@@ -1,0 +1,579 @@
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from tqdm import tqdm
+import re
+from urllib.parse import urlparse, parse_qs, urljoin
+import ollama
+import json
+import os
+import hashlib
+import warnings
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+import argparse
+import sys
+
+
+# -------------------------
+# Load URLs
+# -------------------------
+
+df = pd.read_csv("data/grants_urls.csv")
+
+# Ensure column exists
+if "url" not in df.columns:
+    raise ValueError("CSV must have a column named 'url'")
+
+# -------------------------
+# Shared HTTP session + optional cache
+# -------------------------
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.google.com/",
+    "DNT": "1"
+}
+
+session = requests.Session()
+session.headers.update(HEADERS)
+
+parser = argparse.ArgumentParser(description="Grant researcher scraper and LLM processor")
+parser.add_argument("--mode", choices=["scrape", "llm", "both"], default="both", help="Operation mode: scrape only, llm only, or both")
+parser.add_argument("--force-refresh", action="store_true", help="Force refresh cached pages/results")
+parser.add_argument("--llm-workers", type=int, default=2, help="Number of parallel LLM workers for llm-only mode")
+args = parser.parse_args()
+
+try:
+    import requests_cache
+    requests_cache.install_cache("grant_cache", expire_after=86400)
+except ImportError:
+    requests_cache = None
+
+CACHE_DIR = Path("cache")
+PAGE_CACHE_DIR = CACHE_DIR / "pages"
+RESULT_CACHE_DIR = CACHE_DIR / "results"
+PAGE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+RESULT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def normalize_url(url):
+    parsed = urlparse(url)
+    return parsed._replace(fragment="").geturl()
+
+
+def hash_url(url):
+    return hashlib.sha256(url.encode("utf-8")).hexdigest()
+
+
+def cache_file_path(url, folder, suffix):
+    return folder / f"{hash_url(url)}.{suffix}"
+
+
+def page_cache_path(url):
+    return cache_file_path(url, PAGE_CACHE_DIR, "html")
+
+
+def result_cache_path(url):
+    return cache_file_path(url, RESULT_CACHE_DIR, "json")
+
+
+def load_cached_html(url):
+    path = page_cache_path(url)
+    if path.exists():
+        return path.read_text(encoding="utf-8", errors="ignore")
+    return None
+
+
+def save_cached_html(url, html):
+    path = page_cache_path(url)
+    path.write_text(html, encoding="utf-8", errors="ignore")
+
+
+def load_cached_result(url):
+    path = result_cache_path(url)
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+        except Exception:
+            return None
+    return None
+
+
+def save_cached_result(url, result):
+    path = result_cache_path(url)
+    path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def is_asset_url(url):
+    return bool(re.search(r"\.(css|js|png|jpe?g|gif|svg|ico|pdf|zip|rar|mp4|webm|mp3)(?:[?#]|$)", url, re.IGNORECASE))
+
+
+def is_json_text(text):
+    stripped = text.strip()
+    return stripped.startswith("{") or stripped.startswith("[")
+
+
+def is_xml_text(text):
+    stripped = text.lstrip()
+    return stripped.startswith("<?xml") or stripped.startswith("<rss") or stripped.startswith("<feed") or stripped.startswith("<xml")
+
+
+def extract_jsonld_from_html(html):
+    json_objects = []
+    soup = BeautifulSoup(html, "lxml")
+    for script in soup.find_all("script", type=lambda t: t and "json" in t.lower()):
+        raw = script.string or script.get_text() or ""
+        try:
+            parsed = json.loads(raw.strip())
+            json_objects.append(parsed)
+        except Exception:
+            continue
+    return json_objects
+
+
+def extract_xml_from_html(html):
+    xml_strings = []
+    if "<rss" not in html.lower() and "<feed" not in html.lower() and "<?xml" not in html.lower() and "<xml" not in html.lower():
+        return xml_strings
+    try:
+        xml_soup = BeautifulSoup(html, "xml")
+        xml_strings.append(str(xml_soup))
+    except Exception:
+        pass
+    return xml_strings
+
+# -------------------------
+# Helper functions
+# -------------------------
+
+def clean_text(text):
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def extract_emails(text):
+    emails = re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b", text)
+    return "; ".join(set(emails)) if emails else None
+
+
+def extract_amount(text):
+    # Focus on keywords that suggest individual award amounts to avoid total pool numbers
+    keywords = ["award of", "amount is", "up to", "maximum", "stipend", "grant of", "per applicant", "each", "award size", "funding level"]
+    pattern = r"\$\d+(?:[.,]\d+)?(?:\s?[kKMBmb]|(?:\s?(?:million|billion|thousand)))?(?:\s?-\s?\$\d+(?:[.,]\d+)?(?:\s?[kKMBmb]|(?:\s?(?:million|billion|thousand)))?)?"
+    
+    found_amounts = []
+    for kw in keywords:
+        for match in re.finditer(rf"\b{kw}\b", text, re.IGNORECASE):
+            # Look at a short window after the keyword for the amount
+            window = text[match.end() : match.end() + 60]
+            matches = re.findall(pattern, window, re.IGNORECASE)
+            found_amounts.extend(matches)
+            
+    # Fallback to general search if no specific context was found
+    if not found_amounts:
+        found_amounts = re.findall(pattern, text, re.IGNORECASE)
+
+    # Filter out very short matches and remove duplicates
+    valid = [m.strip() for m in set(found_amounts) if len(m) > 2]
+    return "; ".join(valid) if valid else None
+
+
+def extract_dates(text):
+    # Focus on dates near deadline/application keywords to reduce noise from news/copyrights
+    keywords = ["deadline", "due date", "closes", "opens", "apply by", "application period"]
+    date_regex = r"(\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(?:st|nd|rd|th)?(?:,?\s+\d{4})?\b)"
+    
+    found_dates = []
+    for kw in keywords:
+        # Find the keyword and look at the next 100 characters for a date
+        for match in re.finditer(rf"{kw}", text, re.IGNORECASE):
+            window = text[match.end() : match.end() + 100]
+            dates_in_window = re.findall(date_regex, window, re.IGNORECASE)
+            found_dates.extend(dates_in_window)
+            
+    # Fallback to general dates if keywords didn't yield results (but limit to likely current years)
+    if not found_dates:
+        found_dates = [d for d in re.findall(date_regex, text, re.IGNORECASE) if "202" in d]
+        
+    return "; ".join(set(found_dates)) if found_dates else None
+
+
+def analyze_with_llm(text):
+    """Uses LLM to extract structured data from grant descriptions."""
+    prompt = f"""
+    Extract the following details from the grant text below. 
+    Return the result strictly as a JSON object with these keys:
+    'summary', 'precise_amount', 'deadline', 'eligibility_criteria'.
+    
+    Guidelines for 'precise_amount':
+    1. Extract only the dollar amount or range awarded TO A SINGLE APPLICANT (e.g., '$5,000' or '$10,000 - $25,000').
+    2. IGNORE total program budgets, total funding pools, or aggregate amounts (e.g., if text says '$1M total fund, $5k per grant', return '$5,000').
+    3. Ensure the value is a plain string, not an object or a list. 
+    4. If no specific individual amount is found, return null.
+
+    Text:
+    {text[:8000]} 
+    """
+    # Increased text limit to 8000 to account for multiple pages of data
+    try:
+        response = ollama.generate(
+            model='llama3',
+            prompt=prompt,
+            format='json'
+        )
+        raw_content = response['response'].strip()
+        # Clean markdown formatting if present
+        if raw_content.startswith("```json"):
+            raw_content = raw_content[7:-3].strip()
+        elif raw_content.startswith("```"):
+            raw_content = raw_content[3:-3].strip()
+            
+        return json.loads(raw_content)
+    except Exception as e:
+        print(f"\n[LLM Error] Could not analyze text: {e}")
+        return {
+            "summary": "Error in LLM analysis",
+            "precise_amount": None,
+            "deadline": None,
+            "eligibility_criteria": None
+        }
+
+
+def fetch_url(url, session, use_cache=True):
+    url = normalize_url(url)
+    if use_cache:
+        cached_html = load_cached_html(url)
+        if cached_html is not None:
+            cached_type = None
+            if is_json_text(cached_html):
+                cached_type = "application/json"
+            elif is_xml_text(cached_html):
+                cached_type = "application/xml"
+            return cached_html, cached_type
+
+    r = session.get(url, timeout=15, allow_redirects=True)
+    html = r.text
+    content_type = r.headers.get("Content-Type", "").split(";")[0]
+    if use_cache and html:
+        save_cached_html(url, html)
+    return html, content_type
+
+
+def crawl_site(start_url, session, max_pages=300, use_cache=True):
+    start_url = normalize_url(start_url)
+    queue = [start_url]
+    seen_urls = {start_url}
+    pages = []
+    base_domain = urlparse(start_url).netloc
+
+    while queue and len(pages) < max_pages:
+        current_url = queue.pop(0)
+        result = fetch_url(current_url, session, use_cache=use_cache)
+        if result is None:
+            continue
+        html, content_type = result
+        if html is None:
+            continue
+
+        pages.append((current_url, html, content_type))
+
+        if content_type and "html" not in content_type.lower():
+            continue
+
+        soup = BeautifulSoup(html, "lxml")
+
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href.startswith(("mailto:", "tel:", "javascript:")):
+                continue
+
+            sub_url = normalize_url(urljoin(current_url, href))
+            parsed_sub = urlparse(sub_url)
+            if parsed_sub.scheme not in {"http", "https"}:
+                continue
+            if parsed_sub.netloc != base_domain:
+                continue
+            if sub_url in seen_urls or is_asset_url(sub_url):
+                continue
+
+            seen_urls.add(sub_url)
+            queue.append(sub_url)
+            if len(seen_urls) >= max_pages:
+                break
+
+    return pages
+
+
+def scrape_page(url, session, force_refresh=False, run_llm=True):
+    title = "No Title"
+    try:
+        cached_result = None if force_refresh else load_cached_result(url)
+        if cached_result is not None:
+            return cached_result
+
+        # Handle Google Search redirect URLs
+        if "google.com/url" in url:
+            parsed_url = urlparse(url)
+            query_params = parse_qs(parsed_url.query)
+            if 'q' in query_params:
+                url = query_params['q'][0]
+            elif 'url' in query_params:
+                url = query_params['url'][0]
+
+        page_items = crawl_site(url, session, max_pages=300, use_cache=not force_refresh)
+        if not page_items:
+            raise Exception("Failed to crawl site pages")
+
+        all_descriptions = []
+        all_raw_content = []
+        extracted_json = []
+        extracted_xml = []
+        content_types = set()
+
+        for index, (page_url, page_html, content_type) in enumerate(page_items):
+            warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+            page_label = "Main Page" if index == 0 else f"Page {index + 1}"
+            content_types.add(content_type or "unknown")
+
+            if content_type and "json" in content_type.lower() or is_json_text(page_html):
+                try:
+                    parsed = json.loads(page_html)
+                    extracted_json.append(parsed)
+                    pretty = json.dumps(parsed, ensure_ascii=False, indent=2)
+                    all_descriptions.append(f"--- {page_label} ({page_url}) [json] ---\n" + pretty)
+                    all_raw_content.append(pretty)
+                except Exception:
+                    all_descriptions.append(f"--- {page_label} ({page_url}) [json] ---\n" + page_html)
+                    all_raw_content.append(page_html)
+                continue
+
+            if content_type and "xml" in content_type.lower() or is_xml_text(page_html):
+                xml_parts = extract_xml_from_html(page_html)
+                if xml_parts:
+                    extracted_xml.extend(xml_parts)
+                    all_descriptions.append(f"--- {page_label} ({page_url}) [xml] ---\n" + "\n\n".join(xml_parts))
+                    all_raw_content.append("\n\n".join(xml_parts))
+                else:
+                    all_descriptions.append(f"--- {page_label} ({page_url}) [xml] ---\n" + page_html)
+                    all_raw_content.append(page_html)
+                continue
+
+            page_soup = BeautifulSoup(page_html, "lxml")
+            for element in page_soup(["script", "style", "nav", "footer", "header"]):
+                element.decompose()
+
+            lines = page_soup.get_text(separator="\n", strip=True).splitlines()
+            page_meaningful = [line.strip() for line in lines if len(line.strip()) > 5]
+
+            all_descriptions.append(f"--- {page_label} ({page_url}) ---\n" + "\n\n".join(page_meaningful))
+            all_raw_content.append(" ".join(lines))
+            extracted_json.extend(extract_jsonld_from_html(page_html))
+            extracted_xml.extend(extract_xml_from_html(page_html))
+
+        full_description = "\n\n".join(all_descriptions)
+        clean_content = " ".join(all_raw_content) # For regex search
+
+        emails = extract_emails(clean_content)
+        amounts = extract_amount(clean_content)
+        dates = extract_dates(clean_content)
+
+        # eligibility signals (very useful later)
+        eligibility_keywords = [
+            "nonprofit", "501(c)(3)", "organization",
+            "eligible", "must be", "requirements"
+        ]
+
+        eligibility_hits = [
+            k for k in eligibility_keywords
+            if k.lower() in clean_content.lower()
+        ]
+
+        # build result without LLM first; LLM may be run separately
+        result = {
+            "url": url,
+            "title": title,
+            "summary": None,
+            "llm_amount": None,
+            "llm_deadline": None,
+            "llm_eligibility": None,
+            "emails": emails,
+            "grant_amount": amounts,
+            "application_dates": dates,
+            "eligibility_signals": "; ".join(eligibility_hits),
+            "pages_crawled": len(page_items),
+            "content_types": ", ".join(sorted(content_types)),
+            "embedded_json": json.dumps(extracted_json, ensure_ascii=False) if extracted_json else None,
+            "embedded_xml": "\n\n".join(extracted_xml) if extracted_xml else None
+        }
+        # save raw_text to allow later LLM processing without re-crawling
+        result["raw_text"] = full_description
+
+        # Optionally run LLM now
+        if run_llm:
+            try:
+                llm_data = analyze_with_llm(full_description)
+                result["summary"] = llm_data.get("summary")
+                result["llm_amount"] = llm_data.get("precise_amount")
+                result["llm_deadline"] = llm_data.get("deadline")
+                result["llm_eligibility"] = llm_data.get("eligibility_criteria")
+            except Exception:
+                pass
+
+        save_cached_result(url, result)
+        return result
+
+    except Exception as e:
+        result = {
+            "url": url,
+            "title": None,
+            "summary": None,
+            "llm_amount": None,
+            "llm_deadline": None,
+            "llm_eligibility": None,
+            "emails": None,
+            "grant_amount": None,
+            "application_dates": None,
+            "eligibility_signals": None,
+            "error": str(e)
+        }
+        save_cached_result(url, result)
+        return result
+
+
+def process_llm_on_cached(urls, session, force_refresh=False, max_workers=4):
+    """Process LLM extraction from cached raw_text or by crawling if needed."""
+    results = []
+
+    def process_one(url):
+        # load cached result
+        cached = None if force_refresh else load_cached_result(url)
+        raw_text = None
+        if cached is not None and cached.get("summary") and not force_refresh:
+            return cached
+
+        if cached is not None and cached.get("raw_text"):
+            raw_text = cached.get("raw_text")
+        else:
+            # attempt to crawl site to build raw_text
+            try:
+                page_items = crawl_site(url, session, max_pages=300, use_cache=not force_refresh)
+                if page_items:
+                    parts = []
+                    for index, (page_url, page_html, content_type) in enumerate(page_items):
+                        if content_type and "json" in (content_type or ""):
+                            parts.append(page_html)
+                        else:
+                            soup = BeautifulSoup(page_html, "lxml")
+                            for element in soup(["script", "style", "nav", "footer", "header"]):
+                                element.decompose()
+                            lines = soup.get_text(separator="\n", strip=True).splitlines()
+                            parts.append("\n\n".join([l.strip() for l in lines if len(l.strip()) > 0]))
+                    raw_text = "\n\n".join(parts)
+            except Exception:
+                raw_text = None
+
+        if not raw_text:
+            # nothing to process
+            res = cached or {"url": url, "error": "no raw text available"}
+            save_cached_result(url, res)
+            return res
+
+        # call LLM
+        try:
+            llm_data = analyze_with_llm(raw_text)
+        except Exception as e:
+            llm_data = {"summary": None, "precise_amount": None, "deadline": None, "eligibility_criteria": None}
+
+        result = cached or {"url": url}
+        result.update({
+            "summary": llm_data.get("summary"),
+            "llm_amount": llm_data.get("precise_amount"),
+            "llm_deadline": llm_data.get("deadline"),
+            "llm_eligibility": llm_data.get("eligibility_criteria"),
+            "raw_text": raw_text
+        })
+        save_cached_result(url, result)
+        return result
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(process_one, url): url for url in urls}
+        for future in tqdm(as_completed(futures), total=len(futures)):
+            try:
+                results.append(future.result())
+            except Exception as e:
+                results.append({"url": futures[future], "error": str(e)})
+
+    return results
+
+
+# -------------------------
+# Run scraper
+# -------------------------
+
+try:
+    # Pre-flight check: Ensure Ollama is running and has the model
+    models_response = ollama.list()
+    # Support both dict-style and object-style responses from the Ollama client
+    models = getattr(models_response, "models", models_response)
+    available_models = []
+    for m in models:
+        if isinstance(m, dict):
+            available_models.append(m.get("name") or m.get("model"))
+        elif hasattr(m, "name"):
+            available_models.append(m.name)
+        elif hasattr(m, "model"):
+            available_models.append(m.model)
+        else:
+            available_models.append(str(m))
+    
+    if not any('llama3' in str(m) for m in available_models if m):
+        print("Model 'llama3' not found locally. Pulling now (this may take a few minutes)...")
+        ollama.pull('llama3')
+        print("Model 'llama3' downloaded successfully.")
+    else:
+        print("Ollama connection verified and 'llama3' model is ready.")
+
+except Exception as e:
+    print(f"CRITICAL ERROR: Could not connect to the Ollama server. Please ensure the Ollama application is running in your system tray.\nError: {e}")
+    # If user asked only to scrape, we can continue without Ollama
+    if args.mode == "scrape":
+        print("Continuing in scrape-only mode (no LLM).")
+    else:
+        exit(1)
+
+results = []
+
+all_urls = df["url"].dropna().tolist()
+if args.mode == "llm":
+    # Run LLM processing on cached pages/results
+    results = process_llm_on_cached(all_urls, session, force_refresh=args.force_refresh, max_workers=args.llm_workers)
+    out = pd.DataFrame(results)
+else:
+    # scrape or both
+    max_workers = min(12, max(4, (os.cpu_count() or 1) * 2))
+    results = [None] * len(all_urls)
+    run_llm_flag = args.mode == "both"
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_index = {
+            executor.submit(scrape_page, url, session, args.force_refresh, run_llm_flag): index
+            for index, url in enumerate(all_urls)
+        }
+
+        for future in tqdm(as_completed(future_to_index), total=len(future_to_index)):
+            index = future_to_index[future]
+            results[index] = future.result()
+
+    out = pd.DataFrame(results)
+
+# -------------------------
+# Save output
+# -------------------------
+
+out.to_csv("output/grants_fleshed.csv", index=False)
+
+print("Done → output/grants_fleshed.csv")

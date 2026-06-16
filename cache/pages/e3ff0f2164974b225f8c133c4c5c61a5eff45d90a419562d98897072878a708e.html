@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<head>
+    
+
+
+    <title>Notre action : comment la Fondation Gates agit pour un impact durable dans le monde</title>
+
+    <meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"eb64bef4dd","applicationID":"1052810313","transactionName":"YANRMUNWW0dQBkRQXllJfjNyGGZdRQBTVkNSJVwLRUVaWF0AQhZ4WQJWHQ==","queueTime":0,"applicationTime":662,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:[]},session_trace:{sampling_rate:0.0,mode:"FIXED_RATE",enabled:true,error_sampling_rate:0.0},feature_flags:["soft_nav"],distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1133821996",accountID:"1457659",trustKey:"1457659",xpid:"VQICVlBWARABVFRQDwAHVVUC",licenseKey:"eb64bef4dd",applicationID:"1052810313",browserID:"1133821996"};;/*! For license information please see nr-loader-spa-1.316.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),o=r(1910);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,o.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},733:(e,t,r)=>{"use strict";function n(e,t){return function(e){let t=2166136261;for(let r=0;r<e.length;r++)t^=e.charCodeAt(r),t=Math.imul(t,16777619);return(t>>>0).toString(16).padStart(8,"0")}("".concat(String(e),":").concat(String(t)))}r.d(t,{Y:()=>n})},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>a,df:()=>s,qY:()=>n,v4:()=>o});const n="events",i="jserrors",s="browser/blobs",o="rum",a="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.softNav]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.sessionReplay]:8,[c.logging]:9,[c.genericEvents]:10},u={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:s,[c.sessionReplay]:s,[c.logging]:a,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>s,ET:()=>o,TZ:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},s={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},o="log",a=n.K7.logging},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>a,Ze:()=>d,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),o=r(2646);function a(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&u(e))}function d(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,u(e)}}function u(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,a=i.i.handlers;if(s&&!s.aborted&&s.backlog&&a){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=a[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete a[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>f,Y:()=>l});var n=r(3241),i=r(9908),s=r(1863),o=r(944),a=r(3969),c=r(8362),d=r(860),u=r(4261);function l(e,t,r,s){const l=s||r;!l||l[e]&&l[e]!==c.d.prototype[e]||(l[e]=function(){(0,i.p)(a.xV,["API/"+e+"/called"],void 0,d.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:u.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,o.R)(23,e)}})}function f(e,t,r,n,o){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(o||null===r)&&(0,i.p)(u.Pl+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>a,f:()=>o});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const a=e=>(0,i.a)(e,s)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,Wt:()=>n,g:()=>c,iL:()=>a,tS:()=>o,wk:()=>i});const n="NRBA_SESSION::",i=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},a={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6154);const i="newrelic";function s(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>s});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function s(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Xh:()=>c,Zp:()=>i,kd:()=>d,mq:()=>a,nf:()=>o,qN:()=>s});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],s=["focus","blur"],o=4,a=1e3,c=2e3,d=["PageAction","UserAction","BrowserPerformance"],u={RESOURCES:"experimental.resources",REGISTER:"register"}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>u});var n=r(7836),i=r(5607),s=r(5732);const o="nr@original:".concat(i.W),a=50;var c=Object.prototype.hasOwnProperty,d=!1;function u(e,t,r){return e||(e=n.ee),i.inPlace=function(e,t,r,n,s,o){r||(r="");const a="-"===r.charAt(0);for(let c=0;c<t.length;c++){const d=t[c],u=e[d];f(u)||(e[d]=i(u,a?d+r:r,n,d,s,o))}},i.flag=o,i;function i(t,n,i,d,h,p){return f(t)?t:(n||(n=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach(function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})}),t}catch(e){l([e],r)}for(var n in e)c.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,c,f,g;let m,v;try{c=this,o=[...arguments],v=p?(0,s.$5)(r):[void 0],f="function"==typeof i?i(o,c):i||{}}catch(t){l([t,"",[o,c,d],f],e)}u(n+"start",[o,c,d,v],f,h);const y=performance.now();let b;try{return g=t.apply(c,o),b=performance.now(),g}catch(e){throw b=performance.now(),u(n+"err",[o,c,e,v],f,h),m=e,m}finally{const e=b-y,t={start:y,end:b,duration:e,isLongTask:e>=a,methodName:d,thrownError:m};t.isLongTask&&u("long-task",[t,c,v],f,h),u(n+"end",[o,c,g,v],f,h)}}}function u(r,n,i,s){if(!d||t){var o=d;d=!0;try{e.emit(r,n,i,t,s)}catch(t){l([t,r,n,i],e)}d=o}}}function l(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function f(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=o;var i=s.handlers={};function s(e,t,r,s){o(s||n.d,i,e,t,r)}function o(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var o=t[s]=t[s]||{};(o[r]=o[r]||[]).push([e,i])}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>a,Lc:()=>d,Rz:()=>u,TZ:()=>n,bD:()=>s,d3:()=>o,jx:()=>l,sl:()=>f,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",s="resource",o="-start",a="-end",c="fn"+o,d="fn"+a,u="pushState",l=1e3,f=3e4},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>d});var n=r(9908),i=r(1863),s=r(860),o=r(3969),a=r(993);function c(e,t,r={},c=a.p_.INFO,d=!0,u,l=(0,i.t)()){(0,n.p)(o.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,s.K7.metrics,e),(0,n.p)(a.ET,[l,t,r,c,d,u],void 0,s.K7.logging,e)}function d(e){return"string"==typeof e&&Object.values(a.p_).some(t=>t===e.toUpperCase().trim())}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>l,OV:()=>s,Qu:()=>f,TZ:()=>c,ih:()=>h,pP:()=>a,t1:()=>u,tC:()=>i,wD:()=>d});var n=r(860);const i=["click","keydown","submit"],s="popstate",o="api",a="initialPageLoad",c=n.K7.softNav,d=5e3,u=500,l={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},f={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},h={IP:"in progress",PF:"pending finish",FIN:"finished",CAN:"cancelled"}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>a,rs:()=>i,xV:()=>o,z_:()=>s});const n=r(860).K7.metrics,i="sm",s="cm",o="storeSupportabilityMetrics",a="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>c,CH:()=>p,Dl:()=>R,Fw:()=>w,PA:()=>v,Pl:()=>n,Pv:()=>x,Tb:()=>f,U2:()=>o,V1:()=>A,Wb:()=>T,bt:()=>b,cD:()=>y,d3:()=>E,dT:()=>d,eY:()=>g,fF:()=>h,hG:()=>s,hw:()=>i,k6:()=>a,nb:()=>m,o5:()=>l});const n="api-",i=n+"ixn-",s="addPageAction",o="addToTrace",a="addRelease",c="finished",d="interaction",u="log",l="noticeError",f="pauseReplay",h="recordCustomEvent",p="recordReplay",g="register",m="setApplicationVersion",v="setCurrentRouteName",y="setCustomAttribute",b="setErrorHandler",w="setPageViewName",R="setUserId",E="start",T="wrapLogger",A="measure",x="consent"},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>o,SR:()=>s,rF:()=>a});var n=r(384),i=r(7767);function s(e){return!!(0,n.dV)().o.MO&&(0,i.V)(e)&&!0===e?.session_trace.enabled}function o(e){return!0===e?.session_replay.preload&&s(e)}function a(e,t){try{if("string"==typeof t?.type){if("password"===t.type.toLowerCase())return"*".repeat(e?.length||0);if(void 0!==t?.dataset?.nrUnmask||t?.classList?.contains("nr-unmask"))return e}}catch(e){}return"string"==typeof e?e.replace(/[\S]/g,"*"):"*".repeat(e?.length||0)}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>a});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(s())return e();const r=(0,i.J)(e),o=setInterval(()=>{s()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function a(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5732:(e,t,r)=>{"use strict";r.d(t,{$5:()=>u,B5:()=>d,Ms:()=>s,Ux:()=>a,YA:()=>c,fQ:()=>i,yx:()=>o});var n=r(7508);const i={MFE:"MFE",BA:"BA"};function s(e,t){if(!e||!t?.init.api.register.enabled)return[];const r=t.runtime.registeredEntities;return r?.filter(t=>String(t.metadata.target.id)===String(e)).map(e=>e.metadata.target)||[]}function o(e,t){if(!e||!t?.init.api.register.enabled)return[];const r=t.runtime.registeredEntities;return r?.filter(t=>t.metadata.timings?.asset?.endsWith(e)).map(e=>e.metadata.target)||[]}function a(e,t){if(!l(t))return{};const r=t.agentRef.runtime.appMetadata.agents[0].entityGuid;return e?e.attributes:{"entity.guid":r,appId:t.agentRef.info.applicationID}}function c(e,t){return d(e,t)?{"child.id":e.id,"child.type":e.type,...a(void 0,t)}:{}}function d(e,t){return!!e&&!!l(t)&&t.agentRef.init.api.register.duplicate_data_to_container}function u(e){if(!e?.init.api.register.enabled)return[void 0];const t=[];try{var r=(0,n.AZ)((0,n.QL)());let i=r.length-1;for(;r[i];)t.push(...o(r[i--],e))}catch(e){}return t.length||t.push(void 0),t}function l(e){return 2===e?.harvestEndpointVersion}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>d,RI:()=>i,WN:()=>f,bv:()=>s,gm:()=>o,lR:()=>l,m:()=>c,mw:()=>a,sb:()=>u,zk:()=>h});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),c=""+o?.location,d=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),u=d&&"undefined"==typeof SharedWorker,l=(()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),f=Date.now()-(0,n.t)(),h=()=>{const e=o?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<o.performance.now())return e}},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>u,Qb:()=>l,TZ:()=>i,Ug:()=>o,Vh:()=>s,_s:()=>a,bc:()=>d,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,s="errorDuringReplay",o=.12,a={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},d={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},u=5e3,l={API:"api",RESUME:"resume",SWITCH_TO_FULL:"switchToFull",INITIALIZE:"initialize",PRELOAD:"preload"}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>o,gX:()=>i,iW:()=>s});var n=[];function i(e){if(!e||s(e))return!1;if(0===n.length)return!0;if("*"===n[0].hostname)return!1;for(var t=0;t<n.length;t++){var r=n[t];if(r.hostname.test(e.hostname)&&r.pathname.test(e.pathname))return!1}return!0}function s(e){return void 0===e.hostname}function o(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;if("*"===r)return void(n=[{hostname:"*"}]);0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let s,o;i>0?(s=r.substring(0,i),o=r.substring(i)):(s=r,o="*");let[c]=s.split(":");n.push({hostname:a(c),pathname:a(o,!0)})}}function a(e,t=!1){const r=e.replace(/[.+?^${}()|[\]\\]/g,e=>"\\"+e).replace(/\*/g,".*?");return new RegExp((t?"^":"")+r+"$")}},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},7508:(e,t,r)=>{"use strict";r.d(t,{AZ:()=>g,Qr:()=>b,QL:()=>m});var n=r(6154),i=r(1863),s=r(9119),o=r(7866);class a{dom=new c;performance=new c;constructor(e){this.url=e}get script(){const e=Math.max(this.dom.start,this.performance.end);return{start:e,end:Math.max(this.dom.end,this.performance.end,e)}}}class c{start=0;end=0;value=void 0}let d;try{d=g(m())[0]}catch(e){d=g(e)[0]}const u=e=>"script"===e.initiatorType||["link","fetch"].includes(e.initiatorType)&&e.name.endsWith(".js"),l=new Map;let f=[];function h(e){return l.get(e)}function p(e){const t=h(e);if(t)return t;const r=new a(e);if(l.set(e,r),l.size>1e3){const e=l.keys().next().value;l.delete(e)}return r}if(n.gm.MutationObserver&&n.gm.document){new MutationObserver(e=>{e.forEach(e=>{e.addedNodes.forEach(e=>{if("SCRIPT"===e.nodeName&&e.src){const t=p((0,s.L)(e.src));t.dom.start=(0,i.t)(),t.dom.value=e;const r=()=>{t.dom.end=(0,i.t)()};["load","error"].forEach(t=>e.addEventListener(t,r,{once:!0}))}})})}).observe(n.gm.document,{childList:!0,subtree:!0})}if(n.gm.PerformanceObserver?.supportedEntryTypes.includes("resource")){new PerformanceObserver(e=>{e.getEntries().filter(u).forEach(e=>{const t=p((0,s.L)(e.name));t.performance.start=Math.floor(e.startTime),t.performance.end=Math.floor(e.responseEnd),t.performance.value=e;const r=[];f.forEach(({test:t,addedAt:n},s)=>{(t(e)||(0,i.t)()-n>1e4)&&r.push(s)}),f=f.filter((e,t)=>!r.includes(t))})}).observe({type:"resource",buffered:!0})}function g(e){if(!e||"string"!=typeof e)return[];const t=new Set,r=e.split("\n");for(const e of r){const r=e.match(o.cn)||e.match(o.hB)||e.match(o.fL);if(r&&r[2])t.add((0,s.L)(r[2]));else{const r=e.match(/\(([^)]+\.js):\d+:\d+\)/)||e.match(/^\s+at\s+([^\s(]+\.js):\d+:\d+/);r&&r[1]&&t.add((0,s.L)(r[1]))}}return[...t]}function m(){let e;try{const t=Error.stackTraceLimit;Error.stackTraceLimit=50,e=(new Error).stack,Error.stackTraceLimit=t}catch(t){e=(new Error).stack}return e}function v(e,t){return(0,s.L)(e.name)===t}function y(e,t){e.fetchStart=Math.floor(t.startTime),e.fetchEnd=Math.floor(t.responseEnd),e.asset=t.name,e.type=t.initiatorType}function b(){const e={registeredAt:(0,i.t)(),reportedAt:void 0,fetchStart:0,fetchEnd:0,scriptStart:0,scriptEnd:0,asset:void 0,type:"unknown"},t=m();if(!t)return e;const r=n.gm.performance?.getEntriesByType("navigation")?.[0]?.name||"";try{const o=g(t),a=(o.length>1?o.filter(e=>d!==e):o)[0];if(!a)return e;if(r.includes(a))return e.asset=(0,s.L)(r),e.type="inline",e;e.correlation=h(a);const c=e.correlation?.performance.value||performance.getEntriesByType("resource").find(e=>v(e,a));c?y(e,c):function(e){if(!e||!n.gm.document)return!1;try{const t=n.gm.document.querySelectorAll('link[rel="preload"][as="script"]');for(const r of t)if((0,s.L)(r.href)===e)return!0}catch(e){}return!1}(a)&&(e.asset=a,e.type="preload",f.push({addedAt:(0,i.t)(),test:t=>!!v(t,a)&&(y(e,t),!0)})),Object.defineProperty(e,"scriptStart",{get:()=>e.correlation?.script.start||e.fetchEnd}),Object.defineProperty(e,"scriptEnd",{get:()=>e.correlation?.script.end||e.registeredAt})}catch(e){}return e}},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>s,KC:()=>a,No:()=>i,qh:()=>o});var n=r(860);const i=16e3,s=1e6,o="SESSION_ERROR",a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>i});var n=r(6154);const i=e=>n.RI&&!0===e?.privacy.cookies_enabled},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>a,ee:()=>c});var n=r(384),i=r(8990),s=r(2646),o=r(5607);const a="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var a=h(n);g(e).forEach(e=>{e.apply(a,r)});var d=v()[o[e]];d&&d.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,a,()=>new s.y(a)):new s.y(a)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},7866:(e,t,r)=>{"use strict";r.d(t,{Nc:()=>s,cn:()=>a,fL:()=>i,h3:()=>n,hB:()=>o});const n=/function (.+?)\s*\(/,i=/^\s*at .+ \(eval at \S+ \((?:(?:file|http|https):[^)]+)?\)(?:, [^:]*:\d+:\d+)?\)$/i,s=/^\s*at Function code \(Function code:\d+:\d+\)\s*/i,o=/^\s*at (?:((?:\[object object\])?(?:[^(]*\([^)]*\))*[^()]*(?: \[as \S+\])?) )?\(?((?:file|http|https|chrome-extension):.*?)?:(\d+)(?::(\d+))?\)?\s*$/i,a=/^\s*(?:([^@]*)(?:\(.*?\))?@)?((?:file|http|https|chrome|safari-extension).*?):(\d+)(?::(\d+))?\s*$/i},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let o in s)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):e[o]instanceof Map||e[o]instanceof Set||e[o]instanceof Date||e[o]instanceof RegExp?r[o]=e[o]:"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),s=r(8990),o=r(6154);const a={},c=o.gm.XMLHttpRequest,d="addEventListener",u="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(a[t.debugId]++)return t;a[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[d,u],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(o.RI&&h(document,f),c&&h(c.prototype,f),h(o.gm,f)),t.on(d+"-start",function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)&&"newrelic"!==e[0]){var i=(0,s.I)(n,l,function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=e[1]=i}}),t.on(u+"-start",function(e){e[1]=this.wrapped||e[1]}),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,d);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9119:(e,t,r)=>{"use strict";r.d(t,{L:()=>s});var n=/([^?#]*)[^#]*(#[^?]*|$).*/,i=/([^?#]*)().*/;function s(e,t){return e?e.replace(t?n:i,"$1$2"):e}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n,f:()=>i});const n=r(860).K7.ajax,i="ajaxRequest.id"},9324:(e,t,r)=>{"use strict";r.d(t,{AJ:()=>o,F3:()=>i,Xs:()=>s,Yq:()=>a,xv:()=>n});const n="1.316.0",i="PROD",s="CDN",o="@newrelic/rrweb",a="1.1.0"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>a,ZF:()=>c,bz:()=>o,el:()=>d});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function s(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?s(t,r++).toString(16):"y"===e?(3&s()|8).toString(16):e).join("")}function a(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var a=0;a<e;a++)o.push(s(r,i++).toString(16));return o.join("")}function c(){return a(16)}function d(){return a(32)}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var s=n[e]={exports:{}};return r[e](s,s.exports,i),s.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.316.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.316.0.PROD:",i.l=(r,n,s,o)=>{if(e[r])e[r].push(n);else{var a,c;if(void 0!==s)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+s){a=l;break}}if(!a){c=!0;var f={478:"sha512-/91tZUpAINW5VzLS+EdJpEe0gul6FJd2zTpGwLIhi/mqcTiQPUlhoJmX5zb4EPTwdGqun46DoGQPtDShDBw4bA==",249:"sha512-XqLQgD24Jrw2HFtuRDeuxMcY5WnEXG04tpC98UJOJlIfGqQst/lKUE+G++zwulwEzcM00bl5V0e1kKGq2Nxc1g==",212:"sha512-rOHSN/tvMjFe33yfRKMs44m3dZKgs9foEl0T2tdErrZKsAF8Oe5+OLJKgySrw3WwY4MgvuS4yWEr88MMv5LZaw=="};(a=document.createElement("script")).charset="utf-8",i.nc&&a.setAttribute("nonce",i.nc),a.setAttribute("data-webpack",t+s),a.src=r,0!==a.src.indexOf(window.location.origin+"/")&&(a.crossOrigin="anonymous"),f[o]&&(a.integrity=f[o])}e[r]=[n];var h=(t,n)=>{a.onerror=a.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],a.parentNode&&a.parentNode.removeChild(a),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=h.bind(null,a.onerror),a.onload=h.bind(null,a.onload),c&&document.head.appendChild(a)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var s=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=s);var o=i.p+i.u(t),a=new Error;i.l(o,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var s=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed: ("+s+": "+o+")",a.name="ChunkLoadError",a.type=s,a.request=o,n[1](a)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,s,[o,a,c]=r,d=0;if(o.some(t=>0!==e[t])){for(n in a)i.o(a,n)&&(i.m[n]=a[n]);if(c)c(i)}for(t&&t(r);d<o.length;d++)s=o[d],i.o(e,s)&&e[s]&&e[s][0](),e[s]=0},r=self["webpackChunk:NRBA-1.316.0.PROD"]=self["webpackChunk:NRBA-1.316.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(384),s=i(1741);var o=i(2555),a=i(3333);const c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=i(2614),u=i(944),l=i(8122);const f="[data-nr-mask]",h=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{register:{get enabled(){return e.feature_flags.includes(a.$v.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(a.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=i(6154),g=i(9324);let m=0;const v={buildEnv:g.F3,distMethod:g.Xs,version:g.xv,originTime:p.WN},y={consented:!1},b={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||y.consented},set consented(e){y.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++m}};var w=i(7836),R=i(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};function T(e,t={},r,a){let{init:c,info:d,loader_config:u,runtime:f={},exposed:g=!0}=t;if(!d){const e=(0,n.pV)();c=e.init,d=e.info,u=e.loader_config}var m;e.init=h(c||{}),e.loader_config=(m=u||{},(0,l.a)(m,E)),d.jsAttributes??={},p.bv&&(d.jsAttributes.isWorker=!0),e.info=(0,o.D)(d);const y=e.init;e.runtime??=(e=>{const t=(0,l.a)(e,b),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(f),y.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",i.p=t?e:"https://"+e})(y.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(s.W.prototype).forEach(r=>{const n=s.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=r,e.ee=w.ee.get(e.agentIdentifier),e.exposed=g,(0,R.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.runtime.configured=!0)}var A=i(9908),x=i(1863),S=i(4261),_=i(1738);var O=i(1687),P=i(4234),k=i(5289),N=i(5270),j=i(7767),C=i(6389),D=i(7699);const L=new WeakSet;class I extends P.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,C.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{if(await this.deferred,this.#t(e),!(0,o.f)(e.info))return(0,u.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);let n;try{if((0,j.V)(e.init)){const{setupAgentSession:t}=await i.e(478).then(i.bind(i,8766));n=t(e)}}catch(e){(0,u.R)(20,e),this.ee.emit("internal-error",[e]),(0,A.p)(D.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#r(this.featureName,n,e.init))return(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,u.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};p.RI?(0,k.GG)(()=>n(),!0):n()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return(0,N.SR)(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!L.has(e)&&(L.add(e),!(0,o.f)(e.info))){const t=(0,n.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var M=i(6630);class B extends I{static featureName=M.T;constructor(e){var t;super(e,M.T),this.setupInspectionEvents(),t=e,(0,_.Y)(S.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,A.p)(S.Pl+S.Fw,[(0,x.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(478).then(i.bind(i,5839)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,R.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,k.sB)(t=>{e(t,"DOMContentLoaded")}),(0,k.GG)(t=>{e(t,"load")}),(0,k.Qr)(t=>{e(t,"navigate")}),this.ee.on(d.tS.UPDATE,(e,t)=>{(0,R.W)({type:"lifecycle",name:"session",data:t})})}}class H extends e.d{constructor(e){var t;(super(),p.gm)?(this.features={},(0,n.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(B),T(this,e,e.loaderType||"agent"),t=this,(0,_.Y)(S.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,_.U)(t,e,r,S.cD,n);(0,u.R)(40,typeof r)}else(0,u.R)(39,typeof e)},t),function(e){(0,_.Y)(S.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,u.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,A.p)(S.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,_.U)(e,"enduser.id",t,S.Dl,!0)},e)}(this),function(e){(0,_.Y)(S.nb,function(t){if("string"==typeof t||null===t)return(0,_.U)(e,"application.version",t,S.nb,!1);(0,u.R)(42,typeof t)},e)}(this),function(e){(0,_.Y)(S.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,_.Y)(S.Pv,function(t=!0){if("boolean"==typeof t){if((0,A.p)(S.Pl+S.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,u.R)(65,typeof t)},e)}(this),this.run()):(0,u.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,u.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,u.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,n.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var K=i(2843),W=i(782);class F extends I{static featureName=W.T;constructor(e){super(e,W.T),p.RI&&((0,K.u)(()=>(0,A.p)("docHidden",[(0,x.t)()],void 0,W.T,this.ee),!0),(0,K.G)(()=>(0,A.p)("winPagehide",[(0,x.t)()],void 0,W.T,this.ee)),this.importAggregator(e,()=>i.e(478).then(i.bind(i,9917))))}}var U=i(3969);class V extends I{static featureName=U.TZ;constructor(e){super(e,U.TZ),this.importAggregator(e,()=>i.e(478).then(i.bind(i,6555)))}}var z=i(6774),G=i(3878),Y=i(3304);class Z{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,Y.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function q(e){return J(e)?e:new Z(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic,e?.cause)}function X(e){const t="Unhandled Promise Rejection: ";if(!e?.reason)return;if(J(e.reason)){try{e.reason.message.startsWith(t)||(e.reason.message=t+e.reason.message)}catch(e){}return q(e.reason)}const r=q(e.reason);return(r.message||"").startsWith(t)||(r.message=t+r.message),r}function Q(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new Z(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic,e.cause);return t.name=SyntaxError.name,t}return J(e.error)?e.error:q(e)}function J(e){return e instanceof Error&&!!e.stack}function ee(e,r,n,i,s=(0,x.t)()){"string"==typeof e&&(e=new Error(e)),(0,A.p)("err",[e,s,!1,r,n.runtime.isRecording,void 0,i],void 0,t.K7.jserrors,n.ee),(0,A.p)("uaErr",[],void 0,t.K7.genericEvents,n.ee)}var te=i(5732),re=i(993),ne=i(3785);function ie(e,{customAttributes:t={},level:r=re.p_.INFO}={},n,i,s=(0,x.t)()){(0,ne.R)(n.ee,e,t,r,!1,i,s)}function se(e,r,n,i,s=(0,x.t)()){(0,A.p)(S.Pl+S.hG,[s,e,r,i],void 0,t.K7.genericEvents,n.ee)}function oe(e,r,n,i,s=(0,x.t)()){const{start:o,end:a,customAttributes:c}=r||{},d={customAttributes:c||{}};if("object"!=typeof d.customAttributes||"string"!=typeof e||0===e.length)return void(0,u.R)(57);const l=(e,t)=>null==e?t:"number"==typeof e?e:e instanceof PerformanceMark?e.startTime:Number.NaN;if(d.start=l(o,0),d.end=l(a,s),Number.isNaN(d.start)||Number.isNaN(d.end))(0,u.R)(57);else{if(d.duration=d.end-d.start,!(d.duration<0))return(0,A.p)(S.Pl+S.V1,[d,e,i],void 0,t.K7.genericEvents,n.ee),d;(0,u.R)(58)}}function ae(e,r={},n,i,s=(0,x.t)()){(0,A.p)(S.Pl+S.fF,[s,e,r,i],void 0,t.K7.genericEvents,n.ee)}var ce=i(7508),de=i(9566);const ue=["name","id","type"],le=new Map([[se,"addPageAction"],[ie,"log"],[oe,"measure"],[ee,"noticeError"],[ae,"recordCustomEvent"]]),fe={experimental:(0,C.J)(()=>(0,u.R)(54,"newrelic.register")),disabled:(0,C.J)(()=>(0,u.R)(55)),invalidTarget:(0,C.J)(e=>(0,u.R)(48,e)),deregistered:(0,C.J)(()=>(0,u.R)(68))};function he(e){(0,_.Y)(S.eY,function(t){return pe(e,t)},e)}function pe(e,r){fe.experimental(),r||={},r.instance=(0,de.LA)(8),r.type=te.fQ.MFE,r.licenseKey||=e.info.licenseKey,r.blocked=!1,("object"!=typeof r.tags||null===r.tags||Array.isArray(r.tags))&&(r.tags={}),r.parent??={get id(){return e.runtime.appMetadata.agents[0].entityGuid},type:te.fQ.BA};const n=(0,ce.Qr)(),i={};Object.prototype.hasOwnProperty.call(r,"attributes")||Object.defineProperty(r,"attributes",{get:()=>({...i,"source.id":r.id,"source.name":r.name,"source.type":r.type,"parent.type":r.parent?.type||te.fQ.BA,"parent.id":r.parent?.id})}),Object.entries(r.tags).forEach(([e,t])=>{ue.includes(e)||(i["source.".concat(e)]=t)});let s=()=>{};const o=e.runtime.registeredEntities,a=e=>{r.blocked=!0,s=e};function c(e){return"string"==typeof e&&!!e.trim()&&e.trim().length<501}e.init.api.register.enabled||a(fe.disabled),c(r.id)&&c(r.name)||a(()=>fe.invalidTarget(r));const d={addPageAction:(t,n={})=>p(se,[t,{...i,...n},e],r),deregister:()=>{f(),a(fe.deregistered)},log:(t,n={})=>p(ie,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),measure:(t,n={})=>p(oe,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),noticeError:(t,n={})=>p(ee,[t,{...i,...n},e],r),recordCustomEvent:(t,n={})=>p(ae,[t,{...i,...n},e],r),setApplicationVersion:e=>h("application.version",e),setCustomAttribute:(e,t)=>h(e,t),setUserId:e=>h("enduser.id",e),metadata:{get customAttributes(){return i},target:r,timings:n}},l=()=>(r.blocked&&s(),r.blocked);function f(){if(n.reportedAt)return;n.reportedAt=(0,x.t)();const e=n.fetchEnd-n.fetchStart,t=n.scriptEnd-n.scriptStart;d.recordCustomEvent("MicroFrontEndTiming",{assetUrl:n.asset,assetType:n.type,timeAlive:n.reportedAt-n.registeredAt,timeToBeRequested:n.fetchStart,timeToExecute:t,timeToFetch:e,timeToLoad:e+t,timeToRegister:n.registeredAt})}l()||(o.push(d),(0,K.G)(f));const h=(e,t)=>{l()||(i[e]=t)},p=(r,n,i)=>{if(l()&&r!==pe)return;const s=(0,x.t)(),o=le.get(r)||"unknown";(0,A.p)(U.xV,["API/register/".concat(o,"/called")],void 0,t.K7.metrics,e.ee);try{return r(...n,i,s)}catch(e){(0,u.R)(50,e)}};return d}class ge extends I{static featureName=z.T;constructor(e){var t;super(e,z.T),t=e,(0,_.Y)(S.o5,(e,r)=>ee(e,r,t),t),function(e){(0,_.Y)(S.bt,function(t){e.runtime.onerror=t},e)}(e),function(e){let t=0;(0,_.Y)(S.k6,function(e,r){++t>10||(this.runtime.releaseIds[e.slice(-200)]=(""+r).slice(-200))},e)}(e),he(e);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",(t,r)=>{this.abortHandler&&(0,A.p)("ierr",[q(t),(0,x.t)(),!0,{},e.runtime.isRecording,r],void 0,this.featureName,this.ee)}),p.gm.addEventListener("unhandledrejection",t=>{this.abortHandler&&(0,A.p)("err",[X(t),(0,x.t)(),!1,{unhandledPromiseRejection:1},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,G.jT)(!1,this.removeOnAbort?.signal)),p.gm.addEventListener("error",t=>{this.abortHandler&&(0,A.p)("err",[Q(t),(0,x.t)(),!1,{},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,G.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e,()=>i.e(478).then(i.bind(i,9377)))}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var me=i(8990);let ve=1;function ye(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===p.gm?0:(0,me.I)(e,"nr@id",function(){return ve++})}function be(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,Y.A)(e).length}catch(e){return}}}var we=i(8139),Re=i(3434);const Ee={},Te=["open","send"];function Ae(e,t){var r=e||w.ee;const n=function(e){return(e||w.ee).get("xhr")}(r);if(void 0===p.gm.XMLHttpRequest)return n;if(Ee[n.debugId]++)return n;Ee[n.debugId]=1,(0,we.u)(r);var i=(0,Re.YM)(n),s=p.gm.XMLHttpRequest,o=p.gm.MutationObserver,a=p.gm.Promise,c=p.gm.setInterval,d="readystatechange",l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],f=[],h=p.gm.XMLHttpRequest=function(e){const r=new s(e),o=n.context(r);o.targets=(0,te.$5)(t);try{n.emit("new-xhr",[r],o),r.addEventListener(d,(a=o,function(){var e=this;e.readyState>3&&!a.resolved&&(a.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,l,"fn-",R)}),(0,G.jT)(!1))}catch(e){(0,u.R)(15,e);try{n.emit("internal-error",[e])}catch(e){}}var a;return r};function g(e,t){i.inPlace(t,["onreadystatechange"],"fn-",R)}if(function(e,t){for(var r in e)t[r]=e[r]}(s,h),h.prototype=s.prototype,i.inPlace(h.prototype,Te,"-xhr-",R),n.on("send-xhr-start",function(e,t){g(e,t),function(e){f.push(e),o&&(m?m.then(b):c?c(b):(v=-v,y.data=v))}(t)}),n.on("open-xhr-start",g),o){var m=a&&a.resolve();if(!c&&!a){var v=1,y=document.createTextNode(v);new o(b).observe(y,{characterData:!0})}}else r.on("fn-end",function(e){e[0]&&e[0].type===d||b()});function b(){for(var e=0;e<f.length;e++)g(0,f[e]);f.length&&(f=[])}function R(e,t){return t}return n}var xe="fetch-",Se=xe+"body-",_e=["arrayBuffer","blob","json","text","formData"],Oe=p.gm.Request,Pe=p.gm.Response,ke="prototype";const Ne={};function je(e,t){const r=function(e){return(e||w.ee).get("fetch")}(e);if(!(Oe&&Pe&&p.gm.fetch))return r;if(Ne[r.debugId]++)return r;function n(e,n,i){var s=e[n];"function"==typeof s&&(e[n]=function(){var e=[...arguments];const n={},o=(0,te.$5)(t);var a;r.emit(i+"before-start",[e],n),n[w.P]&&n[w.P].dt&&(a=n[w.P].dt);var c=s.apply(this,e);return r.emit(i+"start",[e,a],c),c.then(function(e){return r.emit(i+"end",[null,e,o],c),e},function(e){throw r.emit(i+"end",[e,void 0,o],c),e})})}return Ne[r.debugId]=1,_e.forEach(e=>{n(Oe[ke],e,Se),n(Pe[ke],e,Se)}),n(p.gm,"fetch",xe),r.on(xe+"end",function(e,t,n){var i=this;if(i.targets=n||[void 0],t){var s=t.headers.get("content-length");null!==s&&(i.rxSize=s),r.emit(xe+"done",[null,t],i)}else r.emit(xe+"done",[e],i)}),r}var Ce=i(7485);class De{constructor(e){this.agentRef=e}generateTracePayload(e){const t=this.agentRef.loader_config;if(!this.shouldGenerateTrace(e)||!t)return null;var r=(t.accountID||"").toString()||null,n=(t.agentID||"").toString()||null,i=(t.trustKey||"").toString()||null;if(!r||!n)return null;var s=(0,de.ZF)(),o=(0,de.el)(),a=Date.now(),c={spanId:s,traceId:o,timestamp:a};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(c.traceContextParentHeader=this.generateTraceContextParentHeader(s,o),c.traceContextStateHeader=this.generateTraceContextStateHeader(s,a,r,n,i)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(c.newrelicHeader=this.generateTraceHeader(s,o,a,r,n,i)),c}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,s){if(!("function"==typeof p.gm?.btoa))return null;var o={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return s&&n!==s&&(o.d.tk=s),btoa((0,Y.A)(o))}shouldGenerateTrace(e){return this.agentRef.init?.distributed_tracing?.enabled&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1;const r=this.agentRef.init?.distributed_tracing;if(e.sameOrigin)t=!0;else if(r?.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,Ce.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}excludeNewrelicHeader(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.cors_use_tracecontext_headers}}var Le=i(9300),Ie=i(7295);function Me(e){return"string"==typeof e?e:e instanceof(0,n.dV)().o.REQ?e.url:p.gm?.URL&&e instanceof URL?e.href:void 0}var Be=["load","error","abort","timeout"],He=Be.length,Ke=(0,n.dV)().o.REQ,We=(0,n.dV)().o.XHR;const Fe="X-NewRelic-App-Data";class Ue extends I{static featureName=Le.T;constructor(e){super(e,Le.T),this.dt=new De(e),this.handler=(e,t,r,n)=>(0,A.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};p.gm?.performance?.getEntriesByType("resource").forEach(r=>{if(r.initiatorType in e&&0!==r.responseStatus){const n={status:r.responseStatus},i={rxSize:r.transferSize,duration:Math.floor(r.duration),cbTime:0};Ve(n,r.name),this.handler("xhr",[n,i,r.startTime,r.responseEnd,e[r.initiatorType]],void 0,t.K7.ajax)}})}catch(e){}je(this.ee,e),Ae(this.ee,e),function(e,r,n,i){function s(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=R,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},t.latestLongtaskEnd=0,e.addEventListener("load",function(r){T(t,e)},(0,G.jT)(!1)),p.lR||e.addEventListener("progress",function(e){t.lastSize=e.loaded},(0,G.jT)(!1))}function o(e){this.params={method:e[0]},Ve(this,e[1]),this.metrics={}}function a(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var n=i.generateTracePayload(this.parsedOrigin);if(n){var s=!1;n.newrelicHeader&&(r.setRequestHeader("newrelic",n.newrelicHeader),s=!0),n.traceContextParentHeader&&(r.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&r.setRequestHeader("tracestate",n.traceContextStateHeader),s=!0),s&&(this.dt=n)}}function c(e,t){var n=this.metrics,i=e[0],s=this;if(n&&i){var o=be(i);o&&(n.txSize=o)}this.startTime=(0,x.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||s.loadCaptureCalled||(s.params.aborted=!0),("load"!==e.type||s.called===s.totalCbs&&(s.onloadCalled||"function"!=typeof t.onload)&&"function"==typeof s.end)&&s.end(t)}catch(e){try{r.emit("internal-error",[e])}catch(e){}}};for(var a=0;a<He;a++)t.addEventListener(Be[a],this.listener,(0,G.jT)(!1))}function d(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function u(e,t){var r=""+ye(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+ye(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,x.t)()}function h(e,t){t instanceof We&&"load"===e[0]&&r.emit("xhr-load-added",[e[1],e[2]],t)}function g(e,t){t instanceof We&&"load"===e[0]&&r.emit("xhr-load-removed",[e[1],e[2]],t)}function m(e,t,r){t instanceof We&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,x.t)()))}function v(e,t){this.xhrCbStart&&r.emit("xhr-cb-time",[(0,x.t)()-this.xhrCbStart,this.onload,t],t)}function y(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&p.RI&&(t=""+p.gm.location.href):e[0]&&e[0].url?t=e[0].url:p.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,Ce.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var n=i.generateTracePayload(this.parsedOrigin);if(n&&(n.newrelicHeader||n.traceContextParentHeader))if(e[0]&&e[0].headers)a(e[0].headers,n)&&(this.dt=n);else{var s={};for(var o in r)s[o]=r[o];s.headers=new Headers(r.headers||{}),a(s.headers,n)&&(this.dt=n),e.length>1?e[1]=s:e.push(s)}}function a(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function b(e,t){this.params={},this.metrics={},this.startTime=(0,x.t)(),this.dt=t;let[r,n={}]=e;Ve(this,Me(r));const i=(""+(r&&r instanceof Ke&&r.method||n.method||"GET")).toUpperCase();this.params.method=i,this.body=n.body,this.txSize=be(n.body)||0}function w(e,t){if(this.endTime=(0,x.t)(),this.params||(this.params={}),(0,Ie.iW)(this.params))return;let r;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(r=+this.rxSize);const n={txSize:this.txSize,rxSize:r,duration:(0,x.t)()-this.startTime},i=[this.params,n,this.startTime,this.endTime,"fetch"];this.targets.forEach(e=>E(i,this,e))}function R(e){const t=this.params,r=this.metrics;if(this.ended)return;this.ended=!0;for(let t=0;t<He;t++)e.removeEventListener(Be[t],this.listener,!1);if(t.aborted)return;if((0,Ie.iW)(t))return;r.duration=(0,x.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):T(this,e),r.cbTime=this.cbTime;const n=[t,r,this.startTime,this.endTime,"xhr"];this.targets.forEach(e=>E(n,this,e))}function E(e,r,i){n("xhr",[...e,i],r,t.K7.ajax)}function T(e,n){e.params.status=n.status;var i=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?be(e.response):"text"===r||""===r||void 0===r?be(e.responseText):void 0}(n,e.lastSize);if(i&&(e.metrics.rxSize=i),e.sameOrigin&&n.getAllResponseHeaders().indexOf(Fe)>=0){var s=n.getResponseHeader(Fe);s&&((0,A.p)(U.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,t.K7.metrics,r),e.params.cat=s.split(", ").pop())}e.loadCaptureCalled=!0}r.on("new-xhr",s),r.on("open-xhr-start",o),r.on("open-xhr-end",a),r.on("send-xhr-start",c),r.on("xhr-cb-time",d),r.on("xhr-load-added",u),r.on("xhr-load-removed",l),r.on("xhr-resolved",f),r.on("addEventListener-end",h),r.on("removeEventListener-end",g),r.on("fn-end",v),r.on("fetch-before-start",y),r.on("fetch-start",b),r.on("fn-start",m),r.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator(e,()=>i.e(478).then(i.bind(i,3845)))}}function Ve(e,t){var r=(0,Ce.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ze={},Ge=["pushState","replaceState"];function Ye(e){const t=function(e){return(e||w.ee).get("history")}(e);return!p.RI||ze[t.debugId]++||(ze[t.debugId]=1,(0,Re.YM)(t).inPlace(window.history,Ge,"-")),t}var Ze=i(3738);function qe(e){(0,_.Y)(S.BL,function(r=Date.now()){const n=r-p.WN;n<0&&(0,u.R)(62,r),(0,A.p)(U.XG,[S.BL,{time:n}],void 0,t.K7.metrics,e.ee),e.addToTrace({name:S.BL,start:r,origin:"nr"}),(0,A.p)(S.Pl+S.hG,[n,S.BL],void 0,t.K7.genericEvents,e.ee)},e)}const{He:Xe,bD:$e,d3:Qe,Kp:Je,TZ:et,Lc:tt,uP:rt,Rz:nt}=Ze;class it extends I{static featureName=et;constructor(e){var r;super(e,et),r=e,(0,_.Y)(S.U2,function(e){if(!(e&&"object"==typeof e&&e.name&&e.start))return;const n={n:e.name,s:e.start-p.WN,e:(e.end||e.start)-p.WN,o:e.origin||"",t:"api"};n.s<0||n.e<0||n.e<n.s?(0,u.R)(61,{start:n.s,end:n.e}):(0,A.p)("bstApi",[n],void 0,t.K7.sessionTrace,r.ee)},r),qe(e);if(!(0,j.V)(e.init))return void this.deregisterDrain();const n=this.ee;let s;Ye(n),this.eventsEE=(0,we.u)(n),this.eventsEE.on(rt,function(e,t){this.bstStart=(0,x.t)()}),this.eventsEE.on(tt,function(e,r){(0,A.p)("bst",[e[0],r,this.bstStart,(0,x.t)()],void 0,t.K7.sessionTrace,n)}),n.on(nt+Qe,function(e){this.time=(0,x.t)(),this.startPath=location.pathname+location.hash}),n.on(nt+Je,function(e){(0,A.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,t.K7.sessionTrace,n)});try{s=new PerformanceObserver(e=>{const r=e.getEntries();(0,A.p)(Xe,[r],void 0,t.K7.sessionTrace,n)}),s.observe({type:$e,buffered:!0})}catch(e){}this.importAggregator(e,()=>i.e(478).then(i.bind(i,6974)),{resourceObserver:s})}}var st=i(733),ot=i(6344);class at extends I{static featureName=ot.TZ;#i;recorder;constructor(e){var r;let n;super(e,ot.TZ),r=e,(0,_.Y)(S.CH,function(){(0,A.p)(S.CH,[],void 0,t.K7.sessionReplay,r.ee)},r),function(e){(0,_.Y)(S.Tb,function(){(0,A.p)(S.Tb,[],void 0,t.K7.sessionReplay,e.ee)},e)}(e);const s="".concat(d.Wt).concat((0,st.Y)(e.info.licenseKey,e.info.applicationID));try{n=JSON.parse(localStorage.getItem(s))}catch(e){}(0,N.SR)(e.init)&&this.ee.on(S.CH,()=>this.#s()),this.#o(n)&&this.importRecorder().then(e=>{e.startRecording(ot.Qb.PRELOAD,n?.sessionReplayMode)}),this.importAggregator(this.agentRef,()=>i.e(478).then(i.bind(i,6167)),this),this.ee.on("err",e=>{this.blocked||this.agentRef.runtime.isRecording&&(this.errorNoticed=!0,(0,A.p)(ot.Vh,[e],void 0,this.featureName,this.ee))})}#o(e){return e&&(e.sessionReplayMode===d.g.FULL||e.sessionReplayMode===d.g.ERROR)||(0,N.Aw)(this.agentRef.init)}importRecorder(){return this.recorder?Promise.resolve(this.recorder):(this.#i??=Promise.all([i.e(478),i.e(249)]).then(i.bind(i,4866)).then(({Recorder:e})=>(this.recorder=new e(this),this.recorder)).catch(e=>{throw this.ee.emit("internal-error",[e]),this.blocked=!0,e}),this.#i)}#s(){this.blocked||(this.featAggregate?this.featAggregate.mode!==d.g.FULL&&this.featAggregate.initializeRecording(d.g.FULL,!0,ot.Qb.API):this.importRecorder().then(()=>{this.recorder.startRecording(ot.Qb.API,d.g.FULL)}))}}var ct=i(3962);class dt extends I{static featureName=ct.TZ;constructor(e){if(super(e,ct.TZ),function(e){const r=e.ee.get("tracer");function n(){}(0,_.Y)(S.dT,function(e){return(new n).get("object"==typeof e?e:{})},e);const i=n.prototype={createTracer:function(n,i){var s={},o=this,a="function"==typeof i;return(0,A.p)(U.xV,["API/createTracer/called"],void 0,t.K7.metrics,e.ee),function(){if(r.emit((a?"":"no-")+"fn-start",[(0,x.t)(),o,a],s),a)try{return i.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw r.emit("fn-err",[arguments,this,t],s),t}finally{r.emit("fn-end",[(0,x.t)()],s)}}}};["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach(r=>{_.Y.apply(this,[r,function(){return(0,A.p)(S.hw+r,[performance.now(),...arguments],this,t.K7.softNav,e.ee),this},e,i])}),(0,_.Y)(S.PA,function(){(0,A.p)(S.hw+"routeName",[performance.now(),...arguments],void 0,t.K7.softNav,e.ee)},e)}(e),!p.RI||!(0,n.dV)().o.MO)return;const r=Ye(this.ee);try{this.removeOnAbort=new AbortController}catch(e){}ct.tC.forEach(e=>{(0,G.sp)(e,e=>{c(e)},!0,this.removeOnAbort?.signal)});const s=()=>(0,A.p)("newURL",[(0,x.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",s),r.on("replaceState-end",s),(0,G.sp)(ct.OV,e=>{c(e),(0,A.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)},!0,this.removeOnAbort?.signal);let o=!1;const a=new((0,n.dV)().o.MO)((e,t)=>{o||(o=!0,requestAnimationFrame(()=>{(0,A.p)("newDom",[(0,x.t)()],void 0,this.featureName,this.ee),o=!1}))}),c=(0,C.s)(e=>{"loading"!==document.readyState&&((0,A.p)("newUIEvent",[e],void 0,this.featureName,this.ee),a.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0}))},100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),a.disconnect(),this.abortHandler=void 0},this.importAggregator(e,()=>i.e(478).then(i.bind(i,4393)),{domObserver:a})}}var ut=i(9119);const lt={},ft=new Set;function ht(e){return"string"==typeof e?{type:"string",size:(new TextEncoder).encode(e).length}:e instanceof ArrayBuffer?{type:"ArrayBuffer",size:e.byteLength}:e instanceof Blob?{type:"Blob",size:e.size}:e instanceof DataView?{type:"DataView",size:e.byteLength}:ArrayBuffer.isView(e)?{type:"TypedArray",size:e.byteLength}:{type:"unknown",size:0}}class pt{constructor(e,t){this.timestamp=(0,x.t)(),this.currentUrl=(0,ut.L)(window.location.href),this.socketId=(0,de.LA)(8),this.requestedUrl=(0,ut.L)(e),this.requestedProtocols=Array.isArray(t)?t.join(","):t||"",this.openedAt=void 0,this.protocol=void 0,this.extensions=void 0,this.binaryType=void 0,this.messageOrigin=void 0,this.messageCount=0,this.messageBytes=0,this.messageBytesMin=0,this.messageBytesMax=0,this.messageTypes=void 0,this.sendCount=0,this.sendBytes=0,this.sendBytesMin=0,this.sendBytesMax=0,this.sendTypes=void 0,this.closedAt=void 0,this.closeCode=void 0,this.closeReason="unknown",this.closeWasClean=void 0,this.connectedDuration=0,this.hasErrors=void 0}}class gt extends I{static featureName=a.TZ;constructor(e){super(e,a.TZ);const r=e.init.feature_flags.includes("websockets"),s=!e.init.feature_flags.includes("no_spv"),o=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.performance.resources.enabled,e.init.user_actions.enabled,r,s];var c;let d;if(c=e,(0,_.Y)(S.hG,(e,t)=>se(e,t,c),c),function(e){(0,_.Y)(S.fF,(t,r)=>ae(t,r,e),e)}(e),qe(e),he(e),function(e){(0,_.Y)(S.V1,(t,r)=>oe(t,r,e),e)}(e),this.removeOnAbort=new AbortController,this.abortHandler=()=>{this.removeOnAbort.abort(),this.abortHandler=void 0},r){const u=function(e){if(!(0,n.dV)().o.WS)return e;const t=e.get("websockets");if(lt[t.debugId]++)return t;lt[t.debugId]=1,(0,K.G)(()=>{const e=(0,x.t)();ft.forEach(r=>{r.nrData.closedAt=e,r.nrData.closeCode=1001,r.nrData.closeReason="Page navigating away",r.nrData.closeWasClean=!1,r.nrData.openedAt&&(r.nrData.connectedDuration=e-r.nrData.openedAt),t.emit("ws",[r.nrData],r)})});class r extends WebSocket{static name="WebSocket";static toString(){return"function WebSocket() { [native code] }"}toString(){return"[object WebSocket]"}get[Symbol.toStringTag](){return r.name}#a(e){(e.__newrelic??={}).socketId=this.nrData.socketId,this.nrData.hasErrors??=!0}constructor(...e){super(...e),this.nrData=new pt(e[0],e[1]),this.addEventListener("open",()=>{this.nrData.openedAt=(0,x.t)(),["protocol","extensions","binaryType"].forEach(e=>{this.nrData[e]=this[e]}),ft.add(this)}),this.addEventListener("message",e=>{const{type:t,size:r}=ht(e.data);this.nrData.messageOrigin??=(0,ut.L)(e.origin),this.nrData.messageCount++,this.nrData.messageBytes+=r,this.nrData.messageBytesMin=Math.min(this.nrData.messageBytesMin||1/0,r),this.nrData.messageBytesMax=Math.max(this.nrData.messageBytesMax,r),(this.nrData.messageTypes??"").includes(t)||(this.nrData.messageTypes=this.nrData.messageTypes?"".concat(this.nrData.messageTypes,",").concat(t):t)}),this.addEventListener("close",e=>{this.nrData.closedAt=(0,x.t)(),this.nrData.closeCode=e.code,e.reason&&(this.nrData.closeReason=e.reason),this.nrData.closeWasClean=e.wasClean,this.nrData.connectedDuration=this.nrData.closedAt-this.nrData.openedAt,ft.delete(this),t.emit("ws",[this.nrData],this)})}addEventListener(e,t,...r){const n=this,i="function"==typeof t?function(...e){try{return t.apply(this,e)}catch(e){throw n.#a(e),e}}:t?.handleEvent?{handleEvent:function(...e){try{return t.handleEvent.apply(t,e)}catch(e){throw n.#a(e),e}}}:t;return super.addEventListener(e,i,...r)}send(e){if(this.readyState===WebSocket.OPEN){const{type:t,size:r}=ht(e);this.nrData.sendCount++,this.nrData.sendBytes+=r,this.nrData.sendBytesMin=Math.min(this.nrData.sendBytesMin||1/0,r),this.nrData.sendBytesMax=Math.max(this.nrData.sendBytesMax,r),(this.nrData.sendTypes??"").includes(t)||(this.nrData.sendTypes=this.nrData.sendTypes?"".concat(this.nrData.sendTypes,",").concat(t):t)}try{return super.send(e)}catch(e){throw this.#a(e),e}}close(...e){try{super.close(...e)}catch(e){throw this.#a(e),e}}}return p.gm.WebSocket=r,t}(this.ee);u.on("ws",e=>{(0,A.p)("ws-complete",[e],void 0,this.featureName,this.ee)})}if(s&&p.gm.addEventListener("securitypolicyviolation",e=>{(0,A.p)("spv",[e],void 0,t.K7.genericEvents,this.ee)},(0,G.jT)(!1,this.removeOnAbort.signal)),p.RI){if(je(this.ee,e),Ae(this.ee,e),d=Ye(this.ee),e.init.user_actions.enabled){function l(t){const r=(0,Ce.D)(t);return e.beacons.includes(r.hostname+":"+r.port)}function f(){d.emit("navChange")}a.Zp.forEach(e=>(0,G.sp)(e,e=>(0,A.p)("ua",[e],void 0,this.featureName,this.ee),!0)),a.qN.forEach(e=>{const t=(0,C.s)(e=>{(0,A.p)("ua",[e],void 0,this.featureName,this.ee)},500,{leading:!0});(0,G.sp)(e,t)}),p.gm.addEventListener("error",()=>{(0,A.p)("uaErr",[],void 0,t.K7.genericEvents,this.ee)},(0,G.jT)(!1,this.removeOnAbort.signal)),this.ee.on("open-xhr-start",(e,r)=>{l(e[1])||r.addEventListener("readystatechange",()=>{2===r.readyState&&(0,A.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)},(0,G.jT)(void 0,this.removeOnAbort.signal))}),this.ee.on("fetch-start",e=>{e.length>=1&&!l(Me(e[0]))&&(0,A.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)}),d.on("pushState-end",f),d.on("replaceState-end",f),window.addEventListener("hashchange",f,(0,G.jT)(!0,this.removeOnAbort.signal)),window.addEventListener("popstate",f,(0,G.jT)(!0,this.removeOnAbort.signal))}if(e.init.performance.resources.enabled&&p.gm.PerformanceObserver?.supportedEntryTypes.includes("resource")){new PerformanceObserver(e=>{e.getEntries().forEach(e=>{(0,A.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)})}).observe({type:"resource",buffered:!0})}}o.some(e=>e)?this.importAggregator(e,()=>i.e(478).then(i.bind(i,8019))):this.deregisterDrain()}}var mt=i(2646);const vt=new Map;function yt(e,t,r,n,i=!0,s){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,u.R)(29);const o=function(e){return(e||w.ee).get("logger")}(e),a=(0,Re.YM)(o,void 0,s),c=new mt.y(w.P);c.level=n.level,c.customAttributes=n.customAttributes,c.autoCaptured=i;const d=t[r]?.[Re.Jt]||t[r];return vt.set(d,c),a.inPlace(t,[r],"wrap-logger-",()=>vt.get(d),void 0,!0),o}var bt=i(1910);class wt extends I{static featureName=re.TZ;constructor(e){var t;super(e,re.TZ),t=e,(0,_.Y)(S.$9,(e,r)=>ie(e,r,t),t),function(e){(0,_.Y)(S.Wb,(t,r,{customAttributes:n={},level:i=re.p_.INFO}={})=>{yt(e.ee,t,r,{customAttributes:n,level:i},!1,e)},e)}(e),he(e);const r=this.ee;["log","error","warn","info","debug","trace"].forEach(t=>{(0,bt.i)(p.gm.console[t]),yt(r,p.gm.console,t,{level:"log"===t?"info":t},void 0,e)}),this.ee.on("wrap-logger-end",function([e],t,n,i=[]){const{level:s,customAttributes:o,autoCaptured:a}=this;i.forEach(t=>{(0,ne.R)(r,e,o,s,a,t)})}),this.importAggregator(e,()=>i.e(478).then(i.bind(i,5288)))}}new H({features:[Ue,B,F,it,at,V,ge,gt,wt,dt],loaderType:"spa"})})()})();</script>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+        <link rel="shortcut icon" href="/-/media/cc7894d090e54e9eb65bb680c9ad4f69.ashx">
+    <link rel="canonical" href="https://www.gatesfoundation.org/fr-fr/our-work" />
+    <link rel="alternative" hreflang="en" href="https://www.gatesfoundation.org/en/our-work" />
+    <link rel="alternative" hreflang="fr-FR" href="https://www.gatesfoundation.org/fr-fr/our-work" />
+        <meta name="servername" content="gfo-prd-cd03" />
+        <meta name="description" content="D&#233;couvrez comment nous luttons contre la pauvret&#233;, les maladies et les in&#233;galit&#233;s gr&#226;ce &#224; la science, au plaidoyer et aux partenariats dans les domaines de la sant&#233;, du d&#233;veloppement et de l&#39;&#233;ducation." />
+        <meta name="title" content="Notre action : comment la Fondation Gates agit pour un impact durable dans le monde" />
+        <meta property="og:url" content="https://www.gatesfoundation.org/fr-fr/our-work" />
+        <meta property="og:title" content="Notre action : comment la Fondation Gates agit pour un impact durable dans le monde" />
+        <meta property="og:locale" content="fr-FR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="D&#233;couvrez comment nous luttons contre la pauvret&#233;, les maladies et les in&#233;galit&#233;s gr&#226;ce &#224; la science, au plaidoyer et aux partenariats dans les domaines de la sant&#233;, du d&#233;veloppement et de l&#39;&#233;ducation." />
+        <meta property="og:image" content="https://www.gatesfoundation.org/-/media/gfo/4our-work/programs/global-health/gh_malaria_ga1299652_fc370682_3200x1800.jpg?rev=a4e2a0bacdd24ef883e2f783865c0929" />
+        <meta property="og:image:url" content="https://www.gatesfoundation.org/-/media/gfo/4our-work/programs/global-health/gh_malaria_ga1299652_fc370682_3200x1800.jpg?rev=a4e2a0bacdd24ef883e2f783865c0929" />
+        <meta property="og:image:secure_url" content="https://www.gatesfoundation.org/-/media/gfo/4our-work/programs/global-health/gh_malaria_ga1299652_fc370682_3200x1800.jpg?rev=a4e2a0bacdd24ef883e2f783865c0929" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="3200" />
+        <meta property="og:image:height" content="1800" />
+        <meta name="twitter:image" content="https://www.gatesfoundation.org/-/media/gfo/4our-work/programs/global-health/gh_malaria_ga1299652_fc370682_3200x1800.jpg?rev=a4e2a0bacdd24ef883e2f783865c0929" />
+
+    <link rel="preload" href="/assets/fonts/NotoSerifDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-BoldItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Bold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-MediumItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-bold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-SemiBold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-MediumItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Italic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Regular.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-LightItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Light.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Condensed-LightItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSerif-Condensed-Light.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-ExtraCondensed-BlackItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-ExtraCondensed-Black.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedBoldItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedBold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedSemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedSemiBold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedMediumItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedMedium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-Condensed.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedLightItalic.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/assets/fonts/NotoSans-CondensedLight.woff2" as="font" type="font/woff2" crossorigin="">
+    <link href="/Areas/GFO/assets/css/index-generated.css?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d" media="all" rel="stylesheet" />
+    <link href="/assets/css/email-signup-generated.css?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d" media="all" rel="stylesheet" /><link href="/assets/css/story-modals-container-generated.css?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d" media="all" rel="stylesheet" /><link href="/assets/css/image-promo-grid-generated.css?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d" media="all" rel="stylesheet" />
+    
+    
+
+	<script>
+		function loadGTM() {};
+	</script>
+
+<script>
+	function oneTrustLoaded() {
+		// override was in the code copied
+		window.OptanonWrapper = () => {}
+		// finish loading the prefetched GTM file
+		loadGTM();
+	}
+</script>
+
+     <!-- OneTrust Cookies Consent Notice start  -->
+     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9bb8ffb-2901-447e-a378-7fbe2eae92c7" async fetchpriority="high" onload="oneTrustLoaded()"></script>
+     <!-- OneTrust Cookies Consent Notice end  -->
+            <script type="application/ld+json">
+        {"@type":"WebPage","name":"Notre action","description":"","publisher":{"@type":"Organization","name":"Gates Foundation"},"breadcrumb":null,"primaryImageOfPage":"https://www.gatesfoundation.org/-/media/f23d8e2832594c028084bb6c405d2232.ashx?rev=9d0644412c134e89820e151ebb23f3a3","datePublished":null,"@context":"https://schema.org"}
+    </script>
+
+</head>
+<body>
+
+
+
+<div class="js-page-content-wrapper">
+    <header class="site-header-wrapper">
+        
+        <div class="js-old-browser-modal modal-container">
+    <div
+        class="modal js-modal old-browser-modal__modal"
+         id="old-browser-modal">
+        <div class="modal__box-holder">
+            <div class="modal__overlay"></div>
+            <div class="modal__box">
+                <div class="modal__title">
+                    <button
+                        type="button"
+                            class="modal__close js-modal-close"
+                            aria-label="Close modal">
+                        <svg class="icon icon--close" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6569 7.75792L16.2427 6.3437L6.34318 16.2432L7.75739 17.6574L17.6569 7.75792Z" fill="currentColor" />
+                            <path d="M16.242 17.6568L17.6562 16.2426L7.75676 6.34314L6.34254 7.75735L16.242 17.6568Z" fill="currentColor" />
+                            <path d="M14 14V10H10V14H14Z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__content">
+                    <section class="rich-text component">
+                        <h3>Unsupported browser detected</h3>
+<p>
+Your browser appears to be unsupported. Because of this, portions of the site may not function as intended.
+</p>
+<p>
+Please install a current version of <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>, <a href="https://www.microsoft.com/en-us/edge">Edge</a>, or <a href="https://www.apple.com/safari/">Safari</a> for a better experience.
+</p>
+<br class="t-last-br" />
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <section class="site-header js-site-header__mount"
+         data-model='{&quot;skipNavigation&quot;:{&quot;href&quot;:&quot;#main-content&quot;,&quot;text&quot;:&quot;Skip to main content&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;lang&quot;:null,&quot;icon&quot;:null},&quot;logo&quot;:{&quot;title&quot;:&quot;Gates Foundation&quot;,&quot;logoSm&quot;:&quot;/-/media/logos/gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg?rev=54c470b2c54e4e7bbf1226f068638fdc&amp;hash=E1C952E05758ECAF4B094E8CD03449FE&quot;,&quot;logoLg&quot;:&quot;/-/media/logos/gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg?rev=54c470b2c54e4e7bbf1226f068638fdc&amp;hash=E1C952E05758ECAF4B094E8CD03449FE&quot;},&quot;cta&quot;:null,&quot;theme&quot;:&quot;base&quot;,&quot;siteName&quot;:null,&quot;sticky&quot;:false,&quot;primaryNav&quot;:[{&quot;title&quot;:&quot;About us&quot;,&quot;subtitle&quot;:&quot;Learn about our origins, how we work, committed grants, careers, and our role in fighting inequities.&quot;,&quot;link&quot;:{&quot;href&quot;:&quot;/about&quot;,&quot;text&quot;:&quot;Learn more about us&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;submenu&quot;:[{&quot;header&quot;:&quot;About the Gates Foundation&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/our-story&quot;,&quot;text&quot;:&quot;Our story&quot;,&quot;title&quot;:&quot;Our story&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/our-role&quot;,&quot;text&quot;:&quot;Our role&quot;,&quot;title&quot;:&quot;Our role&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/how-we-work&quot;,&quot;text&quot;:&quot;How we work&quot;,&quot;title&quot;:&quot;How we work&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/foundation-faq&quot;,&quot;text&quot;:&quot;Frequently Asked Questions&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/foundation-fact-sheet&quot;,&quot;text&quot;:&quot;Foundation Fact Sheet&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/media-center&quot;,&quot;text&quot;:&quot;News &amp; announcements&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]},{&quot;header&quot;:&quot;People &amp; Offices&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/leadership&quot;,&quot;text&quot;:&quot;Leadership&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/offices&quot;,&quot;text&quot;:&quot;Offices&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/careers&quot;,&quot;text&quot;:&quot;Careers&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/diversity-equity-inclusion&quot;,&quot;text&quot;:&quot;Diversity, equity, and inclusion&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/contact&quot;,&quot;text&quot;:&quot;Contact&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]},{&quot;header&quot;:&quot;Funding&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/our-funding&quot;,&quot;text&quot;:&quot;Our funding&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/financials&quot;,&quot;text&quot;:&quot;Financials&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/committed-grants&quot;,&quot;text&quot;:&quot;Our committed grants&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;https://sif.gatesfoundation.org/&quot;,&quot;text&quot;:&quot;Strategic Investment Fund&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;external&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/about/supporting-our-work&quot;,&quot;text&quot;:&quot;Ways to give&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]}],&quot;feature&quot;:null,&quot;promoBackground&quot;:null,&quot;centerAlignMobileLinks&quot;:false,&quot;openCategoriesOnHover&quot;:false,&quot;renderMobileAccordions&quot;:false},{&quot;title&quot;:&quot;Our work&quot;,&quot;subtitle&quot;:&quot;Learn how we collaborate with partners in over 130 countries to address the issues we care about and drive change. &quot;,&quot;link&quot;:{&quot;href&quot;:&quot;/our-work&quot;,&quot;text&quot;:&quot;Explore our work&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;submenu&quot;:[{&quot;header&quot;:&quot;Our goals&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/progress/maternal-and-child-health&quot;,&quot;text&quot;:&quot;Saving the lives of moms &amp; babies&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/progress/economic-opportunity&quot;,&quot;text&quot;:&quot;Expanding economic opportunity&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/progress/infectious-diseases&quot;,&quot;text&quot;:&quot;Ending infectious diseases&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/progress&quot;,&quot;text&quot;:&quot;View our roadmap →&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]},{&quot;header&quot;:&quot;Regions&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/places/africa&quot;,&quot;text&quot;:&quot;Africa&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/places/china&quot;,&quot;text&quot;:&quot;China&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/places/east-asia&quot;,&quot;text&quot;:&quot;East Asia&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/places/india&quot;,&quot;text&quot;:&quot;India&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/places/north-america&quot;,&quot;text&quot;:&quot;North America&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work#places&quot;,&quot;text&quot;:&quot;View all regions →&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]},{&quot;header&quot;:&quot;Featured programs&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/programs/global-growth-and-opportunity/agricultural-development&quot;,&quot;text&quot;:&quot;Agricultural Development&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/programs/global-growth-and-opportunity/digital-public-infrastructure&quot;,&quot;text&quot;:&quot;Digital Public Infrastructure&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/programs/global-health/malaria&quot;,&quot;text&quot;:&quot;Malaria&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work/programs/gender-equality/maternal-newborn-child-nutrition-and-health&quot;,&quot;text&quot;:&quot;Maternal, Newborn, Child Nutrition &amp; Health&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/our-work#program_strategies&quot;,&quot;text&quot;:&quot;View all programs →&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]}],&quot;feature&quot;:null,&quot;promoBackground&quot;:null,&quot;centerAlignMobileLinks&quot;:false,&quot;openCategoriesOnHover&quot;:false,&quot;renderMobileAccordions&quot;:false},{&quot;title&quot;:&quot;Ideas&quot;,&quot;subtitle&quot;:&quot;Read the latest stories, research, interviews, and articles from across the Gates Foundation.&quot;,&quot;link&quot;:{&quot;href&quot;:&quot;/ideas&quot;,&quot;text&quot;:&quot;Discover our ideas&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;submenu&quot;:[{&quot;header&quot;:&quot;Popular topics&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/progress/ai-for-good&quot;,&quot;text&quot;:&quot;AI for good&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/climate-adaptation&quot;,&quot;text&quot;:&quot;Climate adaptation&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/maternal-immunization&quot;,&quot;text&quot;:&quot;Maternal immunization&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/science-innovation-technology/future-womens-health-technology&quot;,&quot;text&quot;:&quot;Women’s health innovations&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas&quot;,&quot;text&quot;:&quot;View all →&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]},{&quot;header&quot;:&quot;Reports and updates&quot;,&quot;numberOfColumns&quot;:1,&quot;link&quot;:{&quot;href&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},&quot;links&quot;:[{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/articles/2026-gates-foundation-annual-letter&quot;,&quot;text&quot;:&quot;Annual Letter&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;/ideas/partners-human-potential&quot;,&quot;text&quot;:&quot;Partners of Human Potential&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;internal&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null},{&quot;image&quot;:null,&quot;hasArrow&quot;:false,&quot;href&quot;:&quot;https://www.gatesfoundation.org/goalkeepers/report/2025-report/#WeCantStopAtAlmost&quot;,&quot;text&quot;:&quot;Goalkeepers report&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;external&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;icon&quot;:null}]}],&quot;feature&quot;:{&quot;type&quot;:&quot;promo&quot;,&quot;data&quot;:{&quot;description&quot;:&quot;How 25 years of innovation, resources, and collaboration have made an impact on saving the lives of mothers and children globally.&quot;,&quot;link&quot;:{&quot;href&quot;:&quot;https://www.gatesfoundation.org/maternal-child-health-data/&quot;,&quot;text&quot;:&quot;A Patchwork of Progress&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;lang&quot;:null,&quot;icon&quot;:null},&quot;image&quot;:{&quot;srcSet&quot;:&quot;/-/media/gfo/5ideas_articles/progress/patchwork-of-progress-thumb-1600x1000.png?rev=2e9d859decd0479bbe70a78cb1dd29d3&amp;w=270&amp;hash=569BD071F223156BA5DAFBB5823316BA 270w,/-/media/gfo/5ideas_articles/progress/patchwork-of-progress-thumb-1600x1000.png?rev=2e9d859decd0479bbe70a78cb1dd29d3&amp;w=540&amp;hash=6B361F1C630D8C39D5273F326EB4E7A7 540w,/-/media/gfo/5ideas_articles/progress/patchwork-of-progress-thumb-1600x1000.png?rev=2e9d859decd0479bbe70a78cb1dd29d3&amp;w=1600&amp;hash=2B08455B4F00FF828D60D6FBE7DE5ACD 1600w&quot;,&quot;alt&quot;:&quot;Patchwork of Progress&quot;,&quot;sizes&quot;:null,&quot;height&quot;:&quot;1000&quot;,&quot;width&quot;:&quot;1600&quot;}}},&quot;promoBackground&quot;:null,&quot;centerAlignMobileLinks&quot;:false,&quot;openCategoriesOnHover&quot;:false,&quot;renderMobileAccordions&quot;:false}],&quot;search&quot;:{&quot;label&quot;:&quot;Search&quot;,&quot;searchUrl&quot;:&quot;/search&quot;,&quot;placeholder&quot;:&quot;Search&quot;,&quot;buttonText&quot;:&quot;Search&quot;},&quot;backgroundColor&quot;:null}'
+         data-dictionary='{&quot;subMenuBack&quot;:&quot;Back&quot;,&quot;openMenuText&quot;:&quot;&quot;,&quot;closeMenuText&quot;:&quot;&quot;}'
+         lang="en" dir="ltr"></section>
+	<script>
+        window.dataLayer = window.dataLayer || [];
+	   window.dataLayer.push({
+	    event: 'experiment_loaded',
+	    'experiment': 'PostHog Nav Test',
+	    'variant': 'Control Nav'
+ });
+	</script>
+
+        
+
+    </header>
+    <main class="main-content">
+        <div id="main-content"></div>
+        <div class="main-content-wrapper">
+<section class="component container container--bleed theme-light container--flush-top 
+            " id="Container-0204ccb5-cbef-4c58-8a3c-6c01fcdc03f2" 
+         style="  ">
+    
+<section class="language-selector  " style="" >
+    <div class="language-selector__container container">
+        <div class="language-selector__current-language" aria-hidden="true">
+            Fran&#231;ais
+        </div>
+        <div class="language-selector__divider">
+            <svg class="icon icon--arrow-left" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-left">
+
+	</use>
+</svg>
+            <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg>
+        </div>
+        <div class="language-selector__label" id="language-selector" lang="fr-FR" dir="ltr">
+            Cette page est disponible en:
+        </div>
+        <nav class="language-selector__navigation js-language-selector"
+             aria-label="language selector">
+            <button type="button" 
+                    class="language-selector__toggle-menu js-language-selector__button" 
+                    aria-expanded="false" 
+                    aria-controls="lanuage-selector__menu" 
+                    id="language-selector__button"
+                    lang="en">
+                <span>Language</span>
+                <svg class="icon icon--chevron-down" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#chevron-down">
+
+	</use>
+</svg>
+            </button>
+            <ul class="language-selector__list"
+                aria-labelledby="language-selector"
+                id="lanuage-selector__menu">
+                        <li class="language-selector__item">
+                            <a class="language-selector__link link"
+                               lang="en" dir="ltr"
+                               hreflang="en"
+                               href="/en/our-work">
+                                English
+                            </a>
+                        </li>
+                        <li class="language-selector__item language-selector__item--current">
+                            <span class="language-selector__link link"
+                                  lang="fr-FR" dir="ltr"
+                                  aria-current="page">
+                                Fran&#231;ais
+                            </span>
+                        </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="page-banner component  page-banner--stacked page-banner--above   "
+		 lang="fr-FR" dir="ltr"
+		 style="">
+
+	<div class="page-banner__container container">
+		<div class="page-banner__content page-banner__content--above">
+							<h1 class="page-banner__title">
+					Notre action
+				</h1>
+							<div class="page-banner__subtitle">
+					Nous travaillons avec des partenaires à travers le monde pour relever de grands défis et améliorer la vie des populations.
+				</div>
+			<div class="page-banner__share-placeholder">
+				
+			</div>
+		</div>
+	</div>
+</section>
+<section class="component container container--100 ">
+    <div class="container__col container__col--100">
+        <section class="story-modals-container js-story-modals-container" >
+	
+<div class="story-tab js-story-tab  story-tab--dark theme-dark "
+	 style="--story-tab-bg-color: #12236D;"
+	 data-nav-title="Saving the lives of mothers, babies, and children">
+
+			<div class="story-tab__tab js-story-tab__button js-make-clickable-element" data-location="/ideas/progress/maternal-and-child-health" data-open-in-new-tab="false">
+					<div class="story-tab__media">
+		<picture class="picture-element story-tab__picture">
+				<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_5x9.jpg?rev=5e9253f44da2472e982298ba81d5e07b&amp;w=400&amp;hash=E3CC9CAF87D4A133C4EA5F73A2E1B817 400w,/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_5x9.jpg?rev=5e9253f44da2472e982298ba81d5e07b&amp;w=740&amp;hash=8799B650886FAE4FCFF6E880D3F2ECD2 740w"
+						media="(min-width: 911px)" sizes="1000px" />
+					<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_3x2.jpg?rev=10b986171da64fa895320622abbd6e6c&amp;w=400&amp;hash=F24DDFEE7C7E32D6E5B07288AE8CE386 400w,/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_3x2.jpg?rev=10b986171da64fa895320622abbd6e6c&amp;w=810&amp;hash=6BAC49DCDFE7D89D70A3E71A38BE469A 810w,/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_3x2.jpg?rev=10b986171da64fa895320622abbd6e6c&amp;w=1215&amp;hash=7CD4AFD98E4DB3F4FFA6A07448DD5512 1215w,/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_3x2.jpg?rev=10b986171da64fa895320622abbd6e6c&amp;w=1600&amp;hash=296CB4058B6590435B10D0B07F7EC015 1600w,/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_3x2.jpg?rev=10b986171da64fa895320622abbd6e6c&amp;w=2000&amp;hash=8B3C02DAC0687B80134049D7275201C4 2000w"
+							media="(max-width: 910px)" sizes="100vw" />
+<img src="/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_5x9.jpg?h=1333&amp;iar=0&amp;w=740&amp;rev=5e9253f44da2472e982298ba81d5e07b&amp;hash=9F97560B42B206C482B97C92BD7B1401" alt="Maternal and Child Health" srcset="/-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_5x9.jpg?rev=5e9253f44da2472e982298ba81d5e07b&#38;w=370&#38;hash=7806FB0B41925AF9192C11132D1B607B 1x, /-/media/gfo/4our-work/areas-of-impact/work_maternal-child-health_5x9.jpg?rev=5e9253f44da2472e982298ba81d5e07b&#38;w=740&#38;hash=8799B650886FAE4FCFF6E880D3F2ECD2 2x">		</picture>
+	</div>
+	<div class="story-tab__content">
+		<div class="story-tab__inner">
+						<a class="arrow-link arrow-link--arrow story-tab__title" href="/ideas/progress/maternal-and-child-health">
+<span>	<span class="story-tab__desktop-title">
+		Saving the lives of mothers, babies, and children
+	</span>
+		<span class="story-tab__mobile-title">Saving the lives of mothers, babies, and children</span>
+</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+		</div>
+	</div>
+	<div class="story-tab__mobile-gate gate-style"></div>
+	<div class="story-tab__desktop-gate gate-style-horizontal"></div>
+
+			</div>
+</div>
+
+<div class="story-tab js-story-tab  story-tab--dark theme-dark "
+	 style="--story-tab-bg-color: #9B320D;"
+	 data-nav-title="Ending infectious diseases">
+
+			<div class="story-tab__tab js-story-tab__button js-make-clickable-element" data-location="/ideas/progress/infectious-diseases" data-open-in-new-tab="false">
+					<div class="story-tab__media">
+		<picture class="picture-element story-tab__picture">
+				<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_5x9.jpg?rev=82ba5bd9e089407eadb2bc247505e796&amp;w=400&amp;hash=751AF939574B2BAF2AB7D5F658543907 400w,/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_5x9.jpg?rev=82ba5bd9e089407eadb2bc247505e796&amp;w=500&amp;hash=14EAE8FA33462844095BAA9E11BD924F 500w"
+						media="(min-width: 911px)" sizes="1000px" />
+					<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_3x2.jpg?rev=0e54057d11df46baba9567b6e091931e&amp;w=400&amp;hash=0FF5B7A61B2D3B4DB704CB9C18C93D6F 400w,/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_3x2.jpg?rev=0e54057d11df46baba9567b6e091931e&amp;w=810&amp;hash=02062EA31A795CB938BE0096436E1466 810w,/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_3x2.jpg?rev=0e54057d11df46baba9567b6e091931e&amp;w=1215&amp;hash=F723050D6B40395B0BD3CB0FFDB9531C 1215w,/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_3x2.jpg?rev=0e54057d11df46baba9567b6e091931e&amp;w=1600&amp;hash=4EFF5A93A0FB2ECAD27309D895A29DFF 1600w,/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_3x2.jpg?rev=0e54057d11df46baba9567b6e091931e&amp;w=2000&amp;hash=F6E6279F85A543B4FF396FE43D2B5B80 2000w"
+							media="(max-width: 910px)" sizes="100vw" />
+<img src="/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_5x9.jpg?h=900&amp;iar=0&amp;w=500&amp;rev=82ba5bd9e089407eadb2bc247505e796&amp;hash=0CDD577912CF4FB63D522655FC8CF846" alt="Infectious Diseases" srcset="/-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_5x9.jpg?rev=82ba5bd9e089407eadb2bc247505e796&#38;w=250&#38;hash=3371DFE09486CE93207B1BAAEB3BC53B 1x, /-/media/gfo/4our-work/areas-of-impact/work_infectious-diseases_5x9.jpg?rev=82ba5bd9e089407eadb2bc247505e796&#38;w=500&#38;hash=14EAE8FA33462844095BAA9E11BD924F 2x">		</picture>
+	</div>
+	<div class="story-tab__content">
+		<div class="story-tab__inner">
+						<a class="arrow-link arrow-link--arrow story-tab__title" href="/ideas/progress/infectious-diseases">
+<span>	<span class="story-tab__desktop-title">
+		Ending infectious diseases
+	</span>
+		<span class="story-tab__mobile-title">Ending infectious diseases</span>
+</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+		</div>
+	</div>
+	<div class="story-tab__mobile-gate gate-style"></div>
+	<div class="story-tab__desktop-gate gate-style-horizontal"></div>
+
+			</div>
+</div>
+
+<div class="story-tab js-story-tab  story-tab--dark theme-dark "
+	 style="--story-tab-bg-color: #295958;"
+	 data-nav-title="Expanding economic opportunity">
+
+			<div class="story-tab__tab js-story-tab__button js-make-clickable-element" data-location="/ideas/progress/economic-opportunity" data-open-in-new-tab="false">
+					<div class="story-tab__media">
+		<picture class="picture-element story-tab__picture">
+				<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_5x9.jpg?rev=327846836fd747f784bb9177bf828e08&amp;w=400&amp;hash=94C9DE99123B01EB20296F1B2846303B 400w,/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_5x9.jpg?rev=327846836fd747f784bb9177bf828e08&amp;w=740&amp;hash=7934D2D2029744D0ECEC0328E2126557 740w"
+						media="(min-width: 911px)" sizes="1000px" />
+					<source srcset="/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_3x2.jpg?rev=4d8dc706bd554f4db7f947c4a0c60292&amp;w=400&amp;hash=C768562D40F4B2A7E0ADFE575DB18A39 400w,/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_3x2.jpg?rev=4d8dc706bd554f4db7f947c4a0c60292&amp;w=810&amp;hash=254EAD91ED8899FFC7979621DF5BED02 810w,/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_3x2.jpg?rev=4d8dc706bd554f4db7f947c4a0c60292&amp;w=1215&amp;hash=A29398112013EE7D03EFDE43A4EEAA78 1215w,/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_3x2.jpg?rev=4d8dc706bd554f4db7f947c4a0c60292&amp;w=1600&amp;hash=0B9950DC7F0BEF9B9DDCC3FC3FE3A758 1600w,/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_3x2.jpg?rev=4d8dc706bd554f4db7f947c4a0c60292&amp;w=2000&amp;hash=EFC02641477F8015EC9D9D705B1F9AF3 2000w"
+							media="(max-width: 910px)" sizes="100vw" />
+<img src="/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_5x9.jpg?h=1333&amp;iar=0&amp;w=740&amp;rev=327846836fd747f784bb9177bf828e08&amp;hash=99BF3560E2CAD9D8ED9FBC46636F7579" alt="Economic Opportunity" srcset="/-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_5x9.jpg?rev=327846836fd747f784bb9177bf828e08&#38;w=370&#38;hash=B67DD6C9CD7C40763DA6656107214D89 1x, /-/media/gfo/4our-work/areas-of-impact/work_economic-opportunity_5x9.jpg?rev=327846836fd747f784bb9177bf828e08&#38;w=740&#38;hash=7934D2D2029744D0ECEC0328E2126557 2x">		</picture>
+	</div>
+	<div class="story-tab__content">
+		<div class="story-tab__inner">
+						<a class="arrow-link arrow-link--arrow story-tab__title" href="/ideas/progress/economic-opportunity">
+<span>	<span class="story-tab__desktop-title">
+		Expanding economic opportunity
+	</span>
+		<span class="story-tab__mobile-title">Expanding economic opportunity</span>
+</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+		</div>
+	</div>
+	<div class="story-tab__mobile-gate gate-style"></div>
+	<div class="story-tab__desktop-gate gate-style-horizontal"></div>
+
+			</div>
+</div>
+
+</section>
+    </div>
+</section>
+
+</section>
+
+<section class="component container container--bleed theme-light  container--background
+            " id="Container-7bff943b-7a94-4415-bf7e-acb955fa0850" 
+         style="--background-color:#F5F3ED;  ">
+    <section class="section-headline component component--headline container section-headline--no-border "
+         lang="fr-FR" dir="ltr">
+    <h2 class="section-headline__title">Notre impact à ce jour</h2>
+
+
+</section>
+
+                <section class="component manual-internal-promo-slider js-manual-internal-promo-slider manual-internal-promo-slider--footer-controls  "
+                         data-slides-to-show="5"
+                         data-slides-to-scroll="1"
+                         >
+                    <div class="manual-internal-promo-slider__container container">
+                        <div class="manual-internal-promo-slider__controls-full">
+                            <button class="btn manual-internal-promo-slider__prev js-slide-prev-button"
+                                    type="button"
+                                    aria-label="previous">
+                                <svg class="icon icon--arrow-left manual-internal-promo-slider__icon-prev" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-left">
+
+	</use>
+</svg>
+                            </button>
+                            <button class="btn manual-internal-promo-slider__next js-slide-next-button"
+                                    type="button"
+                                    aria-label="next">
+                                <svg class="icon icon--arrow-right manual-internal-promo-slider__icon-next" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg>
+                            </button>
+                            <div class="manual-internal-promo-slider__slide-bar">
+                                <div class="manual-internal-promo-slider__slide-bar-pos js-slide-position-bar"></div>
+                            </div>
+                        </div>
+                        <div class="manual-internal-promo-slider__slider js-slide-container"
+                             style="display: none">
+                            
+<section class="component quick-stat js-quick-stat " >
+	<div class="quick-stat__container">
+		<div class="quick-stat__value">
+			<span>2 167</span>
+		</div>
+			<div class="quick-stat__description rich-text">
+				Employés
+			</div>
+			</div>
+</section>
+
+<section class="component quick-stat js-quick-stat " >
+	<div class="quick-stat__container">
+		<div class="quick-stat__value">
+			<span>2 573</span>
+		</div>
+			<div class="quick-stat__description rich-text">
+				Nombre de subventions
+			</div>
+			</div>
+</section>
+
+<section class="component quick-stat js-quick-stat " >
+	<div class="quick-stat__container">
+		<div class="quick-stat__value">
+			<span>$ 8,0 Md</span>
+		</div>
+			<div class="quick-stat__description rich-text">
+				Total du soutien caritatif
+			</div>
+			</div>
+</section>
+
+<section class="component quick-stat js-quick-stat " >
+	<div class="quick-stat__container">
+		<div class="quick-stat__value">
+			<span>1 507</span>
+		</div>
+			<div class="quick-stat__description rich-text">
+				Bénéficiaires
+			</div>
+			</div>
+</section>
+
+<section class="component quick-stat js-quick-stat " >
+	<div class="quick-stat__container">
+		<div class="quick-stat__value">
+			<span>53</span>
+		</div>
+			<div class="quick-stat__description rich-text">
+				Stratégies de programme
+			</div>
+			</div>
+</section>
+
+                        </div>
+                    </div>
+                </section>
+
+</section>
+
+<section class="component container container--bleed theme-light  container--background
+            " id="Container-cbc4aacb-091c-4b60-a3b4-b881b370deeb" 
+         style="--background-color:#F5F3ED;  ">
+    
+<a class="component jump-nav-anchor js-jump-nav-anchor" id="places">Places</a>
+<section class="section-headline component component--headline container section-headline--small section-headline--no-border "
+         lang="fr-FR" dir="ltr">
+    <h2 class="section-headline__title section-headline__title--small">Sites</h2>
+
+
+        <div class="section-headline__subtitle">
+            Notre action est portée par des bénéficiaires et des partenaires aux États-Unis et dans plus de 130 pays. Ces derniers possèdent une expertise de terrain, une compréhension profonde des enjeux qui nous tiennent à cœur et des liens étroits avec les communautés où nous souhaitons faire une différence. Nous avons appris l'importance d’avoir des représentants basés dans des régions clés pour nous aider à tisser des relations avec les organisations partenaires et les gouvernements, à mieux comprendre l'environnement politique et à tenir compte des sensibilités culturelles.
+        </div>
+</section>
+<section class="component container container--100 ">
+    <div class="container__col container__col--100">
+        
+<section class="image-promo-grid js-image-promo-grid" lang="en" dir="ltr">
+        <div class="image-promo-grid__controls">
+        <div class="image-promo-grid__slide-bar">
+            <div class="image-promo-grid__slide-bar-pos js-slide-position-bar"></div>
+        </div>
+        <button class="btn image-promo-grid__prev js-slide-prev-button" type="button" aria-label="previous">
+            <svg class="icon icon--arrow-left image-promo-grid__icon-prev" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-left">
+
+	</use>
+</svg>
+        </button>
+        <button class="btn image-promo-grid__next js-slide-next-button" type="button" aria-label="next">
+            <svg class="icon icon--arrow-right image-promo-grid__icon-next" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg>
+        </button>
+    </div>
+    <div class="image-promo-grid__list js-slide-container">
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="Afrique" data-location="/our-work/places/africa">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Kukawa Mubaraka, 1.5 years old, with his parents Hassan Mubarak and Rebhia Hamisi are seen at Umoja Heath Centre in Nairobi on May 16, 2019." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga11864737_dc587197_16x9.jpg?rev=5d3d02a36e324a12966ded5c19414a0e&w=960&hash=B89FBEE6511CBAF560311833F46FAFB4 960w, /-/media/gfo/4our-work/places/ga11864737_dc587197_16x9.jpg?rev=5d3d02a36e324a12966ded5c19414a0e&w=720&hash=9C3C973E675DDEB47930DDA1F40F1923 720w, /-/media/gfo/4our-work/places/ga11864737_dc587197_16x9.jpg?rev=5d3d02a36e324a12966ded5c19414a0e&w=480&hash=83113CBC9A7B3940E5E55A41DC93CE93 480w, /-/media/gfo/4our-work/places/ga11864737_dc587197_16x9.jpg?rev=5d3d02a36e324a12966ded5c19414a0e&w=240&hash=284B125474E0AED7950934DDF63B9DD2 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/africa">
+<span>Afrique</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="China" data-location="/our-work/places/china">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Students are busy in class at the Hua Ao School, located in Beijing, Shijingshan district on April 7, 2015. Founded in 1997 the school boards and educates nearly 900 students from low-income migrant parents at primary and middle school levels." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga1340658_ll441158_16x9.jpg?rev=d98176a8ba8f403693c7f80b96febf75&w=960&hash=1C6011AC4C851FB0B9F1F2152003CC12 960w, /-/media/gfo/4our-work/places/ga1340658_ll441158_16x9.jpg?rev=d98176a8ba8f403693c7f80b96febf75&w=720&hash=58A0EF96A4B2762666D06DCEF55DB5B4 720w, /-/media/gfo/4our-work/places/ga1340658_ll441158_16x9.jpg?rev=d98176a8ba8f403693c7f80b96febf75&w=480&hash=F162D33D81095A5C8120671603262C2F 480w, /-/media/gfo/4our-work/places/ga1340658_ll441158_16x9.jpg?rev=d98176a8ba8f403693c7f80b96febf75&w=240&hash=BE6D778FB343B5D06FF6E3FA63C91EE8 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/china">
+<span>China</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="East Asia" data-location="/our-work/places/east-asia">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Lab technician working on a neutralising antibody test on the Middle Eastern Respiratory Syndrome (MERS) coronavirus at a Bio Safety Level (BSL) 3 laboratory at the International Vaccine Institute (IVI) in Seoul." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/herokorea-page78213200x1800.jpg?rev=d7a7f4f06a0b4e8b98a31d78b6cc5799&w=960&hash=603D78F43564B0C926BC2F29ACF14533 960w, /-/media/gfo/4our-work/places/herokorea-page78213200x1800.jpg?rev=d7a7f4f06a0b4e8b98a31d78b6cc5799&w=720&hash=31EF4ECA3B67A796B666DB315C8BFE6D 720w, /-/media/gfo/4our-work/places/herokorea-page78213200x1800.jpg?rev=d7a7f4f06a0b4e8b98a31d78b6cc5799&w=480&hash=5456C0D6D56B7C4BBA73FAACE94F3B8B 480w, /-/media/gfo/4our-work/places/herokorea-page78213200x1800.jpg?rev=d7a7f4f06a0b4e8b98a31d78b6cc5799&w=240&hash=672DA815C4881451BBDE639A832A5100 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/east-asia">
+<span>East Asia</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="Europe" data-location="/our-work/places/europe">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Member of the audience asks a question at the One Great George Street Conference Center during a discussion entitled: Family Planning - the rights of girls and women. Co-hosted by The Department for International Development, The Gates Foundation and Save the Children. Wednesday, May 21, 2014." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga1352172_mk410138_16x9.jpg?rev=1fea83ad69d54dda8d9c23d552eb8643&w=960&hash=6CADA644210D4D7DA36505CC69198848 960w, /-/media/gfo/4our-work/places/ga1352172_mk410138_16x9.jpg?rev=1fea83ad69d54dda8d9c23d552eb8643&w=720&hash=DDC5E6C77C5EA95D744C75D9F2123B32 720w, /-/media/gfo/4our-work/places/ga1352172_mk410138_16x9.jpg?rev=1fea83ad69d54dda8d9c23d552eb8643&w=480&hash=311B3979E2B1B8EFD4530F6683DB4B3D 480w, /-/media/gfo/4our-work/places/ga1352172_mk410138_16x9.jpg?rev=1fea83ad69d54dda8d9c23d552eb8643&w=240&hash=22BE71095723B989EE151617449DA696 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/europe">
+<span>Europe</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="India" data-location="/our-work/places/india">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Gayatri Ahirwar, Auxiliary Nurse Midwife (ANM), explains the post care of the vaccinations given to a mother and child at an Anganwadi Centre (AWC) in Bhopal, Madhya Pradesh, India on September 26, 2018." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga11126608_mm561377_16x9.jpg?rev=50b2bdf2c53844678fa65e77c1e01d22&w=960&hash=92BDFDEDA91EF97A9950F241E954D507 960w, /-/media/gfo/4our-work/places/ga11126608_mm561377_16x9.jpg?rev=50b2bdf2c53844678fa65e77c1e01d22&w=720&hash=3D84EA8178D33552A9903891AA2CDFDD 720w, /-/media/gfo/4our-work/places/ga11126608_mm561377_16x9.jpg?rev=50b2bdf2c53844678fa65e77c1e01d22&w=480&hash=7F3B117C39CFD5FAAAC6F47E41FD6141 480w, /-/media/gfo/4our-work/places/ga11126608_mm561377_16x9.jpg?rev=50b2bdf2c53844678fa65e77c1e01d22&w=240&hash=80D063ADB7823B97A0A24CBB8D72AE4F 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/india">
+<span>India</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="Middle East" data-location="/our-work/places/middle-east">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="Ghida Krisht, intern at the United Nations World Food Programme speaks with Dr. Hassan Taie Hussein at the Hassan obstetric gynecological clinic in Luxor, Egypt. Dr. Hassan has seen improvements in pregnant women and newborn health since the Egyptian government with support from the United Nations World Food Program, Global Alliance for Improved Nutrition (GAIN), and the Egyptian Ministry of Social Solidarity, began fortifying flour with essential micronutrients to help combat widespread anemia. The program adds iron and folic acid to baladi bread, the staple food of Egyptians." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga1277152_oa143444_16x9.jpg?rev=f7a33d7f46244fb08547617bb675261c&w=960&hash=22C35B5668DF8D0FBC38DB84C0EF844F 960w, /-/media/gfo/4our-work/places/ga1277152_oa143444_16x9.jpg?rev=f7a33d7f46244fb08547617bb675261c&w=720&hash=07121BE3182F13B236167E57654FC82B 720w, /-/media/gfo/4our-work/places/ga1277152_oa143444_16x9.jpg?rev=f7a33d7f46244fb08547617bb675261c&w=480&hash=9087F44042DF26E8A95E19452D795D81 480w, /-/media/gfo/4our-work/places/ga1277152_oa143444_16x9.jpg?rev=f7a33d7f46244fb08547617bb675261c&w=240&hash=9709E53B1A3E1407A10DC7A34AF7E9FF 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/middle-east">
+<span>Middle East</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+                <div class="text-over-image">
+                        <article class="text-over-image__article js-make-clickable-element" aria-label="North America" data-location="/our-work/places/north-america">
+        <div class="text-over-image__image-wrapper">
+<img class="image-element text-over-image__image image-element" alt="A classroom of women take a test at the Rio Salado College in Tempe, AZ on October 26, 2016." sizes="&#40;min-width: 1230px&#41; 1170px, 100vw" srcset="/-/media/gfo/4our-work/places/ga1268367_mh485885_16x9.jpg?rev=29940792cad4455caa3515eaa54e708b&w=960&hash=E684AB04692C3DCD94E2B68D8DCCBE99 960w, /-/media/gfo/4our-work/places/ga1268367_mh485885_16x9.jpg?rev=29940792cad4455caa3515eaa54e708b&w=720&hash=39E915235EB9732BF6574A10D8B28725 720w, /-/media/gfo/4our-work/places/ga1268367_mh485885_16x9.jpg?rev=29940792cad4455caa3515eaa54e708b&w=480&hash=BA3CC57C15AA3023B50434D375A69951 480w, /-/media/gfo/4our-work/places/ga1268367_mh485885_16x9.jpg?rev=29940792cad4455caa3515eaa54e708b&w=240&hash=B26CCDFAC603010E09782C3560C0AB56 240w" height="540" width="960" loading="lazy" style="--image-height:540; --image-width:960">        </div>
+<a class="arrow-link arrow-link--arrow text-over-image__title" href="/our-work/places/north-america">
+<span>North America</span>
+<svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#arrow-right">
+
+	</use>
+</svg></a>
+    </article>
+
+                </div>
+    </div>
+</section>
+    </div>
+</section>
+
+</section>
+
+<section class="component container container--bleed theme-light  
+            " id="Container-c0d917df-1869-4f0b-b03e-08e0e1f04b97" 
+         style="  ">
+    
+<a class="component jump-nav-anchor js-jump-nav-anchor" id="program_strategies">Program strategies</a>
+<section class="component container container--100 ">
+    <div class="container__col container__col--100">
+        <section class="component accordion-group js-accordion-group" data-only-one="false" lang="fr-FR" dir="ltr">
+    <section class="section-headline section-headline--small component container section-headline--no-border ">
+            <h2 class="section-headline__title section-headline__title--small">
+                Stratégies du programme
+            </h2>
+        <!--
+            If viewing the component in Experience Editor, then show the dropdown.
+            Else, only show the dropdown if both the rendering parameter is checked and there is accompanying text
+        -->
+                    <div class="section-headline__subtitle">
+                Nous soutenons des idées novatrices pour répondre aux obstacles qui empêchent chacun de vivre pleinement sa vie. Certains projets que nous appuyons n'aboutiront pas ; c'est un fait que nous acceptons et même que nous anticipons. La philanthropie consiste à prendre des risques sur des solutions que les gouvernements et les entreprises ne peuvent pas se permettre de financer. À mesure que nous identifions les solutions porteuses, nous adaptons nos stratégies et partageons les résultats au profit de tous.
+            </div>
+    </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Égalité des sexes
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p>Notre p&ocirc;le &Eacute;galit&eacute; des sexes &oelig;uvre pour que chaque femme et chaque fille en Afrique et en Asie du Sud puisse &ecirc;tre en bonne sant&eacute;, faire ses propres choix, avoir ses propres revenus et faire preuve de leadership dans sa soci&eacute;t&eacute;.</p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/gender-equality/family-planning" class="arrow-link arrow-link--arrow" style="color:black;"><span>Family Planning</span> <svg class=" icon=" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/gender-equality/maternal-newborn-child-nutrition-and-health" class="arrow-link arrow-link--arrow" style="color:black;"><span>Maternal, Newborn, Child Nutrition & Health</span> <svg class=" icon=" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/gender-equality/strategic-initiatives" class="arrow-link arrow-link--arrow" style="color:black;"><span>Strategic Initiatives </span> <svg class=" icon=" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/gender-equality/women-in-leadership" class="arrow-link arrow-link--arrow" style="color:black;"><span>Women in Leadership</span> <svg class=" icon=" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+
+<p><a href="/our-work/programs/gender-equality/womens-health-innovations" class="arrow-link arrow-link--arrow" style="color:black;"><span>Women’s Health Innovations</span> <svg class=" icon=" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Développement international
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p style="padding-bottom: 1em;">Notre p&ocirc;le D&eacute;veloppement international cherche en priorit&eacute; &agrave; am&eacute;liorer la fourniture de produits et services de sant&eacute; &agrave; fort impact aux communaut&eacute;s les plus pauvres du monde, et aide les pays &agrave; &eacute;tendre leur couverture sanitaire.</p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/global-development/emergency-response" class="arrow-link arrow-link--arrow" style="color:black;"><span>Emergency Response</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a>
+</p>
+<p><a href="/our-work/programs/global-development/global-health-agencies-and-funds" class="arrow-link arrow-link--arrow" style="color:black;"><span>Global Health Agencies and Funds</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a>
+</p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/global-development/immunization" class="arrow-link arrow-link--arrow" style="color:black;"><span>Immunization</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a>
+</p>
+<p><a href="/our-work/programs/global-development/polio" class="arrow-link arrow-link--arrow" style="color:black;"><span>Polio</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a>
+</p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Croissance et opportunité mondiale
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p style="padding-bottom: 1em;">Notre p&ocirc;le Croissance mondiale et opportunit&eacute;s se consacre &agrave; la cr&eacute;ation et au d&eacute;ploiement &agrave; grande &eacute;chelle d'innovations fond&eacute;es sur le march&eacute; pour stimuler une croissance &eacute;conomique inclusive et durable. </p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/global-growth-and-opportunity/agricultural-development" class="arrow-link arrow-link--arrow" style="color:black;"><span>D&eacute;veloppement agricole</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-growth-and-opportunity/digital-public-infrastructure" class="arrow-link arrow-link--arrow" style="color:black;"><span>Digital Public Infrastructure</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-growth-and-opportunity/global-education-program" class="arrow-link arrow-link--arrow" style="color:black;"><span>Global Education Program</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/global-growth-and-opportunity/inclusive-financial-systems" class="arrow-link arrow-link--arrow" style="color:black;"><span>Syst&egrave;mes financiers inclusifs</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-growth-and-opportunity/nutrition" class="arrow-link arrow-link--arrow" style="color:black;"><span>Nutrition</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-growth-and-opportunity/water-sanitation-and-hygiene" class="arrow-link arrow-link--arrow" style="color:black;"><span>Eau, assainissement &amp; hygi&egrave;ne</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Santé mondiale
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p style="padding-bottom: 1em;">Notre p&ocirc;le Sant&eacute; mondiale a pour objectif de r&eacute;duire les in&eacute;galit&eacute;s en mati&egrave;re de sant&eacute;, en d&eacute;veloppant de nouveaux outils et de nouvelles strat&eacute;gies qui visent &agrave; r&eacute;duire la charge des maladies infectieuses et des principales causes de mortalit&eacute; infantile dans les pays en d&eacute;veloppement.</p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/global-health/accelerator" class="arrow-link arrow-link--arrow" style="color:black;"><span>Accelerator </span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/discovery-and-translational-sciences" class="arrow-link arrow-link--arrow" style="color:black;"><span>Discovery & Translational Sciences</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/enterics-diagnostics-genomics-and-epidemiology" class="arrow-link arrow-link--arrow" style="color:black;"><span>Enterics, Diagnostics, Genomics & Epidemiology (EDGE)</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/hiv" class="arrow-link arrow-link--arrow" style="color:black;"><span>HIV</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/institute-for-disease-modeling" class="arrow-link arrow-link--arrow" style="color:black;"><span>Institute for Disease Modeling</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/integrated-development" class="arrow-link arrow-link--arrow" style="color:black;"><span>Integrated Development</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/global-health/malaria" class="arrow-link arrow-link--arrow" style="color:black;"><span>Malaria</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/neglected-tropical-diseases" class="arrow-link arrow-link--arrow" style="color:black;"><span>Neglected Tropical Diseases</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/pneumonia" class="arrow-link arrow-link--arrow" style="color:black;"><span>Pneumonia</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/tuberculosis" class="arrow-link arrow-link--arrow" style="color:black;"><span>Tuberculosis</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-health/vaccine-development" class="arrow-link arrow-link--arrow" style="color:black;"><span>Vaccine Development</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Politique et plaidoyer mondiaux
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p style="padding-bottom: 1em;">Notre pôle Politique et plaidoyer mondiaux cherche à développer des relations stratégiques et à promouvoir des politiques publiques alignées avec nos actions.</p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/global-policy-and-advocacy/development-policy-and-finance" class="arrow-link arrow-link--arrow" style="color:black;"><span>Development Policy and Finance</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-policy-and-advocacy/global-media-partnerships" class="arrow-link arrow-link--arrow" style="color:black;"><span>Global Media Partnerships</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/global-policy-and-advocacy/philanthropic-partnerships" class="arrow-link arrow-link--arrow" style="color:black;"><span>Philanthropic Partnerships</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/global-policy-and-advocacy/tobacco-control" class="arrow-link arrow-link--arrow" style="color:black;"><span>Tobacco Control</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+        <section class="accordion component js-accordion " lang="fr-FR">
+                <div class="accordion__title">
+                    <button class="btn accordion__toggle js-accordion-link" type="button">
+                        Programme États-Unis
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" class="plus-icon"><line class="plus-icon__vertical-line" x1="12" y1="5" x2="12" y2="19"></line><line class="plus-icon__horizontal-line" x1="5" y1="12" x2="19" y2="12"></line><rect class="plus-icon__square" x="11" y="11" width="2" height="2" transform="rotate(45 12 12)" fill="currentColor"></rect></svg>
+                    </button>
+                </div>
+                            <div class="accordion__content js-accordion-content">
+                    <section class="rich-text js-rich-text component">
+                        <p>Notre p&ocirc;le Programme des &Eacute;tats-Unis &oelig;uvre &agrave; ce que chaque personne qui vit aux &Eacute;tats-Unis puisse apprendre, s'&eacute;panouir et prosp&eacute;rer, quels que soient sa race, son genre, son origine ethnique ou son revenu familial.</p>
+<p style="padding-bottom: 1em;"><a href="https://usprogram.gatesfoundation.org/" rel="noopener noreferrer" class="arrow-link arrow-link--external" target="_blank" style="color:black;">
+<span>Learn more</span>
+<svg class="icon icon--external" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=20c9b57fd364c34094ea7c199cd4467be6e83bcd#external">
+</use>
+</svg>
+</a>
+</p>
+<div class="rich-text__snippet rich-text__snippet--5050">
+<div class="rich-text__5050-left">
+<p><a href="/our-work/programs/us-program/data-strategy" class="arrow-link arrow-link--arrow" style="color:black;"><span>Data</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/us-program/early-learning-solutions" class="arrow-link arrow-link--arrow" style="color:black;"><span>Early Learning Solutions</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/us-program/economic-mobility-and-opportunity" class="arrow-link arrow-link--arrow" style="color:black;"><span>Economic Mobility and Opportunity</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/us-program/k-12-education" class="arrow-link arrow-link--arrow" style="color:black;"><span>K-12 Education</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+<div class="rich-text__5050-right">
+<p><a href="/our-work/programs/us-program/pathways" class="arrow-link arrow-link--arrow" style="color:black;"><span>Pathways</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/us-program/postsecondary-success" class="arrow-link arrow-link--arrow" style="color:black;"><span>Postsecondary Success</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+<p><a href="/our-work/programs/us-program/washington-state" class="arrow-link arrow-link--arrow" style="color:black;"><span>Washington State</span> <svg class="icon icon--arrow-right" aria-hidden="true" focusable="false">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=0305acf8e0e3f4a7bb3a9b6becd8c1a01d25d0f1#arrow-right">
+</use>
+</svg></a></p>
+</div>
+</div>
+                    </section>
+                </div>
+        </section>
+</section>
+
+    </div>
+</section>
+
+</section>
+
+<section class="component container container--bleed theme-light  
+            " id="Container-3b323660-cc1d-46cf-aa93-8e7c44d23eef" 
+         style="  ">
+    <section class="component container container--100 ">
+    <div class="container__col container__col--100">
+        
+<a class="component jump-nav-anchor js-jump-nav-anchor" id="more_about_our_work">More about our work</a>
+<section class="section-headline component component--headline container section-headline--small section-headline--no-border "
+         lang="fr-FR" dir="ltr">
+    <h2 class="section-headline__title section-headline__title--small">En savoir plus sur nos activités</h2>
+
+
+</section>
+<section class="component grouped-cta-cards  " >
+    <div class="grouped-cta-cards__items">
+        <div class="cta-card component   " 
+      lang="fr-FR" dir="ltr">
+    <div class="cta-card__title">
+	    <span>Notre méthode de travail</span>
+    </div>
+        <div class="cta-card__description">
+            Qu’il s’agisse de cultures à faibles rendements en Afrique ou d’obstacles liés au genre en Inde, nous sommes à l’écoute et nous apprenons afin d'identifier les problèmes urgents qui sont sous-estimés.
+        </div>
+            <ul class="cta-card__links" aria-label="Notre méthode de travail">
+
+                <li class="cta-card__link">
+                    <a class="arrow-link" data-gtm-element="promo cta" href="/about/how-we-work" data-gtm-text="En savoir plus" data-gtm-link="https://www.gatesfoundation.org/about/how-we-work">
+<span>En savoir plus</span>
+</a>
+                </li>
+                                                        </ul>
+</div>
+<div class="cta-card component   " 
+      lang="fr-FR" dir="ltr">
+    <div class="cta-card__title">
+	    <span>Subventions attribuées</span>
+    </div>
+        <div class="cta-card__description">
+            Nous avons financé des milliers de projets de toutes tailles. Notre base de données répertorie les subventions versées et engagées depuis 1994.
+        </div>
+            <ul class="cta-card__links" aria-label="Subventions attribuées">
+
+                <li class="cta-card__link">
+                    <a class="arrow-link" data-gtm-element="promo cta" href="/about/committed-grants" data-gtm-text="Learn more" data-gtm-link="https://www.gatesfoundation.org/about/committed-grants">
+<span>Learn more</span>
+</a>
+                </li>
+                                                        </ul>
+</div>
+<div class="cta-card component   " 
+      lang="fr-FR" dir="ltr">
+    <div class="cta-card__title">
+	    <span>Investissements stratégiques</span>
+    </div>
+        <div class="cta-card__description">
+            Nous collaborons avec des entrepreneurs, des entreprises et d'autres organisations pour créer des leviers qui mobilisent le potentiel du secteur privé afin d'apporter des changements concrets à ceux qui en ont le plus besoin.
+        </div>
+            <ul class="cta-card__links" aria-label="Investissements stratégiques">
+
+                <li class="cta-card__link">
+                    <a class="arrow-link" data-gtm-element="promo cta" href="/about/how-we-work/strategic-investments" data-gtm-text="Learn more" data-gtm-link="https://www.gatesfoundation.org/about/how-we-work/strategic-investments">
+<span>Learn more</span>
+</a>
+                </li>
+                                                        </ul>
+</div>
+    </div>
+</section> 
+    </div>
+</section>
+
+</section>
+
+<section class="component container container--bleed theme-light  
+            " id="Container-0ef2d034-fd02-44a8-a03c-e02864e26d93" 
+         style="  ">
+    <section class="component container container--100 ">
+    <div class="container__col container__col--100">
+        
+
+    <section class="js-email-signup email-signup  email-signup--background" 
+             style="background-color:#ebcb00;color:#313a44;" 
+             data-scroll-depth=""
+             lang="en" dir="ltr">
+        <div class="email-signup__inner">
+                <div class="email-signup__details">
+                    <span class="email-signup__title">Get the Optimist newsletter</span>
+                        <div class="email-signup__description rich-text">
+                            Join 300,000 readers who see the world differently. Subscribe for hopeful stories about the people and partnerships improving lives around the world — every other week.
+                        </div>
+                </div>
+                <form class="sc-form js-form email-signup__form js-sc-email-signup1"
+					  data-sitekey="6Lf3sOIqAAAAAOCgs_XQ-rJNeZpBP4s-bBV-pvC8"
+					  data-post-url="/api/emailsignup/Submit"
+                      data-newsletter-signup-component="true"
+                      data-newsletter-signup-component-name=Normal
+                      method="post"
+                      novalidate
+                      data-recaptcha-version="v2-invisible"
+                      data-goal={BCE81E6A-A111-480F-A7DC-5AEEA2EE14AF}>
+
+                    <label class="sc-form-item js-form-required">
+                        <span class="sc-form-item__label">Email address</span>
+                        <input type="email"
+                               class="sc-form-item__field js-email-signup-input"
+                               id="ba280da5-e3d4-4014-8712-4ffc704a3688"
+                               data-type="email"
+                               aria-required="true"
+                               autocomplete="email"
+                               placeholder=""
+                               name="email"
+                               value="" />
+                        <span role="alert" class="sc-form-item__error-msg">
+                            Please enter a valid email address
+                        </span>
+                    </label>
+                    <div class="sc-form__button-row email-signup__button-row">
+                        <button 
+							type="submit" 
+							class="btn btn--primary email-signup__submit-button">
+                            Subscribe
+                        </button>
+                    </div>
+					<div class="email-signup__error-row">
+						<div class="sc-form-item js-form-required js-recaptcha-item">
+							<input type="hidden" name="recaptcha-token" aria-required="true" />
+							<div role="alert" class="sc-form-item__error-msg">
+								Invalid Recaptcha, Please try again
+							</div>
+						</div>
+						<input type="hidden" name="FormID" value="{DAF42FFE-4AD4-4151-BE0C-9C97AFC3E241}" />
+						<input type="hidden" name="CurrentStageName" value="Stage1" />
+						<div class="sc-form__general-error js-form-general-error"></div>
+					</div>
+                    <div class="email-signup__terms">
+                        <p>This site is protected by reCAPTCHA and the Google <a class="link" rel="noopener noreferrer" href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>, and <a class="link" rel="noopener noreferrer" href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply. 
+By submitting your email to subscribe, you agree to the Gates Foundation's <a class="link" href="/privacy-and-cookies-notice">Privacy &amp; Cookies Notice</a></p>
+                    </div>
+                </form>
+            
+        </div>
+    </section>
+
+    </div>
+</section>
+
+</section>
+</div>
+    </main>
+    <footer>
+        
+<section class="global-footer global-footer--dark" dir="ltr">
+    <div class="global-footer__container container">
+            <div class="global-footer__logo" lang="fr-FR" dir="ltr">
+        <a href="/" class="global-footer__logo-link">
+<img src="/-/media/logos/gf-primary-parchment-logo_4by1-ratio-fixed.svg?iar=0&amp;rev=79f9fb8b87054287a7d402227073bf82&amp;hash=408156F3B5360D65B04AA0E8B51938A9" class="global-footer__logo-image" alt="Gates Foundation" srcset="/-/media/logos/gf-primary-parchment-logo_4by1-ratio-fixed.svg?rev=79f9fb8b87054287a7d402227073bf82&#38;hash=BCC2CF4976EFC24C7E544C43301728A2">                    </a>
+    </div>
+
+        <div class="global-footer__main-content">
+                <div class="global-footer__description" lang="fr-FR">
+        We are a nonprofit fighting poverty, disease, and inequity around the world.
+    </div>
+
+    <nav class="global-footer__main-links global-footer__main-links--mobile"
+         aria-label="Main areas">
+        <ul class="global-footer__items">
+                    <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/about">About</a>                    </li>
+                    <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/our-work">Our work</a>                    </li>
+                    <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/ideas">Ideas</a>                    </li>
+        </ul>
+    </nav>
+    <div class="global-footer__social-icons">
+                <div class="social-connect-icons">
+            <div class="social-connect-icons__icons">
+<a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on X" target="_blank" title="Follow Gates Foundation on X" rel="noopener noreferrer" href="https://twitter.com/gatesfoundation"><svg class="icon icon--social-twitter icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-twitter">
+
+	</use>
+</svg></a><a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on Facebook" target="_blank" title="Follow Gates Foundation on Facebook" rel="noopener noreferrer" href="https://www.facebook.com/gatesfoundation/"><svg class="icon icon--social-facebook icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-facebook">
+
+	</use>
+</svg></a><a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on LinkedIn" target="_blank" title="Follow Gates Foundation on LinkedIn" rel="noopener noreferrer" href="https://www.linkedin.com/company/gates-foundation"><svg class="icon icon--social-linkedin icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-linkedin">
+
+	</use>
+</svg></a><a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on Instagram" target="_blank" title="Follow Gates Foundation on Instagram" rel="noopener noreferrer" href="https://www.instagram.com/gatesfoundation/"><svg class="icon icon--social-instagram icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-instagram">
+
+	</use>
+</svg></a><a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on YouTube" target="_blank" title="Follow Gates Foundation on YouTube" rel="noopener noreferrer" href="https://www.youtube.com/user/GatesFoundation/"><svg class="icon icon--social-youtube icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-youtube">
+
+	</use>
+</svg></a><a class="social-connect-icons__button js-social-follow" aria-label="Follow Gates Foundation on Threads" target="_blank" title="Follow Gates Foundation on Threads" rel="noopener noreferrer" href="https://www.threads.net/@gatesfoundation"><svg class="icon icon--social-threads icon--32x32" aria-hidden="true" focusable="false">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Areas/GFO/assets/img/svg-sprite.svg?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d#social-threads">
+
+	</use>
+</svg></a>            </div>
+        </div>
+
+        </div>
+        <nav class="global-footer__main-links global-footer__main-links--desktop"
+             aria-label="Main areas">
+            <ul class="global-footer__items">
+                        <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/about">About</a>                        </li>
+                        <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/our-work">Our work</a>                        </li>
+                        <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/ideas">Ideas</a>                        </li>
+            </ul>
+        </nav>
+<nav class="global-footer__contact-links" aria-label="Contact Us">
+    <ul class="global-footer__items">
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/about/contact">Contact</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/ideas/media-center">Media Center</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/about/careers">Careers</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://www.discovergates.org/">Discovery Center</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://www.gatesphilanthropypartners.org/">Give with us</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://www.gatesfoundation.org/goalkeepers/">Goalkeepers</a>            </li>
+    </ul>
+</nav><nav class="global-footer__legal-links" aria-label="Legal Information">
+    <ul class="global-footer__items">
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/about/contact/reporting-scams">Reporting scams</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://secure.ethicspoint.com/domain/media/en/gui/7589/index.html ">Ethics reporting</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/privacy-and-cookies-notice">Privacy &amp; Cookies Notice</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" href="/terms-of-use">Terms of Use</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://www.gatesfoundation.org/brandguidelines">Brand guidelines</a>            </li>
+            <li class="global-footer__link-item" lang="en" dir="ltr">
+<a class="global-footer__link link" target="_blank" rel="noopener noreferrer" href="https://vendors.gatesfoundation.org/">Vendors</a>            </li>
+    </ul>
+</nav>
+            <div class="global-footer__copyright">
+                    <div class="footer-copyright" lang="fr-FR" >2025-2026 Gates Foundation. All rights reserved.</div>
+
+                </div>
+        </div>
+    </div>
+</section>
+
+    </footer>
+</div>
+    <script src="/assets/js/oldBrowser.js"></script>
+<script src="/Areas/GFO/assets/js/libraries-generated.js?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d"></script><script src="/Areas/GFO/assets/js/index-generated.js?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d"></script><script src="/assets/js/email-signup-generated.js?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d"></script><script src="/assets/js/story-modals-container-generated.js?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d"></script><script src="/assets/js/image-promo-grid-generated.js?v=bb1a6ce6bba3d03387a03da6edbbe26348f1142d"></script>
+</body></html>

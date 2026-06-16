@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="utf-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Steve Fund</title>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<meta name="description" content="We are dedicated to supporting the mental health and emotional well-being for students of color." />
+	<link rel="canonical" href="https://stevefund.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="The Steve Fund" />
+	<meta property="og:description" content="We are dedicated to supporting the mental health and emotional well-being for students of color." />
+	<meta property="og:url" content="https://stevefund.org/" />
+	<meta property="og:site_name" content="The Steve Fund" />
+	<meta property="article:publisher" content="https://www.facebook.com/The-Steve-Fund-1416226418672754/" />
+	<meta property="article:modified_time" content="2026-05-08T19:31:00+00:00" />
+	<meta property="og:image" content="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2025/05/Soul-Care-Relate-blog-1-3rd-image-100.jpg" />
+	<meta property="og:image:width" content="991" />
+	<meta property="og:image:height" content="747" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@thestevefund" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/stevefund.org\/","url":"https:\/\/stevefund.org\/","name":"The Steve Fund","isPartOf":{"@id":"https:\/\/stevefund.org\/#website"},"about":{"@id":"https:\/\/stevefund.org\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/stevefund.org\/#primaryimage"},"image":{"@id":"https:\/\/stevefund.org\/#primaryimage"},"thumbnailUrl":"https:\/\/stevefund.org\/wp-content\/uploads\/2025\/05\/Soul-Care-Relate-blog-1-3rd-image-100.jpg","datePublished":"2023-01-23T17:27:34+00:00","dateModified":"2026-05-08T19:31:00+00:00","description":"We are dedicated to supporting the mental health and emotional well-being for students of color.","breadcrumb":{"@id":"https:\/\/stevefund.org\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/stevefund.org\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/stevefund.org\/#primaryimage","url":"https:\/\/stevefund.org\/wp-content\/uploads\/2025\/05\/Soul-Care-Relate-blog-1-3rd-image-100.jpg","contentUrl":"https:\/\/stevefund.org\/wp-content\/uploads\/2025\/05\/Soul-Care-Relate-blog-1-3rd-image-100.jpg","width":991,"height":747},{"@type":"BreadcrumbList","@id":"https:\/\/stevefund.org\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/stevefund.org\/#website","url":"https:\/\/stevefund.org\/","name":"The Steve Fund","description":"Achieving Equity in Mental Health","publisher":{"@id":"https:\/\/stevefund.org\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/stevefund.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/stevefund.org\/#organization","name":"The Steve Fund","url":"https:\/\/stevefund.org\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/stevefund.org\/#\/schema\/logo\/image\/","url":"https:\/\/stevefund.org\/wp-content\/uploads\/2023\/01\/stevefund-logo.svg","contentUrl":"https:\/\/stevefund.org\/wp-content\/uploads\/2023\/01\/stevefund-logo.svg","width":112,"height":85,"caption":"The Steve Fund"},"image":{"@id":"https:\/\/stevefund.org\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/The-Steve-Fund-1416226418672754\/","https:\/\/x.com\/thestevefund","https:\/\/www.linkedin.com\/company\/thestevefund","https:\/\/www.instagram.com\/thestevefund\/","https:\/\/www.youtube.com\/channel\/UCnP35pt4PhI1UJQiHCRkPSQ"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.cdnfonts.com' />
+
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='wpdm-fonticon-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/download-manager/assets/wpdm-iconfont/css/wpdm-icons.css?ver=1773833152' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdm-front-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/background-css/1/stevefund.org/wp-content/plugins/download-manager/assets/css/front.min.css?ver=3.3.56&wpr_t=1781499188' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdm-front-dark-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/background-css/1/stevefund.org/wp-content/plugins/download-manager/assets/css/front-dark.min.css?ver=3.3.56&wpr_t=1781499188' type='text/css' media='all' />
+<link rel='stylesheet' id='stevefund-gilroy-fonts-css' href='//fonts.cdnfonts.com/css/gilroy-bold' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-noto-serif-fonts-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/npm/noto-serif-jp@21.0.0/all.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-font-awesome-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/ajax/libs/font-awesome/6.7.2/css/all.min.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-bootstrap-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-swiper-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/swiper@8/swiper-bundle.min.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-lity-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/ajax/libs/lity/2.4.1/lity.min.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-style-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/themes/stevefund/style.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-root-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/themes/stevefund/css/root.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-components-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/background-css/1/stevefund.org/wp-content/cache/min/1/wp-content/themes/stevefund/css/components.css?ver=1773833153&wpr_t=1781499188' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stevefund-responsive-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/themes/stevefund/css/responsive.css?ver=1773833153' type='text/css' media='all' />
+<style id='stevefund-inline-inline-css' type='text/css'>
+.sv-banner-container{ background-color: #fdc865; }
+.sv-banner-content,
+.sv-banner-content a{ color: #042b75; }
+
+/*# sourceURL=stevefund-inline-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='cf7cf-style-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/cf7-conditional-fields/style.css?ver=1773833153' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='sib-front-css-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/background-css/1/stevefund.org/wp-content/cache/min/1/wp-content/plugins/mailin/css/mailin-front.css?ver=1773833153&wpr_t=1781499188' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='moove_gdpr_frontend-css' href='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main-nf.css?ver=1773833153' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css'>
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main h3.tab-title, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main span.tab-title,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content .moove-gdpr-branding-cnt a,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,
+				#moove_gdpr_cookie_modal .cookie-switch .cookie-slider:after, 
+				#moove_gdpr_cookie_modal .cookie-switch .slider:after, 
+				#moove_gdpr_cookie_modal .switch .cookie-slider:after, 
+				#moove_gdpr_cookie_modal .switch .slider:after,
+				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content p, 
+				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content p a,
+				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton, 
+				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h1, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h2, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h3, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h4, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h5, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h6,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-modal-title .tab-title,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-tab-main h3.tab-title, 
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-tab-main span.tab-title,
+				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-branding-cnt a {
+					font-weight: inherit				}
+			#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:inherit}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#042b75}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#042b75;border-color:#042b75}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#042b75}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#042b75;border:1px solid #042b75}#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-allow-all.focus-g,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-allow-all:focus,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-allow-all.focus-g,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-allow-all:focus,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-reject-btn.focus-g,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-reject-btn:focus,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-reject-btn.focus-g,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-reject-btn:focus,#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar span.change-settings-button:focus,#moove_gdpr_cookie_info_bar button.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar button.change-settings-button:focus{-webkit-box-shadow:0 0 1px 3px #042b75;-moz-box-shadow:0 0 1px 3px #042b75;box-shadow:0 0 1px 3px #042b75}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#042b75}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,span.change-settings-button:focus,button.change-settings-button.focus-g,button.change-settings-button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:focus{color:#042b75}#moove_gdpr_cookie_modal .moove-gdpr-branding.focus-g span,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main a.focus-g,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .gdpr-cd-details-toggle.focus-g{color:#042b75}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr-shr-button,#moove_gdpr_cookie_info_bar .moove-gdpr-infobar-close-btn{border-radius:0}
+/*# sourceURL=moove_gdpr_frontend-inline-css */
+</style>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/download-manager/assets/js/wpdm.min.js?ver=6.9.4" id="wpdm-frontend-js-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="wpdm-frontjs-js-extra">
+/* <![CDATA[ */
+var wpdm_url = {"home":"https://stevefund.org/","site":"https://stevefund.org/","ajax":"https://stevefund.org/wp-admin/admin-ajax.php"};
+var wpdm_js = {"spinner":"\u003Ci class=\"wpdm-icon wpdm-sun wpdm-spin\"\u003E\u003C/i\u003E","client_id":"972d1f8d7b71a30e873d68abcd00c161"};
+var wpdm_strings = {"pass_var":"Password Verified!","pass_var_q":"Please click following button to start download.","start_dl":"Start Download"};
+//# sourceURL=wpdm-frontjs-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/download-manager/assets/js/front.min.js?ver=3.3.56" id="wpdm-frontjs-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="sib-front-js-js-extra">
+/* <![CDATA[ */
+var sibErrMsg = {"invalidMail":"Please fill out valid email address","requiredField":"Please fill out required fields","invalidDateFormat":"Please fill out valid date format","invalidSMSFormat":"Please fill out valid phone number"};
+var ajax_sib_front_object = {"ajax_url":"https://stevefund.org/wp-admin/admin-ajax.php","ajax_nonce":"c03dc25d2d","flag_url":"https://stevefund.org/wp-content/plugins/mailin/img/flags/"};
+//# sourceURL=sib-front-js-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/mailin/js/mailin-front.js?ver=1773833153" id="sib-front-js-js" data-rocket-defer defer></script>
+<style>.call.action .sv-cta-container a {
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: 20px;
+}</style><script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/sdk/1.1/wonderpush-loader.min.js?ver=1774649871" async></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+  window.WonderPush = window.WonderPush || [];
+  window.WonderPush.push(['init', {"customDomain":"https:\/\/stevefund.org\/wp-content\/plugins\/mailin\/","serviceWorkerUrl":"wonderpush-worker-loader.min.js?webKey=7da6e988c3c693dd49bf3f948b9760afaaba7ffb5c6ea6c07053c128b1e6315f","frameUrl":"wonderpush.min.html","webKey":"7da6e988c3c693dd49bf3f948b9760afaaba7ffb5c6ea6c07053c128b1e6315f"}]);
+</script><link rel="icon" href="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/cropped-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.modal-backdrop.show {
+  z-index: 10;
+}
+
+#wpdm-locks .modal-icon {
+  display: none;
+}
+
+#wpdm-locks .panel-heading.card-header {
+  display: none;
+}
+
+#wpdm-locks .panel.panel-default.card {
+  border: none;
+}
+
+.sv-mds-popup-feedback .wpcf7-form-control-wrap {
+  margin: 0;
+}
+
+.sv-mds-popup-feedback .mds-radio-label {
+  margin-bottom: 10px !important;
+  display: block;
+}
+
+.checklist-block .wpcf7-form-control-wrap {
+    margin: 1rem 0;
+    display: block;
+}
+
+.checklist-block .wpcf7-list-item {
+    display: block;
+		margin:0;
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 14px !important;
+  margin-top: -0px;
+  padding-left: 10px;
+}
+.main-content img.aligncenter {
+    max-width: 1000px !important;
+}		</style>
+		<meta name="generator" content="WordPress Download Manager 3.3.56" />
+                <style>
+        /* WPDM Link Template Styles */        </style>
+                <style>
+
+            :root {
+                --color-primary: #4a8eff;
+                --color-primary-rgb: 74, 142, 255;
+                --color-primary-hover: #5998ff;
+                --color-primary-active: #3281ff;
+                --clr-sec: #6c757d;
+                --clr-sec-rgb: 108, 117, 125;
+                --clr-sec-hover: #6c757d;
+                --clr-sec-active: #6c757d;
+                --color-secondary: #6c757d;
+                --color-secondary-rgb: 108, 117, 125;
+                --color-secondary-hover: #6c757d;
+                --color-secondary-active: #6c757d;
+                --color-success: #018e11;
+                --color-success-rgb: 1, 142, 17;
+                --color-success-hover: #0aad01;
+                --color-success-active: #0c8c01;
+                --color-info: #2CA8FF;
+                --color-info-rgb: 44, 168, 255;
+                --color-info-hover: #2CA8FF;
+                --color-info-active: #2CA8FF;
+                --color-warning: #FFB236;
+                --color-warning-rgb: 255, 178, 54;
+                --color-warning-hover: #FFB236;
+                --color-warning-active: #FFB236;
+                --color-danger: #ff5062;
+                --color-danger-rgb: 255, 80, 98;
+                --color-danger-hover: #ff5062;
+                --color-danger-active: #ff5062;
+                --color-green: #30b570;
+                --color-blue: #0073ff;
+                --color-purple: #8557D3;
+                --color-red: #ff5062;
+                --color-muted: rgba(69, 89, 122, 0.6);
+                --wpdm-font: "Sen", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+
+            .wpdm-download-link.btn.btn-primary {
+                border-radius: 4px;
+            }
+
+
+        </style>
+        <noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.w3eden .blockui:before{--wpr-bg-daad7572-f324-459f-89f9-eba73a46ce0c: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/download-manager/assets/images/loader.svg');}.w3eden.dark-mode .wpdm-custom-select,.w3eden.dark-mode .wpdm-dt-category-filter{--wpr-bg-bce2f01a-c65c-4f32-bffe-a7f016fcfb05: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/download-manager/assets/images/sort.svg');}.w3eden:not(.light-mode) .wpdm-custom-select,.w3eden:not(.light-mode) .wpdm-dt-category-filter{--wpr-bg-f0fc7766-f7be-4fcd-88bd-4134ebb257e2: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/download-manager/assets/images/sort.svg');}#donate-action,#donate-action-in-content{--wpr-bg-99afbf7f-178b-4b24-b074-b595e64cfba8: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/themes/stevefund/img/heart.svg');}blockquote p{--wpr-bg-f07b919a-cd64-4eaa-b364-9fb8f85aaa26: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/themes/stevefund/img/blockquote.svg');}.sib-country-block .sib-toggle .sib-cflags{--wpr-bg-53b21275-4f2a-4583-abaa-c16a3699d510: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/mailin/img/flags/fr.png');}.sib-sms-field ul.sib-country-list li .sib-flag-box .sib-flag{--wpr-bg-fb28c391-aedb-4008-ac5e-26e44cbd4b3c: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/mailin/img/flags/ad.png');}#sv-intro-heading-1{--wpr-bg-fc8bc8a4-da57-4686-9b61-ba476ed5458a: url('https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2024/12/Theme-B-02-2.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".w3eden .blockui","style":".w3eden .blockui:before{--wpr-bg-daad7572-f324-459f-89f9-eba73a46ce0c: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/plugins\/download-manager\/assets\/images\/loader.svg');}","hash":"daad7572-f324-459f-89f9-eba73a46ce0c","url":"https:\/\/stevefund.org\/wp-content\/plugins\/download-manager\/assets\/images\/loader.svg"},{"selector":".w3eden.dark-mode .wpdm-custom-select,.w3eden.dark-mode .wpdm-dt-category-filter","style":".w3eden.dark-mode .wpdm-custom-select,.w3eden.dark-mode .wpdm-dt-category-filter{--wpr-bg-bce2f01a-c65c-4f32-bffe-a7f016fcfb05: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/plugins\/download-manager\/assets\/images\/sort.svg');}","hash":"bce2f01a-c65c-4f32-bffe-a7f016fcfb05","url":"https:\/\/stevefund.org\/wp-content\/plugins\/download-manager\/assets\/images\/sort.svg"},{"selector":".w3eden:not(.light-mode) .wpdm-custom-select,.w3eden:not(.light-mode) .wpdm-dt-category-filter","style":".w3eden:not(.light-mode) .wpdm-custom-select,.w3eden:not(.light-mode) .wpdm-dt-category-filter{--wpr-bg-f0fc7766-f7be-4fcd-88bd-4134ebb257e2: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/plugins\/download-manager\/assets\/images\/sort.svg');}","hash":"f0fc7766-f7be-4fcd-88bd-4134ebb257e2","url":"https:\/\/stevefund.org\/wp-content\/plugins\/download-manager\/assets\/images\/sort.svg"},{"selector":"#donate-action,#donate-action-in-content","style":"#donate-action,#donate-action-in-content{--wpr-bg-99afbf7f-178b-4b24-b074-b595e64cfba8: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/themes\/stevefund\/img\/heart.svg');}","hash":"99afbf7f-178b-4b24-b074-b595e64cfba8","url":"https:\/\/stevefund.org\/wp-content\/themes\/stevefund\/img\/heart.svg"},{"selector":"blockquote p","style":"blockquote p{--wpr-bg-f07b919a-cd64-4eaa-b364-9fb8f85aaa26: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/themes\/stevefund\/img\/blockquote.svg');}","hash":"f07b919a-cd64-4eaa-b364-9fb8f85aaa26","url":"https:\/\/stevefund.org\/wp-content\/themes\/stevefund\/img\/blockquote.svg"},{"selector":".sib-country-block .sib-toggle .sib-cflags","style":".sib-country-block .sib-toggle .sib-cflags{--wpr-bg-53b21275-4f2a-4583-abaa-c16a3699d510: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/plugins\/mailin\/img\/flags\/fr.png');}","hash":"53b21275-4f2a-4583-abaa-c16a3699d510","url":"https:\/\/stevefund.org\/wp-content\/plugins\/mailin\/img\/flags\/fr.png"},{"selector":".sib-sms-field ul.sib-country-list li .sib-flag-box .sib-flag","style":".sib-sms-field ul.sib-country-list li .sib-flag-box .sib-flag{--wpr-bg-fb28c391-aedb-4008-ac5e-26e44cbd4b3c: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/plugins\/mailin\/img\/flags\/ad.png');}","hash":"fb28c391-aedb-4008-ac5e-26e44cbd4b3c","url":"https:\/\/stevefund.org\/wp-content\/plugins\/mailin\/img\/flags\/ad.png"},{"selector":"#sv-intro-heading-1","style":"#sv-intro-heading-1{--wpr-bg-fc8bc8a4-da57-4686-9b61-ba476ed5458a: url('https:\/\/4b3grgvjzgqe-u1782.pressidiumcdn.com\/wp-content\/uploads\/2024\/12\/Theme-B-02-2.png');}","hash":"fc8bc8a4-da57-4686-9b61-ba476ed5458a","url":"https:\/\/stevefund.org\/wp-content\/uploads\/2024\/12\/Theme-B-02-2.png"}]; const rocket_excluded_pairs = [];</script><meta name="generator" content="WP Rocket 3.21.3" data-wpr-features="wpr_lazyload_css_bg_img wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_minify_css wpr_preload_links wpr_desktop" /></head>
+<body class="home wp-singular page-template page-template-page-templates page-template-layout-builder page-template-page-templateslayout-builder-php page page-id-5 wp-theme-stevefund" >
+<!--Pardot Tracking-->
+<script type="text/rocketlazyloadscript" data-rocket-type='text/javascript'>
+piAId = '975733';
+piCId = '2128';
+piHostname = 'go.stevefund.org';
+
+(function() {
+function async_load(){
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+}
+if(window.attachEvent) { window.attachEvent('onload', async_load); }
+else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+<!--Pardot Tracking-->    <div data-rocket-location-hash="faf1d59b48f80d172d69eb555478a335" id="donation-container" class="donation-container"><a href="#XHXSKXKN" style="display: none"></a></div>
+<div data-rocket-location-hash="4cc650a392309b048c687d9dbfc4bbb0" class="offcanvas offcanvas-start sv-w-90" tabindex="-1" id="sv-offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div data-rocket-location-hash="492ab4df0bb875eb2e87a1bb208dadaa" class="offcanvas-header justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div data-rocket-location-hash="b89978480880581f941a5384ae426fbb" class="offcanvas-body">
+        <div data-rocket-location-hash="f735e9ff3d9f5d8d983a91019b914166" id="sv-offcanvas-menu" class=" gilroy"><ul id="side-main-menu" class="nav navbar-nav sv-main-menu"><li  id="side-menu-item-99" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-has-children dropdown side-menu-item-99 nav-item"><a href="https://stevefund.org/programs-services/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="side-menu-item-dropdown-99" data-wpel-link="internal">Programs &#038; Services<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="side-menu-item-dropdown-99">
+	<li  id="side-menu-item-984" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-984 nav-item"><a href="https://stevefund.org/excellence-in-mental-health-on-campus/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Excellence in Mental Health on Campus</a></li>
+	<li  id="side-menu-item-105" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-105 nav-item"><a href="https://stevefund.org/programs-services/workshops-seminars/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Workshops and Seminars</a></li>
+	<li  id="side-menu-item-111" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-111 nav-item"><a href="https://stevefund.org/programs-services/workforce-transitions/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Workforce Transitions Initiative</a></li>
+	<li  id="side-menu-item-102" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-102 nav-item"><a href="https://stevefund.org/programs-services/consulting/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Higher Education Consulting Services</a></li>
+	<li  id="side-menu-item-16520" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-16520 nav-item"><a href="https://stevefund.org/young-men-of-color/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Young Men of Color</a></li>
+</ul>
+</li>
+<li  id="side-menu-item-114" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-has-children dropdown side-menu-item-114 nav-item"><a href="https://stevefund.org/resources/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="side-menu-item-dropdown-114" data-wpel-link="internal">Resources<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="side-menu-item-dropdown-114">
+	<li  id="side-menu-item-120" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-120 nav-item"><a href="https://stevefund.org/resources/knowledge-center/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Knowledge Center</a></li>
+	<li  id="side-menu-item-17196" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-17196 nav-item"><a href="https://stevefund.org/mydigitalsanctuary/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">My Digital Sanctuary</a></li>
+	<li  id="side-menu-item-18046" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-18046 nav-item"><a href="https://stevefund.org/family-corner/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Family Corner</a></li>
+	<li  id="side-menu-item-16806" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-16806 nav-item"><a href="https://stevefund.org/my-safe-space/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">#MySafeSpace Campaign</a></li>
+	<li  id="side-menu-item-17553" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-17553 nav-item"><a href="https://stevefund.org/back-to-school/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Back to School</a></li>
+	<li  id="side-menu-item-123" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-123 nav-item"><a href="https://stevefund.org/resources/news/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">News</a></li>
+	<li  id="side-menu-item-1436" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-1436 nav-item"><a href="https://stevefund.org/resources/courses/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Open Courseware</a></li>
+	<li  id="side-menu-item-12262" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-12262 nav-item"><a href="https://stevefund.org/resources/videos/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Videos</a></li>
+	<li  id="side-menu-item-974" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-974 nav-item"><a href="https://stevefund.org/resources/podcasts/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Podcasts</a></li>
+</ul>
+</li>
+<li  id="side-menu-item-146" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-146 nav-item"><a href="https://stevefund.org/insights/" class="nav-link" data-wpel-link="internal">Insights</a></li>
+<li  id="side-menu-item-11209" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-11209 nav-item"><a href="https://stevefund.org/resources/events/" class="nav-link" data-wpel-link="internal">Events</a></li>
+<li  id="side-menu-item-17090" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-has-children dropdown side-menu-item-17090 nav-item"><a href="https://stevefund.org/about-us/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="side-menu-item-dropdown-17090" data-wpel-link="internal">About Us<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="side-menu-item-dropdown-17090">
+	<li  id="side-menu-item-1388" class="menu-item side-menu-item-type-custom side-menu-item-object-custom side-menu-item-1388 nav-item"><a href="https://stevefund.org/about-us/#our-pillars" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">TSF Mission and Pillars</a></li>
+	<li  id="side-menu-item-1391" class="menu-item side-menu-item-type-custom side-menu-item-object-custom side-menu-item-1391 nav-item"><a href="https://stevefund.org/about-us/#the-steve-fund-team" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Team and Board Members</a></li>
+	<li  id="side-menu-item-1648" class="menu-item side-menu-item-type-custom side-menu-item-object-custom side-menu-item-1648 nav-item"><a href="https://stevefund.org/about-us/#work-with-us" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Careers</a></li>
+	<li  id="side-menu-item-138" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-138 nav-item"><a href="https://stevefund.org/about-us/our-partners-partnerships/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Our Partners</a></li>
+	<li  id="side-menu-item-132" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-132 nav-item"><a href="https://stevefund.org/about-us/our-advisors/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Our Advisors</a></li>
+	<li  id="side-menu-item-17281" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-17281 nav-item"><a href="https://stevefund.org/about-us/financials/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Financials</a></li>
+	<li  id="side-menu-item-3001" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-3001 nav-item"><a href="https://stevefund.org/donate/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Donate</a></li>
+</ul>
+</li>
+<li  id="side-menu-item-143" class="menu-item side-menu-item-type-post_type side-menu-item-object-page side-menu-item-143 nav-item"><a href="https://stevefund.org/contact-us/" class="nav-link" data-wpel-link="internal">Contact Us</a></li>
+</ul></div>    </div>
+</div>
+
+<section  class="sv-section section-banner header banner sv-banner-container d-none mt-sv" ><div data-rocket-location-hash="01b29ba3f2623f335ebe0823a61e8c67" class="container ">    <div data-rocket-location-hash="459ef3f9f116f091bc911e896d055d93" class="row">
+        <div class="col">
+            <div class="justify-content-center sv-banner-content p-3 small d-flex">
+                <p><a href="https://stevefund.org/10-year-report/" data-wpel-link="internal">The Steve Fund 10 Year Report</a></p>                                    <a href="#banner" id="close-banner" aria-label="Close" class="ms-2 sv-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                            </div>
+        </div>
+    </div>
+</div></section>
+<div data-rocket-location-hash="4457ea3ac33675b6d640f94caa1f07d1" id="top-bar" class="sv-bg-dark-blue sv-animate text-white sv-link-color-white">
+    <div data-rocket-location-hash="f117ee89930d3a249ddbfc02370ddefa" class="container">
+		<div data-rocket-location-hash="fbef79bff5c4e1958e7a956f6ebbfa64" class="row">
+            <div class="col-12 p-2 text-end small">
+                <ul class="d-inline-block list-inline social-links ms-3 me-3 mb-0">
+                    <li class="list-inline-item"><a href="https://bit.ly/4aqLgCu" target="_blank" title="Follow us on Facebook" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://bit.ly/4anoTOa" target="_blank" title="Follow us on Instram" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://bit.ly/3TOgfRz" target="_blank" title="Follow us on Twitter" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://bit.ly/3L3cd54" target="_blank" title="Follow us on Youtube" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href="https://bit.ly/4cKEGIi" target="_blank" title="Follow us on Linkedin" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-linkedin"></i></a></li>
+                </ul>
+                                <div class="d-inline-block ms-3 me-3 mb-0">
+                    <a href="#" id="search-icon" class="d-block search-action"><i class="sv-color-sky-blue fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header data-rocket-location-hash="77d57eb9d4df8125e25cc7ff9d3d4e50" id="header" class="bg-white sv-animate">
+	<div data-rocket-location-hash="68e122c6b23b4519e49c5a2a57b5f054" class="container">
+		<div data-rocket-location-hash="2e260b6842ca35f8b3f47da6fc1cc72c" class="row position-relative">
+
+            <div class="col-md-2 col-4 order-md-1 order-2 mt-1 mb-1 align-items-center">
+                <a href="https://stevefund.org" data-wpel-link="internal"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20112%2086'%3E%3C/svg%3E" alt="The Steve Fund logo" width="112" height="86" data-lazy-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/stevefund-logo.svg" /><noscript><img src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/stevefund-logo.svg" alt="The Steve Fund logo" width="112" height="86" /></noscript></a>
+            </div>
+
+            <div class="col-md-8 col-4 order-md-2 order-1 d-flex align-items-center">
+
+                <nav class="navbar navbar-expand-md bg-none mx-auto" role="navigation">
+
+                  <div class="main-menu-container">
+                    <button class="navbar-toggler border-0" type="button"  data-bs-toggle="offcanvas" data-bs-target="#sv-offcanvas" aria-controls="sv-offcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon sv-toggler-icon"></span>
+                    </button>
+                    <div id="sv-navbar-collapse" class="collapse navbar-collapse gilroy"><ul id="menu-main-menu" class="nav navbar-nav sv-main-menu"><li  id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-99 nav-item"><a href="https://stevefund.org/programs-services/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-99" data-wpel-link="internal">Programs &#038; Services<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-99">
+	<li  id="menu-item-984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-984 nav-item"><a href="https://stevefund.org/excellence-in-mental-health-on-campus/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Excellence in Mental Health on Campus</a></li>
+	<li  id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105 nav-item"><a href="https://stevefund.org/programs-services/workshops-seminars/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Workshops and Seminars</a></li>
+	<li  id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111 nav-item"><a href="https://stevefund.org/programs-services/workforce-transitions/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Workforce Transitions Initiative</a></li>
+	<li  id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102 nav-item"><a href="https://stevefund.org/programs-services/consulting/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Higher Education Consulting Services</a></li>
+	<li  id="menu-item-16520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16520 nav-item"><a href="https://stevefund.org/young-men-of-color/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Young Men of Color</a></li>
+</ul>
+</li>
+<li  id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-114 nav-item"><a href="https://stevefund.org/resources/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-114" data-wpel-link="internal">Resources<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-114">
+	<li  id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120 nav-item"><a href="https://stevefund.org/resources/knowledge-center/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Knowledge Center</a></li>
+	<li  id="menu-item-17196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17196 nav-item"><a href="https://stevefund.org/mydigitalsanctuary/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">My Digital Sanctuary</a></li>
+	<li  id="menu-item-18046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18046 nav-item"><a href="https://stevefund.org/family-corner/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Family Corner</a></li>
+	<li  id="menu-item-16806" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16806 nav-item"><a href="https://stevefund.org/my-safe-space/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">#MySafeSpace Campaign</a></li>
+	<li  id="menu-item-17553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17553 nav-item"><a href="https://stevefund.org/back-to-school/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Back to School</a></li>
+	<li  id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123 nav-item"><a href="https://stevefund.org/resources/news/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">News</a></li>
+	<li  id="menu-item-1436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1436 nav-item"><a href="https://stevefund.org/resources/courses/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Open Courseware</a></li>
+	<li  id="menu-item-12262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12262 nav-item"><a href="https://stevefund.org/resources/videos/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Videos</a></li>
+	<li  id="menu-item-974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-974 nav-item"><a href="https://stevefund.org/resources/podcasts/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Podcasts</a></li>
+</ul>
+</li>
+<li  id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146 nav-item"><a href="https://stevefund.org/insights/" class="nav-link" data-wpel-link="internal">Insights</a></li>
+<li  id="menu-item-11209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11209 nav-item"><a href="https://stevefund.org/resources/events/" class="nav-link" data-wpel-link="internal">Events</a></li>
+<li  id="menu-item-17090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-17090 nav-item"><a href="https://stevefund.org/about-us/" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-17090" data-wpel-link="internal">About Us<span class="carret"><i class="fa-solid fa-plus"></i></span></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-17090">
+	<li  id="menu-item-1388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1388 nav-item"><a href="https://stevefund.org/about-us/#our-pillars" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">TSF Mission and Pillars</a></li>
+	<li  id="menu-item-1391" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1391 nav-item"><a href="https://stevefund.org/about-us/#the-steve-fund-team" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Team and Board Members</a></li>
+	<li  id="menu-item-1648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1648 nav-item"><a href="https://stevefund.org/about-us/#work-with-us" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Careers</a></li>
+	<li  id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138 nav-item"><a href="https://stevefund.org/about-us/our-partners-partnerships/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Our Partners</a></li>
+	<li  id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132 nav-item"><a href="https://stevefund.org/about-us/our-advisors/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Our Advisors</a></li>
+	<li  id="menu-item-17281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17281 nav-item"><a href="https://stevefund.org/about-us/financials/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Financials</a></li>
+	<li  id="menu-item-3001" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3001 nav-item"><a href="https://stevefund.org/donate/" class="dropdown-item sv-color-dark-blue" data-wpel-link="internal">Donate</a></li>
+</ul>
+</li>
+<li  id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143 nav-item"><a href="https://stevefund.org/contact-us/" class="nav-link" data-wpel-link="internal">Contact Us</a></li>
+</ul></div>                    </div>
+                </nav>
+
+            </div>
+            <div class="col-md-2 col-4 order-3 d-flex align-items-center justify-content-end">
+                                    <a href="#donation-container" id="donate-action" class="donation-action">Donate</a>
+                            </div>
+
+            <div id="search-box" class="d-none position-absolute d-flex align-items-center justify-content-center w-100 h-100 top-0 right-0 bg-white sv-index-top">
+                <form role="search" method="get" id="searchform" class="searchform w-100" action="https://stevefund.org">
+                    <input type="text" value="" placeholder="Search.." name="s" id="s" class="w-100 p-2 sv-radius-5 sv-bg-gray " />
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section  class="sv-section section-1 header intro  mt-sv" ><div data-rocket-location-hash="a56a8f6c3d75fbdcb9a288fd2ee6f00a" class="container-fluid ">    <div data-rocket-location-hash="6befeb447f21776780aba789e248bfd4" class="row">
+        <div class="col p-0">
+            <div data-bg="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2025/05/Soul-Care-Relate-blog-1-3rd-image-100.jpg" id="sv-intro-heading-1" class="sv-intro-heading position-relative d-flex align-items-center text-white text-uppercase sv-bg-image rocket-lazyload" style="">
+
+                                    <h1 class="mx-auto sv-index-1">The Steve Fund</h1>
+                                <div class="sv-overlay position-absolute w-100 h-100 top-0 start-0 sv-index-0"></div>
+            </div>
+
+        </div>
+    </div>
+</div></section><section  class="sv-section section-2 left image  mt-sv" ><div data-rocket-location-hash="d78a542512f8e480d9b42bc6ee850459" class="container ps-lg-5 pe-lg-5 "><div data-rocket-location-hash="ca8628f43eda5e53527be2e6845b5a8b" class="row">
+    <div class="col-md-6">
+        <div class="sv-box pt-5 pe-5 position-relative sv-with-bg-lines sv-bg-lines-sky-blue sv-bg-lines-radius-top-right sv-bg-lines-top sv-bg-lines-right">
+            <div class="sv-img-container d-block shadow mt-5 me-5 sv-radius-top-right overflow-hidden">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="sv-img-fluid" alt="About The Steve Fund" data-lazy-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2025/09/TSF-Home-Page-Intro-e1759248420314.jpg" /><noscript><img src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2025/09/TSF-Home-Page-Intro-e1759248420314.jpg" class="sv-img-fluid" alt="About The Steve Fund" /></noscript>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+        <div class="sv-box w-100 p-5">
+            <div class="sv-box-inner d-block m-lg-5">
+                    <div data-rocket-location-hash="49ba11e84f7a5c34869b8e8a6f6ca0be" class="row">
+        <div class="col text-center">
+            <div class="h3 text-uppercase sv-color-dark-blue mb-5 sv-anchor"  id="sv-about-the-steve-fund">
+                About The Steve Fund                <div class="sv-mini-border-container d-flex justify-content-center w-100 mt-3"><div class="sv-mini-border sv-bg-yellow"></div></div>            </div>
+        </div>
+    </div>
+                <div class="mb-4">
+                    <p><span style="font-weight: 400;">The Steve Fund is a leading nonprofit dedicated to promoting the mental health and emotional well-being of young people, </span><span style="font-weight: 400;">particularly those from underserved and under-resourced communities</span><span style="font-weight: 400;">.  </span></p>
+<p><span style="font-weight: 400;">We leverage a dynamic combination of partnerships, research, and community-aligned resources to support families and young people during key moments of growth and transition — from adolescence into higher education, through the college experience, and into the workforce. </span></p>
+<p><strong>We are creating a community of  action. Join us! </strong></p>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+</div></section><section  class="sv-section section-3 header subtitle  mt-sv" ><div data-rocket-location-hash="b7b0e56a05e16fc9860db4918b3e27b0" class="container ">    <div data-rocket-location-hash="f616e1af5ca2a96aa485e3787ad68580" class="row">
+        <div class="col text-center text-uppercase ">
+            <h2 class="w-100 sv-color-dark-blue sv-anchor"  id="sv-solutions-from-the-steve-fund">Solutions from the Steve Fund</h2>
+            <div class="sv-mini-border-container d-flex justify-content-center w-100 mt-3"><div class="sv-mini-border sv-bg-yellow"></div></div>        </div>
+    </div>
+</div></section><section  class="sv-section section-4 content body text-center mt-sv" ><div data-rocket-location-hash="f182c9baaae49e8d4ad5c4a3b5d93540" class="container ps-lg-5 pe-lg-5 ">    <div data-rocket-location-hash="5de0cb829c014fbddf6d125cda8056aa" class="row">
+        <div class="col main-content">
+            <p><span style="font-weight: 400;">Building knowledge and capacity among organizations </span><span style="font-weight: 400;">supporting the mental health of young people</span><span style="font-weight: 400;"> is critical to the Steve Fund’s mission. </span><span style="font-weight: 400;">Our programs, resources, and events</span><span style="font-weight: 400;"> are designed to support universities, colleges, nonprofits, and workforce organizations in improving their mental health and well-being support for young people.</span></p>
+        </div>
+    </div>
+</div></section><section  class="sv-section section-5 list grid section-grid-page sv-bg-bottom-dark-blue mt-sv" ><div data-rocket-location-hash="07af255335574deeaec00a668b894b9f" class="container "><div class="row" >
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-page">
+    <div class="sv-tile-container member">
+        <div data-bg="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/04/11_03_2015_brc_autumn_010-1024x683.jpg" class="sv-tile-image position-relative w-100 sv-bg-image rocket-lazyload" style="">
+            <div class="w-100 h-100 position-absolute top-0 left-0"></div>
+        </div>
+        <div class="sv-tile-details m-0">
+            <div class="row m-0 tile-info sv-bg-light-gray ps-4 pe-4 pt-3 pb-3 text-center tile-info-page">
+                <div class="col-12 mb-3 tile-title">
+                    <h3 class="h5 sv-color-dark-gray">
+                        Workshops & Seminars                    </h3>
+                </div>
+                <div class="col-12 tile-details p-3">
+                    <a href="https://stevefund.org/programs-services/workshops-seminars/" title="Workshops &amp; Seminars" data-wpel-link="internal"> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-page">
+    <div class="sv-tile-container member">
+        <div data-bg="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/contact-page-bg-1024x332.jpg" class="sv-tile-image position-relative w-100 sv-bg-image rocket-lazyload" style="">
+            <div class="w-100 h-100 position-absolute top-0 left-0"></div>
+        </div>
+        <div class="sv-tile-details m-0">
+            <div class="row m-0 tile-info sv-bg-light-gray ps-4 pe-4 pt-3 pb-3 text-center tile-info-page">
+                <div class="col-12 mb-3 tile-title">
+                    <h3 class="h5 sv-color-dark-gray">
+                        Workforce Transitions Initiative                    </h3>
+                </div>
+                <div class="col-12 tile-details p-3">
+                    <a href="https://stevefund.org/programs-services/workforce-transitions/" title="Workforce Transitions Initiative" data-wpel-link="internal"> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-page">
+    <div class="sv-tile-container member">
+        <div data-bg="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2025/09/Higher-Ed-Consulting-Banenr-scaled-1-1024x683.jpg" class="sv-tile-image position-relative w-100 sv-bg-image rocket-lazyload" style="">
+            <div class="w-100 h-100 position-absolute top-0 left-0"></div>
+        </div>
+        <div class="sv-tile-details m-0">
+            <div class="row m-0 tile-info sv-bg-light-gray ps-4 pe-4 pt-3 pb-3 text-center tile-info-page">
+                <div class="col-12 mb-3 tile-title">
+                    <h3 class="h5 sv-color-dark-gray">
+                        Higher Education Consulting Services                    </h3>
+                </div>
+                <div class="col-12 tile-details p-3">
+                    <a href="https://stevefund.org/programs-services/consulting/" title="Higher Education Consulting Services" data-wpel-link="internal"> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div></section><section  class="sv-section section-6 video popup  mt-sv" ><div data-rocket-location-hash="9fdad993c71776639b8c3810e5315fe0" class="container ">        <div data-rocket-location-hash="f5f05e829d592dfeefb7e612a1a636d2" class="row">
+            <div class="col-12">
+                <div data-bg="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/08/fostering-bg.jpg" class="sv-featured-heading position-relative w-100 sv-bg-image rocket-lazyload" style="">
+				<a href="//www.youtube.com/watch?v=ycgnhR1EfKk" class="position-absolute top-0 left-0 w-100 h-100" data-lity="" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
+					<div class="sv-video-title h3 position-absolute sv-bottom-30 sv-start-30 sv-index-1" style="color:#FFFFFF">Fostering a Better Future</div>
+					<span class="sv-play-icon text-white position-absolute top-50 start-50"><i class="fa-regular fa-circle-play"></i></span>
+					<div class="sv-overlay position-absolute w-100 h-100 top-0 start-0 sv-index-0"></div>
+				</a>
+		  </div>            </div>
+        </div>
+    </div></section><section  class="sv-section section-7 header subtitle  mt-sv" ><div data-rocket-location-hash="b2cdc7e89ed3062dff253bf908482eee" class="container ">    <div data-rocket-location-hash="6c15006f29275bef58d824b147bb70c6" class="row">
+        <div class="col text-center text-uppercase ">
+            <h2 class="w-100 sv-color-dark-blue sv-anchor"  id="sv-mental-health-and-wellness-insights">Mental Health and Wellness Insights</h2>
+            <div class="sv-mini-border-container d-flex justify-content-center w-100 mt-3"><div class="sv-mini-border sv-bg-yellow"></div></div>        </div>
+    </div>
+</div></section><section  class="sv-section section-8 list grid section-grid-post  mt-sv" ><div data-rocket-location-hash="a178488e17c6ce93dc703e81d6862ec5" class="container "><div class="row" >
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-post">
+    <div class="sv-tile-container shadow">
+        <div class="sv-tile-image position-relative w-100 sv-bg-image" style="background-image:url();">
+            <a class="w-100 h-100 position-absolute top-0 left-0" href="https://stevefund.org/insight/mental-health-awareness-month-leidos/" title="Mental Health Awareness Month - Leidos" data-wpel-link="internal"></a>
+        </div>
+        <div class="sv-tile-details p-3">
+                    <div class="row tile-info tile-info-post">
+            <div class="col-12 mb-2 tile-meta small sv-color-dark-blue">
+                <div class="tile-meta-date d-inline-block">Posted 2 months ago</div>            </div>
+            <div class="col-12 mb-3 tile-title">
+                <a href="https://stevefund.org/insight/mental-health-awareness-month-leidos/" title="Mental Health Awareness Month - Leidos" class="text-decoration-none" data-wpel-link="internal">
+                    <h3 class="h5 sv-color-dark-gray text-">Mental Health Awareness Month - Leidos</h3>
+                </a>
+            </div>
+            <div class="col-12 tile-excerpt">
+                Featured Resources in Partnership with Leidos
+As part of this Mental Health Awareness Month campaign, The Steve Fund will feature five new Leidos-sponsored resources on My Digital Sanctuary:
+
+...            </div>
+                    <div class="col-12 mt-3 mb-3 tile-tags">
+                    </div>
+            </div>
+            </div>
+    </div>
+</div>
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-post">
+    <div class="sv-tile-container shadow">
+        <div class="sv-tile-image position-relative w-100 sv-bg-image" style="background-image:url();">
+            <a class="w-100 h-100 position-absolute top-0 left-0" href="https://stevefund.org/insight/your-story-matters-and-sharing-it-does-too-2/" title="Your Story Matters,  and Sharing It Does Too!" data-wpel-link="internal"></a>
+        </div>
+        <div class="sv-tile-details p-3">
+                    <div class="row tile-info tile-info-post">
+            <div class="col-12 mb-2 tile-meta small sv-color-dark-blue">
+                            </div>
+            <div class="col-12 mb-3 tile-title">
+                <a href="https://stevefund.org/insight/your-story-matters-and-sharing-it-does-too-2/" title="Your Story Matters,  and Sharing It Does Too!" class="text-decoration-none" data-wpel-link="internal">
+                    <h3 class="h5 sv-color-dark-gray text-">Your Story Matters,  and Sharing It Does Too!</h3>
+                </a>
+            </div>
+            <div class="col-12 tile-excerpt">
+                ...            </div>
+                    <div class="col-12 mt-3 mb-3 tile-tags">
+                    </div>
+            </div>
+            </div>
+    </div>
+</div>
+<div class=" col-lg-4 col-md-6 mb-sv  sv-tile-outer-container sv-tile-post">
+    <div class="sv-tile-container shadow">
+        <div class="sv-tile-image position-relative w-100 sv-bg-image" style="background-image:url();">
+            <a class="w-100 h-100 position-absolute top-0 left-0" href="https://stevefund.org/insight/the-color-of-hope-2/" title="The Color of Hope" data-wpel-link="internal"></a>
+        </div>
+        <div class="sv-tile-details p-3">
+                    <div class="row tile-info tile-info-post">
+            <div class="col-12 mb-2 tile-meta small sv-color-dark-blue">
+                            </div>
+            <div class="col-12 mb-3 tile-title">
+                <a href="https://stevefund.org/insight/the-color-of-hope-2/" title="The Color of Hope" class="text-decoration-none" data-wpel-link="internal">
+                    <h3 class="h5 sv-color-dark-gray text-">The Color of Hope</h3>
+                </a>
+            </div>
+            <div class="col-12 tile-excerpt">
+                ...            </div>
+                    <div class="col-12 mt-3 mb-3 tile-tags">
+                    </div>
+            </div>
+            </div>
+    </div>
+</div>
+</div>
+</div></section><section  class="sv-section section-9 call action  mt-sv" ><div data-rocket-location-hash="faabd86d4a51679ab58b7c7d039d3109" class="container sv-bg-dark-blue"><div data-rocket-location-hash="650f8b62cfd8ac54fb33ae05d90b9617" class="row cta overflow-hidden">
+    <div class="col pt-5 pe-5 position-relative sv-with-bg-lines sv-bg-lines-yellow sv-with-bg-lines-left sv-bg-lines-radius-top-right">
+        <div class="p-5 position-relative position-relative sv-with-bg-lines sv-with-bg-lines-right sv-bg-lines-sky-blue sv-bg-lines-radius-top-left">
+            <div data-rocket-location-hash="f0368ad78a6a355ea985645a24457324" class="row">
+                <div class="col-md-6 d-flex align-items-center justify-content-center  sv-index-1">
+                    <div class="sv-cta-container sv-font-35 sv-line-50 fw-bold text-white d-block">
+                        <p><strong>In Crisis?</strong></p>
+<p>Text <strong>STEVE</strong> to <strong>741741</strong> to connect with a trained counselor 24/7.</p>
+<p>We are in this together, and help is always available.</p>
+<p><a href="https://stevefund.org/crisistextline/" data-wpel-link="internal">Learn more</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="sv-img-container d-block shadow m-5 sv-radius-bottom-left overflow-hidden">
+                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="sv-img-fluid" alt="Call to action image" data-lazy-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/03/Frame-6.jpg" /><noscript><img src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/03/Frame-6.jpg" class="sv-img-fluid" alt="Call to action image" /></noscript>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div></section><section  class="sv-section section-10 donation block  mt-sv" ><div data-rocket-location-hash="eda27055ba189c79d381d2fc0ba600e4" class="container "><div data-rocket-location-hash="3aa1c6b01de1e17523f01db3799573c9" class="row">
+	<div class="col-12" id="donation-block-container">
+		<div class="sv-donation-heading position-relative w-100 sv-bg-image pb-5 pt-5 sv-with-bg-lines sv-bg-lines-sky-blue sv-bg-lines-radius-top-right sv-bg-lines-top sv-bg-lines-right">
+			<div class="position-relative h2 text-center  mw-80 mx-auto pt-4 sv-color-dark-blue" >Support the Steve Fund</div><div class="mt-5 position-relative text-center mw-80 mx-auto p-3 sv-index-1 h4"><p><span style="font-weight: 400;">Your donation will help ensure our programs, resources, and events will grow to support the mental health and emotional well-being of young people nationwide. Join us! </span></p>
+</div>			<div class="w-100 mt-4 mb-4 d-flex align-items-center justify-content-center">
+				<a href="https://stevefund.org/donate/" id="donate-action-in-content" data-wpel-link="internal">Donate Now</a>			</div>
+		</div>	
+	</div>
+</div>
+</div></section><footer data-rocket-location-hash="a9b7e438659b2d238699b9169fb1ad1e" id="footer">
+
+	<div data-rocket-location-hash="ff561fc860204e9d0bd85a25facef122" id="footer-contact-form" class="position-relative text-md-start text-center mt-sv">
+
+		<div data-rocket-location-hash="2d5699d3d37a8464fcb5084a0357cc70" class="sv-bg position-absolute h-50 w-100 bottom-0 start-0 sv-bg-dark-blue"></div>
+
+	    <div data-rocket-location-hash="a1e1cc35a9dcf4486f4daeade6367d0e" class="container sv-bg-gray">
+			<div class="row">
+				<div class="col-md-6 p-md-5 p-3 order-md-1 order-2">
+					<div class="h3 text-uppercase sv-color-dark-blue">
+						Stay up to date<br />with our newsletter						<div class="sv-mini-border-container d-flex justify-content-left w-100 "><div class="sv-mini-border sv-bg-sky-blue"></div></div>				 	</div>
+					<div class="mt-5 mb-3">
+						<p>Sign-up now to receive the updates and communications from The Steve Fund!</p>
+					</div>
+					<div class="embed-form-box">
+														<iframe class="stevefund-iframe" title="Stay in touch contact form" src="https://go.stevefund.org/l/974733/2023-02-16/3fn8p" width="100%" scrolling="no"></iframe>
+											</div>
+				</div>
+				<div class="col-md-6 p-md-5 p-3 order-md-2 order-1">
+					<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="img-fluid" alt="Contact Form Image" data-lazy-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/stay-updated-with-our-story.jpg" /><noscript><img src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/uploads/2023/01/stay-updated-with-our-story.jpg" class="img-fluid" alt="Contact Form Image" /></noscript>
+				</div>
+			</div>
+	    </div>
+	</div>
+
+
+	<div data-rocket-location-hash="975f2054a517e9ea2ecd94c8eecda30f" id="footer-nav-area" class="position-relative text-md-start text-center text-white sv-link-color-white">
+
+		<div data-rocket-location-hash="d6286e3fdc998995934be586ce0d6fcb" class="sv-bg position-absolute h-100 w-100 bottom-0 start-0 sv-bg-dark-blue"></div>
+
+		<div data-rocket-location-hash="02655395be51f2577544d94601420929" class="container">
+			<div class="row pt-md-5 pb-md-5 pt-3 pb-3">
+				<div class="col-md-3">
+					<div class="footer-title fw-bold h5 sv-color-sky-blue mb-md-4 mb-3 mt-md-0 mt-4 text-uppercase">Get in touch</div>
+					<div class="footer-text"><p>The Steve Fund<br />
+3470 Olney-Laytonsville Road, #313<br />
+Olney, Maryland 20832</p>
+</div>
+					<div class="footer-title fw-bold h5 mt-md-5 mt-3 sv-color-sky-blue text-uppercase">Connect with us</div>
+					<div class="footer-text">
+						<ul class="list-inline social-links sv-font-25 mt-3">
+							<li class="list-inline-item"><a href="https://bit.ly/4aqLgCu" target="_blank" title="Follow us on Facebook" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-facebook-f"></i></a></li>
+							<li class="list-inline-item"><a href="https://bit.ly/4anoTOa" target="_blank" title="Follow us on Instram" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href="https://bit.ly/3TOgfRz" target="_blank" title="Follow us on Twitter" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="https://bit.ly/3L3cd54" target="_blank" title="Follow us on Youtube" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-youtube"></i></a></li>
+							<li class="list-inline-item"><a href="https://bit.ly/4cKEGIi" target="_blank" title="Follow us on Linkedin" data-wpel-link="external" rel="external noopener noreferrer"><i class="sv-color-sky-blue fa-brands fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="footer-title fw-bold h5 sv-color-sky-blue mb-md-4 mb-3 mt-md-0 mt-4">About us</div>
+							<div class="footer-menu">
+								<div class="menu-footer-left-container"><ul id="menu-footer-left" class="menu list-unstyled" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><li  id="menu-item-1807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1807 nav-item"><a itemprop="url" href="https://stevefund.org/about-us/#the-steve-funds-mission" class="nav-link" data-wpel-link="internal"><span itemprop="name">Our Mission</span></a></li>
+<li  id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810 nav-item"><a itemprop="url" href="https://stevefund.org/about-us/#the-steve-fund-team" class="nav-link" data-wpel-link="internal"><span itemprop="name">Our Team</span></a></li>
+<li  id="menu-item-1811" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1811 nav-item"><a itemprop="url" href="https://stevefund.org/about-us/#work-with-us" class="nav-link" data-wpel-link="internal"><span itemprop="name">Careers</span></a></li>
+<li  id="menu-item-13271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13271 nav-item"><a itemprop="url" href="https://stevefund.org/crisistextline/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Crisis Text Line</span></a></li>
+<li  id="menu-item-17280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17280 nav-item"><a itemprop="url" href="https://stevefund.org/about-us/financials/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Financials</span></a></li>
+<li  id="menu-item-2168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2168 nav-item"><a itemprop="url" href="https://stevefund.org/donate/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Donate</span></a></li>
+</ul></div>							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footer-title fw-bold h5 sv-color-sky-blue mb-md-4 mb-3 mt-md-0 mt-4">Programs & Services</div>
+							<div class="footer-menu">
+								<div class="menu-programs-services-container"><ul id="menu-programs-services" class="menu list-unstyled" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><li  id="menu-item-11224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11224 nav-item"><a itemprop="url" href="https://stevefund.org/programs-services/workshops-seminars/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Workshops &#038; Seminars</span></a></li>
+<li  id="menu-item-11225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11225 nav-item"><a itemprop="url" href="https://stevefund.org/programs-services/workforce-transitions/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Workforce Transitions Initiative</span></a></li>
+<li  id="menu-item-11228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11228 nav-item"><a itemprop="url" href="https://stevefund.org/programs-services/consulting/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Higher Education Consulting Services</span></a></li>
+<li  id="menu-item-16521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16521 nav-item"><a itemprop="url" href="https://stevefund.org/young-men-of-color/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Young Men of Color</span></a></li>
+</ul></div>							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footer-title fw-bold h5 sv-color-sky-blue mb-md-4 mb-3 mt-md-0 mt-4">Resources</div>
+							<div class="footer-menu">
+								<div class="menu-footer-right-container"><ul id="menu-footer-right" class="menu list-unstyled" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><li  id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186 nav-item"><a itemprop="url" href="https://stevefund.org/resources/knowledge-center/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Knowledge Center</span></a></li>
+<li  id="menu-item-17198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17198 nav-item"><a itemprop="url" href="https://stevefund.org/mydigitalsanctuary/" class="nav-link" data-wpel-link="internal"><span itemprop="name">My Digital Sanctuary</span></a></li>
+<li  id="menu-item-18047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18047 nav-item"><a itemprop="url" href="https://stevefund.org/family-corner/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Family Corner</span></a></li>
+<li  id="menu-item-16807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16807 nav-item"><a itemprop="url" href="https://stevefund.org/my-safe-space/" class="nav-link" data-wpel-link="internal"><span itemprop="name">#MySafeSpace Campaign</span></a></li>
+<li  id="menu-item-17554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17554 nav-item"><a itemprop="url" href="https://stevefund.org/back-to-school/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Back to School</span></a></li>
+<li  id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183 nav-item"><a itemprop="url" href="https://stevefund.org/resources/events/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Events</span></a></li>
+<li  id="menu-item-1819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819 nav-item"><a itemprop="url" href="https://stevefund.org/resources/news/in-the-media/" class="nav-link" data-wpel-link="internal"><span itemprop="name">News About the Steve Fund</span></a></li>
+<li  id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1814 nav-item"><a itemprop="url" href="https://stevefund.org/resources/news/press-statements/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Press Statements</span></a></li>
+<li  id="menu-item-1817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817 nav-item"><a itemprop="url" href="https://stevefund.org/resources/news/reports/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Reports</span></a></li>
+<li  id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1829 nav-item"><a itemprop="url" href="https://stevefund.org/resources/courses/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Open Courseware</span></a></li>
+<li  id="menu-item-1820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820 nav-item"><a itemprop="url" href="https://stevefund.org/resources/videos/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Videos</span></a></li>
+<li  id="menu-item-1823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823 nav-item"><a itemprop="url" href="https://stevefund.org/resources/podcasts/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Podcasts</span></a></li>
+<li  id="menu-item-1826" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1826 nav-item"><a itemprop="url" href="https://stevefund.org/insights/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Insights</span></a></li>
+</ul></div>							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footer-title fw-bold h5 sv-color-sky-blue mb-md-4 mb-3 mt-md-0 mt-4">Equity in Mental Health On Campus</div>
+							<div class="footer-menu">
+								<div class="menu-equity-in-mental-health-on-campus-container"><ul id="menu-equity-in-mental-health-on-campus" class="menu list-unstyled" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><li  id="menu-item-1799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1799 nav-item"><a itemprop="url" href="https://stevefund.org/equity-in-mental-health-on-campus/#the-equity-in-mental-health-framework" class="nav-link" data-wpel-link="internal"><span itemprop="name">The Framework</span></a></li>
+<li  id="menu-item-1801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1801 nav-item"><a itemprop="url" href="https://stevefund.org/equity-in-mental-health-on-campus/#the-equity-in-mental-health-on-campus-approach" class="nav-link" data-wpel-link="internal"><span itemprop="name">Our Approach</span></a></li>
+<li  id="menu-item-1804" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1804 nav-item"><a itemprop="url" href="https://stevefund.org/equity-in-mental-health-on-campus/#enroll-now" class="nav-link" data-wpel-link="internal"><span itemprop="name">Enroll in EHMC</span></a></li>
+</ul></div>							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row border-top small pt-3">
+				<div class="col-md-6">
+					&copy; Copyright 2026 - All Rights Reserved
+				</div>
+				<div class="col-md-6 text-md-end mt-md-0 mt-4">
+					<div class="menu-disclaimer-menu-container"><ul id="menu-disclaimer-menu" class="menu list-inline" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><li  id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy list-inline-item menu-item-152 nav-item"><a itemprop="url" href="https://stevefund.org/privacy-policy/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Privacy Policy</span></a></li>
+<li  id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item menu-item-155 nav-item"><a itemprop="url" href="https://stevefund.org/terms-of-use/" class="nav-link" data-wpel-link="internal"><span itemprop="name">Terms of Use</span></a></li>
+</ul></div>				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<a href="#" id="scroll-top" class="scroll-top sv-bg-yellow sv-color-dark-blue position-fixed d-flex align-items-center bottom-0 end-0 m-4 mb-5 rounded-circle invisible sv-font-25">
+	<div class="mx-auto sv-animate-hover sv-animate-hover-up-small"><i class="fa-solid fa-arrow-up"></i></div>
+</a>
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/stevefund.org\/wp-admin\/admin-ajax.php","nonce":"8a856b16e4","url":"https:\/\/stevefund.org","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/stevefund/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+            <script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+                const abmsg = "We noticed an ad blocker. Consider whitelisting us to support the site ❤️";
+                const abmsgd = "download";
+                const iswpdmpropage = 0;
+                jQuery(function($){
+
+                    
+                });
+            });</script>
+            <div id="fb-root"></div>
+            <script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+        jQuery(function ($){
+
+            let previousHtml = $('.wpcf7-response-output').html();
+
+            setInterval(function() {
+                const currentHtml = $('.wpcf7-response-output').html();
+
+                if (currentHtml !== previousHtml) {
+                    // Decode HTML entities
+                    const decodedText = $('<textarea />').html(currentHtml).text();
+                    $('.wpcf7-response-output').html(decodedText);
+
+                    // Update the previous HTML to avoid repeated decoding
+                    previousHtml = currentHtml;
+                }
+            }, 500);
+
+        });
+    });</script>	<!--copyscapeskip-->
+	<aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-light-scheme gdpr_infobar_postion_bottom" aria-label="GDPR Cookie Banner" aria-hidden="true" style="display: none;">
+	<div class="moove-gdpr-info-bar-container">
+		<div class="moove-gdpr-info-bar-content">
+		
+<div class="moove-gdpr-cookie-notice">
+  <p>We are using cookies to give you the best experience on our website.</p>
+<p>You can find out more about which cookies we are using or switch them off in <button  aria-haspopup="true" data-href="#moove_gdpr_cookie_modal" class="change-settings-button">settings</button>.</p>
+</div>
+<!--  .moove-gdpr-cookie-notice -->
+		
+<div class="moove-gdpr-button-holder">
+			<button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Accept" >Accept</button>
+						<button class="mgbutton moove-gdpr-infobar-settings-btn change-settings-button gdpr-fbo-2" aria-haspopup="true" data-href="#moove_gdpr_cookie_modal"  aria-label="Settings">Settings</button>
+			</div>
+<!--  .button-container -->
+		</div>
+		<!-- moove-gdpr-info-bar-content -->
+	</div>
+	<!-- moove-gdpr-info-bar-container -->
+	</aside>
+	<!-- #moove_gdpr_cookie_info_bar -->
+	<!--/copyscapeskip-->
+<div id="load-donation-scripts" style="display:none !important;">(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+.split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+:function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+})(window,document,'script','FundraiseUp','ALEBYVBF');</div><style>@media (max-width: 767px) { #sv-intro-heading-1{ background-image : var(--wpr-bg-fc8bc8a4-da57-4686-9b61-ba476ed5458a)  !important;  }  } </style><script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/stevefund-functionality/js/stevefund-tiles.js?ver=1773833153" id="stevefund-tiles-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="stevefund-public-js-extra">
+/* <![CDATA[ */
+var stevefund_public_settings = {"security_nonce":"df67eaab68","action":"stevefund_public_load_more_action","ajaxurl":"https://stevefund.org/wp-admin/admin-ajax.php"};
+//# sourceURL=stevefund-public-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/stevefund-functionality/js/stevefund.js?ver=1773833153" id="stevefund-public-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://stevefund.org","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?ver=1773833153" id="stevefund-bootstrap-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/ajax/libs/iframe-resizer/4.3.5/iframeResizer.min.js?ver=1773833153" id="stevefund-iframe-resizer-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/ajax/libs/lity/2.4.1/lity.min.js?ver=1773833153" id="stevefund-lity-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="stevefund-script-js-extra">
+/* <![CDATA[ */
+var stevefund_settings = {"security_nonce":"18475a4439","action":"stevefund_save_action","ajaxurl":"https://stevefund.org/wp-admin/admin-ajax.php"};
+//# sourceURL=stevefund-script-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/themes/stevefund/js/stevefund.js?ver=1773833153" id="stevefund-script-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1773833153" id="swv-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/stevefund.org\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1773833153" id="contact-form-7-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="wpcf7cf-scripts-js-extra">
+/* <![CDATA[ */
+var wpcf7cf_global_settings = {"ajaxurl":"https://stevefund.org/wp-admin/admin-ajax.php"};
+//# sourceURL=wpcf7cf-scripts-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/cf7-conditional-fields/js/scripts.js?ver=1773833153" id="wpcf7cf-scripts-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6LdtVBIqAAAAADZsCZF96D8MxCnWYwEKWkzW5HrE" id="google-recaptcha-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="wpcf7-recaptcha-js-before">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {
+    "sitekey": "6LdtVBIqAAAAADZsCZF96D8MxCnWYwEKWkzW5HrE",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=1773833153" id="wpcf7-recaptcha-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="moove_gdpr_frontend-js-extra">
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https://stevefund.org/wp-admin/admin-ajax.php","post_id":"5","plugin_dir":"https://stevefund.org/wp-content/plugins/gdpr-cookie-compliance","show_icons":"all","is_page":"1","ajax_cookie_removal":"false","strict_init":"2","enabled_default":{"strict":2,"third_party":1,"advanced":1,"performance":0,"preference":0},"geo_location":"false","force_reload":"true","is_single":"","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","close_btn_action":"1","close_btn_rdr":"","scripts_defined":"{\"cache\":true,\"header\":\"\",\"body\":\"\",\"footer\":\"\",\"thirdparty\":{\"header\":\"\u003C!--LinkedIn Tracking--\u003E\\r\\n\u003Cscript data-gdpr type=\\\"text\\/javascript\\\"\u003E\\r\\n_linkedin_partner_id = \\\"5822828\\\";\\r\\nwindow._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];\\r\\nwindow._linkedin_data_partner_ids.push(_linkedin_partner_id);\\r\\n\u003C\\/script\u003E\u003Cscript data-gdpr type=\\\"text\\/javascript\\\"\u003E\\r\\n(function(l) {\\r\\nif (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};\\r\\nwindow.lintrk.q=[]}\\r\\nvar s = document.getElementsByTagName(\\\"script\\\")[0];\\r\\nvar b = document.createElement(\\\"script\\\");\\r\\nb.type = \\\"text\\/javascript\\\";b.async = true;\\r\\nb.src = \\\"https:\\/\\/snap.licdn.com\\/li.lms-analytics\\/insight.min.js\\\";\\r\\ns.parentNode.insertBefore(b, s);})(window.lintrk);\\r\\n\u003C\\/script\u003E\\r\\n\u003Cnoscript\u003E\\r\\n\u003Cimg height=\\\"1\\\" width=\\\"1\\\" style=\\\"display:none;\\\" alt=\\\"\\\" src=\\\"https:\\/\\/px.ads.linkedin.com\\/collect\\/?pid=5822828&fmt=gif\\\" \\/\u003E\\r\\n\u003C\\/noscript\u003E\\r\\n\u003C!--LinkedIn Tracking--\u003E\\t\\t\\t\\t\\t\\t\\t\\t\u003C!-- Google Tag Manager --\u003E\\n\\t\\t\\t\\t\u003Cscript data-gdpr data-type=\\\"gdpr-integration\\\"\u003E(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\\n\\t\\t\\t\\tnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\\n\\t\\t\\t\\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\\n\\t\\t\\t\\t'https:\\/\\/www.googletagmanager.com\\/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\\n\\t\\t\\t\\t})(window,document,'script','dataLayer','GTM-P3RPNHP');\u003C\\/script\u003E\\n\\t\\t\\t\\t\u003C!-- End Google Tag Manager --\u003E\\n\\t\\t\\t\\t\",\"body\":\"\\t\\t\\t\\t\u003C!-- Google Tag Manager (noscript) --\u003E\\n\\t\\t\\t\\t\u003Cnoscript data-type=\\\"gdpr-integration\\\"\u003E\u003Ciframe src=\\\"https:\\/\\/www.googletagmanager.com\\/ns.html?id=GTM-P3RPNHP\\\"\\n\\t\\t\\t\\theight=\\\"0\\\" width=\\\"0\\\" style=\\\"display:none;visibility:hidden\\\"\u003E\u003C\\/iframe\u003E\u003C\\/noscript\u003E\\n\\t\\t\\t\\t\u003C!-- End Google Tag Manager (noscript) --\u003E\\n\\t\\t\\t\\t\\t\\t\\t\\t\",\"footer\":\"\"},\"strict\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"advanced\":{\"header\":\"\u003Cscript data-gdpr type=\\\"text\\/javascript\\\"\u003E\\r\\n_linkedin_partner_id = \\\"5822828\\\";\\r\\nwindow._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];\\r\\nwindow._linkedin_data_partner_ids.push(_linkedin_partner_id);\\r\\n\u003C\\/script\u003E\u003Cscript data-gdpr type=\\\"text\\/javascript\\\"\u003E\\r\\n(function(l) {\\r\\nif (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};\\r\\nwindow.lintrk.q=[]}\\r\\nvar s = document.getElementsByTagName(\\\"script\\\")[0];\\r\\nvar b = document.createElement(\\\"script\\\");\\r\\nb.type = \\\"text\\/javascript\\\";b.async = true;\\r\\nb.src = \\\"https:\\/\\/snap.licdn.com\\/li.lms-analytics\\/insight.min.js\\\";\\r\\ns.parentNode.insertBefore(b, s);})(window.lintrk);\\r\\n\u003C\\/script\u003E\\r\\n\u003Cnoscript\u003E\\r\\n\u003Cimg height=\\\"1\\\" width=\\\"1\\\" style=\\\"display:none;\\\" alt=\\\"\\\" src=\\\"https:\\/\\/px.ads.linkedin.com\\/collect\\/?pid=5822828&fmt=gif\\\" \\/\u003E\\r\\n\u003C\\/noscript\u003E\\r\\n\",\"body\":\"\",\"footer\":\"\"}}","gdpr_scor":"true","wp_lang":"","wp_consent_api":"false","gdpr_nonce":"4be3c5f071"};
+//# sourceURL=moove_gdpr_frontend-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/cache/min/1/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js?ver=1773833153" id="moove_gdpr_frontend-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="moove_gdpr_frontend-js-after">
+/* <![CDATA[ */
+var gdpr_c=document.cookie.match(/(?:^|;\s*)moove_gdpr_popup=([^;]*)/);var gdpr_d=gdpr_c?JSON.parse(decodeURIComponent(gdpr_c[1])):{};var gdpr_consent__strict=gdpr_d.strict==="1"?"true":"false";var gdpr_consent__thirdparty=gdpr_d.thirdparty==="1"?"true":"false";var gdpr_consent__advanced=gdpr_d.advanced==="1"?"true":"false";var gdpr_consent__performance=gdpr_d.performance==="1"?"true":"false";var gdpr_consent__preference=gdpr_d.preference==="1"?"true":"false";var _cc=[];if(gdpr_d.strict==="1")_cc.push("strict");if(gdpr_d.thirdparty==="1")_cc.push("thirdparty");if(gdpr_d.advanced==="1")_cc.push("advanced");if(gdpr_d.performance==="1")_cc.push("performance");if(gdpr_d.preference==="1")_cc.push("preference");var gdpr_consent__cookies=_cc.join("|");
+//# sourceURL=moove_gdpr_frontend-js-after
+/* ]]> */
+</script>
+
+	<!--copyscapeskip-->
+	<button data-href="#moove_gdpr_cookie_modal" aria-haspopup="true"  id="moove_gdpr_save_popup_settings_button" style='display: none;' class="" aria-label="Change cookie settings">
+	<span class="moove_gdpr_icon">
+		<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="max-width: 30px; max-height: 30px;">
+		<g data-name="1">
+			<path d="M293.9,450H233.53a15,15,0,0,1-14.92-13.42l-4.47-42.09a152.77,152.77,0,0,1-18.25-7.56L163,413.53a15,15,0,0,1-20-1.06l-42.69-42.69a15,15,0,0,1-1.06-20l26.61-32.93a152.15,152.15,0,0,1-7.57-18.25L76.13,294.1a15,15,0,0,1-13.42-14.91V218.81A15,15,0,0,1,76.13,203.9l42.09-4.47a152.15,152.15,0,0,1,7.57-18.25L99.18,148.25a15,15,0,0,1,1.06-20l42.69-42.69a15,15,0,0,1,20-1.06l32.93,26.6a152.77,152.77,0,0,1,18.25-7.56l4.47-42.09A15,15,0,0,1,233.53,48H293.9a15,15,0,0,1,14.92,13.42l4.46,42.09a152.91,152.91,0,0,1,18.26,7.56l32.92-26.6a15,15,0,0,1,20,1.06l42.69,42.69a15,15,0,0,1,1.06,20l-26.61,32.93a153.8,153.8,0,0,1,7.57,18.25l42.09,4.47a15,15,0,0,1,13.41,14.91v60.38A15,15,0,0,1,451.3,294.1l-42.09,4.47a153.8,153.8,0,0,1-7.57,18.25l26.61,32.93a15,15,0,0,1-1.06,20L384.5,412.47a15,15,0,0,1-20,1.06l-32.92-26.6a152.91,152.91,0,0,1-18.26,7.56l-4.46,42.09A15,15,0,0,1,293.9,450ZM247,420h33.39l4.09-38.56a15,15,0,0,1,11.06-12.91A123,123,0,0,0,325.7,356a15,15,0,0,1,17,1.31l30.16,24.37,23.61-23.61L372.06,328a15,15,0,0,1-1.31-17,122.63,122.63,0,0,0,12.49-30.14,15,15,0,0,1,12.92-11.06l38.55-4.1V232.31l-38.55-4.1a15,15,0,0,1-12.92-11.06A122.63,122.63,0,0,0,370.75,187a15,15,0,0,1,1.31-17l24.37-30.16-23.61-23.61-30.16,24.37a15,15,0,0,1-17,1.31,123,123,0,0,0-30.14-12.49,15,15,0,0,1-11.06-12.91L280.41,78H247l-4.09,38.56a15,15,0,0,1-11.07,12.91A122.79,122.79,0,0,0,201.73,142a15,15,0,0,1-17-1.31L154.6,116.28,131,139.89l24.38,30.16a15,15,0,0,1,1.3,17,123.41,123.41,0,0,0-12.49,30.14,15,15,0,0,1-12.91,11.06l-38.56,4.1v33.38l38.56,4.1a15,15,0,0,1,12.91,11.06A123.41,123.41,0,0,0,156.67,311a15,15,0,0,1-1.3,17L131,358.11l23.61,23.61,30.17-24.37a15,15,0,0,1,17-1.31,122.79,122.79,0,0,0,30.13,12.49,15,15,0,0,1,11.07,12.91ZM449.71,279.19h0Z" fill="currentColor"/>
+			<path d="M263.71,340.36A91.36,91.36,0,1,1,355.08,249,91.46,91.46,0,0,1,263.71,340.36Zm0-152.72A61.36,61.36,0,1,0,325.08,249,61.43,61.43,0,0,0,263.71,187.64Z" fill="currentColor"/>
+		</g>
+		</svg>
+	</span>
+
+	<span class="moove_gdpr_text">Change cookie settings</span>
+	</button>
+	<!--/copyscapeskip-->
+    
+	<!--copyscapeskip-->
+	<!-- V1 -->
+	<dialog id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" aria-modal="true" aria-hidden="true" aria-label="GDPR Settings Screen">
+	<div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+		    
+		<button class="moove-gdpr-modal-close" autofocus aria-label="Close GDPR Cookie Settings">
+			<span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+			<span class="gdpr-icon moovegdpr-arrow-close"></span>
+		</button>
+				<div class="moove-gdpr-modal-left-content">
+		
+<div class="moove-gdpr-company-logo-holder">
+	<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20350%20233'%3E%3C/svg%3E" alt="The Steve Fund"   width="350"  height="233"  class="img-responsive" data-lazy-src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png" /><noscript><img src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png" alt="The Steve Fund"   width="350"  height="233"  class="img-responsive" /></noscript>
+</div>
+<!--  .moove-gdpr-company-logo-holder -->
+		<ul id="moove-gdpr-menu">
+			
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+	<button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Privacy Overview">
+	<span class="gdpr-nav-tab-title">Privacy Overview</span>
+	</button>
+</li>
+
+	<li class="menu-item-strict-necessary-cookies menu-item-off">
+	<button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Strictly Necessary Cookies">
+		<span class="gdpr-nav-tab-title">Strictly Necessary Cookies</span>
+	</button>
+	</li>
+
+
+	<li class="menu-item-off menu-item-third_party_cookies">
+	<button data-href="#third_party_cookies" class="moove-gdpr-tab-nav" aria-label="3rd Party Cookies">
+		<span class="gdpr-nav-tab-title">3rd Party Cookies</span>
+	</button>
+	</li>
+
+	<li class="menu-item-advanced-cookies menu-item-off">
+	<button data-href="#advanced-cookies" class="moove-gdpr-tab-nav" aria-label="Additional Cookies">
+		<span class="gdpr-nav-tab-title">Additional Cookies</span>
+	</button>
+	</li>
+
+
+	<li class="menu-item-moreinfo menu-item-off">
+	<button data-href="#cookie_policy_modal" class="moove-gdpr-tab-nav" aria-label="Cookie Policy">
+		<span class="gdpr-nav-tab-title">Cookie Policy</span>
+	</button>
+	</li>
+		</ul>
+		
+<div class="moove-gdpr-branding-cnt">
+	</div>
+<!--  .moove-gdpr-branding -->
+		</div>
+		<!--  .moove-gdpr-modal-left-content -->
+		<div class="moove-gdpr-modal-right-content">
+		<div class="moove-gdpr-modal-title">
+			 
+		</div>
+		<!-- .moove-gdpr-modal-ritle -->
+		<div class="main-modal-content">
+
+			<div class="moove-gdpr-tab-content">
+			
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+		<span class="tab-title">Privacy Overview</span>
+		<div class="moove-gdpr-tab-main-content">
+	<p>This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.</p>
+		</div>
+	<!--  .moove-gdpr-tab-main-content -->
+
+</div>
+<!-- #privacy_overview -->
+			
+  <div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">Strictly Necessary Cookies</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.</p>
+      <div class="moove-gdpr-status-bar gdpr-checkbox-disabled checkbox-selected">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_strict_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>        
+              <input type="checkbox" aria-label="Strictly Necessary Cookies" disabled checked="checked"  value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+              <span class="cookie-slider cookie-round gdpr-sr" data-text-enable="Enabled" data-text-disabled="Disabled">
+                <span class="gdpr-sr-label">
+                  <span class="gdpr-sr-enable">Enabled</span>
+                  <span class="gdpr-sr-disable">Disabled</span>
+                </span>
+              </span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+                                              
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #strict-necesarry-cookies -->
+			
+  <div id="third_party_cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">3rd Party Cookies</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>This website uses Google Analytics to collect anonymous information such as the number of visitors to the site, and the most popular pages.</p>
+<p>Keeping this cookie enabled helps us to improve our website.</p>
+      <div class="moove-gdpr-status-bar">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_performance_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>     
+              <input type="checkbox" aria-label="3rd Party Cookies" value="check" name="moove_gdpr_performance_cookies" id="moove_gdpr_performance_cookies" >
+              <span class="cookie-slider cookie-round gdpr-sr" data-text-enable="Enabled" data-text-disabled="Disabled">
+                <span class="gdpr-sr-label">
+                  <span class="gdpr-sr-enable">Enabled</span>
+                  <span class="gdpr-sr-disable">Disabled</span>
+                </span>
+              </span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+             
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #third_party_cookies -->
+			
+  <div id="advanced-cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">Additional Cookies</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>This website uses the following additional cookies:</p>
+<p>(List the cookies that you are using on the website here.)</p>
+      <div class="moove-gdpr-status-bar">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_advanced_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>
+              <input type="checkbox" aria-label="Additional Cookies" value="check" name="moove_gdpr_advanced_cookies" id="moove_gdpr_advanced_cookies" >
+              <span class="cookie-slider cookie-round gdpr-sr" data-text-enable="Enabled" data-text-disabled="Disabled">
+                <span class="gdpr-sr-label">
+                  <span class="gdpr-sr-enable">Enabled</span>
+                  <span class="gdpr-sr-disable">Disabled</span>
+                </span>
+              </span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+         
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #advanced-cookies -->
+									
+	<div id="cookie_policy_modal" class="moove-gdpr-tab-main" style="display:none">
+	<span class="tab-title">Cookie Policy</span>
+	<div class="moove-gdpr-tab-main-content">
+		<p>More information about our <a href="https://stevefund.org/privacy-policy/" target="_blank" rel="noopener" data-wpel-link="internal">Cookie Policy</a></p>
+		 
+	</div>
+	<!--  .moove-gdpr-tab-main-content -->
+	</div>
+			</div>
+			<!--  .moove-gdpr-tab-content -->
+		</div>
+		<!--  .main-modal-content -->
+		<div class="moove-gdpr-modal-footer-content">
+			<div class="moove-gdpr-button-holder">
+						<button class="mgbutton moove-gdpr-modal-allow-all button-visible" aria-label="Enable All">Enable All</button>
+								<button class="mgbutton moove-gdpr-modal-save-settings button-visible" aria-label="Save Changes">Save Changes</button>
+				</div>
+<!--  .moove-gdpr-button-holder -->
+		</div>
+		<!--  .moove-gdpr-modal-footer-content -->
+		</div>
+		<!--  .moove-gdpr-modal-right-content -->
+
+		<div class="moove-clearfix"></div>
+
+	</div>
+	<!--  .moove-gdpr-modal-content -->
+	</dialog>
+	<!-- #moove_gdpr_cookie_modal -->
+	<!--/copyscapeskip-->
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://4b3grgvjzgqe-u1782.pressidiumcdn.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script></html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1781499188 -->

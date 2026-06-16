@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+  <head>
+    
+    
+
+    
+
+
+
+        
+            
+                    
+                            
+                        
+                
+        
+
+    
+<!-- Start of ADDITIONAL DEBUG INFO ** cv.html **
+
+    CVToken: CASMicrosoftCVd929cf94.0
+  End of ADDITIONAL DEBUG INFO -->
+
+
+
+    
+    
+    
+    
+        
+            
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+            <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+            
+                <meta name="keywords" content="microsoft pluton security processor, microsoft pluton, microsoft pluton processor driver" />
+            
+                <meta property="og:image" content="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Rendering-of-a-Pluton-CPU-chip?scl=1" />
+            
+                <meta name="twitter:image" content="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Rendering-of-a-Pluton-CPU-chip?scl=1" />
+            
+                <meta name="ms.lang" content="en" />
+            
+                <meta name="ms.loc" content="us" />
+            
+                <meta name="twitter:creator" content="@microsoft" />
+            
+                <meta name="twitter:site" content="@surface" />
+            
+                <meta property="og:locale" content="en-us" />
+            
+                <meta property="og:site_name" content="Surface" />
+            
+                <meta name="awa-publishedDate" content="20250422" />
+            
+            <meta name="content-page-ref" content="QyejA8RNdXaoycf3MlFmXfYuCMJIVDOzACuPfX_m5LAttG0i3pp1Y11wR9PbdNF0-QrTQFfU5IaoUl6WJ8SJMXhCWnTumZFYhubGWNNhk6o50HifyhZcz8k2c9sllQ0CfD-Jw0cP-fFVAT1HCZymxLe08GE7PJw0A6Spez6Tdq4"/>
+<script defer="defer" type="text/javascript" src="https://rum.hlx.page/.rum/@adobe/helix-rum-js@%5E2/dist/micro.js" data-routing="program=147636,environment=1510597,tier=publish"></script>
+<link rel="icon" href="/favicon.ico?v2" type="image/x-icon"/>
+
+            
+
+            
+
+            
+                <meta name="robots" content="index, follow"/>
+            
+            
+
+            <meta name="template" content="surface-articles-template"/>
+
+            <meta name="awa-canvasType" content="web"/>
+            <meta name="awa-isTented" content="false"/>
+
+            <meta name="awa-pageType" content="Root Node"/>
+            <meta name="awa-pgtmp" content="surface-articles-template"/>
+            <meta name="awa-pageId" content="133021c1a5cc46af1c18b7624f69f9de"/>
+            <meta name="awa-market" content="en-us"/>
+            <meta name="awa-cms" content="AEM"/>
+            <meta name="awa-stv" content="20260330"/>
+            <meta name="sitename" content="surface"/>
+            
+
+
+            
+
+ <title>Microsoft Pluton: The Heart of Security | Microsoft Surface</title>
+<link rel="canonical" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security"/>  
+
+<meta name="description" content="Learn about Microsoft Pluton security processor, the security heart built into the CPU of Surface. Discover why Pluton is harder to hack and easier to update."/>
+
+<meta name="twitter:url" content="https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security"/>
+<meta name="twitter:title" content="Microsoft Pluton: The Heart of Security | Microsoft Surface"/>
+<meta name="twitter:description" content="Learn about Microsoft Pluton security processor, the security heart built into the CPU of Surface. Discover why Pluton is harder to hack and easier to update."/>
+<meta name="twitter:card" content="summary"/>
+<meta property="og:url" content="https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security"/>
+<meta property="og:title" content="Microsoft Pluton: The Heart of Security | Microsoft Surface"/>
+<meta property="og:description" content="Learn about Microsoft Pluton security processor, the security heart built into the CPU of Surface. Discover why Pluton is harder to hack and easier to update."/>
+<meta property="og:type" content="website"/>
+
+            
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/clientlibs/clientlib-mwf-new/main-light.ACSHASH00f3de21feb098c1210537b8acff540a.min.css" type="text/css">
+
+
+
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-base.ACSHASH09fc174a067266136d6f9a3802411f78.min.css" type="text/css">
+
+
+
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-site.ACSHASH92e80721518de4ad99d715733acbc501.min.css" type="text/css">
+
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-surface.ACSHASHf8be243b16cdd23e9b4915ca14f0aeb2.min.css" type="text/css">
+
+
+
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-uhf.ACSHASHf9f2395c582fa601707b7a5dfae9f05f.min.css" type="text/css">
+
+
+
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-experimentations.ACSHASHdf20eb81fa2af3a1c0b0246a9a6a9485.min.css" type="text/css">
+
+
+
+    
+        <script id="ie11-polyfill-script">
+
+        var isModernBrowser = (
+            'fetch' in window &&
+            'assign' in Object
+        );
+
+        if ( !isModernBrowser ) {
+            var scriptElement = document.createElement('script');
+
+                scriptElement.async = false;
+                scriptElement.src = '/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-polyfills/resources/ie11-polyfills.js';
+
+                var polyfillScriptElement = document.querySelector('#ie11-polyfill-script');
+
+                if (polyfillScriptElement) {
+                    polyfillScriptElement.parentNode.insertBefore(scriptElement, polyfillScriptElement.nextSibling);
+                }
+            }
+        </script>
+    
+    
+    
+<script src="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-jquery.ACSHASH75d0cb3e9ff9fee40f5ce5fd93c17fb2.min.js"></script>
+
+
+
+    
+    
+<script src="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-jquery-cookie.ACSHASH5c75a4fa9fb3503322f8a0c9dd51512d.min.js"></script>
+
+
+
+    
+    
+    
+    <script src="https://assets.adobedtm.com/5ef092d1efb5/4c272e8cc694/launch-EN7506e353034849faa4a18bc4c20e727c.min.js"></script>
+
+
+            
+    
+    
+
+    
+
+    
+    
+    
+
+            
+
+
+
+            
+
+
+    
+            
+            
+    
+<script src="/echo/etc.clientlibs/microsoft/clientlibs/exp-analytics/v1.ACSHASHbf7b336dbb370c984e1bf59b1a980d86.min.js"></script>
+
+
+
+            <script type="text/javascript">
+                var expToken = {
+                    "exp": {
+                        "target": {
+                            "propertyToken": "b9d6f877-64a5-5fc1-ae2f-16d634d89489",
+                            "visitorJsHash": "3d099c67f11e65baad62b5d21e36827e",
+                            "expJsHash": "e8ee6e3433a60c66439eaf7e8101f8d8",
+                            "isExpWithoutPersonalizationEnabled": ("true"==="true")
+                        }
+                    }
+                };
+                window.cas = expToken;
+            </script>
+
+            
+            
+            
+    
+        <meta name="cas-exp-visitor" content="/echo/etc.clientlibs/microsoft/components/structure/page/clientlibs/visitor.ACSHASH3d099c67f11e65baad62b5d21e36827e.min.js">
+    
+
+            
+    
+        <meta name="cas-exp-at" content="/echo/etc.clientlibs/microsoft/components/structure/page/clientlibs/experimentation.ACSHASHe8ee6e3433a60c66439eaf7e8101f8d8.min.js">
+    
+
+
+            
+                
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/clientlibs/exp-cookiecomp/v1.ACSHASHa238861e6209e4e02576ddf5d1749c8b.min.js" async></script>
+
+
+            
+
+            
+            <meta name="exp-visitor-anchor" content=""/>
+            
+                    
+
+                    
+                        
+                    
+                
+
+            
+
+            
+
+            
+            <meta name="exp-atjs-anchor" content=""/>
+        
+
+
+<!-- Start of ADDITIONAL DEBUG INFO ** experimentation.html **
+
+    CVToken-Experimentation: CASMicrosoftCVd929cf94.0
+    
+            Exp header value: not found
+    
+    true
+    End of ADDITIONAL DEBUG INFO -->
+
+            
+            
+    
+<script src="/echo/etc.clientlibs/cascade.component.authoring/dynamicclientsidelibs/handlerscripts/v1.ACSHASH6734c5d7a732130b83c7d4a6ba54dcec.min.js"></script>
+
+
+
+<meta name="awa-program" content="echo" /><meta name="awa-enabledFeatures" content="ccs_test;LocaleDetection;QspEnabled;contentbackfillgenerate;esiproductcards;feature-controlled-mwf;uhf-ms-io-endpoint;uhf-esi-cv;uhf-esi-cache;contentsquare;mediapixel;holiday-themer;lazyload-static-components;clientlibDefer;upsellEnabled;contentbackfillpkgdelete;healthcheck;contentbackfillhttpgenerate;perf-tracker-1ds;dynamic-bundle;cvIncrementer;tentingEnabled;chatCookiesImplemented;alertCountDownWithoutServerTime;pdpDynamicRendering;bundlesDynamicRendering;contentbackfillmetadatachangesvideo;contentbackfillmetadatachangesnonvideo;listDynamicRendering;experimentation-without-personalization;generic-list-importer;combinedUHF;cvCallEnabled;m365ProductCatalog;support-unsupported-locales;vsbEnabled;deferClickTale;videoLazyLoad;prefetchFontsEnabled;enable-code-isolation;imageLinkTag;fetchPriority;contentIngestionAgent;enableClickgroupTelemetry;imageLazyLoad;contentIngestionAgent-dispatcher2westus2Agent;isCacheControlFeatureEnabled;feature-controlled-content-card;lcpPrioritizationPhase1;ocReimagineTelemetry;deferScriptsEnabled;lcpPrioritizationPhase2;ocReimagineSlotNumberTelemetry;contentIngestionAgent-dispatcher1westus2Agent;ocReimagineComponentNameTelemetry;ocReimagineTemplateNameTelemetry;ptePhase1;extended-html-minification-sites;dynamicPrice;gl-auto-config;displayV35Toggle;chatCustomEndpoint;enableBoostPersonalization;ocReimagineTelemetryTemplateNameSwap;enableEmailConnector;enable-eventingService;ocReimagineAIAssistant;acsPMEFeatureEnabled;ocReimagineCustomerApiUrl;ocReimagineCustomerFilterApiUrl;email-FigmaEmailAutomation;storeVideoUmp;ocProductPricePrimaryLocale;complianceManagerEnabled;entertainmentEW;enableClarityScript;EnableCascadeAuthSDK;ecsMigrationCheck" /></head>
+
+  
+  <body class="page basicpage">
+    
+
+    
+      
+
+
+
+
+
+	<span style="display:none">
+		
+		
+  			<script>
+  	  			window.mscv = 'CASMicrosoftCVd929cf94.0'
+  			</script>
+			
+		
+		
+				
+					
+				
+			
+
+		
+  			<script>
+  	  			window.msservercv = 'CASMicrosoftCVd929cf94.0'
+  			</script>
+			
+
+		
+		
+				This is the Trace Id: 8758851007674ffcca7a95cb23266ed4
+				<script>
+					window.traceid = '8758851007674ffcca7a95cb23266ed4'
+				</script>
+			
+	</span>
+
+	
+
+	
+	<script type="text/javascript">
+		window.msauthIsPublisher = true;
+	</script>
+
+	
+			
+
+			
+
+			
+			
+		
+	
+
+    
+    
+      
+
+    <span aria-hidden="true" class="d-none geo-info" data-continent="NA" data-country_code="US" data-region_code="WA" data-city="SEATTLE" data-timezone="PST" data-zip="98101-98109+98111-98112+98114-98119+98121-98122+98124-98126+98129+98131-98134+98136+98138+98144-98146+98148+98154-98155+98158+98160-98161+98164+98166+98168+98170+98174+98177-98178+98181+98185+98188-98191+98195+98198-98199" data-county="KING" data-areacode="206">
+    </span>
+
+    
+    
+    
+    <div id="page-top" tabindex="-1"></div>
+    
+
+    <div id="modalsRenderedAfterPageLoad">
+      
+    </div>
+
+    
+
+    
+
+    
+
+    
+    
+      
+
+
+
+      
+<div class="universalheader" data-component-id="cf9a86dceae618e01d6e6399d243873c">
+
+	
+    	
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/universalheader/v1/universalheader/clientlibs/site.ACSHASHba88550b05d37722ac0b4ce30f3c4d6c.min.css" type="text/css">
+
+
+
+	
+
+	
+
+	
+		
+    
+    
+
+    
+        
+                
+
+
+
+        
+        
+                
+                
+            
+    
+<!-- Start of ADDITIONAL DEBUG INFO ** cv.html **
+
+    CVToken: CASMicrosoftCVd929cf94.1
+  End of ADDITIONAL DEBUG INFO -->
+
+                <!-- Start of ADDITIONAL DEBUG INFO ** uhftemplate.html **
+
+    CVToken: CASMicrosoftCVd929cf94.1
+  End of ADDITIONAL DEBUG INFO -->
+                <link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/63-57d110/c9-be0100/a6-e969ef/43-9f2e7c/82-8b5456/a0-5d3913/4f-460e79/ae-f1ac0c?ver=2.0&amp;_cf=02242021_3231" type="text/css" media="all" />    <div id="headerArea" class="uhf"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                <div id="headerRegion"      data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|coreui-region|headerUniversalHeader|coreui-universalheader">
+        
+
+
+                        <div data-m='{"cN":"cookiebanner_cont","cT":"Container","id":"c1m1r1a1","sN":1,"aN":"m1r1a1"}'>
+
+<div id="uhfCookieAlert" data-locale="en-us">
+    <div id="msccBannerV2"></div>
+</div>
+
+                            
+                        </div>
+
+
+
+
+        <a id="uhfSkipToMain" class="m-skip-to-main" href="javascript:void(0)" data-href="#primaryArea" tabindex="0" data-m='{"cN":"Skip to content_nonnav","id":"nn2m1r1a1","sN":2,"aN":"m1r1a1"}'>Skip to main content</a>
+
+
+<header class="c-uhfh context-uhf no-js c-sgl-stck c-category-header " itemscope="itemscope" data-header-footprint="/surface/surface-header-RT, fromService: True"   data-magict="true"   itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed  global-head-cont" data-m='{"cN":"Universal Header_cont","cT":"Container","id":"c3m1r1a1","sN":3,"aN":"m1r1a1"}'>
+        <div class="c-uhfh-gcontainer-st">
+            <button type="button" class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="All Microsoft expand to see list of Microsoft products and services" initialState-label="All Microsoft expand to see list of Microsoft products and services" toggleState-label="Close All Microsoft list" aria-expanded="false" data-m='{"cN":"Mobile menu button_nonnav","id":"nn1c3m1r1a1","sN":1,"aN":"c3m1r1a1"}'></button>
+            <button type="button" class="c-action-trigger c-glyph glyph-arrow-htmllegacy c-close-search" aria-label="Close search" aria-expanded="false" data-m='{"cN":"Close Search_nonnav","id":"nn2c3m1r1a1","sN":2,"aN":"c3m1r1a1"}'></button>
+                    <a id="uhfLogo" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" data-m='{"cN":"GlobalNav_Logo_cont","cT":"Container","id":"c3c3m1r1a1","sN":3,"aN":"c3m1r1a1"}'>
+                        <img alt="" itemprop="logo" class="c-image" src="https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png" role="presentation" aria-hidden="true" />
+                        <span itemprop="name" role="presentation" aria-hidden="true">Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-left" aria-label="See more menu options" data-m='{"cN":"Mobile back button_nonnav","id":"nn4c3m1r1a1","sN":4,"aN":"c3m1r1a1"}'></button>
+                <span data-global-title="Microsoft home" class="js-mobile-title">Surface</span>
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-right" aria-label="See more menu options" data-m='{"cN":"Mobile forward button_nonnav","id":"nn5c3m1r1a1","sN":5,"aN":"c3m1r1a1"}'></button>
+            </div>
+                    <div class="c-show-pipe x-hidden-vp-mobile-st">
+                        <a id="uhfCatLogo" class="c-logo c-cat-logo" href="https://www.microsoft.com/en-us/surface" aria-label="Surface" itemprop="url" data-m='{"cN":"CatNav_Surface_nav","id":"n6c3m1r1a1","sN":6,"aN":"c3m1r1a1"}'>
+                                <span>Surface</span>
+                        </a>
+                    </div>
+                <div class="cat-logo-button-cont x-hidden">
+                        <button type="button" id="uhfCatLogoButton" class="c-cat-logo-button x-hidden" aria-expanded="false" aria-label="Surface" data-m='{"cN":"Surface_nonnav","id":"nn7c3m1r1a1","sN":7,"aN":"c3m1r1a1"}'>
+                            Surface
+                        </button>
+                </div>
+
+
+
+                    <nav id="uhf-g-nav" aria-label="Contextual menu" class="c-uhfh-gnav" data-m='{"cN":"Category nav_cont","cT":"Container","id":"c8c3m1r1a1","sN":8,"aN":"c3m1r1a1"}'>
+            <ul class="js-paddle-items">
+                    <li class="single-link js-nav-menu x-hidden-none-mobile-vp uhf-menu-item">
+                        <a class="c-uhf-nav-link" href="https://www.microsoft.com/en-us/surface" data-m='{"cN":"CatNav_Home_nav","id":"n1c8c3m1r1a1","sN":1,"aN":"c8c3m1r1a1"}' > Home </a>
+                    </li>
+                                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_55"  aria-expanded="false" data-m='{"cN":"CatNav_Devices_nonnav","id":"nn2c8c3m1r1a1","sN":2,"aN":"c8c3m1r1a1"}'>Computers</button>
+
+                                <ul class="f-multi-column f-multi-column-4" data-class-idn="f-multi-column f-multi-column-4" aria-hidden="true" data-m='{"cN":"Devices_cont","cT":"Container","id":"c3c8c3m1r1a1","sN":3,"aN":"c8c3m1r1a1"}'>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c1c3c8c3m1r1a1","sN":1,"aN":"c3c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_56-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c1c3c8c3m1r1a1","sN":1,"aN":"c1c3c8c3m1r1a1"}'>Copilot+PC 2-in-1s</span>
+    <button id="uhf-navbtn-shellmenu_56-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c1c3c8c3m1r1a1","sN":2,"aN":"c1c3c8c3m1r1a1"}'>Copilot+PC 2-in-1s</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_56-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Pro_cont","cT":"Container","id":"c3c1c3c8c3m1r1a1","sN":3,"aN":"c1c3c8c3m1r1a1"}'>
+            <a id="surface-pro" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/devices/surface-pro" data-m='{"cN":"CatNav_Surface Pro_nav","id":"n1c3c1c3c8c3m1r1a1","sN":1,"aN":"c3c1c3c8c3m1r1a1"}'>Surface Pro</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Pro Keyboards_cont","cT":"Container","id":"c4c1c3c8c3m1r1a1","sN":4,"aN":"c1c3c8c3m1r1a1"}'>
+            <a id="surface-pro-keyboards" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-pro-keyboards" data-m='{"cN":"CatNav_Surface Pro Keyboards_nav","id":"n1c4c1c3c8c3m1r1a1","sN":1,"aN":"c4c1c3c8c3m1r1a1"}'>Surface Pro Keyboards</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Slim Pen_cont","cT":"Container","id":"c5c1c3c8c3m1r1a1","sN":5,"aN":"c1c3c8c3m1r1a1"}'>
+            <a id="surface-slim-pen" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/d/surface-slim-pen/8tb9xw8rwc14" data-m='{"cN":"CatNav_Surface Slim Pen_nav","id":"n1c5c1c3c8c3m1r1a1","sN":1,"aN":"c5c1c3c8c3m1r1a1"}'>Surface Slim Pen</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c2c3c8c3m1r1a1","sN":2,"aN":"c3c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_60-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c2c3c8c3m1r1a1","sN":1,"aN":"c2c3c8c3m1r1a1"}'>Copilot+PC Laptops</span>
+    <button id="uhf-navbtn-shellmenu_60-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c2c3c8c3m1r1a1","sN":2,"aN":"c2c3c8c3m1r1a1"}'>Copilot+PC Laptops</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_60-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Laptop Ultra_cont","cT":"Container","id":"c3c2c3c8c3m1r1a1","sN":3,"aN":"c2c3c8c3m1r1a1"}'>
+            <a id="surface-laptop-ultra" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra" data-m='{"cN":"CatNav_Surface Laptop Ultra_nav","id":"n1c3c2c3c8c3m1r1a1","sN":1,"aN":"c3c2c3c8c3m1r1a1"}'>Surface Laptop Ultra</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Laptop_cont","cT":"Container","id":"c4c2c3c8c3m1r1a1","sN":4,"aN":"c2c3c8c3m1r1a1"}'>
+            <a id="surface-laptop" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/devices/surface-laptop" data-m='{"cN":"CatNav_Surface Laptop_nav","id":"n1c4c2c3c8c3m1r1a1","sN":1,"aN":"c4c2c3c8c3m1r1a1"}'>Surface Laptop</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Laptop accessories_cont","cT":"Container","id":"c5c2c3c8c3m1r1a1","sN":5,"aN":"c2c3c8c3m1r1a1"}'>
+            <a id="surface-laptop-accessories" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/surfacelaptopaccessories?headerid=department-surface" data-m='{"cN":"CatNav_Surface Laptop accessories_nav","id":"n1c5c2c3c8c3m1r1a1","sN":1,"aN":"c5c2c3c8c3m1r1a1"}'>Surface Laptop accessories</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c3c3c8c3m1r1a1","sN":3,"aN":"c3c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_64-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c3c3c8c3m1r1a1","sN":1,"aN":"c3c3c8c3m1r1a1"}'>More</span>
+    <button id="uhf-navbtn-shellmenu_64-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c3c3c8c3m1r1a1","sN":2,"aN":"c3c3c8c3m1r1a1"}'>More</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_64-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"surface-studio-2+_cont","cT":"Container","id":"c3c3c3c8c3m1r1a1","sN":3,"aN":"c3c3c8c3m1r1a1"}'>
+            <a id="shellmenu_65" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/d/surface-studio-2/8vlfqc3597k4" data-m='{"cN":"CatNav_surface-studio-2+_nav","id":"n1c3c3c3c8c3m1r1a1","sN":1,"aN":"c3c3c3c8c3m1r1a1"}'>Surface Studio 2+</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Laptop Studio 2_cont","cT":"Container","id":"c4c3c3c8c3m1r1a1","sN":4,"aN":"c3c3c8c3m1r1a1"}'>
+            <a id="surface-laptop-studio-2" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/d/surface-laptop-studio-2/8rqr54krf1dz" data-m='{"cN":"CatNav_Surface Laptop Studio 2_nav","id":"n1c4c3c3c8c3m1r1a1","sN":1,"aN":"c4c3c3c8c3m1r1a1"}'>Surface Laptop Studio 2</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c4c3c8c3m1r1a1","sN":4,"aN":"c3c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_67-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c4c3c8c3m1r1a1","sN":1,"aN":"c4c3c8c3m1r1a1"}'>Need help deciding?</span>
+    <button id="uhf-navbtn-shellmenu_67-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c4c3c8c3m1r1a1","sN":2,"aN":"c4c3c8c3m1r1a1"}'>Need help deciding?</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_67-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Compare Surface devices_cont","cT":"Container","id":"c3c4c3c8c3m1r1a1","sN":3,"aN":"c4c3c8c3m1r1a1"}'>
+            <a id="shellmenu_68" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/devices/compare-devices" data-m='{"cN":"CatNav_Compare Surface devices_nav","id":"n1c3c4c3c8c3m1r1a1","sN":1,"aN":"c3c4c3c8c3m1r1a1"}'>Compare Surface devices</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Do more with Surface_cont","cT":"Container","id":"c4c4c3c8c3m1r1a1","sN":4,"aN":"c4c3c8c3m1r1a1"}'>
+            <a id="do-more-with-surface" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/do-more-with-surface" data-m='{"cN":"CatNav_Do more with Surface_nav","id":"n1c4c4c3c8c3m1r1a1","sN":1,"aN":"c4c4c3c8c3m1r1a1"}'>Do more with Surface</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_70"  aria-expanded="false" data-m='{"cN":"CatNav_Computers for Business_nonnav","id":"nn4c8c3m1r1a1","sN":4,"aN":"c8c3m1r1a1"}'>Computers for Business</button>
+
+                                <ul class="f-multi-column f-multi-column-5" data-class-idn="f-multi-column f-multi-column-5" aria-hidden="true" data-m='{"cN":"Computers for Business_cont","cT":"Container","id":"c5c8c3m1r1a1","sN":5,"aN":"c8c3m1r1a1"}'>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c1c5c8c3m1r1a1","sN":1,"aN":"c5c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_71-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c1c5c8c3m1r1a1","sN":1,"aN":"c1c5c8c3m1r1a1"}'>2-in-1 PCs</span>
+    <button id="uhf-navbtn-shellmenu_71-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c1c5c8c3m1r1a1","sN":2,"aN":"c1c5c8c3m1r1a1"}'>2-in-1 PCs</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_71-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"All Surface Pro 2-in-1s for Business_cont","cT":"Container","id":"c3c1c5c8c3m1r1a1","sN":3,"aN":"c1c5c8c3m1r1a1"}'>
+            <a id="shellmenu_72" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/surface-pro-for-business-models" data-m='{"cN":"CatNav_All Surface Pro 2-in-1s for Business_nav","id":"n1c3c1c5c8c3m1r1a1","sN":1,"aN":"c3c1c5c8c3m1r1a1"}'>All Surface Pro 2-in-1s for Business</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c2c5c8c3m1r1a1","sN":2,"aN":"c5c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_73-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c2c5c8c3m1r1a1","sN":1,"aN":"c2c5c8c3m1r1a1"}'>Laptops</span>
+    <button id="uhf-navbtn-shellmenu_73-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c2c5c8c3m1r1a1","sN":2,"aN":"c2c5c8c3m1r1a1"}'>Laptops</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_73-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"All Surface Laptops for Business_cont","cT":"Container","id":"c3c2c5c8c3m1r1a1","sN":3,"aN":"c2c5c8c3m1r1a1"}'>
+            <a id="shellmenu_74" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/surface-laptop-for-business-models" data-m='{"cN":"CatNav_All Surface Laptops for Business_nav","id":"n1c3c2c5c8c3m1r1a1","sN":1,"aN":"c3c2c5c8c3m1r1a1"}'>All Surface Laptops for Business</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c3c5c8c3m1r1a1","sN":3,"aN":"c5c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_75-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c3c5c8c3m1r1a1","sN":1,"aN":"c3c5c8c3m1r1a1"}'>Large Screens</span>
+    <button id="uhf-navbtn-shellmenu_75-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c3c5c8c3m1r1a1","sN":2,"aN":"c3c5c8c3m1r1a1"}'>Large Screens</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_75-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Studio 2+ for Business_cont","cT":"Container","id":"c3c3c5c8c3m1r1a1","sN":3,"aN":"c3c5c8c3m1r1a1"}'>
+            <a id="shellmenu_76" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/surface-studio-2-plus" data-m='{"cN":"CatNav_Surface Studio 2+ for Business_nav","id":"n1c3c3c5c8c3m1r1a1","sN":1,"aN":"c3c3c5c8c3m1r1a1"}'>Surface Studio 2+ for Business</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Hub 3_cont","cT":"Container","id":"c4c3c5c8c3m1r1a1","sN":4,"aN":"c3c5c8c3m1r1a1"}'>
+            <a id="shellmenu_77" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/surface-hub-3" data-m='{"cN":"CatNav_Surface Hub 3_nav","id":"n1c4c3c5c8c3m1r1a1","sN":1,"aN":"c4c3c5c8c3m1r1a1"}'>Surface Hub 3</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c4c5c8c3m1r1a1","sN":4,"aN":"c5c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_78-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c4c5c8c3m1r1a1","sN":1,"aN":"c4c5c8c3m1r1a1"}'>Accessories</span>
+    <button id="uhf-navbtn-shellmenu_78-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c4c5c8c3m1r1a1","sN":2,"aN":"c4c5c8c3m1r1a1"}'>Accessories</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_78-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"All Accessories_cont","cT":"Container","id":"c3c4c5c8c3m1r1a1","sN":3,"aN":"c4c5c8c3m1r1a1"}'>
+            <a id="shellmenu_79" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/accessories" data-m='{"cN":"CatNav_All Accessories_nav","id":"n1c3c4c5c8c3m1r1a1","sN":1,"aN":"c3c4c5c8c3m1r1a1"}'>All Accessories</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c5c5c8c3m1r1a1","sN":5,"aN":"c5c8c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_80-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c5c5c8c3m1r1a1","sN":1,"aN":"c5c5c8c3m1r1a1"}'>Need help deciding?</span>
+    <button id="uhf-navbtn-shellmenu_80-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c5c5c8c3m1r1a1","sN":2,"aN":"c5c5c8c3m1r1a1"}'>Need help deciding?</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_80-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Compare Surface devices for business_cont","cT":"Container","id":"c3c5c5c8c3m1r1a1","sN":3,"aN":"c5c5c8c3m1r1a1"}'>
+            <a id="shellmenu_81" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/business/compare-devices" data-m='{"cN":"CatNav_Compare Surface devices for business_nav","id":"n1c3c5c5c8c3m1r1a1","sN":1,"aN":"c3c5c5c8c3m1r1a1"}'>Compare Surface devices for Business</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                        <li class="f-multi-column-info"><a data-m='{"cN":"Surface for Business Home_nav","id":"n6c5c8c3m1r1a1","sN":6,"aN":"c5c8c3m1r1a1"}' href="https://www.microsoft.com/en-us/surface/business" aria-label="Surface for Business Home" class="c-glyph">Surface for Business Home</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_82"  aria-expanded="false" data-m='{"cN":"CatNav_Accessories_nonnav","id":"nn6c8c3m1r1a1","sN":6,"aN":"c8c3m1r1a1"}'>Accessories</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Accessories_cont","cT":"Container","id":"c7c8c3m1r1a1","sN":7,"aN":"c8c3m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Pro accessories_cont","cT":"Container","id":"c1c7c8c3m1r1a1","sN":1,"aN":"c7c8c3m1r1a1"}'>
+            <a id="pro-accessories" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/surfaceproaccessories" data-m='{"cN":"CatNav_Surface Pro accessories_nav","id":"n1c1c7c8c3m1r1a1","sN":1,"aN":"c1c7c8c3m1r1a1"}'>Surface Pro accessories</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Laptop accessories_cont","cT":"Container","id":"c2c7c8c3m1r1a1","sN":2,"aN":"c7c8c3m1r1a1"}'>
+            <a id="laptop-accessories" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/surfacelaptopaccessories?headerid=department-surface" data-m='{"cN":"CatNav_Surface Laptop accessories_nav","id":"n1c2c7c8c3m1r1a1","sN":1,"aN":"c2c7c8c3m1r1a1"}'>Surface Laptop accessories</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Studio accessories_cont","cT":"Container","id":"c3c7c8c3m1r1a1","sN":3,"aN":"c7c8c3m1r1a1"}'>
+            <a id="studio-accessories" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/surfacestudioaccessories?headerid=department-surface" data-m='{"cN":"CatNav_Surface Studio accessories_nav","id":"n1c3c7c8c3m1r1a1","sN":1,"aN":"c3c7c8c3m1r1a1"}'>Surface Studio accessories</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Pro Keyboards_cont","cT":"Container","id":"c4c7c8c3m1r1a1","sN":4,"aN":"c7c8c3m1r1a1"}'>
+            <a id="surface-pro-keyboards" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-pro-keyboards" data-m='{"cN":"CatNav_Surface Pro Keyboards_nav","id":"n1c4c7c8c3m1r1a1","sN":1,"aN":"c4c7c8c3m1r1a1"}'>Surface Pro Keyboards</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"All Surface accessories_cont","cT":"Container","id":"c5c7c8c3m1r1a1","sN":5,"aN":"c7c8c3m1r1a1"}'>
+            <a id="all-accessories" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-accessories" data-m='{"cN":"CatNav_All Surface accessories_nav","id":"n1c5c7c8c3m1r1a1","sN":1,"aN":"c5c7c8c3m1r1a1"}'>All Surface accessories</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="shop-now"  aria-expanded="false" data-m='{"cN":"CatNav_Shop now_nonnav","id":"nn8c8c3m1r1a1","sN":8,"aN":"c8c3m1r1a1"}'>Shop now</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Shop now_cont","cT":"Container","id":"c9c8c3m1r1a1","sN":9,"aN":"c8c3m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"All Surface devices_cont","cT":"Container","id":"c1c9c8c3m1r1a1","sN":1,"aN":"c9c8c3m1r1a1"}'>
+            <a id="surface-devices" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/shop-all-microsoft-surface" data-m='{"cN":"CatNav_All Surface devices_nav","id":"n1c1c9c8c3m1r1a1","sN":1,"aN":"c1c9c8c3m1r1a1"}'>All Surface devices</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface deals_cont","cT":"Container","id":"c2c9c8c3m1r1a1","sN":2,"aN":"c9c8c3m1r1a1"}'>
+            <a id="surface-deals" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-deals" data-m='{"cN":"CatNav_Surface deals_nav","id":"n1c2c9c8c3m1r1a1","sN":1,"aN":"c2c9c8c3m1r1a1"}'>Surface deals</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Bundles_cont","cT":"Container","id":"c3c9c8c3m1r1a1","sN":3,"aN":"c9c8c3m1r1a1"}'>
+            <a id="surface-bundles" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/surfacebundles?headerid=department-surface" data-m='{"cN":"CatNav_Surface Bundles_nav","id":"n1c3c9c8c3m1r1a1","sN":1,"aN":"c3c9c8c3m1r1a1"}'>Surface bundles</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"CertifiedrefurbishedSurface_cont","cT":"Container","id":"c4c9c8c3m1r1a1","sN":4,"aN":"c9c8c3m1r1a1"}'>
+            <a id="certified-refurbished-surface" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/certifiedrefurbishedsurface" data-m='{"cN":"CatNav_CertifiedrefurbishedSurface_nav","id":"n1c4c9c8c3m1r1a1","sN":1,"aN":"c4c9c8c3m1r1a1"}'>Certified refurbished Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"SurfaceRepairParts_cont","cT":"Container","id":"c5c9c8c3m1r1a1","sN":5,"aN":"c9c8c3m1r1a1"}'>
+            <a id="c-shellmenu_93" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-repair-parts" data-m='{"cN":"CatNav_SurfaceRepairParts_nav","id":"n1c5c9c8c3m1r1a1","sN":1,"aN":"c5c9c8c3m1r1a1"}'>Surface repair parts</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"WhereToBuy_cont","cT":"Container","id":"c6c9c8c3m1r1a1","sN":6,"aN":"c9c8c3m1r1a1"}'>
+            <a id="c-shellmenu_94" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface/buy" data-m='{"cN":"CatNav_WhereToBuy_nav","id":"n1c6c9c8c3m1r1a1","sN":1,"aN":"c6c9c8c3m1r1a1"}'>Where to buy</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="support"  aria-expanded="false" data-m='{"cN":"CatNav_Support_nonnav","id":"nn10c8c3m1r1a1","sN":10,"aN":"c8c3m1r1a1"}'>Support</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Support_cont","cT":"Container","id":"c11c8c3m1r1a1","sN":11,"aN":"c8c3m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface Support_cont","cT":"Container","id":"c1c11c8c3m1r1a1","sN":1,"aN":"c11c8c3m1r1a1"}'>
+            <a id="surface-support" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/surface" data-m='{"cN":"CatNav_Surface Support_nav","id":"n1c1c11c8c3m1r1a1","sN":1,"aN":"c1c11c8c3m1r1a1"}'>Surface Support</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Transfer your data to a new Surface Copilot+ PC_cont","cT":"Container","id":"c2c11c8c3m1r1a1","sN":2,"aN":"c11c8c3m1r1a1"}'>
+            <a id="transfer-your-data-to-a-new-surface-copilot-plus-pc" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/transfer-your-data-with-windows-backup?audience=surface" data-m='{"cN":"CatNav_Transfer your data to a new Surface Copilot+ PC_nav","id":"n1c2c11c8c3m1r1a1","sN":1,"aN":"c2c11c8c3m1r1a1"}'>Transfer your data to a new Surface Copilot+ PC</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>
+
+                <li id="overflow-menu" class="overflow-menu x-hidden uhf-menu-item">
+                        <div class="c-uhf-menu js-nav-menu">
+        <button data-m='{"pid":"More","id":"nn12c8c3m1r1a1","sN":12,"aN":"c8c3m1r1a1"}' type="button" aria-label="More" aria-expanded="false">More</button>
+        <ul id="overflow-menu-list" aria-hidden="true" class="overflow-menu-list">
+        </ul>
+    </div>
+
+                </li>
+                                    <li class="single-link js-nav-menu" id="c-uhf-nav-cta">
+                        <a id="surface-deals-new" class="c-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface-deals" data-m='{"cN":"CatNav_cta_SHOP DEALS_nav","id":"n13c8c3m1r1a1","sN":13,"aN":"c8c3m1r1a1"}'>SHOP DEALS</a>
+                    </li>
+            </ul>
+            
+        </nav>
+
+
+            <div class="c-uhfh-actions" data-m='{"cN":"Header actions_cont","cT":"Container","id":"c9c3m1r1a1","sN":9,"aN":"c3m1r1a1"}'>
+                <div class="wf-menu">        <nav id="uhf-c-nav" aria-label="All Microsoft menu" data-m='{"cN":"GlobalNav_cont","cT":"Container","id":"c1c9c3m1r1a1","sN":1,"aN":"c9c3m1r1a1"}'>
+            <ul class="js-paddle-items">
+                <li>
+                    <div class="c-uhf-menu js-nav-menu">
+                        <button type="button" class="c-button-logo all-ms-nav" aria-expanded="false" data-m='{"cN":"GlobalNav_More_nonnav","id":"nn1c1c9c3m1r1a1","sN":1,"aN":"c1c9c3m1r1a1"}'> <span>All Microsoft</span></button>
+                        <ul class="f-multi-column f-multi-column-6" aria-hidden="true" data-m='{"cN":"More_cont","cT":"Container","id":"c2c1c9c3m1r1a1","sN":2,"aN":"c1c9c3m1r1a1"}'>
+                                    <li class="c-w0-contr">
+            <h2 class="c-uhf-sronly">Global</h2>
+            <ul class="c-w0">
+        <li class="js-nav-menu single-link" data-m='{"cN":"M365_cont","cT":"Container","id":"c1c2c1c9c3m1r1a1","sN":1,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_0" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"W0Nav_M365_nav","id":"n1c1c2c1c9c3m1r1a1","sN":1,"aN":"c1c2c1c9c3m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"GlobalAzure_cont","cT":"Container","id":"c2c2c1c9c3m1r1a1","sN":2,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_1" class="js-subm-uhf-nav-link" href="https://azure.microsoft.com/en-us?ocid=cmm4r4ppnhp" data-m='{"cN":"W0Nav_GlobalAzure_nav","id":"n1c2c2c1c9c3m1r1a1","sN":1,"aN":"c2c2c1c9c3m1r1a1"}'>Azure</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Copilot_cont","cT":"Container","id":"c3c2c1c9c3m1r1a1","sN":3,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_2" class="js-subm-uhf-nav-link" href="https://copilot.microsoft.com/" data-m='{"cN":"W0Nav_Copilot_nav","id":"n1c3c2c1c9c3m1r1a1","sN":1,"aN":"c3c2c1c9c3m1r1a1"}'>Copilot</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Windows_cont","cT":"Container","id":"c4c2c1c9c3m1r1a1","sN":4,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_3" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/" data-m='{"cN":"W0Nav_Windows_nav","id":"n1c4c2c1c9c3m1r1a1","sN":1,"aN":"c4c2c1c9c3m1r1a1"}'>Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface_cont","cT":"Container","id":"c5c2c1c9c3m1r1a1","sN":5,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_4" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/surface" data-m='{"cN":"W0Nav_Surface_nav","id":"n1c5c2c1c9c3m1r1a1","sN":1,"aN":"c5c2c1c9c3m1r1a1"}'>Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"XBOX_cont","cT":"Container","id":"c6c2c1c9c3m1r1a1","sN":6,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_5" class="js-subm-uhf-nav-link" href="https://www.xbox.com/" data-m='{"cN":"W0Nav_XBOX_nav","id":"n1c6c2c1c9c3m1r1a1","sN":1,"aN":"c6c2c1c9c3m1r1a1"}'>XBOX</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Deals_cont","cT":"Container","id":"c7c2c1c9c3m1r1a1","sN":7,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_6" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/sale?icid=DSM_TopNavDeals" data-m='{"cN":"W0Nav_Deals_nav","id":"n1c7c2c1c9c3m1r1a1","sN":1,"aN":"c7c2c1c9c3m1r1a1"}'>Deals</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Small Business_cont","cT":"Container","id":"c8c2c1c9c3m1r1a1","sN":8,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="l0_SmallBusiness" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/business" data-m='{"cN":"W0Nav_Small Business_nav","id":"n1c8c2c1c9c3m1r1a1","sN":1,"aN":"c8c2c1c9c3m1r1a1"}'>Small Business</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Support_cont","cT":"Container","id":"c9c2c1c9c3m1r1a1","sN":9,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="l1_support" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/en-us" data-m='{"cN":"W0Nav_Support_nav","id":"n1c9c2c1c9c3m1r1a1","sN":1,"aN":"c9c2c1c9c3m1r1a1"}'>Support</a>
+            
+        </li>
+            </ul>
+        </li>
+
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c10c2c1c9c3m1r1a1","sN":10,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_10-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c10c2c1c9c3m1r1a1","sN":1,"aN":"c10c2c1c9c3m1r1a1"}'>Software</span>
+    <button id="uhf-navbtn-shellmenu_10-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c10c2c1c9c3m1r1a1","sN":2,"aN":"c10c2c1c9c3m1r1a1"}'>Software</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_10-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_WindowsApps_cont","cT":"Container","id":"c3c10c2c1c9c3m1r1a1","sN":3,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_11" class="js-subm-uhf-nav-link" href="https://apps.microsoft.com/home" data-m='{"cN":"GlobalNav_More_Software_WindowsApps_nav","id":"n1c3c10c2c1c9c3m1r1a1","sN":1,"aN":"c3c10c2c1c9c3m1r1a1"}'>Windows Apps</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Outlook_cont","cT":"Container","id":"c4c10c2c1c9c3m1r1a1","sN":4,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_12" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" data-m='{"cN":"GlobalNav_More_Software_Outlook_nav","id":"n1c4c10c2c1c9c3m1r1a1","sN":1,"aN":"c4c10c2c1c9c3m1r1a1"}'>Outlook</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneDrive_cont","cT":"Container","id":"c5c10c2c1c9c3m1r1a1","sN":5,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_13" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage" data-m='{"cN":"GlobalNav_More_Software_OneDrive_nav","id":"n1c5c10c2c1c9c3m1r1a1","sN":1,"aN":"c5c10c2c1c9c3m1r1a1"}'>OneDrive</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Microsoft Teams_cont","cT":"Container","id":"c6c10c2c1c9c3m1r1a1","sN":6,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_14" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" data-m='{"cN":"GlobalNav_More_Software_Microsoft Teams_nav","id":"n1c6c10c2c1c9c3m1r1a1","sN":1,"aN":"c6c10c2c1c9c3m1r1a1"}'>Microsoft Teams</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneNote_cont","cT":"Container","id":"c7c10c2c1c9c3m1r1a1","sN":7,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_15" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app" data-m='{"cN":"GlobalNav_More_Software_OneNote_nav","id":"n1c7c10c2c1c9c3m1r1a1","sN":1,"aN":"c7c10c2c1c9c3m1r1a1"}'>OneNote</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Edge_cont","cT":"Container","id":"c8c10c2c1c9c3m1r1a1","sN":8,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_16" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/edge" data-m='{"cN":"GlobalNav_More_Software_Edge_nav","id":"n1c8c10c2c1c9c3m1r1a1","sN":1,"aN":"c8c10c2c1c9c3m1r1a1"}'>Microsoft Edge</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Skype_cont","cT":"Container","id":"c9c10c2c1c9c3m1r1a1","sN":9,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_17" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/en-us/office/moving-from-skype-to-microsoft-teams-free-3c0caa26-d9db-4179-bcb3-930ae2c87570?icid=DSM_All_Skype" data-m='{"cN":"GlobalNav_More_Software_Skype_nav","id":"n1c9c10c2c1c9c3m1r1a1","sN":1,"aN":"c9c10c2c1c9c3m1r1a1"}'>Moving from Skype to Teams</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cN":"PCsAndDevices_cont","cT":"Container","id":"c11c2c1c9c3m1r1a1","sN":11,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_18-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn1c11c2c1c9c3m1r1a1","sN":1,"aN":"c11c2c1c9c3m1r1a1"}'>PCs &amp; Devices  </span>
+    <button id="uhf-navbtn-shellmenu_18-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn2c11c2c1c9c3m1r1a1","sN":2,"aN":"c11c2c1c9c3m1r1a1"}'>PCs &amp; Devices  </button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_18-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_PCsAndTablets_cont","cT":"Container","id":"c3c11c2c1c9c3m1r1a1","sN":3,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_19" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/pc?icid=CNavDevicesPC" data-m='{"cN":"GlobalNav_More_PCsAndDevices_PCsAndTablets_nav","id":"n1c3c11c2c1c9c3m1r1a1","sN":1,"aN":"c3c11c2c1c9c3m1r1a1"}'>Computers</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_ShopXbox_cont","cT":"Container","id":"c4c11c2c1c9c3m1r1a1","sN":4,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_20" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/xbox?icid=DSM_All_ShopXbox" data-m='{"cN":"GlobalNav_More_PCsAndDevices_ShopXbox_nav","id":"n1c4c11c2c1c9c3m1r1a1","sN":1,"aN":"c4c11c2c1c9c3m1r1a1"}'>Shop XBOX</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_Accessories_cont","cT":"Container","id":"c5c11c2c1c9c3m1r1a1","sN":5,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_21" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/accessories?icid=CNavDevicesAccessories" data-m='{"cN":"GlobalNav_More_PCsAndDevices_Accessories_nav","id":"n1c5c11c2c1c9c3m1r1a1","sN":1,"aN":"c5c11c2c1c9c3m1r1a1"}'>Accessories</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_VMAndMixedReality_cont","cT":"Container","id":"c6c11c2c1c9c3m1r1a1","sN":6,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_22" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/virtualreality?icid=CNavVirtualReality" data-m='{"cN":"GlobalNav_More_PCsAndDevices_VMAndMixedReality_nav","id":"n1c6c11c2c1c9c3m1r1a1","sN":1,"aN":"c6c11c2c1c9c3m1r1a1"}'>VR &amp; mixed reality</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevicesCertifiedRefurbished_cont","cT":"Container","id":"c7c11c2c1c9c3m1r1a1","sN":7,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_23" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/certified-refurbished-products" data-m='{"cN":"GlobalNav_More_PCsAndDevicesCertifiedRefurbished_nav","id":"n1c7c11c2c1c9c3m1r1a1","sN":1,"aN":"c7c11c2c1c9c3m1r1a1"}'>Certified Refurbished</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_Trade-in-for-cash_cont","cT":"Container","id":"c8c11c2c1c9c3m1r1a1","sN":8,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_24" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/microsoft-trade-in" data-m='{"cN":"GlobalNav_More_PCsAndDevices_Trade-in-for-cash_nav","id":"n1c8c11c2c1c9c3m1r1a1","sN":1,"aN":"c8c11c2c1c9c3m1r1a1"}'>Trade-in for cash</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c12c2c1c9c3m1r1a1","sN":12,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_25-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c12c2c1c9c3m1r1a1","sN":1,"aN":"c12c2c1c9c3m1r1a1"}'>Entertainment</span>
+    <button id="uhf-navbtn-shellmenu_25-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c12c2c1c9c3m1r1a1","sN":2,"aN":"c12c2c1c9c3m1r1a1"}'>Entertainment</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_25-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Entertainment_XboxGamePassUltimate_cont","cT":"Container","id":"c3c12c2c1c9c3m1r1a1","sN":3,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_26" class="js-subm-uhf-nav-link" href="https://www.xbox.com/en-us/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0?icid=DSM_All_XboxGamePassUltimate" data-m='{"cN":"GlobalNav_More_Entertainment_XboxGamePassUltimate_nav","id":"n1c3c12c2c1c9c3m1r1a1","sN":1,"aN":"c3c12c2c1c9c3m1r1a1"}'>XBOX Game Pass Ultimate</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Entertainment_PC_Game_Pass_cont","cT":"Container","id":"c4c12c2c1c9c3m1r1a1","sN":4,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_27" class="js-subm-uhf-nav-link" href="https://www.xbox.com/en-us/games/store/pc-game-pass/cfq7ttc0kgq8?icid=CNavAllPCGamePass" data-m='{"cN":"GlobalNav_More_Entertainment_PC_Game_Pass_nav","id":"n1c4c12c2c1c9c3m1r1a1","sN":1,"aN":"c4c12c2c1c9c3m1r1a1"}'>PC Game Pass</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Entertainment_XboxGames_cont","cT":"Container","id":"c5c12c2c1c9c3m1r1a1","sN":5,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_28" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/xboxgames?icid=DSM_All_XboxGames" data-m='{"cN":"GlobalNav_More_Entertainment_XboxGames_nav","id":"n1c5c12c2c1c9c3m1r1a1","sN":1,"aN":"c5c12c2c1c9c3m1r1a1"}'>XBOX games</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Entertainment_PCGames_cont","cT":"Container","id":"c6c12c2c1c9c3m1r1a1","sN":6,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_29" class="js-subm-uhf-nav-link" href="https://apps.microsoft.com/games" data-m='{"cN":"GlobalNav_More_Entertainment_PCGames_nav","id":"n1c6c12c2c1c9c3m1r1a1","sN":1,"aN":"c6c12c2c1c9c3m1r1a1"}'>PC games</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c13c2c1c9c3m1r1a1","sN":13,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_30-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c13c2c1c9c3m1r1a1","sN":1,"aN":"c13c2c1c9c3m1r1a1"}'>Business</span>
+    <button id="uhf-navbtn-shellmenu_30-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c13c2c1c9c3m1r1a1","sN":2,"aN":"c13c2c1c9c3m1r1a1"}'>Business</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_30-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_AI_cont","cT":"Container","id":"c3c13c2c1c9c3m1r1a1","sN":3,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_31" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/ai?icid=DSM_All_AI" data-m='{"cN":"GlobalNav_More_Business_AI_nav","id":"n1c3c13c2c1c9c3m1r1a1","sN":1,"aN":"c3c13c2c1c9c3m1r1a1"}'>Microsoft AI</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Microsoft Security_cont","cT":"Container","id":"c4c13c2c1c9c3m1r1a1","sN":4,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_32" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/security" data-m='{"cN":"GlobalNav_More_Business_Microsoft Security_nav","id":"n1c4c13c2c1c9c3m1r1a1","sN":1,"aN":"c4c13c2c1c9c3m1r1a1"}'>Microsoft Security</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_MicrosoftDynamics365_cont","cT":"Container","id":"c5c13c2c1c9c3m1r1a1","sN":5,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_33" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/dynamics-365" data-m='{"cN":"GlobalNav_More_Business_MicrosoftDynamics365_nav","id":"n1c5c13c2c1c9c3m1r1a1","sN":1,"aN":"c5c13c2c1c9c3m1r1a1"}'>Dynamics 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Microsoft365forbusiness_cont","cT":"Container","id":"c6c13c2c1c9c3m1r1a1","sN":6,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_34" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/microsoft-365/business" data-m='{"cN":"GlobalNav_More_Business_Microsoft365forbusiness_nav","id":"n1c6c13c2c1c9c3m1r1a1","sN":1,"aN":"c6c13c2c1c9c3m1r1a1"}'>Microsoft 365 for business</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_MicrosoftPowerPlatform_cont","cT":"Container","id":"c7c13c2c1c9c3m1r1a1","sN":7,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_35" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/power-platform" data-m='{"cN":"GlobalNav_More_Business_MicrosoftPowerPlatform_nav","id":"n1c7c13c2c1c9c3m1r1a1","sN":1,"aN":"c7c13c2c1c9c3m1r1a1"}'>Microsoft Power Platform</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Windows365_cont","cT":"Container","id":"c8c13c2c1c9c3m1r1a1","sN":8,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_36" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows-365" data-m='{"cN":"GlobalNav_More_Business_Windows365_nav","id":"n1c8c13c2c1c9c3m1r1a1","sN":1,"aN":"c8c13c2c1c9c3m1r1a1"}'>Windows 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_SmallBusiness_cont","cT":"Container","id":"c9c13c2c1c9c3m1r1a1","sN":9,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_37" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore" data-m='{"cN":"GlobalNav_More_Business_SmallBusiness_nav","id":"n1c9c13c2c1c9c3m1r1a1","sN":1,"aN":"c9c13c2c1c9c3m1r1a1"}'>Small Business</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Sovereignty_cont","cT":"Container","id":"c10c13c2c1c9c3m1r1a1","sN":10,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_38" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/sovereignty?icid=DSM_More_Sovereignty" data-m='{"cN":"GlobalNav_More_Business_Sovereignty_nav","id":"n1c10c13c2c1c9c3m1r1a1","sN":1,"aN":"c10c13c2c1c9c3m1r1a1"}'>Digital Sovereignty</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c14c2c1c9c3m1r1a1","sN":14,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_39-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c14c2c1c9c3m1r1a1","sN":1,"aN":"c14c2c1c9c3m1r1a1"}'>Developer &amp; IT  </span>
+    <button id="uhf-navbtn-shellmenu_39-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c14c2c1c9c3m1r1a1","sN":2,"aN":"c14c2c1c9c3m1r1a1"}'>Developer &amp; IT  </button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_39-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Azure_cont","cT":"Container","id":"c3c14c2c1c9c3m1r1a1","sN":3,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_40" class="js-subm-uhf-nav-link" href="https://azure.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Azure_nav","id":"n1c3c14c2c1c9c3m1r1a1","sN":1,"aN":"c3c14c2c1c9c3m1r1a1"}'>Azure</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_MicrosoftDeveloper_cont","cT":"Container","id":"c4c14c2c1c9c3m1r1a1","sN":4,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_41" class="js-subm-uhf-nav-link" href="https://developer.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_MicrosoftDeveloper_nav","id":"n1c4c14c2c1c9c3m1r1a1","sN":1,"aN":"c4c14c2c1c9c3m1r1a1"}'>Microsoft Developer</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_MicrosoftLearn_cont","cT":"Container","id":"c5c14c2c1c9c3m1r1a1","sN":5,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_42" class="js-subm-uhf-nav-link" href="https://learn.microsoft.com/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_MicrosoftLearn_nav","id":"n1c5c14c2c1c9c3m1r1a1","sN":1,"aN":"c5c14c2c1c9c3m1r1a1"}'>Microsoft Learn</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_SupportForAIMarketplaceApps_cont","cT":"Container","id":"c6c14c2c1c9c3m1r1a1","sN":6,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_43" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_All_SupportAIMarketplace&amp;ocid=cmm3atxvn98" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_SupportForAIMarketplaceApps_nav","id":"n1c6c14c2c1c9c3m1r1a1","sN":1,"aN":"c6c14c2c1c9c3m1r1a1"}'>Support for AI marketplace apps</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_MicrosoftTechCommunity_cont","cT":"Container","id":"c7c14c2c1c9c3m1r1a1","sN":7,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_44" class="js-subm-uhf-nav-link" href="https://techcommunity.microsoft.com/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_MicrosoftTechCommunity_nav","id":"n1c7c14c2c1c9c3m1r1a1","sN":1,"aN":"c7c14c2c1c9c3m1r1a1"}'>Microsoft Tech Community</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Marketplace_cont","cT":"Container","id":"c8c14c2c1c9c3m1r1a1","sN":8,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_45" class="js-subm-uhf-nav-link" href="https://marketplace.microsoft.com?icid=DSM_All_Marketplace&amp;ocid=cmm3atxvn98" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Marketplace_nav","id":"n1c8c14c2c1c9c3m1r1a1","sN":1,"aN":"c8c14c2c1c9c3m1r1a1"}'>Microsoft Marketplace</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Software companies_cont","cT":"Container","id":"c9c14c2c1c9c3m1r1a1","sN":9,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_46" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/software-development-companies?icid=DSM_All_SoftwareCompanies&amp;ocid=cmm3atxvn98" data-m='{"cN":"GlobalNav_Software companies_nav","id":"n1c9c14c2c1c9c3m1r1a1","sN":1,"aN":"c9c14c2c1c9c3m1r1a1"}'>Software companies</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_VisualStudio_cont","cT":"Container","id":"c10c14c2c1c9c3m1r1a1","sN":10,"aN":"c14c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_47" class="js-subm-uhf-nav-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_VisualStudio_nav","id":"n1c10c14c2c1c9c3m1r1a1","sN":1,"aN":"c10c14c2c1c9c3m1r1a1"}'>Visual Studio</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c15c2c1c9c3m1r1a1","sN":15,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_48-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c15c2c1c9c3m1r1a1","sN":1,"aN":"c15c2c1c9c3m1r1a1"}'>Other</span>
+    <button id="uhf-navbtn-shellmenu_48-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c15c2c1c9c3m1r1a1","sN":2,"aN":"c15c2c1c9c3m1r1a1"}'>Other</button>
+    <ul aria-hidden="true" aria-labelledby="uhf-navspn-shellmenu_48-span">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_Microsoft Rewards_cont","cT":"Container","id":"c3c15c2c1c9c3m1r1a1","sN":3,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_49" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/rewards" data-m='{"cN":"GlobalNav_More_Other_Microsoft Rewards_nav","id":"n1c3c15c2c1c9c3m1r1a1","sN":1,"aN":"c3c15c2c1c9c3m1r1a1"}'>Microsoft Rewards </a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_FreeDownloadsAndSecurity_cont","cT":"Container","id":"c4c15c2c1c9c3m1r1a1","sN":4,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_50" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/download" data-m='{"cN":"GlobalNav_More_Other_FreeDownloadsAndSecurity_nav","id":"n1c4c15c2c1c9c3m1r1a1","sN":1,"aN":"c4c15c2c1c9c3m1r1a1"}'>Free downloads &amp; security</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_Education_cont","cT":"Container","id":"c5c15c2c1c9c3m1r1a1","sN":5,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_51" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/education" data-m='{"cN":"GlobalNav_More_Other_Education_nav","id":"n1c5c15c2c1c9c3m1r1a1","sN":1,"aN":"c5c15c2c1c9c3m1r1a1"}'>Education</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_GiftCards_cont","cT":"Container","id":"c6c15c2c1c9c3m1r1a1","sN":6,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_52" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/gift-cards?icid=DSM_All_GiftCards" data-m='{"cN":"GlobalNav_More_Other_GiftCards_nav","id":"n1c6c15c2c1c9c3m1r1a1","sN":1,"aN":"c6c15c2c1c9c3m1r1a1"}'>Gift cards</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_Licensing_cont","cT":"Container","id":"c7c15c2c1c9c3m1r1a1","sN":7,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="Licensing" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/licensing/" data-m='{"cN":"GlobalNav_More_Other_Licensing_nav","id":"n1c7c15c2c1c9c3m1r1a1","sN":1,"aN":"c7c15c2c1c9c3m1r1a1"}'>Licensing</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Other_Unlocked_stories_cont","cT":"Container","id":"c8c15c2c1c9c3m1r1a1","sN":8,"aN":"c15c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_54" class="js-subm-uhf-nav-link" href="https://unlocked.microsoft.com/" data-m='{"cN":"GlobalNav_More_Other_Unlocked_stories_nav","id":"n1c8c15c2c1c9c3m1r1a1","sN":1,"aN":"c8c15c2c1c9c3m1r1a1"}'>Unlocked stories</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                            <li class="f-multi-column-info">
+                                    <a data-m='{"id":"n16c2c1c9c3m1r1a1","sN":16,"aN":"c2c1c9c3m1r1a1"}' href="https://www.microsoft.com/en-us/sitemap" aria-label="" class="c-glyph">View Sitemap</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+</div>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="https://www.microsoft.com/en-us/search/explore" method="GET" data-seAutoSuggest='{"isAutosuggestDisabled":false,"queryParams":{"market":"en-us","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","filter":"+ClientType:StoreWeb","counts":"5,1,5"},"familyNames":{"Apps":"App","Books":"Book","Bundles":"Bundle","Devices":"Device","Fees":"Fee","Games":"Game","MusicAlbums":"Album","MusicTracks":"Song","MusicVideos":"Video","MusicArtists":"Artist","OperatingSystem":"Operating System","Software":"Software","Movies":"Movie","TV":"TV","CSV":"Gift Card","VideoActor":"Actor"}}' data-seautosuggestapi="https://www.microsoft.com/msstoreapiprod/api/autosuggest" data-m='{"cN":"GlobalNav_Search_cont","cT":"Container","id":"c3c1c9c3m1r1a1","sN":3,"aN":"c1c9c3m1r1a1"}' aria-expanded="false">
+                                <input  id="cli_shellHeaderSearchInput" aria-label="Search Expanded" aria-expanded="false" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="q" placeholder="Search or ask a question" data-m='{"cN":"SearchBox_nav","id":"n1c3c1c9c3m1r1a1","sN":1,"aN":"c3c1c9c3m1r1a1"}' data-toggle="tooltip" data-placement="right" title="Search or ask a question" />
+                                    <button id="search" aria-label="Search or ask a question" class="c-glyph" data-m='{"cN":"Search_nav","id":"n2c3c1c9c3m1r1a1","sN":2,"aN":"c3c1c9c3m1r1a1"}' data-bi-mto="true" aria-expanded="false" disabled="disabled">
+                                        <span role="presentation">Search</span>
+                                        <span role="tooltip" class="c-uhf-tooltip c-uhf-search-tooltip">Search or ask a question</span>
+                                    </button>
+                                <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                                    <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-label="Search Suggestions" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m='{"cN":"search suggestions_cont","cT":"Container","id":"c3c3c1c9c3m1r1a1","sN":3,"aN":"c3c1c9c3m1r1a1"}'></ul>
+                                    <ul class="c-menu f-auto-suggest-no-results" aria-hidden="true" aria-label="No results" data-js-auto-suggest-postion="default" data-js-auto-suggest-position="default" role="listbox">
+                                        <li class="c-menu-item" role="option" aria-disabled="true"> <span tabindex="-1">No results</span></li>
+                                    </ul>
+                                </div>
+                                
+                            </form>
+                        <button data-m='{"cN":"cancel-search","pid":"Cancel Search","id":"nn4c1c9c3m1r1a1","sN":4,"aN":"c1c9c3m1r1a1"}' id="cancel-search" class="cancel-search" aria-label="Cancel Search">
+                            <span>Cancel</span>
+                        </button>
+                    <a id="uhf-shopping-cart" style="margin-top: 2px"
+                       aria-label="0 items in shopping cart"
+                       class="c-action-trigger c-glyph c-uhf-nav-link glyph-shopping-cart"
+                       href="https://www.microsoft.com/en-us/store/cart"
+                       data-src-dmn-chk="true"
+                       data-m='{"cN":"GlobalNav_Cart_nav","bhvr":82,"id":"n5c1c9c3m1r1a1","sN":5,"aN":"c1c9c3m1r1a1"}'>
+                        <span class="shopping-cart-amount x-hidden" aria-hidden="true">0</span>
+                        <span class="c-cart-lbl c-st-lbl">Cart</span>
+                        <span id="uhf-shopping-cart-tooltip" class="c-uhf-tooltip" role="tooltip">0 items in shopping cart</span>
+                    </a>
+                            <iframe id="shell-cart-count" data-src="//www.microsoft.com/store/buy/cartcount"></iframe>
+                        <div id="meControl" class="c-me" data-bi-cn="GlobalNav_Account_SignIn"  data-signinsettings='{"containerId":"meControl","enabled":true,"headerHeight":48,"debug":false,"extensibleLinks":[],"userData":{"idp":"msa","firstName":"","lastName":"","memberName":"","cid":"","authenticatedState":"3"},"rpData":{"preferredIdp":"msa","msaInfo":{"signInUrl":"","signOutUrl":"","meUrl":"https://login.live.com/me.srf?wa=wsignin1.0"},"aadInfo":{"signOutUrl":"","appId":"","siteUrl":"","blockMsaFed":true}}}' data-m='{"cN":"GlobalNav_Account_cont","cT":"Container","id":"c6c1c9c3m1r1a1","sN":6,"aN":"c1c9c3m1r1a1"}'>
+                            <div class="msame_Header">
+                                <div class="msame_Header_name st_msame_placeholder">Sign in</div>
+                            </div>
+                            
+                        </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</header>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+
+            
+    
+
+	
+
+
+
+    
+
+
+
+
+<div class='meControl-configInfo' data-isenabled='true' data-convergedstack='true' data-baseurl='/cascadeauth/account' data-appid='10fa57ef-4895-4ab2-872c-8c3613d4f7fb' data-appcallbackurl='https://www.microsoft.com/cascadeauth/account/signin-oidc' data-accountconstraint='0' data-apigeneration='GEN1' data-silentauthrequirereload='false' data-silentauthaction='default'></div>
+<div class='userInfo-config' data-userInfoUrl='/cascadeauth/api/v1/account/userinfo' data-userInfoTimeoutMS='1000' data-retryDelayMS='2000' data-maxRetryAttempt='3'></div>
+
+
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/components/content/universalheader/v1/universalheader/clientlibs/site.ACSHASH69d585e01cb601a02e396b34fdcab8c4.min.js"></script>
+
+
+
+
+</div>
+<div class="root responsivegrid MLSD All Styles Policy">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="layout-container responsivegrid aem-GridColumn aem-GridColumn--default--12" data-component-id="28134f1ee1370eee417bc52d1ed0a717">
+
+<main class="microsoft-template-layout-container" tabindex="-1">
+    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+        
+        <div class="responsivegrid container aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid col-md-2 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="link-group mt-5 aem-GridColumn aem-GridColumn--default--12" data-component-id="87cf376b2ab805d5d4e992c327f85a75">
+
+    
+
+
+
+
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid col-md-8 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid MLSD All Styles Policy aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image mt-5 border-radius-8px border-radius-img aem-GridColumn aem-GridColumn--default--12" data-component-id="c58ce8b5acc818d928a7cae0413d78b7">
+    
+        
+    
+<script src="/echo/etc.clientlibs/microsoft/components/content/image/v1/image/clientlibs/site.ACSHASHbcde6272b2272b5eb04bb7d3df6ac45f.min.js"></script>
+
+
+
+    
+    
+    
+    
+    
+        
+            
+            
+            
+            
+            
+            <img class="img-fluid isTransparent" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Rendering-of-a-Pluton-CPU-chip?scl=1" loading="lazy" alt="Rendering of a Pluton CPU chip" data-automation-test-id="image-uidec1f"/>
+        
+    
+    
+
+
+    
+</div>
+<div class="breadcrumb aem-GridColumn aem-GridColumn--default--12" data-component-id="b55963c34dc43f5f759e04afccd99d6a">
+
+
+
+
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/breadcrumb/v1/breadcrumb/clientlibs/site.ACSHASH387bb12cd66f39a8ac1d0e003b54d9a8.min.css" type="text/css">
+
+
+
+
+
+<nav id="breadcrumb-uidc9fa" data-automation-test-id="Breadcrumb-breadcrumb-uidc9fa" data-componentName="breadcrumb-uidc9fa" class="cmp-breadcrumb align-left"> 
+    
+    
+        <div class="c-call-to-action">
+            
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+        <a data-bi-cn="Do more with Surface" data-bi-ecn="Do more with Surface" data-bi-ct="link" data-bi-pa="body" class=" simple-link " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface" data-bi-bhvr="0" data-automation-test-id="link1-" data-original-text="Do more with Surface" role=" " aria-label="Do more with Surface" target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface" data-bi-compnm="breadcrumb-uidc9fa">
+            
+            
+                Do more with Surface
+            
+            
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+<script src="/echo/etc.clientlibs/microsoft/components/content/calltoaction/v1/calltoaction/clientlibs/site.ACSHASH6069c9c4123345cb32954882a5e52e8d.min.js"></script>
+
+
+
+    
+
+
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+        <a data-bi-cn="Stay secure" data-bi-ecn="Stay secure" data-bi-ct="link" data-bi-pa="body" class=" simple-link " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/secure" data-bi-bhvr="0" data-automation-test-id="link2-" data-original-text="Stay secure" role=" " aria-label="Stay secure" target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/secure" data-bi-compnm="breadcrumb-uidc9fa">
+            
+            
+                Stay secure
+            
+            
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+        <a data-bi-cn="Microsoft Pluton: The Heart of Security" data-bi-ecn="Microsoft Pluton: The Heart of Security" data-bi-ct="link" data-bi-pa="body" class=" simple-link " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security" data-bi-bhvr="0" data-automation-test-id="link3-" data-original-text="Microsoft Pluton: The Heart of Security" role=" " aria-label="Microsoft Pluton: The Heart of Security" target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security" data-bi-compnm="breadcrumb-uidc9fa">
+            
+            
+                Microsoft Pluton: The Heart of Security
+            
+            
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+        </div>
+    
+</nav>
+
+
+
+
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/breadcrumb/v1/breadcrumb/clientlibs/site.ACSHASH972621b04dbad648b0af890a0bbc983a.min.js"></script>
+
+
+
+    
+</div>
+<div class="richtext mt-2 aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0" data-component-id="aca330e78c05fd9ffbcf8222be356f7b">
+<div class="cmp-text text-break" data-automation-test-id="RichTextV1Div-richtext-uid8239">
+    <p>April 22, 2025</p>
+
+</div>
+
+    
+
+</div>
+<div class="stickysocial aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/mlsd/components/content/stickysocial/v1/stickysocial/clientlib-base.ACSHASH80af19e0d12b5a9966da025ed206af22.min.css" type="text/css">
+
+
+
+
+<div class="wdg-sticky left " id="stickysocial-uida88a" data-componentName="stickysocial-uida88a">
+    <div class="wdg-social-links">
+        <p>Share this page</p>
+        <ul>
+            
+                <li>
+                    <a data-bi-cn="facebook icon" data-bi-ecn="facebook icon" data-bi-ct="img" data-bi-pa="body" href="https://www.facebook.com/sharer/sharer.php?m2w&s=100&u=https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security" target="_blank" aria-label="Share on Facebook">
+                        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWMldc-Panel-Social-Icones-Facebook-content-placement" alt="Facebook icon"/>
+                    </a>
+                </li>
+            
+                <li>
+                    <a data-bi-cn="twitter icon" data-bi-ecn="twitter icon" data-bi-ct="img" data-bi-pa="body" href="https://twitter.com/share?url=https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security" target="_blank" aria-label="Share this page on X (formerly Twitter)">
+                        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWMqnI-Panel-Social-Icones-Twitter-content-placement" alt="X icon (formally twitter icon)"/>
+                    </a>
+                </li>
+            
+                <li>
+                    <a data-bi-cn="pinterest icon" data-bi-ecn="pinterest icon" data-bi-ct="img" data-bi-pa="body" href="https://pinterest.com/pin/create/link/?url=https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security" target="_blank" aria-label="Share on Pinterest">
+                        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWMiDT-Panel-Social-Icones-Pinterest-content-placement" alt="Pinterest icon"/>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+</div>
+<div class="heading Heading Styles aem-GridColumn aem-GridColumn--default--12" data-component-id="6b880e252846ae03b532f40bd58c2fae">
+
+<h1 class="  " data-automation-test-id="Heading-heading-uid7afd">Microsoft Pluton security processor: The heart of security</h1>
+
+
+
+</div>
+<div class="richtext mt-3 aem-GridColumn aem-GridColumn--default--12" data-component-id="aca330e78c05fd9ffbcf8222be356f7b">
+<div class="cmp-text text-break" data-automation-test-id="RichTextV1Div-richtext-uid0f13">
+    <p>In the era of AI, you don’t have to choose between having inspiring technology and security peace of mind. You can have both. <a href="https://www.microsoft.com/en-us/windows/windows-11" target="_blank" class="ms-rte-link" aria-label="Learn more about Windows 11 features on our webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">Windows 11</a> brings layers and layers of security measures to help keep your digital life in safe hands—yours. <a href="https://www.microsoft.com/en-us/surface" target="_self" class="ms-rte-link" aria-label="Learn more about Microsoft Surface Copilot plus PCs on our webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">Microsoft Surface Copilot&#43; PCs</a> deliver robust security with built-in protection designed to take the worry and leave behind the peace of mind.</p>
+<p>One of the powerful security measures is <a href="https://techcommunity.microsoft.com/blog/windows-itpro-blog/understanding-the-microsoft-pluton-security-processor/4370413" target="_blank" class="ms-rte-link" aria-label="Learn more about the Microsoft Pluton security process on this webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">Microsoft Pluton security processor</a>, the ultimate in security built right into the CPU<sup><a aria-label="Footnote 1" href="#sup1" class="ms-rte-link" target="_self" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">1</a></sup> of Surface. Pluton is harder to hack and easier to update—all to protect your credentials and data. It’s the smarts behind security.</p>
+<p><span class="h2 mb-0">The smarts behind the security: Microsoft Pluton</span></p>
+<p>Think of Microsoft Pluton as the brains and brawn inside of Surface Copilot&#43; PCs. Pluton acts like a secure vault within Surface, safeguarding sensitive information, such as:</p>
+<ul><li>Passwords</li><li>Online account credentials</li><li>Personal data</li></ul>
+<p>Imagine someone tries to steal your login information. Don’t panic: your passwords are stored in this secure vault within the CPU, making it extremely difficult for attackers to access, even if they have physical access to the laptop.</p>
+<p><span class="h2 mb-0">Peace of mind with enhanced security</span></p>
+<p>From the moment you turn it on, experience peace of mind knowing Surface adheres to the highest security standards available in Windows. This enhanced security helps you to work and play confidently, protected from the worry of cyberattacks.</p>
+<p>With Pluton seamlessly integrated with Windows 11 features, like <a href="https://www.microsoft.com/en-us/windows/tips/windows-hello" target="_blank" class="ms-rte-link" aria-label="Learn more about Windows Hello on our tips webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">Windows Hello</a><sup><a aria-label="Footnote 2" href="#sup2" class="ms-rte-link" target="_self" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">2</a></sup> for biometric authentication and <a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/" target="_blank" class="ms-rte-link" aria-label="Learn more about BitLocker on our webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">BitLocker</a> for disk encryption, security is streamlined into a robust and user-friendly experience of Surface.</p>
+<p><span class="h2 mb-0">Secure to the core, thanks to Microsoft Pluton security processor</span></p>
+<p>Because Pluton is integrated directly into the CPU of Surface, the strategic placement offers several key advantages:</p>
+<ul><li>Reduced attack surface area: By being embedded within the CPU, Pluton protects from potential weaknesses because the overall surface area exposed to potential threats is reduced.</li><li>Enhanced protection: Pluton safeguards sensitive data, including:<ul><li>Credentials: Your login information, passwords, and other authentication details.</li><li>Identities: Unique identifiers that represent you online.</li><li>Encryption keys: Essential for securing your data both at rest and in transit.</li><li>Personal data: Sensitive information like financial details and personal contacts.</li></ul>
+</li><li>Ongoing protection and automatic updates: Pluton receives automatic security updates from Microsoft through <a href="https://support.microsoft.com/en-us/windows/windows-update-faq-8a903416-6f45-0718-f5c7-375e92dddeb2" target="_blank" class="ms-rte-link" aria-label="Learn more about Windows Update on our support frequently asked questions webpage" data-bi-compnm="richtext-uid0f13" rel="noopener noreferrer">Windows Update</a>, ensuring continuous protection without manual intervention. This means you don&#39;t have to worry about manually updating security, which can be tricky and time-consuming. The regular security updates help ensure your Surface remains protected against the latest threats.</li><li>Hardware-level security: Because Pluton is built directly into the CPU, it provides an extra layer of protection against tampering. Even if someone gains physical access to your laptop and tries to install malware, accessing the critical data stored within the Microsoft Pluton security processor is extremely difficult. This enhances the overall resilience of Surface against potential threats.</li></ul>
+
+</div>
+
+    
+
+</div>
+<div class="image mt-3 border-radius-img aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0" data-component-id="c58ce8b5acc818d928a7cae0413d78b7">
+    
+        
+    
+
+
+
+    
+    
+    
+    
+    
+        
+            
+            
+            
+            
+            
+            <img class="img-fluid isTransparent" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-a-Surface-Pro-Copilot-plus-PC-with-an-overlay-of-architecture-layers-identified-and-the-hardwar-9f3LE7gFN0?scl=1" loading="lazy" alt="An image of a Surface Pro, Copilot+ PC with an overlay of architecture layers identified and the hardware layer highlighted, along with Windows 11 Bloom on the screen" data-automation-test-id="image-uidd193"/>
+        
+    
+    
+
+
+    
+</div>
+<div class="richtext mt-3 aem-GridColumn aem-GridColumn--default--12" data-component-id="aca330e78c05fd9ffbcf8222be356f7b">
+<div class="cmp-text text-break" data-automation-test-id="RichTextV1Div-richtext-uidcc4c">
+    <p><span class="h2 mb-0">Key benefits of Microsoft Pluton</span></p>
+<p>Pluton offers several key benefits, including:</p>
+<ul><li>Peace of mind: The highest standard for Windows security available helps protect your online accounts, personal photos, financial information, and more.</li><li>Streamlined security: Pluton seamlessly integrates with Windows 11 features like Windows Hello and BitLocker, providing a robust and user-friendly security experience.</li><li>Improved performance: By handling security tasks at the hardware level, Pluton frees up system resources, potentially leading to improved overall laptop performance.</li></ul>
+<p><span class="h2 mb-0">Microsoft Pluton protects you</span></p>
+<p>By choosing Surface, you&#39;re not just investing in a powerful and versatile laptop; you&#39;re also investing in peace of mind with the ultimate in security built right into the CPU. With <a href="https://learn.microsoft.com/en-us/windows/security/hardware-security/pluton/microsoft-pluton-security-processor" target="_blank" class="ms-rte-link" aria-label="Learn more about Microsoft Pluton security processor on our webpage" data-bi-compnm="richtext-uidcc4c" rel="noopener noreferrer">Microsoft Pluton security processor</a> at the core, Surface is harder to hack and easier to update—all to protect your credentials and data.</p>
+
+</div>
+
+    
+
+</div>
+<div class="footnotes-component Footnotes Styles aem-GridColumn aem-GridColumn--default--12" data-component-id="5aae1cc391ba1be81238febb88e2ef7b">
+
+    
+
+
+
+    
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/footnotes/v1/footnotes/clientlibs/site.ACSHASH40203e0bb3e24fd4626d84825f55e9c5.min.css" type="text/css">
+
+
+
+
+
+       
+    <div id="footnotes-uidf4fb" data-componentName="footnotes-uidf4fb" class="row " style="background-color: null">
+				<section class="col-12 mt-5  " aria-label="Desclaimers">
+						
+						
+								
+								
+										<div class="small py-2 text-break-keep-all"><span class="small mb-0"><strong>DISCLAIMER</strong>: Features and functionality subject to change. Articles are written specifically for the United States market; features, functionality, and availability may vary by region.</span></div>
+								
+								<ul class="list-unstyled small mb-0">
+										<li class="py-2">
+												<a class="superscript" aria-label="Footnote 1" href="#sup1" id="sup1" data-bi-cn="1" data-bi-ecn="1" data-bi-bhvr="0" data-bi-ct="Link" data-bi-pa="Body" data-bi-compnm="Footnotes">[1]</a>
+												<span class="text-break-keep-all"><span class="small mb-0">Built in on all Copilot&#43; PCs and hardware dependent on other Windows 11 PCs.</span></span>
+										</li>
+<li class="py-2">
+												<a class="superscript" aria-label="Footnote 2" href="#sup2" id="sup2" data-bi-cn="2" data-bi-ecn="2" data-bi-bhvr="0" data-bi-ct="Link" data-bi-pa="Body" data-bi-compnm="Footnotes">[2]</a>
+												<span class="text-break-keep-all"><span class="small mb-0">Facial and fingerprint recognition work with devices equipped with the correct sensors. PIN, facial, and fingerprint recognition require Windows Hello to be set up.</span></span>
+										</li>
+
+								</ul>
+						
+				</section>
+    </div>
+
+
+
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/components/content/footnotes/v1/footnotes/clientlibs/site.ACSHASH691794ebb63623a5f6d41a651b22c5cb.min.js"></script>
+
+
+
+		
+</div>
+<div class="heading mt-5 mb-4 aem-GridColumn aem-GridColumn--default--12" data-component-id="6b880e252846ae03b532f40bd58c2fae">
+
+<h2 class="h3  " data-automation-test-id="Heading-heading-uid2df8">Products featured in this article</h2>
+
+
+
+</div>
+<div class="content-card mb-5 aem-GridColumn aem-GridColumn--default--12" data-component-id="e4caa97101f9f7cf8317c819b353e6ed">
+
+    
+
+
+
+
+    
+        
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card/v1/content-card/clientlibs/site.ACSHASH65ebc911d315591324874e1b6818906c.min.js" defer></script>
+
+
+    
+
+
+
+	
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/content-card/v1/content-card/clientlibs/site.ACSHASHb1fbaca9eb9d84ec1091d5085f72ae7f.min.css" type="text/css">
+
+
+
+
+
+<section id="content-card-uid75dc" data-componentName="content-card-uid75dc">
+    <div class="row row-cols-1 row-cols-md-2  ">
+        
+            
+            
+                
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        <div class="col mb-4 mb-md-0">
+            <div class="card" data-target-uri="https://www.microsoft.com/en-us/surface" data-bi-ecN="Learn more" data-bi-cT="Content Card" data-bi-pA="body" data-bi-ehN="Microsoft Surface Copilot+ PCs" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Surface-Logo?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" data-bi-bhvr="0" data-bi-hN="Microsoft Surface Copilot+ PCs" data-bi-compNm="Content card horizontal 2 up" data-bi-cN="Learn more">
+                <div class="row">
+                    <div class="col-2 ">
+                        <picture>
+                            <img class="card-img lazyload blur-up lazypreload" data-sizes="auto" data-src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Surface-Logo?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" alt="Microsoft Surface logo"/>
+                        </picture>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="card-body ">
+                            
+    
+    
+    
+
+                            
+                                <h4 class="component-heading h5    text-break-keep-all">
+                                    
+  
+  
+  
+    
+
+      
+      
+      
+
+       Microsoft Surface Copilot+ PCs 
+      
+    
+
+    
+  
+
+                                </h4>
+                            
+                            
+                            
+                                
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+
+    
+        <a data-bi-cn="Learn more" data-bi-ecn="Learn more" data-bi-ct="cta" data-bi-pa="body" class="text-break-keep-all cta text-primary  " data-target-uri="https://www.microsoft.com/en-us/surface" data-bi-bhvr="0" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Surface-Logo?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" data-automation-test-id="cta1-" data-bi-ehn="Microsoft Surface Copilot+ PCs" data-bi-hn="Microsoft Surface Copilot+ PCs" data-bi-compnm="Content card horizontal 2 up" data-original-text="Learn more" role=" " aria-label="Learn more about Microsoft Surface Copilot+ PCs" target="_self" href="https://www.microsoft.com/en-us/surface">
+            
+            
+                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Learn more 
+      
+    
+
+    
+  
+
+            
+            
+            
+             <span class="glyph" aria-hidden="true"></span> 
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+
+            
+        
+            
+            
+                
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        <div class="col ">
+            <div class="card" data-target-uri="https://www.microsoft.com/en-us/windows/windows-11" data-bi-ecN="Learn more" data-bi-cT="Content Card" data-bi-pA="body" data-bi-ehN="Benefits of Windows 11" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWNtfS-MicrosoftTeams-image-3-feature?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" data-bi-bhvr="0" data-bi-hN="Benefits of Windows 11" data-bi-compNm="Content card horizontal 2 up" data-bi-cN="Learn more">
+                <div class="row">
+                    <div class="col-2 ">
+                        <picture>
+                            <img class="card-img lazyload blur-up lazypreload" data-sizes="auto" data-src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWNtfS-MicrosoftTeams-image-3-feature?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" alt="Windows 11 bloom"/>
+                        </picture>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="card-body ">
+                            
+    
+    
+    
+
+                            
+                                <h4 class="component-heading h5    text-break-keep-all">
+                                    
+  
+  
+  
+    
+
+      
+      
+      
+
+       Benefits of Windows 11 
+      
+    
+
+    
+  
+
+                                </h4>
+                            
+                            
+                            
+                                
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+
+    
+        <a data-bi-cn="Learn more" data-bi-ecn="Learn more" data-bi-ct="cta" data-bi-pa="body" class="text-break-keep-all cta   " data-target-uri="https://www.microsoft.com/en-us/windows/windows-11" data-bi-bhvr="0" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWNtfS-MicrosoftTeams-image-3-feature?fmt=png-alpha&amp;wid=111&amp;hei=111&amp;fit=crop" data-automation-test-id="cta1-" data-bi-ehn="Benefits of Windows 11" data-bi-hn="Benefits of Windows 11" data-bi-compnm="Content card horizontal 2 up" data-original-text="Learn more" role=" " aria-label="Learn more about the Benefits of Windows 11" target="_blank" href="https://www.microsoft.com/en-us/windows/windows-11">
+            
+            
+                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Learn more 
+      
+    
+
+    
+  
+
+            
+            
+            
+             <span class="glyph" aria-hidden="true"></span> 
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+
+            
+        
+    </div>
+    
+</section>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid border-radius-8px border-radius-img bg-gray-100 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid mb-5 aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--default--2">
+
+
+<div class="aem-Grid aem-Grid--8 aem-Grid--default--8 ">
+    
+    <div class="layout-container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--default--0" data-component-id="51e927945f39700e952adb9bd3dc97e7">
+
+
+
+
+
+<div class="aem-Grid aem-Grid--8 aem-Grid--default--8  grid-image-layout-container-uidfeb3 default heading-bg-color-layout-container-uidfeb3" data-automation-test-id="layout-container-uidfeb3">
+          <style data-automation-test-id="headingColor-layout-container-uidfeb3">
+                    .heading-bg-color-layout-container-uidfeb3{
+                         background-color: #f2f2f2 !important;
+                    }
+          </style>
+     
+     <div class="container" id="layout-container-uidfeb3" data-componentName="layout-container-uidfeb3">
+          
+          
+          <div class="heading mt-5 mb-5 aem-GridColumn aem-GridColumn--default--8" data-component-id="6b880e252846ae03b532f40bd58c2fae">
+
+<h2 class="h3  " data-automation-test-id="Heading-heading-uide7e3">Related topics</h2>
+
+
+
+</div>
+<div class="content-card Content Card Styles aem-GridColumn aem-GridColumn--default--8" data-component-id="e4caa97101f9f7cf8317c819b353e6ed">
+
+    
+
+
+
+
+    
+        
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card/v1/content-card/clientlibs/site.ACSHASH65ebc911d315591324874e1b6818906c.min.js" defer></script>
+
+
+    
+
+
+
+	
+    
+
+
+
+
+
+<section id="content-card-uidbc81" data-componentName="content-card-uidbc81">
+    <div class="row row-cols-1  row-cols-md-3 ">
+        
+            
+                
+    
+    
+
+    
+        
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v3/content-card-item/clientlibs/site.ACSHASH7e98ce1d1fb3c40effe0a57430c1371c.min.css" type="text/css">
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v1/content-card-item/clientlibs/site.ACSHASH5eb7940588edeff2b13a25b0bd1cb864.min.css" type="text/css">
+
+
+
+    
+
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col mb-5 mb-md-0
+                    
+                    ">
+            <div class="card material-card h-100 " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/advantages-of-copilot-plus-pcs" data-bi-ecN="Learn more" data-bi-cT="Content Card" data-bi-pA="body" data-bi-ehN="Why a Microsoft Surface is the best Copilot+ PC experience" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-bi-bhvr="0" data-bi-hN="Why a Microsoft Surface is the best Copilot+ PC experience" data-bi-compNm="Content card vertical 3 up - depth" data-bi-cN="Learn more">
+                
+                    
+	
+		<picture>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" media="(min-width: 1400px)"/>
+			<source srcset=" https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=404&amp;hei=228&amp;fit=crop" media="(min-width: 1084px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=337&amp;hei=190&amp;fit=crop" media="(min-width: 860px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=834&amp;hei=470&amp;fit=crop" media="(min-width: 540px)"/>
+			
+				<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&wid=834&hei=470&fit=crop&resSharp=1" loading="lazy" class="card-img" alt="An image of a Surface Pro, Copilot+ PC and a Surface Laptop, Copilot+ PC  "/>
+			
+			
+			
+			
+			
+		</picture>
+	
+	
+
+                    
+                
+                    <!-- If any of the cards in a group contain a badge, all cards should include a card header -->
+                    
+                    <div class="card-body px-4 pt-4">
+                        
+                            <h3 class="component-heading h4    text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Why a Microsoft Surface is the best Copilot+ PC experience 
+      
+    
+
+    
+  
+
+                            </h3>
+                        
+                        
+                            <div class="text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Learn the advantages of Surface Copilot+ PCs and how Copilot+ PCs differ from other computers.  
+      
+    
+
+    
+  
+
+                            </div>
+                        
+                    </div>
+                    <div class="card-footer pt-3 px-4 pb-4">
+                        
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+
+    
+        <a data-bi-cn="Learn more" data-bi-ecn="Learn more" data-bi-ct="cta" data-bi-pa="body" class="text-break-keep-all cta text-primary  " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/advantages-of-copilot-plus-pcs" data-bi-bhvr="0" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-224-hero-video_tbmnl_en-us-1?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-automation-test-id="cta1-" data-bi-ehn="Why a Microsoft Surface is the best Copilot+ PC experience" data-bi-hn="Why a Microsoft Surface is the best Copilot+ PC experience" data-bi-compnm="Content card vertical 3 up - depth" data-original-text="Learn more" role=" " aria-label="Learn more on our article webpage " target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/advantages-of-copilot-plus-pcs">
+            
+            
+                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Learn more 
+      
+    
+
+    
+  
+
+            
+            
+            
+             <span class="glyph" aria-hidden="true"></span> 
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+                    </div>
+            </div>
+        </div>
+
+    
+    
+        
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v3/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script><script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v1/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script>
+
+
+    
+
+
+
+            
+            
+        
+            
+                
+    
+    
+
+    
+        
+    
+
+
+
+    
+
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col mb-5 mb-md-0
+                    
+                    ">
+            <div class="card material-card h-100 " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/difference-between-surface-laptop-vs-surface-pro" data-bi-ecN="Show me" data-bi-cT="Content Card" data-bi-pA="body" data-bi-ehN="The differences between Surface Laptop and Surface Pro from Microsoft " data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-bi-bhvr="0" data-bi-hN="The differences between Surface Laptop and Surface Pro from Microsoft " data-bi-compNm="Content card vertical 3 up - depth" data-bi-cN="Show me">
+                
+                    
+	
+		<picture>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" media="(min-width: 1400px)"/>
+			<source srcset=" https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=404&amp;hei=228&amp;fit=crop" media="(min-width: 1084px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=337&amp;hei=190&amp;fit=crop" media="(min-width: 860px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=834&amp;hei=470&amp;fit=crop" media="(min-width: 540px)"/>
+			
+				<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&wid=834&hei=470&fit=crop&resSharp=1" loading="lazy" class="card-img" alt="An image of three Surface Pro and two Surface Laptops in different colors"/>
+			
+			
+			
+			
+			
+		</picture>
+	
+	
+
+                    
+                
+                    <!-- If any of the cards in a group contain a badge, all cards should include a card header -->
+                    
+                    <div class="card-body px-4 pt-4">
+                        
+                            <h3 class="component-heading h4    text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       The differences between Surface Laptop and Surface Pro from Microsoft  
+      
+    
+
+    
+  
+
+                            </h3>
+                        
+                        
+                            <div class="text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Surface Laptop and Surface Pro share powerful Copilot+ PC features but each excels in their own right. Discover what makes each a standout.  
+      
+    
+
+    
+  
+
+                            </div>
+                        
+                    </div>
+                    <div class="card-footer pt-3 px-4 pb-4">
+                        
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+
+    
+        <a data-bi-cn="Show me" data-bi-ecn="Show me" data-bi-ct="cta" data-bi-pa="body" class="text-break-keep-all cta text-primary  " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/difference-between-surface-laptop-vs-surface-pro" data-bi-bhvr="0" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/SUR25_L_VB_Laptop7_Pro11_Family_Rear_16x9_RGB?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-automation-test-id="cta1-" data-bi-ehn="The differences between Surface Laptop and Surface Pro from Microsoft " data-bi-hn="The differences between Surface Laptop and Surface Pro from Microsoft " data-bi-compnm="Content card vertical 3 up - depth" data-original-text="Show me" role=" " aria-label="Show me how Surface computers compare in form and function on our article webpage" target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/difference-between-surface-laptop-vs-surface-pro">
+            
+            
+                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Show me 
+      
+    
+
+    
+  
+
+            
+            
+            
+             <span class="glyph" aria-hidden="true"></span> 
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+                    </div>
+            </div>
+        </div>
+
+    
+    
+        
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v3/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script><script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v1/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script>
+
+
+    
+
+
+
+            
+            
+        
+            
+                
+    
+    
+
+    
+        
+    
+
+
+
+    
+
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col 
+                    
+                    ">
+            <div class="card material-card h-100 " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/surface-pro-a-comprehensive-guide" data-bi-ecN="Learn more" data-bi-cT="Content Card" data-bi-pA="body" data-bi-ehN="Surface Pro: A comprehensive guide " data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-bi-bhvr="0" data-bi-hN="Surface Pro: A comprehensive guide " data-bi-compNm="Content card vertical 3 up - depth" data-bi-cN="Learn more">
+                
+                    
+	
+		<picture>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" media="(min-width: 1400px)"/>
+			<source srcset=" https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=404&amp;hei=228&amp;fit=crop" media="(min-width: 1084px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=337&amp;hei=190&amp;fit=crop" media="(min-width: 860px)"/>
+			<source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=834&amp;hei=470&amp;fit=crop" media="(min-width: 540px)"/>
+			
+				<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&wid=834&hei=470&fit=crop&resSharp=1" loading="lazy" class="card-img" alt="An image of Surface Pro that shows it as tablet and a laptop floating in the air"/>
+			
+			
+			
+			
+			
+		</picture>
+	
+	
+
+                    
+                
+                    <!-- If any of the cards in a group contain a badge, all cards should include a card header -->
+                    
+                    <div class="card-body px-4 pt-4">
+                        
+                            <h3 class="component-heading h4    text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Surface Pro: A comprehensive guide  
+      
+    
+
+    
+  
+
+                            </h3>
+                        
+                        
+                            <div class="text-break-keep-all">
+                                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Part tablet and part laptop, work, create, and connect anywhere with AI power and versatility.  
+      
+    
+
+    
+  
+
+                            </div>
+                        
+                    </div>
+                    <div class="card-footer pt-3 px-4 pb-4">
+                        
+
+    
+    <div class="link-group" data-automation-test-id="LinkGroupDiv-">
+        
+        
+            
+            
+    
+    
+         
+    
+    
+    
+    
+
+    
+        <a data-bi-cn="Learn more" data-bi-ecn="Learn more" data-bi-ct="cta" data-bi-pa="body" class="text-break-keep-all cta text-primary  " data-target-uri="https://www.microsoft.com/en-us/surface/do-more-with-surface/surface-pro-a-comprehensive-guide" data-bi-bhvr="0" data-bi-assetid="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-An-image-of-Surface-Pro-that-shows-it-as-tablet-and-a-laptop-floating-in-the-air?fmt=png-alpha&amp;wid=517&amp;hei=291&amp;fit=crop" data-automation-test-id="cta1-" data-bi-ehn="Surface Pro: A comprehensive guide " data-bi-hn="Surface Pro: A comprehensive guide " data-bi-compnm="Content card vertical 3 up - depth" data-original-text="Learn more" role=" " aria-label="Learn more on our article webpage " target="_self" href="https://www.microsoft.com/en-us/surface/do-more-with-surface/surface-pro-a-comprehensive-guide">
+            
+            
+                
+  
+  
+  
+    
+
+      
+      
+      
+
+       Learn more 
+      
+    
+
+    
+  
+
+            
+            
+            
+             <span class="glyph" aria-hidden="true"></span> 
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+
+
+    
+
+
+        
+    </div>
+
+
+                    </div>
+            </div>
+        </div>
+
+    
+    
+        
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v3/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script><script type="text/javascript" src="/echo/etc.clientlibs/microsoft/components/content/content-card-item/v1/content-card-item/clientlibs/site.ACSHASHd41d8cd98f00b204e9800998ecf8427e.min.js" defer></script>
+
+
+    
+
+
+
+            
+            
+        
+    </div>
+    
+</section>
+
+
+
+</div>
+
+          
+     </div>
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="back-to-top-button aem-GridColumn aem-GridColumn--default--12" data-component-id="66f104ac83c5ea29ffc13bb793e679c0">
+    
+    
+        
+    
+<link rel="stylesheet" href="/echo/etc.clientlibs/microsoft/components/content/back-to-top-button/v1/back-to-top-button/clientlibs/sites.ACSHASHfc060ddd09f80435205e72fc0cfe9fa4.min.css" type="text/css">
+
+
+
+    
+    
+    
+    <div class="fixed-back-to-top p-g d-flex justify-content-end " data-mount="fixed-back-to-top">
+        <a href="#page-top" aria-label="Back to top" class="btn bg-body btn-faint-secondary" data-bi-cn="Back to top" data-bi-ecn="Back to top" data-bi-bhvr="0" data-bi-ct="Button" data-bi-pa="Body" data-bi-compnm="Back to top">
+            <span class="glyph-prepend glyph-prepend-xsmall glyph-prepend-up">
+                
+                    <span class="px-1"></span>
+                
+                Back to top
+            </span>
+        </a>
+    </div>
+
+
+
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/components/content/back-to-top-button/v1/back-to-top-button/clientlibs/sites.ACSHASH148bbe2eead6c5832c56691afb23e496.min.js"></script>
+
+
+
+</div>
+
+    
+</div>
+</div>
+<div class="schemamarkup aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/echo/etc.clientlibs/mlsd/components/content/schemamarkup/v1/schemamarkup/clientlibs/site.ACSHASH5a734f12d49ea89be9e1d39717e245a3.min.js" defer></script>
+
+
+
+
+<div id="SchemaMarkup" data-json="{&#34;schemaMarkupList&#34;:[{&#34;schemaType&#34;:&#34;page&#34;,&#34;page&#34;:{&#34;type&#34;:&#34;Article&#34;,&#34;headline&#34;:&#34;Microsoft Pluton security processor: The heart of security&#34;,&#34;image&#34;:&#34;https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Rendering-of-a-Pluton-CPU-chip?scl\u003d1&#34;,&#34;publisherLogoUrl&#34;:&#34;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver\u003d5c31&#34;},&#34;video&#34;:{},&#34;howTo&#34;:{&#34;toolTypeValue&#34;:&#34;HowToTool&#34;,&#34;stepTypeValue&#34;:&#34;HowToStep&#34;},&#34;webSite&#34;:{}},{&#34;schemaType&#34;:&#34;breadcrumb&#34;,&#34;page&#34;:{},&#34;video&#34;:{},&#34;howTo&#34;:{&#34;toolTypeValue&#34;:&#34;HowToTool&#34;,&#34;stepTypeValue&#34;:&#34;HowToStep&#34;},&#34;webSite&#34;:{},&#34;breadcrumbData&#34;:&#34;{\r\n        \&#34;@context\&#34;: \&#34;https://schema.org\&#34;,\r\n        \&#34;@type\&#34;: \&#34;BreadcrumbList\&#34;,\r\n        \&#34;itemListElement\&#34;:\r\n[\r\n    {\r\n        \&#34;@type\&#34;: \&#34;ListItem\&#34;,\r\n        \&#34;position\&#34;: 1,\r\n        \&#34;name\&#34;: \&#34;Do more with Surface\&#34;,\r\n        \&#34;item\&#34;: \&#34;https://www.microsoft.com/en-us/surface/do-more-with-surface\&#34;\r\n    },\r\n    {\r\n        \&#34;@type\&#34;: \&#34;ListItem\&#34;,\r\n        \&#34;position\&#34;: 2,\r\n        \&#34;name\&#34;: \&#34;Stay secure\&#34;,\r\n        \&#34;item\&#34;: \&#34;https://www.microsoft.com/en-us/surface/do-more-with-surface/secure\&#34;\r\n    },\r\n    {\r\n        \&#34;@type\&#34;: \&#34;ListItem\&#34;,\r\n        \&#34;position\&#34;: 3,\r\n        \&#34;name\&#34;: \&#34;Microsoft Pluton: The Heart of Security\&#34;,\r\n        \&#34;item\&#34;: \&#34;https://www.microsoft.com/en-us/surface/do-more-with-surface/microsoft-pluton-the-heart-of-surface-security\&#34;\r\n    }\r\n]\r\n}&#34;}],&#34;publishedDate&#34;:&#34;Mon Mar 30 08:11:14 UTC 2026&#34;,&#34;lastModifiedDate&#34;:{&#34;year&#34;:2026,&#34;month&#34;:2,&#34;dayOfMonth&#34;:30,&#34;hourOfDay&#34;:8,&#34;minute&#34;:11,&#34;second&#34;:14}}"></div>
+
+</div>
+
+        
+    </div>
+</main></div>
+
+    
+</div>
+</div>
+<div class="universalfooter" data-component-id="873fa1f863becf63b38092282d4ea0b1">
+	
+
+	
+		
+    
+    
+
+    
+        
+                
+
+
+
+        
+        
+                
+                
+            
+    
+<!-- Start of ADDITIONAL DEBUG INFO ** cv.html **
+
+    CVToken: CASMicrosoftCVd929cf94.2
+  End of ADDITIONAL DEBUG INFO -->
+
+                <!-- Start of ADDITIONAL DEBUG INFO ** uhftemplate.html **
+
+    CVToken: CASMicrosoftCVd929cf94.2
+  End of ADDITIONAL DEBUG INFO -->
+                    <div id="footerArea" class="uhf"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                <div id="footerRegion"      data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|coreui-region|footerUniversalFooter|coreui-universalfooter">
+        
+
+
+
+<footer id="uhf-footer" class="c-uhff context-uhf"  data-uhf-mscc-rq="false" data-footer-footprint="/surface/surface-footer-common, fromService: True" data-m='{"cN":"Uhf footer_cont","cT":"Container","id":"c1m1r1a2","sN":1,"aN":"m1r1a2"}'>
+        <nav class="c-uhff-nav" aria-label="Footer Resource links" data-m='{"cN":"Footer nav_cont","cT":"Container","id":"c1c1m1r1a2","sN":1,"aN":"c1m1r1a2"}'>
+            
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn1_cont","cT":"Container","id":"c1c1c1m1r1a2","sN":1,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">What&#39;s new</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Surface Pro What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/surface/devices/surface-pro" data-m='{"cN":"Footer_WhatsNew_NewSurfacePro_nav","id":"n1c1c1c1m1r1a2","sN":1,"aN":"c1c1c1m1r1a2"}'>Surface Pro</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Laptop What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/surface/devices/surface-laptop" data-m='{"cN":"Footer_WhatsNew_SurfaceLaptop_nav","id":"n2c1c1c1m1r1a2","sN":2,"aN":"c1c1c1m1r1a2"}'>Surface Laptop</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Laptop Ultra What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra?icid=DSM_Footer_WhatsNew_SurfaceLaptopUltra" data-m='{"cN":"Footer_WhatsNew_Surface Laptop Ultra_nav","id":"n3c1c1c1m1r1a2","sN":3,"aN":"c1c1c1m1r1a2"}'>Surface Laptop Ultra</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface RTX Spark Dev Box What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box?icid=DSM_Footer_WhatsNew_SurfaceRTXSparkDevBox" data-m='{"cN":"footer_whatsnew_SurfaceRTXSparksDevBox_nav_nav","id":"n4c1c1c1m1r1a2","sN":4,"aN":"c1c1c1m1r1a2"}'>Surface RTX Spark Dev Box</a>
+                            </li>
+                            <li>
+                                <a aria-label="Copilot for organizations What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-copilot/organizations?icid=DSM_Footer_CopilotOrganizations" data-m='{"cN":"Footer_WhatsNew_CopilotMicrosoft_nav","id":"n5c1c1c1m1r1a2","sN":5,"aN":"c1c1c1m1r1a2"}'>Copilot for organizations</a>
+                            </li>
+                            <li>
+                                <a aria-label="Copilot for personal use What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals?form=MY02PT&amp;OCID=GE_web_Copilot_Free_868g3t5nj" data-m='{"cN":"Footer_WhatsNew_CopilotPersonal_nav","id":"n6c1c1c1m1r1a2","sN":6,"aN":"c1c1c1m1r1a2"}'>Copilot for personal use</a>
+                            </li>
+                            <li>
+                                <a aria-label="Explore Microsoft products What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-products-and-apps" data-m='{"cN":"Footer_WhatsNew_ExploreMicrosoftProducts_nav","id":"n7c1c1c1m1r1a2","sN":7,"aN":"c1c1c1m1r1a2"}'>Explore Microsoft products</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 11 apps What&#39;s new" class="c-uhff-link" href="https://www.microsoft.com/en-us/windows/apps-for-windows?icid=DSM_Footer_WhatsNew_Windows11apps" data-m='{"cN":"Footer_WhatsNew_Windows_11_apps_nav","id":"n8c1c1c1m1r1a2","sN":8,"aN":"c1c1c1m1r1a2"}'>Windows 11 apps</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn2_cont","cT":"Container","id":"c2c1c1m1r1a2","sN":2,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">Microsoft Store</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Account profile Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/" data-m='{"cN":"Footer_StoreandSupport_AccountProfile_nav","id":"n1c2c1c1m1r1a2","sN":1,"aN":"c2c1c1m1r1a2"}'>Account profile</a>
+                            </li>
+                            <li>
+                                <a aria-label="Download Center Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/download" data-m='{"cN":"Footer_StoreandSupport_DownloadCenter_nav","id":"n2c2c1c1m1r1a2","sN":2,"aN":"c2c1c1m1r1a2"}'>Download Center</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Store support Microsoft Store" class="c-uhff-link" href="https://go.microsoft.com/fwlink/?linkid=2139749" data-m='{"cN":"Footer_StoreandSupport_SalesAndSupport_nav","id":"n3c2c1c1m1r1a2","sN":3,"aN":"c2c1c1m1r1a2"}'>Microsoft Store support</a>
+                            </li>
+                            <li>
+                                <a aria-label="Returns Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/returns" data-m='{"cN":"Footer_StoreandSupport_Returns_nav","id":"n4c2c1c1m1r1a2","sN":4,"aN":"c2c1c1m1r1a2"}'>Returns</a>
+                            </li>
+                            <li>
+                                <a aria-label="Order tracking Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/order-tracking" data-m='{"cN":"Footer_StoreandSupport_OrderTracking_nav","id":"n5c2c1c1m1r1a2","sN":5,"aN":"c2c1c1m1r1a2"}'>Order tracking</a>
+                            </li>
+                            <li>
+                                <a aria-label="Certified Refurbished Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/certified-refurbished-products" data-m='{"cN":"Footer_StoreandSupport_StoreLocations_nav","id":"n6c2c1c1m1r1a2","sN":6,"aN":"c2c1c1m1r1a2"}'>Certified Refurbished</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Store Promise Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/why-microsoft-store?icid=footer_why-msft-store_7102020" data-m='{"cN":"Footer_StoreandSupport_MicrosoftPromise_nav","id":"n7c2c1c1m1r1a2","sN":7,"aN":"c2c1c1m1r1a2"}'>Microsoft Store Promise</a>
+                            </li>
+                            <li>
+                                <a aria-label="Flexible Payments Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/payment-financing-options?icid=footer_financing_vcc" data-m='{"cN":"Footer_StoreandSupport_Financing_nav","id":"n8c2c1c1m1r1a2","sN":8,"aN":"c2c1c1m1r1a2"}'>Flexible Payments</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn3_cont","cT":"Container","id":"c3c1c1m1r1a2","sN":3,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">Education</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft in education Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/education" data-m='{"cN":"Footer_Education_MicrosoftInEducation_nav","id":"n1c3c1c1m1r1a2","sN":1,"aN":"c3c1c1m1r1a2"}'>Microsoft in education</a>
+                            </li>
+                            <li>
+                                <a aria-label="Devices for education Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/education/devices/overview" data-m='{"cN":"Footer_Education_DevicesforEducation_nav","id":"n2c3c1c1m1r1a2","sN":2,"aN":"c3c1c1m1r1a2"}'>Devices for education</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Teams for Education Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/education/products/teams" data-m='{"cN":"Footer_Education_MicrosoftTeamsforEducation_nav","id":"n3c3c1c1m1r1a2","sN":3,"aN":"c3c1c1m1r1a2"}'>Microsoft Teams for Education</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 365 Education Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/education/products/microsoft-365" data-m='{"cN":"Footer_Education_Microsoft365Education_nav","id":"n4c3c1c1m1r1a2","sN":4,"aN":"c3c1c1m1r1a2"}'>Microsoft 365 Education</a>
+                            </li>
+                            <li>
+                                <a aria-label="How to buy for your school Education" class="c-uhff-link" href="https://www.microsoft.com/education/how-to-buy" data-m='{"cN":"Footer_Howtobuyforyourschool_nav","id":"n5c3c1c1m1r1a2","sN":5,"aN":"c3c1c1m1r1a2"}'>How to buy for your school</a>
+                            </li>
+                            <li>
+                                <a aria-label="Educator training and development Education" class="c-uhff-link" href="https://education.microsoft.com/" data-m='{"cN":"Footer_Education_EducatorTrainingDevelopment_nav","id":"n6c3c1c1m1r1a2","sN":6,"aN":"c3c1c1m1r1a2"}'>Educator training and development</a>
+                            </li>
+                            <li>
+                                <a aria-label="Deals for students and parents Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/education" data-m='{"cN":"Footer_Education_DealsForStudentsandParents_nav","id":"n7c3c1c1m1r1a2","sN":7,"aN":"c3c1c1m1r1a2"}'>Deals for students and parents</a>
+                            </li>
+                            <li>
+                                <a aria-label="AI for education Education" class="c-uhff-link" href="https://www.microsoft.com/en-us/education/ai-in-education" data-m='{"cN":"Footer_Education_Azureforstudents_nav","id":"n8c3c1c1m1r1a2","sN":8,"aN":"c3c1c1m1r1a2"}'>AI for education</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn4_cont","cT":"Container","id":"c4c1c1m1r1a2","sN":4,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">Business</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft AI Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/ai?icid=DSM_Footer_AI" data-m='{"cN":"Footer_Business_AI_nav","id":"n1c4c1c1m1r1a2","sN":1,"aN":"c4c1c1m1r1a2"}'>Microsoft AI</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Security Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/security" data-m='{"cN":"Footer_Business_Microsoft Security_nav","id":"n2c4c1c1m1r1a2","sN":2,"aN":"c4c1c1m1r1a2"}'>Microsoft Security</a>
+                            </li>
+                            <li>
+                                <a aria-label="Dynamics 365 Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/dynamics-365" data-m='{"cN":"Footer_Business_MicrosoftDynamics365_nav","id":"n3c4c1c1m1r1a2","sN":3,"aN":"c4c1c1m1r1a2"}'>Dynamics 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 365 Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-365/business" data-m='{"cN":"Footer_Business_M365_nav","id":"n4c4c1c1m1r1a2","sN":4,"aN":"c4c1c1m1r1a2"}'>Microsoft 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Power Platform Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/power-platform" data-m='{"cN":"Footer_DeveloperAndIT_Power Platform_nav","id":"n5c4c1c1m1r1a2","sN":5,"aN":"c4c1c1m1r1a2"}'>Microsoft Power Platform</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Teams Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" data-m='{"cN":"Footer_Business_Microsoft365_nav","id":"n6c4c1c1m1r1a2","sN":6,"aN":"c4c1c1m1r1a2"}'>Microsoft Teams</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 365 Copilot Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/microsoft-365-copilot?icid=DSM_Footer_Microsoft365Copilot" data-m='{"cN":"Footer_CopilotMicrosoft365_nav","id":"n7c4c1c1m1r1a2","sN":7,"aN":"c4c1c1m1r1a2"}'>Microsoft 365 Copilot</a>
+                            </li>
+                            <li>
+                                <a aria-label="Small Business Business" class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore" data-m='{"cN":"Footer_Business-SmallBusiness_nav","id":"n8c4c1c1m1r1a2","sN":8,"aN":"c4c1c1m1r1a2"}'>Small Business</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn5_cont","cT":"Container","id":"c5c1c1m1r1a2","sN":5,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">Developer &amp; IT</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Azure Developer &amp; IT" class="c-uhff-link" href="https://azure.microsoft.com/en-us/" data-m='{"cN":"Footer_DeveloperAndIT_MicrosoftAzure_nav","id":"n1c5c1c1m1r1a2","sN":1,"aN":"c5c1c1m1r1a2"}'>Azure</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Developer Developer &amp; IT" class="c-uhff-link" href="https://developer.microsoft.com/en-us/" data-m='{"cN":"Footer_DeveloperAndIT_MicrosoftDeveloper_nav","id":"n2c5c1c1m1r1a2","sN":2,"aN":"c5c1c1m1r1a2"}'>Microsoft Developer</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Learn Developer &amp; IT" class="c-uhff-link" href="https://learn.microsoft.com/" data-m='{"cN":"Footer_DeveloperAndIT_MicrosoftLearn_nav","id":"n3c5c1c1m1r1a2","sN":3,"aN":"c5c1c1m1r1a2"}'>Microsoft Learn</a>
+                            </li>
+                            <li>
+                                <a aria-label="Support for AI marketplace apps Developer &amp; IT" class="c-uhff-link" href="https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_Footer_SupportAIMarketplace&amp;ocid=cmm3atxvn98" data-m='{"cN":"Footer_DeveloperAndIT_SupportForAIMarketplaceApps_nav","id":"n4c5c1c1m1r1a2","sN":4,"aN":"c5c1c1m1r1a2"}'>Support for AI marketplace apps</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Tech Community Developer &amp; IT" class="c-uhff-link" href="https://techcommunity.microsoft.com/" data-m='{"cN":"Footer_DeveloperAndIT_MicrosoftTechCommunity_nav","id":"n5c5c1c1m1r1a2","sN":5,"aN":"c5c1c1m1r1a2"}'>Microsoft Tech Community</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Marketplace Developer &amp; IT" class="c-uhff-link" href="https://marketplace.microsoft.com?icid=DSM_Footer_Marketplace&amp;ocid=cmm3atxvn98" data-m='{"cN":"Footer_DeveloperAndIT_Marketplace_nav","id":"n6c5c1c1m1r1a2","sN":6,"aN":"c5c1c1m1r1a2"}'>Microsoft Marketplace</a>
+                            </li>
+                            <li>
+                                <a aria-label="Software companies Developer &amp; IT" class="c-uhff-link" href="https://www.microsoft.com/software-development-companies?icid=DSM_Footer_SoftwareCompanies&amp;ocid=cmm3atxvn98" data-m='{"cN":"Software companies_nav","id":"n7c5c1c1m1r1a2","sN":7,"aN":"c5c1c1m1r1a2"}'>Software companies</a>
+                            </li>
+                            <li>
+                                <a aria-label="Visual Studio Developer &amp; IT" class="c-uhff-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"Footer_DeveloperAndIT_MicrosoftVisualStudio_nav","id":"n8c5c1c1m1r1a2","sN":8,"aN":"c5c1c1m1r1a2"}'>Visual Studio</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn6_cont","cT":"Container","id":"c6c1c1m1r1a2","sN":6,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="2">Company</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Careers Company" class="c-uhff-link" href="https://careers.microsoft.com/" data-m='{"cN":"Footer_Company_Careers_nav","id":"n1c6c1c1m1r1a2","sN":1,"aN":"c6c1c1m1r1a2"}'>Careers</a>
+                            </li>
+                            <li>
+                                <a aria-label="About Microsoft Company" class="c-uhff-link" href="https://www.microsoft.com/about" data-m='{"cN":"Footer_Company_AboutMicrosoft_nav","id":"n2c6c1c1m1r1a2","sN":2,"aN":"c6c1c1m1r1a2"}'>About Microsoft</a>
+                            </li>
+                            <li>
+                                <a aria-label="Company news Company" class="c-uhff-link" href="https://news.microsoft.com/source/?icid=DSM_Footer_Company_CompanyNews" data-m='{"cN":"Footer_Company_CompanyNews_nav","id":"n3c6c1c1m1r1a2","sN":3,"aN":"c6c1c1m1r1a2"}'>Company news</a>
+                            </li>
+                            <li>
+                                <a aria-label="Privacy at Microsoft Company" class="c-uhff-link" href="https://www.microsoft.com/en-us/privacy?icid=DSM_Footer_Company_Privacy" data-m='{"cN":"Footer_Company_PrivacyAtMicrosoft_nav","id":"n4c6c1c1m1r1a2","sN":4,"aN":"c6c1c1m1r1a2"}'>Privacy at Microsoft</a>
+                            </li>
+                            <li>
+                                <a aria-label="Investors Company" class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m='{"cN":"Footer_Company_Investors_nav","id":"n5c6c1c1m1r1a2","sN":5,"aN":"c6c1c1m1r1a2"}'>Investors</a>
+                            </li>
+                            <li>
+                                <a aria-label="Diversity and inclusion Company" class="c-uhff-link" href="https://www.microsoft.com/en-us/diversity/default?icid=DSM_Footer_Company_Diversity" data-m='{"cN":"Footer_Company_DiversityAndInclusion_nav","id":"n6c6c1c1m1r1a2","sN":6,"aN":"c6c1c1m1r1a2"}'>Diversity and inclusion</a>
+                            </li>
+                            <li>
+                                <a aria-label="Accessibility Company" class="c-uhff-link" href="https://www.microsoft.com/en-us/accessibility" data-m='{"cN":"Footer_Company_Accessibility_nav","id":"n7c6c1c1m1r1a2","sN":7,"aN":"c6c1c1m1r1a2"}'>Accessibility</a>
+                            </li>
+                            <li>
+                                <a aria-label="Sustainability Company" class="c-uhff-link" href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability?icid=DSM_Footer_Sustainability" data-m='{"cN":"Footer_Company_Sustainability_nav","id":"n8c6c1c1m1r1a2","sN":8,"aN":"c6c1c1m1r1a2"}'>Sustainability</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+        </nav>
+    <div class="c-uhff-base">
+                <a id="locale-picker-link" aria-label="Content Language Selector. Currently set to English (United States)" class="c-uhff-link c-uhff-lang-selector c-glyph glyph-world" href="/en-us/surface/worldwide" data-m='{"cN":"locale_picker(US)_nav","id":"n7c1c1m1r1a2","sN":7,"aN":"c1c1m1r1a2"}'>English (United States)</a>
+
+            <a data-m='{"id":"n8c1c1m1r1a2","sN":8,"aN":"c1c1m1r1a2"}' href="https://aka.ms/yourcaliforniaprivacychoices" class='c-uhff-link c-uhff-ccpa'>
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+            <title>Your Privacy Choices Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"/>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"/>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"/>
+        </svg>
+        <span>Your Privacy Choices</span>
+    </a>
+
+        <noscript>
+                <a data-m='{"id":"n9c1c1m1r1a2","sN":9,"aN":"c1c1m1r1a2"}' href="https://aka.ms/yourcaliforniaprivacychoices" class='c-uhff-link c-uhff-ccpa'>
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+            <title>Your Privacy Choices Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"/>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"/>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"/>
+        </svg>
+        <span>Your Privacy Choices</span>
+    </a>
+
+        </noscript>
+            <a data-m='{"id":"n10c1c1m1r1a2","sN":10,"aN":"c1c1m1r1a2"}' href="https://go.microsoft.com/fwlink/?linkid=2259814" class="c-uhff-link c-uhff-consumer">
+        <span>Consumer Health Privacy</span>
+    </a>
+
+        <nav aria-label="Microsoft corporate links">
+            <ul class="c-list f-bare" data-m='{"cN":"Corp links_cont","cT":"Container","id":"c11c1c1m1r1a2","sN":11,"aN":"c1c1m1r1a2"}'>
+                                <li  id="c-uhff-footer_sitemap">
+                    <a class="c-uhff-link" href="https://www.microsoft.com/en-us/sitemap1.aspx" data-mscc-ic="false" data-m='{"cN":"Footer_Sitemap_nav","id":"n1c11c1c1m1r1a2","sN":1,"aN":"c11c1c1m1r1a2"}'>Sitemap</a>
+                </li>
+                <li  id="c-uhff-footer_contactus">
+                    <a class="c-uhff-link" href="https://support.microsoft.com/contactus" data-mscc-ic="false" data-m='{"cN":"Footer_ContactUs_nav","id":"n2c11c1c1m1r1a2","sN":2,"aN":"c11c1c1m1r1a2"}'>Contact Microsoft</a>
+                </li>
+                <li  id="c-uhff-footer_privacyandcookies">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-mscc-ic="false" data-m='{"cN":"Footer_PrivacyandCookies_nav","id":"n3c11c1c1m1r1a2","sN":3,"aN":"c11c1c1m1r1a2"}'>Privacy </a>
+                </li>
+                <li class=" x-hidden" id="c-uhff-footer_managecookies">
+                    <a class="c-uhff-link" href="#" data-mscc-ic="false" data-m='{"cN":"Footer_ManageCookies_nav","id":"n4c11c1c1m1r1a2","sN":4,"aN":"c11c1c1m1r1a2"}'>Manage cookies</a>
+                </li>
+                <li  id="c-uhff-footer_termsofuse">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=206977" data-mscc-ic="false" data-m='{"cN":"Footer_TermsOfUse_nav","id":"n5c11c1c1m1r1a2","sN":5,"aN":"c11c1c1m1r1a2"}'>Terms of use</a>
+                </li>
+                <li  id="c-uhff-footer_trademarks">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?linkid=2196228" data-mscc-ic="false" data-m='{"cN":"Footer_Trademarks_nav","id":"n6c11c1c1m1r1a2","sN":6,"aN":"c11c1c1m1r1a2"}'>Trademarks</a>
+                </li>
+                <li  id="c-uhff-footer_safetyandeco">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?linkid=2196227" data-mscc-ic="false" data-m='{"cN":"Footer_SafetyAndEco_nav","id":"n7c11c1c1m1r1a2","sN":7,"aN":"c11c1c1m1r1a2"}'>Safety &amp; eco</a>
+                </li>
+                <li  id="c-uhff-recycling">
+                    <a class="c-uhff-link" href="https://www.microsoft.com/en-us/legal/compliance/recycling" data-mscc-ic="false" data-m='{"cN":"Recycling_nav","id":"n8c11c1c1m1r1a2","sN":8,"aN":"c11c1c1m1r1a2"}'>Recycling</a>
+                </li>
+                <li  id="c-uhff-footer_aboutourads">
+                    <a class="c-uhff-link" href="https://choice.microsoft.com" data-mscc-ic="false" data-m='{"cN":"Footer_AboutourAds_nav","id":"n9c11c1c1m1r1a2","sN":9,"aN":"c11c1c1m1r1a2"}'>About our ads</a>
+                </li>
+
+                <li>&#169; Microsoft 2026</li>
+                
+            </ul>
+        </nav>
+        
+    </div>
+    
+</footer>
+
+<script id="uhf-footer-ccpa">
+    const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+</script>
+
+
+
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script><script src="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/shell/_scrf/js/themes=default/54-af9f9f/fb-2be034/21-f9d187/b0-50721e/d8-97d509/40-0bd7f9/ea-f1669e/9d-c6ea39/62-a72447/3e-a4ee50/7c-0bd6a1/60-37309a/db-bc0148/dc-7e9864/6d-c07ea1/6f-dafe8c/f6-aa5278/e6-5f3533/6d-1e7ed0/b7-cadaa7/62-2741f0/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/d0-e64f3e/92-10345d/79-499886/7e-cda2d3/e7-1fe854/66-9d711a/38-b93a9e/de-884374/1f-100dea/33-abe4df/8f-61bee0?ver=2.0&_cf=02242021_3231&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=surface&market=en-us&uhf=1" defer></script>
+            
+    
+
+	
+
+
+    
+
+</div>
+
+
+      
+    
+    
+	
+	
+    
+	
+		
+    
+<script src="/echo/etc.clientlibs/microsoft/clientlibs/clientlib-mwf-new/main-light.ACSHASHf8a6ecd849f93a3e5d989c0cee0ceb80.min.js"></script>
+
+
+
+		
+    
+<script src="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-base.ACSHASH7e89d60ab495cd79ad67f82f4ceb5b7f.min.js"></script>
+
+
+
+	
+	
+    
+<script src="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-site.ACSHASHb99dc5ca91c2e710e3e46c5befc3b383.min.js"></script>
+
+
+
+    
+	
+    
+    
+<script src="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-surface.ACSHASH77014e24f035235a6c93b13839c54373.min.js"></script>
+
+
+
+    
+    
+	
+
+	
+    
+<script src="/echo/etc.clientlibs/mlsd/clientlibs/clientlib-experimentations.ACSHASH6d6cae3109289d7bb9ba54d594948a7f.min.js"></script>
+
+
+
+	
+		
+    
+<script src="/echo/etc.clientlibs/microsoft/clientlibs/clientlib-httpclient.ACSHASH93770a7cfefa6b3c67ce4472a2e3d569.min.js"></script>
+
+
+
+	
+	
+	
+    
+<script src="/echo/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-cookieconsent.ACSHASHc892f451b0c4db9c8ab2601a427c9b2c.min.js"></script>
+
+
+
+	<!-- Changes for Global Pixel -->
+	
+	
+	
+	
+		<script type="text/javascript" id="contentsquare">
+				(function(){
+					var contentSq =
+						{
+							"entryFile": "https://cdnssl.clicktale.net/www32/ptc/05d32363-d534-4d93-9b65-cde674775e71.js",
+	                    };
+					if (typeof window["partnerScripts"]==="undefined"){
+						window["partnerScripts"]={};
+					}
+					window["partnerScripts"]["contentSquare"] = contentSq;
+				})();
+			</script>
+	
+
+
+
+
+
+
+
+    
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/clientlibs/cookie-compliance-manager.ACSHASHd471cafc5d23f4577f5cf2676dcc276a.min.js"></script>
+
+
+
+
+
+
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/components/structure/page/clientlibs/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js"></script>
+
+
+
+
+
+<!-- Feature Control Service:List of all Enabled Features -->
+<div id='customFeatureControl' enabledFeatures="contentbackfillgenerate,esiproductcards,feature-controlled-mwf,uhf-ms-io-endpoint,uhf-esi-cv,uhf-esi-cache,contentsquare,mediapixel,holiday-themer,lazyload-static-components,clientlibDefer,upsellEnabled,contentbackfillpkgdelete,healthcheck,contentbackfillhttpgenerate,perf-tracker-1ds,dynamic-bundle,cvIncrementer,tentingEnabled,chatCookiesImplemented,alertCountDownWithoutServerTime,pdpDynamicRendering,bundlesDynamicRendering,contentbackfillmetadatachangesvideo,contentbackfillmetadatachangesnonvideo,listDynamicRendering,experimentation-without-personalization,generic-list-importer,combinedUHF,cvCallEnabled,m365ProductCatalog,support-unsupported-locales,vsbEnabled,deferClickTale,videoLazyLoad,prefetchFontsEnabled,enable-code-isolation,imageLinkTag,fetchPriority,contentIngestionAgent,enableClickgroupTelemetry,imageLazyLoad,contentIngestionAgent-dispatcher2westus2Agent,isCacheControlFeatureEnabled,feature-controlled-content-card,lcpPrioritizationPhase1,ocReimagineTelemetry,deferScriptsEnabled,lcpPrioritizationPhase2,ocReimagineSlotNumberTelemetry,contentIngestionAgent-dispatcher1westus2Agent,ocReimagineComponentNameTelemetry,ocReimagineTemplateNameTelemetry,ptePhase1,extended-html-minification-sites,dynamicPrice,gl-auto-config,displayV35Toggle,chatCustomEndpoint,enableBoostPersonalization,ocReimagineTelemetryTemplateNameSwap,enableEmailConnector,enable-eventingService,ocReimagineAIAssistant,acsPMEFeatureEnabled,ocReimagineCustomerApiUrl,ocReimagineCustomerFilterApiUrl,email-FigmaEmailAutomation,storeVideoUmp,ocProductPricePrimaryLocale,complianceManagerEnabled,entertainmentEW,enableClarityScript,EnableCascadeAuthSDK,ecsMigrationCheck"></div>
+
+
+
+
+<div class='oneds-config' data-instrumentationkey='71b56821daef4546b06b863758fb9082-d0a29c05-b59e-4563-ad93-227576cdb53f-7210' data-isenabled='true' data-env='prod' data-market='en-us' data-pageName='Microsoft Pluton: The Heart of Security | Microsoft Surface' data-urlCollectQuery='true' data-urlCollectHash='true' data-autoCapturelineage='true' data-autoCaptureresize='true' data-autoCapturescroll='true' data-initialize1DSEventName="DbDone" data-tenantName='mlsd' data-tenantTitle='Modern Life, Search and Devices' data-tenantDomain='microsoft' data-tenantSiteName='microsoft' data-tenantNameProperty='tenantName' data-tenantTitleProperty='tenantTitle' data-tenantDomainProperty='tenantDomain' data-tenantSiteNameProperty='tenantSiteName' data-max1DSInitializeDelayInSeconds='1'>
+</div>
+
+
+    
+    
+<script src="/echo/etc.clientlibs/microsoft/components/structure/page/clientlibs/custom-oneds.ACSHASH2b7224aac4ea4007cb4436ebcdc8cec8.min.js"></script>
+
+
+
+
+
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+    
+
+    
+
+    
+    
+    
+
+      
+
+    
+
+    
+
+    
+
+
+    
+  
+
+
+    <!-- Start of ADDITIONAL DEBUG INFO
+	
+	MS-CV: CASMicrosoftCVd929cf94.0
+	MS-CV-ESI: CASMicrosoftCVd929cf94.2
+	End of ADDITIONAL DEBUG INFO -->
+  </body>
+</html>

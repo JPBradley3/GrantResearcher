@@ -1,0 +1,61 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Org ID Check</title>
+<link rel="stylesheet" type="text/css" href="../bootstrap/3/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap/3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../Css/Foster.css">
+<link rel="stylesheet" type="text/css" href="../Css/Portal.css">
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain only numbers.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
+</head>
+
+<body><nav class="navbar navbar-default portal"></nav>
+<div id="FFlogo" style=""><img src="/images/Logo-Illustrator.png" alt="Logo" class="img-responsive"/></div>
+  
+<div class="container white-bkgd"><div class=" BodyHeadline">Organization EIN Check</div>
+<form class="form-inline" id="frmIdChk" onSubmit="MM_validateForm('EIN1','','RinRange01:99','EIN2','','RinRange0:9999999');return document.MM_returnValue" method="post">
+  <div class="form-group">
+    Please enter your organization Employer ID Number (EIN) to determine if your organization is already in our database.
+  </div>
+  <div class="row margin-bot-20">
+  <div class="form-group col-xs-8">
+    <label for="EIN1">Employer ID Number: (EIN)</label><br />
+    <input type="number" class="form-control" id="EIN1" name="EIN1" placeholder="##" size="5" maxlength="2" max="99" required><strong> &#8212; </strong><input type="number" class="form-control" id="EIN2" name="EIN2" placeholder="#######"  size="10" maxlength="7" min="0000000" max="9999999" required>
+  </div>
+  </div>
+<div class="row">
+	<div class="col-sm-12">
+  <input type="hidden" name="hdnSubmit" value="true">
+  <button type="submit" class="btn btn-FF" href="#">Check EIN</button></div>
+</div>
+</form>
+
+</div>
+
+
+
+</body>
+</html>

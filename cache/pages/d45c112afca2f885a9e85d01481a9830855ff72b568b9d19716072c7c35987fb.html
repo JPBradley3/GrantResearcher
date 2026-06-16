@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://inatai.org/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-divi-userfonts">@font-face { font-family: "Sofia Sans"; font-display: swap;  src: url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype"); }</style><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Source+Sans+3:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|PT+Serif:regular,italic,700,700italic&#038;subset=latin,latin-ext&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16WXZ0ow.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Xw3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Hw3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w3aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w3aX8.ttf) format('truetype');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRTQgYoZZY2vCFuvAFT_rO1dw.ttf) format('truetype');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRQQgYoZZY2vCFuvAFT9gaQZyffpQ.ttf) format('truetype');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRVQgYoZZY2vCFuvAFYzro.ttf) format('truetype');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRSQgYoZZY2vCFuvAnt66qcVy4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlOxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqOdOxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqItOxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqGdJxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqF5JxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlJxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqBBJxCcSnw.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw462EE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kzm62EE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky462EE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KyK62EE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7GEE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxf7GEE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw47GEE9C4.ttf) format('truetype');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KwR7GEE9C4.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16WXZ0oA.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Xw3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Hw3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w3aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w3aXw.woff) format('woff');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRTQgYoZZY2vCFuvAFT_rO1dA.woff) format('woff');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRQQgYoZZY2vCFuvAFT9gaQZyffpg.woff) format('woff');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRVQgYoZZY2vCFuvAFYzrk.woff) format('woff');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRSQgYoZZY2vCFuvAnt66qcVy0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlOxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqOdOxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqItOxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqGdJxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqF5JxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlJxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqBBJxCcSnA.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw462EE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kzm62EE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky462EE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KyK62EE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7GEE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxf7GEE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw47GEE9C0.woff) format('woff');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KwR7GEE9C0.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16WXZ0pg.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Xw3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Hw3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w3aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w3aXo.woff2) format('woff2');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRTQgYoZZY2vCFuvAFT_rO1cg.woff2) format('woff2');}@font-face {font-family: 'PT Serif';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRQQgYoZZY2vCFuvAFT9gaQZyffoA.woff2) format('woff2');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRVQgYoZZY2vCFuvAFYzr8.woff2) format('woff2');}@font-face {font-family: 'PT Serif';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRSQgYoZZY2vCFuvAnt66qcVys.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlOxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqOdOxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqItOxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqGdJxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqF5JxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqDlJxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqBBJxCcSmg.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw462EE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kzm62EE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky462EE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KyK62EE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7GEE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxf7GEE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw47GEE9Cs.woff2) format('woff2');}@font-face {font-family: 'Source Sans 3';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KwR7GEE9Cs.woff2) format('woff2');}</style><link rel="alternate" hreflang="en" href="https://inatai.org/2022-grantmaking-report/" />
+<link rel="alternate" hreflang="x-default" href="https://inatai.org/2022-grantmaking-report/" />
+
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>2022 Grantmaking Report - Inatai Foundation</title><link rel="preload" data-smush-preload as="image" href="https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3.jpg" imagesrcset="https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3.jpg 1920w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-1280x533.jpg 1280w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-980x408.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-480x200.jpg 480w" imagesizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" fetchpriority="high" />
+<meta name="description" content="Photo courtesy of Washington Building Leaders of Change (WA-BLOC)."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://inatai.org/2022-grantmaking-report/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2022 Grantmaking Report - Inatai Foundation" />
+<meta property="og:description" content="Photo courtesy of Washington Building Leaders of Change (WA-BLOC)." />
+<meta property="og:url" content="https://inatai.org/2022-grantmaking-report/" />
+<meta property="og:site_name" content="Inatai Foundation" />
+<meta property="og:updated_time" content="2023-09-24T21:32:19-07:00" />
+<meta property="article:published_time" content="2023-09-24T08:00:00-07:00" />
+<meta property="article:modified_time" content="2023-09-24T21:32:19-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="2022 Grantmaking Report - Inatai Foundation" />
+<meta name="twitter:description" content="Photo courtesy of Washington Building Leaders of Change (WA-BLOC)." />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="35 minutes" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://inatai.org/#organization","name":"Inatai Foundation","url":"https://inatai.org"},{"@type":"WebSite","@id":"https://inatai.org/#website","url":"https://inatai.org","name":"Inatai Foundation","publisher":{"@id":"https://inatai.org/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://inatai.org/2022-grantmaking-report/#webpage","url":"https://inatai.org/2022-grantmaking-report/","name":"2022 Grantmaking Report - Inatai Foundation","datePublished":"2023-09-24T08:00:00-07:00","dateModified":"2023-09-24T21:32:19-07:00","isPartOf":{"@id":"https://inatai.org/#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://inatai.org/author/trevin/","name":"Trevin Spencer","url":"https://inatai.org/author/trevin/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/e8b50caaa0c5351a01f8a5264ba8b249aaa14368578b4882b27e2b86fcdeaabf?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/e8b50caaa0c5351a01f8a5264ba8b249aaa14368578b4882b27e2b86fcdeaabf?s=96&amp;d=mm&amp;r=g","caption":"Trevin Spencer","inLanguage":"en-US"},"sameAs":["https://2dudes.io"],"worksFor":{"@id":"https://inatai.org/#organization"}},{"@type":"Article","headline":"2022 Grantmaking Report - Inatai Foundation","datePublished":"2023-09-24T08:00:00-07:00","dateModified":"2023-09-24T21:32:19-07:00","author":{"@id":"https://inatai.org/author/trevin/","name":"Trevin Spencer"},"publisher":{"@id":"https://inatai.org/#organization"},"description":"Photo courtesy of Washington Building Leaders of Change (WA-BLOC).","name":"2022 Grantmaking Report - Inatai Foundation","@id":"https://inatai.org/2022-grantmaking-report/#richSnippet","isPartOf":{"@id":"https://inatai.org/2022-grantmaking-report/#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://inatai.org/2022-grantmaking-report/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel="alternate" type="application/rss+xml" title="Inatai Foundation &raquo; Feed" href="https://inatai.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Inatai Foundation &raquo; Comments Feed" href="https://inatai.org/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://inatai.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finatai.org%2F2022-grantmaking-report%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://inatai.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finatai.org%2F2022-grantmaking-report%2F&#038;format=xml" />
+<meta content="Divi Child Theme v.1.0.0" name="generator"/><link rel='stylesheet' id='dmpro_general_style-css' href='https://inatai.org/wp-content/plugins/divi-modules-pro/public/css/general.css?ver=1.0.0' type='text/css' media='all' />
+<style id='dmpro_general_style-inline-css' type='text/css'>
+@media (min-width: 981px) {#dmpro-mediaquery-state { z-index:1; }}@media (max-width: 980px) and (min-width: 769px){#dmpro-mediaquery-state { z-index:2; }}@media (max-width: 768px) and (min-width: 401px){#dmpro-mediaquery-state { z-index:2; }}@media (max-width: 400px){#dmpro-mediaquery-state { z-index:3; }}
+/*# sourceURL=dmpro_general_style-inline-css */
+</style>
+<link rel='stylesheet' id='magnific-css' href='https://inatai.org/wp-content/plugins/shortcode-gallery-for-matterport-showcase/magnific.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-matterport-css' href='https://inatai.org/wp-content/plugins/shortcode-gallery-for-matterport-showcase/wp-matterport.css?ver=2.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-legacy-dropdown-click-0-css' href='https://inatai.org/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/style.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://inatai.org/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='search-filter-plugin-styles-css' href='https://inatai.org/wp-content/plugins/search-filter-pro/public/assets/css/search-filter.min.css?ver=2.5.21' type='text/css' media='all' />
+<link rel='stylesheet' id='graphina-divi-charts-and-graphs-styles-css' href='https://inatai.org/wp-content/plugins/graphina-divi-charts-and-graphs/styles/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-parent-css' href='https://inatai.org/wp-content/themes/Divi/style-static.min.css?ver=4.27.6' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='https://inatai.org/wp-content/themes/Divichild/style.css?ver=4.27.6' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css' href='https://inatai.org/wp-content/plugins/styles-by-43folders/css/custom_styles.css?ver=20230513' type='text/css' media='all' />
+<script type="text/javascript" id="wpml-cookie-js-extra">
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=493000" id="wpml-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://inatai.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/script.min.js?ver=1" id="wpml-legacy-dropdown-click-0-js"></script>
+<script type="text/javascript" id="search-filter-plugin-build-js-extra">
+/* <![CDATA[ */
+var SF_LDATA = {"ajax_url":"https://inatai.org/wp-admin/admin-ajax.php","home_url":"https://inatai.org/","extensions":[]};
+//# sourceURL=search-filter-plugin-build-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/search-filter-pro/public/assets/js/search-filter-build.min.js?ver=2.5.21" id="search-filter-plugin-build-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/search-filter-pro/public/assets/js/chosen.jquery.min.js?ver=2.5.21" id="search-filter-plugin-chosen-js"></script>
+<link rel="https://api.w.org/" href="https://inatai.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://inatai.org/wp-json/wp/v2/pages/11008" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://inatai.org/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://inatai.org/?p=11008' />
+<meta name="generator" content="WPML ver:4.9.3 stt:1,2;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="google-site-verification" content="dBX8aGzX5-EvJVGI4qJ_D95YuEM1xgZVV1nm6xB73ak" />
+<!--  ADDS THESE FONTS
+freight-sans-pro
+<link rel="stylesheet" href="https://use.typekit.net/flj6lmj.css">
+<link rel="stylesheet" href="https://use.typekit.net/pef1dlp.css"> -->
+<script>jQuery(document).ready(function($ ) {
+// add "&rel=0" to end of all YouTube video URL’s
+// to prevent displaying related videos
+$(".pa-hide-related iframe").attr( "src", function( i, val ) {
+return val + "&rel=0";
+});
+});
+</script>
+<link rel="icon" href="https://inatai.org/wp-content/uploads/2023/09/cropped-cropped-Inatai_Favicon4-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://inatai.org/wp-content/uploads/2023/09/cropped-cropped-Inatai_Favicon4-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://inatai.org/wp-content/uploads/2023/09/cropped-cropped-Inatai_Favicon4-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://inatai.org/wp-content/uploads/2023/09/cropped-cropped-Inatai_Favicon4-270x270.jpg" />
+<link rel="stylesheet" id="et-divi-customizer-global-cached-inline-styles" href="https://inatai.org/wp-content/et-cache/global/et-divi-customizer-global.min.css?ver=1780617550" /><style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+</head>
+<body class="wp-singular page-template-default page page-id-11008 wp-theme-Divi wp-child-theme-Divichild et-tb-has-template et-tb-has-header et-tb-has-footer et_pb_button_helper_class et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	<div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_with_border et_pb_section et_pb_section_0_tb_header et_pb_sticky_module et_section_regular et_pb_section--with-menu" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header et_animated et_pb_gutters2 et_pb_row--with-menu">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_search et_pb_search_0_tb_header  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<form role="search" method="get" class="et_pb_searchform" action="https://inatai.org/">
+					<div>
+						<label class="screen-reader-text" for="s">Search for:</label>
+						<input type="text" name="s" placeholder="How can we help?" class="et_pb_s" />
+						<input type="hidden" name="et_pb_searchform_submit" value="et_search_proccess" />
+						
+						<input type="hidden" name="et_pb_include_posts" value="yes" />
+						<input type="hidden" name="et_pb_include_pages" value="yes" />
+						<input type="submit" value="Search" class="et_pb_searchsubmit">
+					</div>
+				</form>
+			</div><div id="language-menu" class="et_pb_module et_pb_menu et_pb_menu_0_tb_header et_pb_bg_layout_dark  et_pb_text_align_right et_dropdown_animation_fade et_pb_menu--without-logo et_pb_menu--style-left_aligned">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-language" class="et-menu nav"><li id="menu-item-10255" class="hidden et_pb_menu_page_id-10255 menu-item menu-item-type-custom menu-item-object-custom menu-item-10255"><a>Empty Link</a></li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				</div>
+			</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1_tb_header et_pb_row--with-menu">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div id="main-nav" class="et_pb_module et_pb_menu et_pb_menu_1_tb_header et_pb_bg_layout_light  et_pb_text_align_right et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						<div class="et_pb_menu__logo-wrap">
+			  <div class="et_pb_menu__logo">
+				<a href="https://inatai.org/" ><img fetchpriority="high" decoding="async" width="600" height="405" src="https://inatai.org/wp-content/uploads/2025/02/Inatai_Foundation_Group_Health_Foundation_Logo_Dark_Blue.png" alt="" srcset="https://inatai.org/wp-content/uploads/2025/02/Inatai_Foundation_Group_Health_Foundation_Logo_Dark_Blue.png 600w, https://inatai.org/wp-content/uploads/2025/02/Inatai_Foundation_Group_Health_Foundation_Logo_Dark_Blue-480x324.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-13304" /></a>
+			  </div>
+			</div>
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-main-navigation" class="et-menu nav"><li class="et_pb_menu_page_id-1503 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1503"><a>Funding</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-256 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1989"><a href="https://inatai.org/grantmaking-overview/">Grantmaking overview</a>
+	<ul class="sub-menu">
+		<li class="et_pb_menu_page_id-2031 menu-item menu-item-type-post_type menu-item-object-page menu-item-2034"><a href="https://inatai.org/grantmaking-overview/sponsorships/">Sponsorships</a></li>
+		<li class="et_pb_menu_page_id-1978 menu-item menu-item-type-post_type menu-item-object-page menu-item-1984"><a href="https://inatai.org/grantmaking-overview/community-power-grant/">Community Power Grant</a></li>
+		<li class="et_pb_menu_page_id-2016 menu-item menu-item-type-post_type menu-item-object-page menu-item-2019"><a href="https://inatai.org/grantmaking-overview/systems-change-grant/">Systems Change Grant</a></li>
+		<li class="et_pb_menu_page_id-14967 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-15008"><a href="https://inatai.org/grantmaking-overview/open-invitation/">Open Invitation</a>
+		<ul class="sub-menu">
+			<li class="et_pb_menu_page_id-14864 menu-item menu-item-type-post_type menu-item-object-page menu-item-14956"><a href="https://inatai.org/grantmaking-overview/clip/">Campaigns, Litigation, Issues, &#038; Policy (CLIP)</a></li>
+			<li class="et_pb_menu_page_id-14894 menu-item menu-item-type-post_type menu-item-object-page menu-item-14957"><a href="https://inatai.org/grantmaking-overview/infrastructure-opportunities/">Infrastructure Opportunities</a></li>
+			<li class="et_pb_menu_page_id-14885 menu-item menu-item-type-post_type menu-item-object-page menu-item-14958"><a href="https://inatai.org/grantmaking-overview/tcap-opportunities/">Transformational Capacity Building</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="et_pb_menu_page_id-2465 menu-item menu-item-type-post_type menu-item-object-page menu-item-2495"><a href="https://inatai.org/grantee-directory/">Grantee directory</a></li>
+	<li class="et_pb_menu_page_id-14200 menu-item menu-item-type-post_type menu-item-object-page menu-item-14242"><a href="https://inatai.org/2024-annual-report/">2024 Annual Report</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-1632 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1632"><a>Resources</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-2084 menu-item menu-item-type-post_type menu-item-object-page menu-item-2087"><a href="https://inatai.org/reports-overview/">Reports overview</a></li>
+	<li class="et_pb_menu_page_id-2077 menu-item menu-item-type-post_type menu-item-object-page menu-item-2080"><a href="https://inatai.org/approaches/">Approaches</a></li>
+	<li class="et_pb_menu_page_id-3327 menu-item menu-item-type-post_type menu-item-object-page menu-item-3329"><a href="https://inatai.org/grantee-events/">Grantee events</a></li>
+	<li class="et_pb_menu_page_id-14634 menu-item menu-item-type-post_type menu-item-object-page menu-item-14650"><a href="https://inatai.org/portal-access/">Portal Access</a></li>
+	<li class="et_pb_menu_page_id-12170 menu-item menu-item-type-post_type menu-item-object-page menu-item-12266"><a href="https://inatai.org/eventsspace/">Reserve our space</a></li>
+	<li class="et_pb_menu_page_id-11057 menu-item menu-item-type-post_type menu-item-object-page menu-item-11061"><a href="https://inatai.org/inatai-logo-and-brand-guidelines/">Inatai logo and brand guidelines</a></li>
+	<li class="et_pb_menu_page_id-2416 menu-item menu-item-type-post_type menu-item-object-page menu-item-3198"><a href="https://inatai.org/organizational-identities/">Definitions for org identities</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-1504 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1504"><a>Get to know Inatai</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-2717 menu-item menu-item-type-post_type menu-item-object-page menu-item-2720"><a href="https://inatai.org/about/">About us</a></li>
+	<li class="et_pb_menu_page_id-2769 menu-item menu-item-type-post_type menu-item-object-page menu-item-2772"><a href="https://inatai.org/our-team/">Our team</a></li>
+	<li class="et_pb_menu_page_id-2826 menu-item menu-item-type-post_type menu-item-object-page menu-item-2829"><a href="https://inatai.org/join-inatai/">Join Inatai</a></li>
+	<li class="et_pb_menu_page_id-2960 menu-item menu-item-type-post_type menu-item-object-page menu-item-2962"><a href="https://inatai.org/board-of-directors/">Board of Directors</a></li>
+	<li class="et_pb_menu_page_id-12283 menu-item menu-item-type-custom menu-item-object-custom menu-item-12283"><a target="_blank" href="https://inatai.partners">Investment Management Co.</a></li>
+	<li class="et_pb_menu_page_id-13394 menu-item menu-item-type-post_type menu-item-object-page menu-item-13434"><a href="https://inatai.org/policy-advocacy-priorities/">Policy &#038; advocacy priorities</a></li>
+	<li class="et_pb_menu_page_id-3235 menu-item menu-item-type-post_type menu-item-object-page menu-item-3238"><a href="https://inatai.org/faq/">Frequently asked questions</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-2105 menu-item menu-item-type-post_type menu-item-object-page menu-item-2108"><a href="https://inatai.org/contact/">Contact us</a></li>
+<li class="et_pb_menu_page_id-11029 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11029"><a>News &#038; Stories</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-3012 menu-item menu-item-type-post_type menu-item-object-page menu-item-3015"><a href="https://inatai.org/news/">News</a></li>
+	<li class="et_pb_menu_page_id-13272 menu-item menu-item-type-post_type menu-item-object-page menu-item-13371"><a href="https://inatai.org/power-builders/">Power Builders</a></li>
+</ul>
+</li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				</div>
+			</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-11008" class="post-11008 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 tbvs-section-light et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="800" src="https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3.jpg" alt="2022 Grantmaking Report" title="2022_Grantmaking_Report_Hero3" srcset="https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3.jpg 1920w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-1280x533.jpg 1280w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-980x408.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/2022_Grantmaking_Report_Hero3-480x200.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-11354" fetchpriority="high" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3><span style="color: #cee1ce;">Funding</span> <span style="color: #ffffff;">|</span> <span style="color: #cee1ce;">2022 Grantmaking Report</span></h3></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>A YEAR OF CHANGES,</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>but one thing remains the same</h2></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 style="text-align: right;"><span style="color: #cee1ce;"><span>Published<br />September 2023</span></span></h3></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_right et_pb_button_alignment_tablet_left et_pb_button_alignment_phone_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="/wp-content/uploads/2023/09/INT_GrantmakingReport_2023_Release091823.pdf" target="_blank" data-icon="$">2022 Grantmaking Report</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 tbvs-section-light et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="story" class="et_pb_row et_pb_row_3 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="p1"><span class="s1" style="color: #132027;"><b>I’M PROUD TO SHARE</b></span> Inatai Foundation’s 2022 Grantmaking Report, which chronicles our progress and the story of our third full year of grantmaking. Since 2019, we have committed a total of $200 million to hundreds of organizations in Washington state. We achieved our full grantmaking capacity last year, contributing nearly $64 million to powerful communities fighting for equity and racial justice in every corner of our state. </p>
+<p class="p1">2022 was a year of evolutions, a series of changes to better reflect who we are today and who we aspire to be in service to grantee organizations. We clarified our values to help us play our best role as a foundation. We introduced a new mission statement:<span style="color: #132027;"><b> to transform the balance of power to ensure equity and racial justice across Washington and beyond.</b></span> And we sought and received permission from the Chinook Nation to use the Chinuk Wawa word inatai as our new name. Inatai means “across” or “other side” and communicates our belief that powerful communities working together will move all of us to a place of greater equity and racial justice.</p>
+<p class="p1">One thing that has not and will not change is who we support. Consistent with previous years, most of our grants in 2022 went to organizations led by and for people most affected by inequities and injustice. Their work impacts all 39 Washington counties.<span style="color: #132027;"><b> In our history as a foundation to date, more than 80 percent of the organizations we fund are led by Black, Indigenous, and people of color.</b></span> Our worldview is straightforward: Equity and racial justice are not possible without communities having the power to determine the policies, institutions, and structures that affect their daily lives. </p>
+<p class="p2">We have made the conscious choice to collect and report data that will help us make decisions in alignment with our values and mission and with communities’ visions for the future. This information also helps us hold ourselves accountable to being a truly statewide organization. As you dive in, we’d like to share three themes from our 2022 data that show how we can best support grantee organizations.</p>
+<h3 class="p1"><span class="s1">Expansion of multiyear grants</span></h3>
+<p class="p1">Ask any leader of a nonprofit and they will tell you that the best way for a funder to sustain the long-term work of equity and racial justice is through multiyear grants. Inatai also favors this approach because it allows us to build trusting relationships with organizations and more time to understand the communities they serve. To date, 60 percent of our grant dollars have been multiyear commitments. As leaders have shared with us time and again, the issues their communities face outlive the news cycle. Multiyear grants are necessary for the decades it takes to effectively strategize and organize.</p>
+<h3 class="p1">Deeper investment in 501(c)(4) work</h3>
+<p>While all nonprofit organizations can participate in the electoral and political process to some extent, 501(c)(4) organizations are allowed greater latitude to pursue a range of advocacy, power-building, and political activities. In 2022, 20 percent of Inatai’s grant dollars were directed to 501(c)(4) organizations. As a 501(c)(4) organization, we prefer to make grants to reflective, accountable, community-rooted 501(c)(4) organizations. Our average grant to a BIPOC-led 501(c)(4) organization is significantly larger than the average grant to a 501(c)(3) nonprofit. Inatai resources have supported many organizations to expand their policy and advocacy work, including hiring political directors, organizers, and lobbyists.</p>
+<h3 class="p1">Our systems and processes could use refining</h3>
+<p>A third-party evaluation of how grantee organizations experience our foundation showed that while people appreciate our approach to grantmaking and our emphasis on trust and relationship-building, we have room to improve how we communicate our grantmaking cycles and opportunities, so their structure and expectations are clearer to organizations seeking funding. In response, we invested time and energy into improving our internal processes and infrastructure, and we hope the organizations we support feel the payoff of that effort. As we continue to develop funding programs and strengthen our capacity, we will keep the experiences of organizations and leaders at the forefront of each decision we make.</p>
+<p class="p1">On behalf of every team member at Inatai, we enjoyed getting to know you in 2022 and we look forward to even more connection ahead. Until then, we hope you find this report helpful in understanding our work, including areas we are striving to improve. Thank you for reading.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_4 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_team_member et_pb_team_member_0 clearfix  et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_team_member_image et-waypoint et_pb_animation_off"><img decoding="async" width="483" height="486" src="https://inatai.org/wp-content/uploads/2023/09/Nichole_June_Maher.jpg" alt="" srcset="https://inatai.org/wp-content/uploads/2023/09/Nichole_June_Maher.jpg 483w, https://inatai.org/wp-content/uploads/2023/09/Nichole_June_Maher-480x483.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 483px, 100vw" class="wp-image-11016" /></div>
+				<div class="et_pb_team_member_description">
+					
+					
+					
+					
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="687" height="213" src="https://inatai.org/wp-content/uploads/2023/09/Nicholes_Signature.jpg" alt="Nichole&#039;s Signature" title="Nicholes_Signature" srcset="https://inatai.org/wp-content/uploads/2023/09/Nicholes_Signature.jpg 687w, https://inatai.org/wp-content/uploads/2023/09/Nicholes_Signature-480x149.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 687px, 100vw" class="wp-image-11299" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1"><span class="s1">Nichole June Maher</span></h3>
+<p class="p2">President &amp; CEO</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="mission" class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5 et_animated">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1 style="text-align: left;">2022 Highlights</h1></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: left;">$63.8M Total Grantmaking</h2></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_6 et_animated et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_6 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_0  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="687" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign"></span></p></div>
+				<h3 class="title">Grants and contributions</h3>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_1  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="78" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign">%</span></p></div>
+				<h3 class="title">to people-of-color-led organizations</h3>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_2  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="97" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign">%</span></p></div>
+				<h3 class="title">as unrestricted grant awards</h3>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_3  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="34" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign"></span></p></div>
+				<h3 class="title">tribal nations awarded</h3>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_4  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="487" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign"></span></p></div>
+				<h3 class="title">unique organizations</h3>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_number_counter et_pb_number_counter_5  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light et_pb_with_title" data-number-value="8" data-number-separator="">
+				
+				
+				
+				
+				<div class="percent" ><p><span class="percent-value"></span><span class="percent-sign"></span></p></div>
+				<h3 class="title">convenings to connect with prospective and current grantees</h3>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 tbvs-section-light et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="story" class="et_pb_row et_pb_row_7 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_with_border et_pb_column_4_4 et_pb_column et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>GRANTEE ORGANIZATIONS ARE RACIALLY DIVERSE</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Why we ask organizations for their racial identities</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>The lack of reflective leadership in institutions and government has prevented Black, Indigenous, and people of color from making decisions and shaping policies that impact their communities. Many BIPOC leaders we’ve met across the state also shared that their advocacy work—especially in rural areas and smaller cities—is often overlooked by philanthropy.</p>
+<p>Inatai Foundation is accountable to people, organizations, and networks who are building power within racially diverse communities and who understand that racial justice is a core condition of equity. We ask grant applicants to share the racial identities of their leaders, as well as their organization’s identity, based on the definitions we offer as part of the process. We do not accept applications from organizations that decline to share this information, nor will we make grants to organizations that misrepresent themselves.</p>
+<p>We are also learning other ways leaders reflect the communities they serve. Our team looks at several leadership identities in addition to race and ethnicity, including gender and gender expansiveness, abilities/disabilities, immigration status, sexuality, homelessness, and other lived experiences. As we continue to improve our data collection systems and processes, we hope to better understand how leaders within the organizations we support are connected to the communities they serve, and how we can best support their progress in becoming more racially and ethnically diverse.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="story" class="et_pb_row et_pb_row_8 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_with_border et_pb_column_4_4 et_pb_column et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="2452" height="1134" src="https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2-2.jpg" alt="Graph1 2022 Grantmaking Report" title="Graph1_2022_Grantmaking_Report2-2" srcset="https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2-2.jpg 2452w, https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2-2-1280x592.jpg 1280w, https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2-2-980x453.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2-2-480x222.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 2452px, 100vw" class="wp-image-11657" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1094" height="2098" src="https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2_Mobile2.jpg" alt="Graph1 2022 Grantmaking Report" title="Graph1_2022_Grantmaking_Report2_Mobile2" srcset="https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2_Mobile2.jpg 1094w, https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2_Mobile2-980x1879.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/Graph1_2022_Grantmaking_Report2_Mobile2-480x921.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1094px, 100vw" class="wp-image-11659" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_9 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1"><b>GRANTMAKING BY<br />ORGANIZATION IDENTITY</b></h3>
+<p class="p1"><span style="color: #a58036;"><strong><em>Culturally specific</em></strong></span> organizations are created by and for people of a specific racial or ethnic identity group and are accountable to that community.</p>
+<p class="p1"><span style="color: #363960;"><strong><span class="s1"><i>Multiracial or multicultural</i></span></strong></span> organizations have leaders from several racial or ethnic identities.</p>
+<p class="p1"><strong><span class="s1"><i>Historically white-led</i></span></strong><span class="s2"><i> </i></span>organizations are founded, formed, goverened, and have cultures and values primarily led by white people.</p>
+<p class="p1"><span style="color: #3a5d60;"><strong><span class="s1"><i>Cross-racial</i></span></strong></span> organizations are coalitions or networks of groups, each with a specific racial, ethnic, or multicultural base. They come together to advance political, policy, or other priorities.</p>
+<p class="p1"><span style="font-size: small;"><span class="s1"><i>Note: </i></span><i>1 percent was awarded to organizations that did not fit into any of these categories.<span class="Apple-converted-space"> </span></i></span></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1"><span class="s1"><b>A NOTE ABOUT AAPI ORGANIZATIONS</b></span></h3>
+<p class="p2">At the request of Native Hawaiian and Pacific Islander grantee leaders and organizations, we have begun to disaggregate the AAPI (Asian American and Pacific Islander) racial category into four different groups in our data collection. In this report, we count organizations with multiple Asian or Pacific Islander identities as multicultural or multiracial. <span class="Apple-converted-space"> </span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 tbvs-section-light et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="story" class="et_pb_row et_pb_row_10 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>POWERFUL COMMUNITIES ARE EVERYWHERE</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1">Grant Dollars awarded</h3>
+<h4 class="p1">by county</h4></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1710" height="1182" src="https://inatai.org/wp-content/uploads/2023/09/County_Money_Map.jpg" alt="County Money Map" title="County_Money_Map" srcset="https://inatai.org/wp-content/uploads/2023/09/County_Money_Map.jpg 1710w, https://inatai.org/wp-content/uploads/2023/09/County_Money_Map-1280x885.jpg 1280w, https://inatai.org/wp-content/uploads/2023/09/County_Money_Map-980x677.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/County_Money_Map-480x332.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1710px, 100vw" class="wp-image-11046" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_11 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="p1">We understand that Washington is complex and diverse, and we are continually learning and trying to establish a more accurate picture of the geographic diversity in our region. As a foundation that strives to be truly statewide, Inatai asks organizations to identify the primary county(ies) in which they work.</p>
+<p class="p1">We are also seeking to understand how applicants define their geography. The scale of grantees’ work ranges from local to statewide and even international in some cases. This information gives us an idea of where our resources are going and where we could be more geographically equitable.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_12 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="84" height="98" src="https://inatai.org/wp-content/uploads/2023/09/Gold_Circle.jpg" alt="Gold Circle" title="Gold_Circle" class="wp-image-11661" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_13 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_17  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1">AVERAGE GRANT SIZE BY COUNTY</h3>
+<p class="p1">In areas where we have found fewer organizations to fund, we are making larger grants to help bridge the gap. For reference, our average grant size per county is $93,000.</p>
+<p class="p1">Asotin County<span class="s1"> &#8211; $670,000<br /></span>Kittitas County<span class="s1"> &#8211; $219,000 <span class="Apple-converted-space"> <br /></span></span><span class="s2">Ferry County</span> &#8211; $201,000 <span class="Apple-converted-space"> <br /></span>Mason County<span class="s1"> &#8211; $174,000<br /></span>Clallam County<span class="s1"> &#8211; $170,000 <br /></span>Island County <span class="s1">&#8211; $150,000  <span class="Apple-converted-space"> <br /></span></span>Klickitat County <span class="s1">&#8211; $147,000  <span class="Apple-converted-space"> <br /></span></span>Okanogan County<span class="s1"> &#8211; $141,000  <span class="Apple-converted-space"> <br /></span></span>Spokane County<span class="s1"> &#8211; $129,000</span></p>
+<p class="p1">Additionally, organizations whose work is truly rooted throughout the state received an average of $186,000.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1"><span class="s1"><b>SUPPORT OUTSIDE OF WASHINGTON</b></span></h3>
+<p class="p2">About 8 percent of our dollars were directed to out-of-state organizations who support multicultural and culturally specific legal advocacy, political organizing, voter engagement, and voter protection work that impacts communities in our state. About one-third of these funds remained in the Pacific Northwest, in neighboring states.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 tbvs-section-light et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="story" class="et_pb_row et_pb_row_14 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>COMMUNITY POWER CANNOT BE BUILT IN ISOLATION</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_20  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="p1">Community power cannot be built in isolation, so Inatai prioritized connecting grantee organizations in 2022. Our gatherings are active spaces where leaders can build upon their collective strengths and form genuine relationships based on shared identities, common goals, mutual priorities, and regional proximity.</p>
+<p class="p1">This past year, Inatai Foundation continued to refine how we invited community leaders into shared space. Six of our eight convenings were designed around specific grantmaking programs and yielded invaluable lessons for how we understand community power building in the state.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_15 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1"><b>EMERGING OPPORTUNITIES CONVENINGS </b></h3>
+<p>A series of in-person and virtual gatherings brought leaders from across the state to discuss and expand on four themes that have emerged in our history of grantmaking.</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_22  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4 class="p1"><span class="s1"><i>Executive transitions</i></span></h4>
+<p class="p1">Leaders from eight organizations joined a virtual discussion in June to talk about executive transitions at their organizations. Some were people of color taking over nonprofits that were historically white-led and others were founders who are planning for succession. A vital lesson is that when moving through key leadership changes, organizations benefit from technical assistance around leadership development, organizational sustainability, and infrastructure.</p>
+<h4 class="p1"><em>Immigrant justice</em></h4>
+<p>At an in-person gathering in Snoqualmie, 20 leaders from across the state working on immigrant justice shared stories of how policy and advocacy are essential to creating impactful changes for their communities. We clearly heard the need for statewide power-building infrastructure; our team was surprised when participants shared that this event was likely the first time a funder organized a statewide gathering for immigrant justice organizations.</p>
+<p><em style="color: #a58036; font-family: 'PT Serif', Georgia, 'Times New Roman', serif; font-size: 21px; font-weight: bold;">Civil rights and legal advocacy </em></p>
+<p class="p1">In Leavenworth, we brought together representatives from 12 organizations working to protect and advance civil rights in their communities. The organizations ranged from newer groups in smaller communities formed in reaction to far-right threats to large legal advocacy organizations with statewide reach. Still, there were areas where their work intersected, including common oppositional forces.</p>
+<h4 class="p1"><em>Wealth and asset creation</em></h4>
+<p>Our team invited leaders from 10 organizations to meet virtually and share their work with each other related to the development and protection of community-owned wealth. Participants saw wealth and asset building through various prisms, but all agreed that community-owned property and land lend significant strength to their communities.</p>
+<h4 class="p1"></h4>
+<p class="p1"></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_16">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 class="p1">SYSTEMS CHANGE CONVENING</h3>
+<p>Systems Change Grants (formerly known as Systems, Power &amp; Action grants) are three-year awards totaling up to $720,000 for each recipient. As of fall 2022, this portfolio supports 73 organizations across the state to strengthen their power-building, advocacy, and systems change work. Last year, we held a virtual conference with 70 leaders from across Washington to connect, share, learn, and deepen their understanding of each other’s work and priorities. Leaders articulated their visions for expanding power-building strategies through voter engagement, public policy, and reflective leadership in government. Participants presented sharp analyses of what change looks like in their communities. Notably, many leaders committed to coordinating and supporting each other’s work after the event.</p>
+<h4 class="p1"></h4></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="story" class="et_pb_row et_pb_row_17 et_pb_equal_columns et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_27  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_6">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="1315" height="715" src="https://inatai.org/wp-content/uploads/2023/09/Inatai_Team_At_Snoqualmie.jpg" alt="Inatai Team At Snoqualmie" title="Inatai_Team_At_Snoqualmie" srcset="https://inatai.org/wp-content/uploads/2023/09/Inatai_Team_At_Snoqualmie.jpg 1315w, https://inatai.org/wp-content/uploads/2023/09/Inatai_Team_At_Snoqualmie-1280x696.jpg 1280w, https://inatai.org/wp-content/uploads/2023/09/Inatai_Team_At_Snoqualmie-980x533.jpg 980w, https://inatai.org/wp-content/uploads/2023/09/Inatai_Team_At_Snoqualmie-480x261.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1315px, 100vw" class="wp-image-11049" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_24  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;"><em>Community leaders and the Inatai team in Snoqualmie celebrating a convening of immigrant justice organizations from across the state. <br />Photo: Uly Curry</em></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_18">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4 class="p1"><span class="s1"><em>We’d like to thank the leaders of community organizations at the forefront of critical work who took time to connect with peers in our state.</em></span></h4></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_26  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Our next iteration of gatherings will center around different geographies, and we may uncover new opportunities for grantee organizations to dream and plan together. Ultimately, our hope is that participants from current and future grantee organizations continue to cultivate and sustain supportive relationships that lead to transformative power.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_footer tbvs-section-light et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="600" height="405" src="https://inatai.org/wp-content/uploads/2023/05/Inatai_Foundation_Group_Health_Foundation_Logo_White.png" alt="Inatai Foundation Group Health Foundation Logo White" title="Inatai_Foundation_Group_Health_Foundation_Logo_White" srcset="https://inatai.org/wp-content/uploads/2023/05/Inatai_Foundation_Group_Health_Foundation_Logo_White.png 600w, https://inatai.org/wp-content/uploads/2023/05/Inatai_Foundation_Group_Health_Foundation_Logo_White-480x324.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1054" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div id="subscribe" class="et_pb_row et_pb_row_1_tb_footer">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>A commitment to building community power</h3></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Inatai Foundation is a 501(c)(4) philanthropy seeking to transform the balance of power to ensure equity and racial justice across Washington state and beyond. We are accountable to leaders and organizations building power in racially diverse communities in our state. With a team based throughout Washington, we work to advance four distinct areas of work: grantmaking, relationship building, policy and advocacy, and investment management.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Newsletter Signup</h3></div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_signup_0_tb_footer et_pb_newsletter_layout_top_bottom et_pb_newsletter et_pb_subscribe clearfix  et_pb_text_align_left et_pb_bg_layout_light et_pb_no_bg et_pb_newsletter_description_no_title et_pb_newsletter_description_no_content">
+				
+				
+				
+				
+				<div class="et_pb_newsletter_description et_multi_view_hidden"></div>
+				
+				<div class="et_pb_newsletter_form">
+					<form method="post">
+						<div class="et_pb_newsletter_result et_pb_newsletter_error"></div>
+						<div class="et_pb_newsletter_result et_pb_newsletter_success">
+							<h2>Success!</h2>
+						</div>
+						<div class="et_pb_newsletter_fields">
+							
+					<p class="et_pb_newsletter_field et_pb_contact_field_last et_pb_contact_field_last_tablet et_pb_contact_field_last_phone">
+						<label class="et_pb_contact_form_label" for="et_pb_signup_firstname" style="display: none;">First Name</label>
+						<input id="et_pb_signup_firstname" class="input" type="text" placeholder="First Name" name="et_pb_signup_firstname">
+					</p>
+							
+					<p class="et_pb_newsletter_field et_pb_contact_field_last et_pb_contact_field_last_tablet et_pb_contact_field_last_phone">
+						<label class="et_pb_contact_form_label" for="et_pb_signup_lastname" style="display: none;">Last Name</label>
+						<input id="et_pb_signup_lastname" class="input" type="text" placeholder="Last Name" name="et_pb_signup_lastname">
+					</p>
+							
+					<p class="et_pb_newsletter_field et_pb_contact_field_last et_pb_contact_field_last_tablet et_pb_contact_field_last_phone">
+						<label class="et_pb_contact_form_label" for="et_pb_signup_email" style="display: none;">Email</label>
+						<input id="et_pb_signup_email" class="input" type="text" placeholder="Email" name="et_pb_signup_email">
+					</p>
+							
+							
+					<p class="et_pb_newsletter_button_wrap">
+						<a class="et_pb_newsletter_button et_pb_button" href="#" data-icon="">
+							<span class="et_subscribe_loader"></span>
+							<span class="et_pb_newsletter_button_text">Subscribe</span>
+						</a>
+					</p>
+							
+						</div>
+						
+						<input type="hidden" value="mailchimp" name="et_pb_signup_provider" />
+						<input type="hidden" value="cba61b6b72" name="et_pb_signup_list_id" />
+						<input type="hidden" value="Mailchimp3" name="et_pb_signup_account_name" />
+						<input type="hidden" value="true" name="et_pb_signup_ip_address" /><input type="hidden" value="0d5bdf73b3de0d53ce665c6507c19a8d" name="et_pb_signup_checksum" />
+					</form>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2_tb_footer et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_3_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4>FUNDING</h4>
+<p><a href="/grantmaking-overview/" title="Grantmaking Overview">Grantmaking overview</a><br />
+<a href="/grantmaking-overview/sponsorships/" title="Sponsorships">Sponsorships</a><br />
+<a href="/grantee-directory/" title="Grantee Directory">Grantee directory</a></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_4_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4>Resources</h4>
+<p><a href="/reports-overview/" title="Reports">Reports overview</a><br />
+<a href="/approaches/" title="Approaches">Approaches</a><br />
+<a href="/portal-access/" title="Portal Access">Portal Access</a><br />
+<a href="/inatai-logo-and-brand-guidelines/">Inatai logo and brand guidelines</a><br />
+<a href="/organizational-identities/">Definitions for org identities</a></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_5_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4>Get To Know Inatai</h4>
+<p><a href="/about/" title="About Us">About us</a><br />
+<a href="/our-team/" title="Meet our Team">Our team</a><br />
+<a href="/board-of-directors/" title="Board of Directors">Board of Directors</a><br />
+<a href="/investment-management-co/" title="Investment Management Co.">Investment Management Co.</a><br />
+<a href="/join-inatai/" title="Careers">Join Inatai</a><br />
+<a href="/faq/">Frequently asked questions</a></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_with_border et_pb_row et_pb_row_3_tb_footer">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_6_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6_tb_footer  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a href="/contact/">Contact Us</a>  |  <a href="/privacy-policy/">Privacy Policy</a></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7_tb_footer  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">© 2026 Inatai Foundation  |  All Rights Reserved</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_7_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<ul class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0_tb_footer clearfix  et_pb_text_align_right et_pb_text_align_center-tablet et_pb_bg_layout_light">
+				
+				
+				
+				
+				<li
+            class='et_pb_social_media_follow_network_0_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-facebook'><a
+              href='http://facebook.com/InataiFoundation'
+              class='icon et_pb_with_border'
+              title='Follow on Facebook'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li><li
+            class='et_pb_social_media_follow_network_1_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-linkedin'><a
+              href='http://www.linkedin.com/company/inataifoundation/'
+              class='icon et_pb_with_border'
+              title='Follow on LinkedIn'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li><li
+            class='et_pb_social_media_follow_network_2_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-instagram'><a
+              href='http://www.instagram.com/inataifdn/'
+              class='icon et_pb_with_border'
+              title='Follow on Instagram'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li><li
+            class='et_pb_social_media_follow_network_3_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-youtube'><a
+              href='https://www.youtube.com/@InataiFoundation'
+              class='icon et_pb_with_border'
+              title='Follow on Youtube'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li>
+			</ul>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		</div>
+
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Divichild/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_row_0_tb_header","style":"slideTop","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_5","style":"slideBottom","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"2%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_6","style":"slideBottom","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"2%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+				</script>
+	
+<script>
+jQuery(function($) {
+       
+    window.et_pb_smooth_scroll = function( $target, $top_section, speed, easing ) {
+		console.log('here');
+        var $window_width = $( window ).width();
+
+        $menu_offset = 125;
+
+        if ( $ ('#wpadminbar').length && $window_width > 600 ) {
+            $menu_offset += $( '#wpadminbar' ).outerHeight();
+        }
+
+        //fix sidenav scroll to top
+        if ( $top_section ) {
+            $scroll_position = 0;
+        } else {
+            $scroll_position = $target.offset().top - $menu_offset;
+        }
+
+        // set swing (animate's scrollTop default) as default value
+        if( typeof easing === 'undefined' ){
+            easing = 'swing';
+        }
+
+        $( 'html, body' ).animate( { scrollTop :  $scroll_position }, speed, easing );
+    }
+   
+});
+</script>
+<script src="https://cdn.userway.org/widget.js" data-account="ZSjsEaZ05U"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XG7C4T9N7J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XG7C4T9N7J');
+</script><script type="text/javascript" src="https://inatai.org/wp-content/plugins/shortcode-gallery-for-matterport-showcase/magnific.min.js?ver%5B0%5D=jquery" id="magnific-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/shortcode-gallery-for-matterport-showcase/wp-matterport.js?ver%5B0%5D=jquery&amp;ver%5B1%5D=magnific" id="wp-matterport-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"M d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="smush-detector-js-extra">
+/* <![CDATA[ */
+var smush_detector = {"ajax_url":"https://inatai.org/wp-admin/admin-ajax.php","nonce":"1c7675aa00","is_mobile":"","data_store":{"type":"post-meta","data":{"post_id":11008}},"previous_data_version":"0","previous_data_hash":"eab223dc27502f1f074c53268de49d30"};
+//# sourceURL=smush-detector-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/wp-smush-pro/app/assets/js/smush-detector.min.js?ver=4.1.0" id="smush-detector-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://inatai.org/wp-admin/admin-ajax.php","images_uri":"https://inatai.org/wp-content/themes/Divi/images","builder_images_uri":"https://inatai.org/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"c5cd4a8eeb","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"31b1b43b3e","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"11008","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://inatai.org/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#7EBEC5","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inatai.org/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/divi-modules-pro/scripts/frontend-bundle.min.js?ver=1.2.9.5" id="divi-modules-pro-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/plugins/graphina-divi-charts-and-graphs/scripts/frontend-bundle.min.js" id="graphina-divi-charts-and-graphs-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.6" id="et-core-common-js"></script>
+<script type="text/javascript" src="https://inatai.org/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js?ver=4.27.6" id="easypiechart-js"></script>
+<script type="text/javascript" id="et-builder-modules-script-sticky-js-extra">
+/* <![CDATA[ */
+var et_pb_sticky_elements = {"et_pb_section_0_tb_header":{"id":"et_pb_section_0_tb_header","selector":".et_pb_section_0_tb_header","position":"top","topOffset":"0px","bottomOffset":"0px","topLimit":"none","bottomLimit":"none","offsetSurrounding":"off","transition":"on","styles":{"module_alignment":{"desktop":"","tablet":"","phone":""},"positioning":"relative"},"stickyStyles":{"position_origin_r":"top_left","horizontal_offset":"","vertical_offset":""}}};
+//# sourceURL=et-builder-modules-script-sticky-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inatai.org/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/sticky-elements.js?ver=4.27.6" id="et-builder-modules-script-sticky-js"></script>
+<style id="et-builder-module-design-tb-1873-tb-1316-11008-cached-inline-styles">.et_pb_menu .et_pb_menu__wrap{margin-bottom:-10px}.et_pb_menu--with-logo .et_pb_menu__menu>nav>ul>li>a{padding-top:10px;padding-bottom:10px;align-self:flex-end}.et_mobile_menu{height:80vh;overflow-y:auto}@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Sofia Sans Condensed";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSansCondensed-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Freight Text Semibold Italic";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/FreightTextSemibold-Italic.otf") format("opentype")}@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Sofia Sans Condensed";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSansCondensed-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Freight Text Semibold Italic";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/FreightTextSemibold-Italic.otf") format("opentype")}</style><style id="et-builder-module-design-tb-1873-tb-1316-deferred-11008-cached-inline-styles">@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}.et_pb_stickydiv.et_pb_section.et_pb_section_0_tb_header{background-image:initial!important}.et_pb_section_0_tb_header{border-bottom-color:#A58036}.et_pb_section_0_tb_header.et_pb_section{padding-top:15px;padding-bottom:0px}.et_pb_section_0_tb_header,div.et_pb_section.et_pb_section_0_tb_header{transition:padding 300ms ease 0ms,border 300ms ease 0ms,background-color 300ms ease 0ms,background-image 300ms ease 0ms}.et_pb_sticky.et_pb_section_0_tb_header.et_pb_section{background-color:#FFFFFF!important}.et_pb_row_0_tb_header.et_pb_row{padding-top:15px!important;padding-bottom:0px!important;margin-right:5%!important;margin-left:auto!important;padding-top:15px;padding-bottom:0px}.et_pb_sticky .et_pb_row_0_tb_header{padding-top:5px!important;z-index:11!important}.et_pb_row_0_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,.et_pb_row_1_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row{max-width:100%}.et_pb_row_0_tb_header{z-index:11!important;position:relative;transition:padding 300ms ease 0ms}.et_pb_search_0_tb_header input.et_pb_searchsubmit{font-weight:800;text-transform:uppercase;color:#FFFFFF!important;letter-spacing:1px;background-color:#132027!important;border-color:#132027!important}.et_pb_search_0_tb_header input.et_pb_searchsubmit:hover{color:#FFFFFF!important;background-color:#A58036!important;border-color:#A58036!important}.et_pb_search_0_tb_header form input.et_pb_s,.et_pb_search_0_tb_header form input.et_pb_s::placeholder{font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left}.et_pb_search_0_tb_header form input.et_pb_s::-ms-input-placeholder{font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left}.et_pb_search_0_tb_header form input.et_pb_s::-webkit-input-placeholder{font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left;font-size:110%;text-align:left;color:#132027!important}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder{font-size:110%;text-align:left;color:#132027!important}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-webkit-input-placeholder{font-size:110%;text-align:left}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-moz-placeholder{font-size:110%;text-align:left}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-ms-input-placeholder{font-size:110%;text-align:left}.et_pb_search_0_tb_header.et_pb_search,.et_pb_search_0_tb_header input.et_pb_s{border-radius:0px 0px 0px 0px;overflow:hidden}.et_pb_search_0_tb_header.et_pb_search{border-width:0px 0px 2px 0px;border-bottom-color:#A58036}.et_pb_search_0_tb_header{overflow-x:hidden;overflow-y:hidden;margin-top:0px!important;margin-bottom:0px!important;max-width:390px}.et_pb_search_0_tb_header input.et_pb_s{padding-top:0em!important;padding-right:73px!important;padding-bottom:0em!important;padding-left:0px!important;border-color:#132027!important;height:auto;min-height:0}.et_pb_search_0_tb_header form input.et_pb_s,.et_pb_search_0_tb_header form input.et_pb_s:focus{color:#132027}.et_pb_search_0_tb_header input.et_pb_searchsubmit,.et_pb_search_0_tb_header input.et_pb_s{transition:color 300ms ease 0ms,background-color 300ms ease 0ms,border-color 300ms ease 0ms}.et_pb_search_0_tb_header input.et_pb_s:hover{border-color:#A58036!important}.et_pb_search_0_tb_header form input.et_pb_s:-ms-input-placeholder{color:#132027!important}.et_pb_menu_0_tb_header.et_pb_menu .nav li ul.sub-menu a{color:#132027!important}.et_pb_menu_0_tb_header.et_pb_menu ul li a{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:800;text-transform:uppercase;color:#FFFFFF!important;letter-spacing:1px}.et_pb_menu_0_tb_header{z-index:0;position:relative}.et_pb_sticky .et_pb_menu_0_tb_header,.et_pb_sticky .et_pb_menu_1_tb_header{z-index:0!important}.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_menu_0_tb_header .et_pb_menu__logo-slot,.et_pb_menu_1_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_menu_1_tb_header .et_pb_menu__logo-slot{transition:width 300ms ease 0ms;width:160px;max-width:100%}.et_pb_menu_0_tb_header.et_pb_menu ul li.current-menu-item a,.et_pb_menu_1_tb_header.et_pb_menu ul li.current-menu-item a{color:#A58036!important}.et_pb_menu_0_tb_header.et_pb_menu .nav li ul,.et_pb_menu_1_tb_header.et_pb_menu .nav li ul{background-color:#FFFFFF!important;border-color:#A58036}.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu,.et_pb_menu_1_tb_header.et_pb_menu .et_mobile_menu{border-color:#A58036}.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu,.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu ul,.et_pb_menu_1_tb_header.et_pb_menu .et_mobile_menu,.et_pb_menu_1_tb_header.et_pb_menu .et_mobile_menu ul{background-color:#ffffff!important}.et_pb_sticky .et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_sticky .et_pb_menu_0_tb_header .et_pb_menu__logo-slot,.et_pb_sticky .et_pb_menu_1_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_sticky .et_pb_menu_1_tb_header .et_pb_menu__logo-slot{width:140px}.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img,.et_pb_menu_0_tb_header .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img,.et_pb_menu_1_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img,.et_pb_menu_1_tb_header .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img{height:auto;max-height:none}.et_pb_menu_0_tb_header .mobile_nav .mobile_menu_bar:before,.et_pb_menu_1_tb_header .mobile_nav .mobile_menu_bar:before{font-size:46px;color:#A58036}.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__search-button,.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__close-search-button,.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__cart-button,.et_pb_menu_1_tb_header .et_pb_menu__icon.et_pb_menu__search-button,.et_pb_menu_1_tb_header .et_pb_menu__icon.et_pb_menu__close-search-button,.et_pb_menu_1_tb_header .et_pb_menu__icon.et_pb_menu__cart-button{color:#A58036}.et_pb_row_1_tb_header.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_menu_1_tb_header.et_pb_menu ul li a{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:800;text-transform:uppercase;font-size:17px;color:#132027!important;letter-spacing:1px}.et_pb_menu_1_tb_header{margin-top:-32px!important;z-index:0;position:relative}.et_pb_column_0_tb_header{padding-top:0px;padding-bottom:0px;display:flex}.et_pb_sticky.et_pb_section_0_tb_header{border-bottom-width:2px;padding-top:10px!important;padding-bottom:0px!important}.et_pb_search_0_tb_header.et_pb_module{margin-left:auto!important;margin-right:0px!important}@media only screen and (min-width:981px){.et_pb_row_0_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row{width:70%}.et_pb_row_1_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row{width:90%}}@media only screen and (max-width:980px){.et_pb_section_0_tb_header{border-bottom-color:#A58036}.et_pb_section_0_tb_header.et_pb_section{padding-top:15px;padding-bottom:27px}.et_pb_row_0_tb_header.et_pb_row{margin-right:auto!important;margin-left:auto!important}.et_pb_row_0_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,.et_pb_row_1_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row{width:90%}.et_pb_search_0_tb_header form input.et_pb_s,.et_pb_search_0_tb_header form input.et_pb_s::placeholder{font-size:100%;font-size:100%;font-size:100%;font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-webkit-input-placeholder{font-size:100%;font-size:100%;font-size:100%;font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-ms-input-placeholder{font-size:100%;font-size:100%;font-size:100%;font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder{font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-webkit-input-placeholder{font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-moz-placeholder{font-size:100%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-ms-input-placeholder{font-size:100%}.et_pb_search_0_tb_header.et_pb_search{border-bottom-width:2px;border-bottom-color:#A58036}.et_pb_search_0_tb_header input.et_pb_s{padding-top:0em!important;padding-right:73px!important;padding-bottom:0em!important;padding-left:0px!important}.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_menu_0_tb_header .et_pb_menu__logo-slot,.et_pb_menu_1_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_menu_1_tb_header .et_pb_menu__logo-slot{width:120px}.et_pb_row_1_tb_header.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px!important;padding-bottom:0px!important}.et_pb_menu_1_tb_header{padding-top:0px;margin-top:0px!important}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_menu_0_tb_header{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0_tb_header{border-bottom-color:#A58036}.et_pb_section_0_tb_header.et_pb_section{padding-bottom:15px}.et_pb_search_0_tb_header form input.et_pb_s,.et_pb_search_0_tb_header form input.et_pb_s::placeholder{font-size:92%;font-size:92%;font-size:92%;font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-webkit-input-placeholder{font-size:92%;font-size:92%;font-size:92%;font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-ms-input-placeholder{font-size:92%;font-size:92%;font-size:92%;font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder{font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-webkit-input-placeholder{font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-moz-placeholder{font-size:92%}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-ms-input-placeholder{font-size:92%}.et_pb_search_0_tb_header.et_pb_search{border-bottom-width:2px;border-bottom-color:#A58036}.et_pb_search_0_tb_header input.et_pb_s{padding-right:23px!important}.et_pb_menu_0_tb_header{display:none!important}.et_pb_menu_1_tb_header{padding-top:10px}}@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Sofia Sans Condensed";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSansCondensed-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Freight Text Semibold Italic";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/FreightTextSemibold-Italic.otf") format("opentype")}div.et_pb_section.et_pb_section_0_tb_footer{background-image:url(https://inatai.org/wp-content/uploads/2023/07/Inatai_Foundation_Seattle_Dark_Pattern_Seamless-scaled.jpg)!important}.et_pb_section_0_tb_footer.et_pb_section{padding-top:6%;padding-bottom:3%;background-color:#132027!important}.et_pb_row_0_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:50px!important;padding-top:0px;padding-bottom:50px}.et_pb_row_0_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,.et_pb_row_1_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,.et_pb_row_2_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_2_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_2_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_2_tb_footer.et_pb_row,.et_pb_row_3_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_3_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_3_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_3_tb_footer.et_pb_row{width:90%;max-width:100%}.et_pb_image_0_tb_footer{text-align:left;margin-left:0}.et_pb_row_1_tb_footer.et_pb_row{padding-top:3px!important;padding-bottom:3px!important;padding-top:3px;padding-bottom:3px}.et_pb_text_0_tb_footer.et_pb_text,.et_pb_text_2_tb_footer.et_pb_text{color:#132027!important}.et_pb_text_0_tb_footer,.et_pb_text_2_tb_footer{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-bottom:15px!important}.et_pb_text_0_tb_footer h1,.et_pb_text_1_tb_footer h1,.et_pb_text_2_tb_footer h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:74px;color:#132027!important;letter-spacing:-1px}.et_pb_text_0_tb_footer h2,.et_pb_text_1_tb_footer h2,.et_pb_text_2_tb_footer h2,.et_pb_text_3_tb_footer h2,.et_pb_text_4_tb_footer h2,.et_pb_text_5_tb_footer h2,.et_pb_text_6_tb_footer h2,.et_pb_text_7_tb_footer h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:45px;color:#363960!important}.et_pb_text_0_tb_footer h3,.et_pb_text_2_tb_footer h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:28px;color:#FFFFFF!important;line-height:1.1em}.et_pb_text_0_tb_footer h4,.et_pb_text_1_tb_footer h4,.et_pb_text_2_tb_footer h4,.et_pb_text_6_tb_footer h4,.et_pb_text_7_tb_footer h4{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:21px;color:#132027!important;letter-spacing:1px}.et_pb_text_0_tb_footer h6,.et_pb_text_1_tb_footer h6,.et_pb_text_2_tb_footer h6,.et_pb_text_3_tb_footer h6,.et_pb_text_4_tb_footer h6,.et_pb_text_5_tb_footer h6,.et_pb_text_6_tb_footer h6,.et_pb_text_7_tb_footer h6{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:800;font-size:19px;color:#132027!important;line-height:1.5em}.et_pb_text_1_tb_footer.et_pb_text,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .et_pb_newsletter_result h2,.et_pb_text_3_tb_footer.et_pb_text,.et_pb_text_4_tb_footer.et_pb_text,.et_pb_text_5_tb_footer.et_pb_text,.et_pb_text_6_tb_footer.et_pb_text,.et_pb_text_7_tb_footer.et_pb_text,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="checkbox"]+label i:before,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input::placeholder,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input:focus{color:#FFFFFF!important}.et_pb_text_1_tb_footer{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-bottom:0px!important}.et_pb_text_1_tb_footer h3,.et_pb_text_3_tb_footer h3,.et_pb_text_4_tb_footer h3,.et_pb_text_5_tb_footer h3,.et_pb_text_6_tb_footer h3,.et_pb_text_7_tb_footer h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:28px;color:#132027!important;line-height:1.1em}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h2,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h1.et_pb_module_header,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h3.et_pb_module_header,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h4.et_pb_module_header,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h5.et_pb_module_header,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description h6.et_pb_module_header{font-weight:800!important;font-size:30px!important;color:#181818!important}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_description,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form{color:#333333!important}.et_pb_signup_0_tb_footer.et_pb_contact_field .et_pb_contact_field_options_title,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input[type=checkbox]+label,.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input[type=radio]+label{font-size:16px;text-align:left}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input::-webkit-input-placeholder{font-size:16px;text-align:left}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input::-moz-placeholder{font-size:16px;text-align:left}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_form .input:-ms-input-placeholder{font-size:16px;text-align:left}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="radio"]+label i,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="checkbox"]+label i{border-radius:0px 0px 0px 0px;overflow:hidden;border-color:#181818 #181818 #FFFFFF #181818;border-bottom-width:1px}body #page-container .et_pb_section .et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_button.et_pb_button{color:#132027!important;border-width:2px!important;border-color:#FFFFFF;border-radius:0px;letter-spacing:1px;font-size:16px;font-weight:700!important;text-transform:uppercase!important;background-color:#ffffff;padding-top:14px!important;padding-right:32px!important;padding-bottom:14px!important;padding-left:32px!important}body #page-container .et_pb_section .et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_button.et_pb_button:hover{color:#FFFFFF!important;border-color:#A58036!important;background-image:initial;background-color:#A58036}body #page-container .et_pb_section .et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_button.et_pb_button:before,body #page-container .et_pb_section .et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_button.et_pb_button:after{display:none!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="checkbox"]+label i,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="radio"]+label i,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input.input:focus,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea:focus,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select:focus{background-color:RGBA(255,255,255,0)}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input::-webkit-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input::-moz-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input::-ms-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input:focus::-webkit-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input:focus::-moz-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input:focus:-ms-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea:focus::-webkit-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea:focus::-moz-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea:focus:-ms-input-placeholder{color:#FFFFFF!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form .input,.et_pb_signup_0_tb_footer .et_pb_newsletter_form input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p.et_pb_newsletter_field input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p.et_pb_newsletter_field textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form select{padding-top:18px!important;padding-right:20px!important;padding-bottom:18px!important;padding-left:20px!important}.et_pb_signup_0_tb_footer.et_pb_subscribe .et_pb_newsletter_button.et_pb_button{transition:color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="radio"]+label i:before{background-color:#FFFFFF}.et_pb_row_2_tb_footer.et_pb_row{padding-top:30px!important;padding-right:12.2%!important;margin-top:0px!important;margin-right:auto!important;margin-left:auto!important;padding-top:30px;padding-right:12.2%}.et_pb_text_3_tb_footer,.et_pb_text_4_tb_footer,.et_pb_text_5_tb_footer{line-height:2.3em;font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;line-height:2.3em}.et_pb_text_3_tb_footer.et_pb_text a,.et_pb_text_4_tb_footer.et_pb_text a,.et_pb_text_5_tb_footer.et_pb_text a,.et_pb_text_6_tb_footer.et_pb_text a,.et_pb_text_7_tb_footer.et_pb_text a{color:#FFFFFF!important;transition:color 300ms ease 0ms}.et_pb_text_3_tb_footer.et_pb_text a:hover,.et_pb_text_4_tb_footer.et_pb_text a:hover,.et_pb_text_5_tb_footer.et_pb_text a:hover,.et_pb_text_6_tb_footer.et_pb_text a:hover,.et_pb_text_7_tb_footer.et_pb_text a:hover{color:#A58036!important}.et_pb_text_3_tb_footer h1,.et_pb_text_4_tb_footer h1,.et_pb_text_5_tb_footer h1{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:74px;color:#132027!important;letter-spacing:-1px}.et_pb_text_3_tb_footer h4,.et_pb_text_4_tb_footer h4,.et_pb_text_5_tb_footer h4{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:21px;color:#FFFFFF!important;letter-spacing:1px}.et_pb_row_3_tb_footer{border-top-width:2px;border-top-color:#A58036}.et_pb_text_6_tb_footer,.et_pb_text_7_tb_footer{font-size:17px;margin-bottom:17px!important}.et_pb_text_6_tb_footer a,.et_pb_text_7_tb_footer a{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif}.et_pb_text_6_tb_footer h1,.et_pb_text_7_tb_footer h1{font-weight:700;text-transform:uppercase;font-size:74px;color:#132027!important;letter-spacing:-1px}.et_pb_social_media_follow_network_0_tb_footer a.icon,.et_pb_social_media_follow .et_pb_social_media_follow_network_0_tb_footer .icon:before,.et_pb_social_media_follow_network_1_tb_footer a.icon,.et_pb_social_media_follow .et_pb_social_media_follow_network_1_tb_footer .icon:before,.et_pb_social_media_follow_network_2_tb_footer a.icon,.et_pb_social_media_follow .et_pb_social_media_follow_network_2_tb_footer .icon:before,.et_pb_social_media_follow_network_3_tb_footer a.icon,.et_pb_social_media_follow .et_pb_social_media_follow_network_3_tb_footer .icon:before{transition:background-color 300ms ease 0ms,background-image 300ms ease 0ms,color 300ms ease 0ms}.et_pb_social_media_follow .et_pb_social_media_follow_network_0_tb_footer.et_pb_social_icon .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_1_tb_footer.et_pb_social_icon .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_2_tb_footer.et_pb_social_icon .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_3_tb_footer.et_pb_social_icon .icon:before{color:#000000}.et_pb_social_media_follow .et_pb_social_media_follow_network_0_tb_footer.et_pb_social_icon:hover .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_1_tb_footer.et_pb_social_icon:hover .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_2_tb_footer.et_pb_social_icon:hover .icon:before,.et_pb_social_media_follow .et_pb_social_media_follow_network_3_tb_footer.et_pb_social_icon:hover .icon:before{color:#FFFFFF}.et_pb_social_media_follow_0_tb_footer li.et_pb_social_icon a.icon:before{color:#CEE1CE}.et_pb_social_media_follow_0_tb_footer li a.icon:before{font-size:13px;line-height:26px;height:26px;width:26px}.et_pb_social_media_follow_0_tb_footer li a.icon{height:26px;width:26px}.et_pb_social_media_follow_network_0_tb_footer a.icon,.et_pb_social_media_follow_network_1_tb_footer a.icon,.et_pb_social_media_follow_network_2_tb_footer a.icon,.et_pb_social_media_follow_network_3_tb_footer a.icon{background-color:#FFFFFF!important}.et_pb_social_media_follow_network_0_tb_footer a.icon:hover,.et_pb_social_media_follow_network_1_tb_footer a.icon:hover,.et_pb_social_media_follow_network_2_tb_footer a.icon:hover,.et_pb_social_media_follow_network_3_tb_footer a.icon:hover{background-image:initial!important;background-color:#A58036!important}.et_pb_social_media_follow_network_0_tb_footer.et_pb_social_icon a.icon,.et_pb_social_media_follow_network_1_tb_footer.et_pb_social_icon a.icon,.et_pb_social_media_follow_network_2_tb_footer.et_pb_social_icon a.icon,.et_pb_social_media_follow_network_3_tb_footer.et_pb_social_icon a.icon{border-radius:50px 50px 50px 50px}.et_pb_social_media_follow li.et_pb_social_media_follow_network_0_tb_footer a,.et_pb_social_media_follow li.et_pb_social_media_follow_network_1_tb_footer a,.et_pb_social_media_follow li.et_pb_social_media_follow_network_2_tb_footer a,.et_pb_social_media_follow li.et_pb_social_media_follow_network_3_tb_footer a{padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;width:auto;height:auto}@media only screen and (min-width:981px){.et_pb_image_0_tb_footer{width:110px}}@media only screen and (max-width:980px){.et_pb_section_0_tb_footer.et_pb_section{padding-top:7%;padding-bottom:2%}.et_pb_row_0_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:50px!important;padding-top:0px!important;padding-bottom:50px!important}.et_pb_image_0_tb_footer{width:15%}.et_pb_image_0_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_text_2_tb_footer{margin-top:-9px!important;margin-bottom:15px!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="radio"]+label i,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="checkbox"]+label i{border-bottom-width:1px;border-bottom-color:#FFFFFF}.et_pb_signup_0_tb_footer{max-width:60%}.et_pb_row_2_tb_footer.et_pb_row{padding-top:40px!important;padding-right:25%!important;margin-top:0px!important;margin-right:auto!important;margin-left:auto!important;padding-top:40px!important;padding-right:25%!important}.et_pb_row_3_tb_footer{border-top-width:2px;border-top-color:#A58036}ul.et_pb_social_media_follow_0_tb_footer{margin-top:-40px!important}.et_pb_column_1_tb_footer,.et_pb_column_6_tb_footer{padding-bottom:30px}.et_pb_column_2_tb_footer,.et_pb_column_7_tb_footer{padding-bottom:10px}}@media only screen and (max-width:767px){.et_pb_section_0_tb_footer.et_pb_section{padding-top:14%;padding-bottom:2%}.et_pb_row_0_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:30px!important;padding-top:0px!important;padding-bottom:30px!important}.et_pb_image_0_tb_footer{width:27%}.et_pb_image_0_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_text_0_tb_footer h1,.et_pb_text_1_tb_footer h1,.et_pb_text_2_tb_footer h1,.et_pb_text_3_tb_footer h1,.et_pb_text_4_tb_footer h1,.et_pb_text_5_tb_footer h1,.et_pb_text_6_tb_footer h1,.et_pb_text_7_tb_footer h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:40px}.et_pb_text_0_tb_footer h2,.et_pb_text_1_tb_footer h2,.et_pb_text_2_tb_footer h2,.et_pb_text_3_tb_footer h2,.et_pb_text_4_tb_footer h2,.et_pb_text_5_tb_footer h2,.et_pb_text_6_tb_footer h2,.et_pb_text_7_tb_footer h2{font-size:36px}.et_pb_text_0_tb_footer h3,.et_pb_text_2_tb_footer h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase}.et_pb_text_2_tb_footer{margin-top:-10px!important}.et_pb_signup_0_tb_footer .et_pb_newsletter_form p input[type="text"],.et_pb_signup_0_tb_footer .et_pb_newsletter_form p textarea,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p select,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="radio"]+label i,.et_pb_signup_0_tb_footer .et_pb_newsletter_form p .input[type="checkbox"]+label i{border-bottom-width:1px;border-bottom-color:#FFFFFF}.et_pb_signup_0_tb_footer{max-width:100%}.et_pb_row_2_tb_footer.et_pb_row{padding-top:40px!important;padding-right:25%!important;padding-bottom:23px!important;margin-top:0px!important;margin-right:auto!important;margin-bottom:0px!important;margin-left:auto!important;padding-top:40px!important;padding-right:25%!important;padding-bottom:23px!important}.et_pb_row_3_tb_footer{border-top-width:2px;border-top-color:#A58036}ul.et_pb_social_media_follow_0_tb_footer{margin-top:-40px!important}}@font-face{font-family:"Sofia Sans";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSans-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Sofia Sans Condensed";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/SofiaSansCondensed-VariableFont_wght.ttf") format("truetype")}@font-face{font-family:"Freight Text Semibold Italic";font-display:swap;src:url("https://inatai.org/wp-content/uploads/et-fonts/FreightTextSemibold-Italic.otf") format("opentype")}.et_pb_section_0.et_pb_section{padding-top:4%;padding-bottom:0%}.et_pb_row_0.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_row_0,body #page-container .et-db #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,.et_pb_row_1,body #page-container .et-db #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1.et_pb_row{width:90%;max-width:100%}.et_pb_image_0{width:100%;max-width:100%!important;text-align:left;margin-left:0}.et_pb_image_0 .et_pb_image_wrap,.et_pb_image_0 img{width:100%}.et_pb_row_1{background-image:linear-gradient(180deg,rgba(10,10,10,0.44) 0%,rgba(10,10,10,0.5) 100%),url(https://inatai.org/wp-content/uploads/2023/07/SilverTexture_Huge.jpg)}.et_pb_row_1.et_pb_row{padding-top:3%!important;padding-right:5%!important;padding-bottom:3%!important;padding-left:5%!important;padding-top:3%;padding-right:5%;padding-bottom:3%;padding-left:5%}.et_pb_text_0.et_pb_text,.et_pb_text_1.et_pb_text,.et_pb_text_3.et_pb_text,.et_pb_text_4.et_pb_text,.et_pb_text_5.et_pb_text,.et_pb_text_6.et_pb_text,.et_pb_text_7.et_pb_text,.et_pb_text_8.et_pb_text,.et_pb_text_10.et_pb_text,.et_pb_text_11.et_pb_text,.et_pb_text_12.et_pb_text,.et_pb_text_14.et_pb_text,.et_pb_text_15.et_pb_text,.et_pb_text_16.et_pb_text,.et_pb_text_17.et_pb_text,.et_pb_text_18.et_pb_text,.et_pb_text_19.et_pb_text,.et_pb_text_20.et_pb_text,.et_pb_text_21.et_pb_text,.et_pb_text_22.et_pb_text,.et_pb_text_23.et_pb_text,.et_pb_text_24.et_pb_text,.et_pb_text_25.et_pb_text,.et_pb_text_26.et_pb_text{color:#132027!important}.et_pb_text_0,.et_pb_text_3{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-bottom:5px!important;max-width:750px}.et_pb_text_0 h1,.et_pb_text_1 h1,.et_pb_text_2 h1,.et_pb_text_3 h1,.et_pb_text_4 h1,.et_pb_text_5 h1,.et_pb_text_7 h1,.et_pb_text_8 h1,.et_pb_text_9 h1,.et_pb_text_10 h1,.et_pb_text_11 h1,.et_pb_text_12 h1,.et_pb_text_14 h1,.et_pb_text_15 h1,.et_pb_text_16 h1,.et_pb_text_17 h1,.et_pb_text_18 h1,.et_pb_text_19 h1,.et_pb_text_20 h1,.et_pb_text_21 h1,.et_pb_text_22 h1,.et_pb_text_23 h1,.et_pb_text_24 h1,.et_pb_text_25 h1,.et_pb_text_26 h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:74px;color:#132027!important;letter-spacing:-1px}.et_pb_text_0 h2,.et_pb_text_3 h2,.et_pb_text_4 h2,.et_pb_text_5 h2,.et_pb_text_10 h2,.et_pb_text_11 h2,.et_pb_text_12 h2,.et_pb_text_15 h2,.et_pb_text_16 h2,.et_pb_text_17 h2,.et_pb_text_18 h2,.et_pb_text_20 h2,.et_pb_text_21 h2,.et_pb_text_22 h2,.et_pb_text_23 h2,.et_pb_text_24 h2,.et_pb_text_25 h2,.et_pb_text_26 h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:45px;color:#363960!important}.et_pb_text_0 h3,.et_pb_text_1 h3,.et_pb_text_3 h3,.et_pb_text_6 h3,.et_pb_text_7 h3,.et_pb_text_8 h3,.et_pb_text_14 h3,.et_pb_text_19 h3,.et_pb_text_24 h3,.et_pb_text_25 h3,.et_pb_text_26 h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:28px;color:#132027!important;line-height:1.1em}.et_pb_text_0 h4,.et_pb_text_1 h4,.et_pb_text_3 h4,.et_pb_text_6 h4,.et_pb_text_7 h4,.et_pb_text_8 h4,.et_pb_text_14 h4,.et_pb_text_19 h4,.et_pb_text_24 h4,.et_pb_text_26 h4{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:21px;color:#132027!important;letter-spacing:1px}.et_pb_text_0 h6,.et_pb_text_1 h6,.et_pb_text_2 h6,.et_pb_text_3 h6,.et_pb_text_4 h6,.et_pb_text_5 h6,.et_pb_text_6 h6,.et_pb_text_7 h6,.et_pb_text_8 h6,.et_pb_text_9 h6,.et_pb_text_10 h6,.et_pb_text_11 h6,.et_pb_text_12 h6,.et_pb_text_14 h6,.et_pb_text_15 h6,.et_pb_text_16 h6,.et_pb_text_17 h6,.et_pb_text_18 h6,.et_pb_text_19 h6,.et_pb_text_20 h6,.et_pb_text_21 h6,.et_pb_text_22 h6,.et_pb_text_23 h6,.et_pb_text_24 h6,.et_pb_text_25 h6,.et_pb_text_26 h6{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-weight:800;font-size:19px;color:#132027!important;line-height:1.5em}.et_pb_text_1,.et_pb_text_8,.et_pb_text_14,.et_pb_text_19{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;padding-bottom:0px!important;margin-bottom:1%!important}.et_pb_text_1 h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:5vw;color:#FFFFFF!important}.et_pb_text_2.et_pb_text,.et_pb_text_9.et_pb_text{color:#FFFFFF!important}.et_pb_text_2{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-top:-12px!important;max-width:760px}.et_pb_text_2 h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:45px;color:#FFFFFF!important}.et_pb_text_2 h3,.et_pb_text_9 h3,.et_pb_text_16 h3{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:800;font-size:20px;color:#181818!important;line-height:1.1em}.et_pb_text_2 h4,.et_pb_text_4 h4,.et_pb_text_5 h4,.et_pb_text_9 h4,.et_pb_text_10 h4,.et_pb_text_11 h4,.et_pb_text_12 h4,.et_pb_text_16 h4,.et_pb_text_17 h4,.et_pb_text_18 h4{font-family:'PT Serif',Georgia,"Times New Roman",serif;font-weight:700;font-size:21px;color:#132027!important;letter-spacing:1px}body #page-container .et_pb_section .et_pb_button_0{color:#FFFFFF!important;border-width:4px!important;border-color:#3A5D60;border-radius:0px;letter-spacing:1px;font-size:14px;font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif!important;font-weight:800!important;text-transform:uppercase!important;background-color:#3A5D60}body #page-container .et_pb_section .et_pb_button_0:hover{color:#FFFFFF!important;border-color:#A58036!important;background-image:initial;background-color:#A58036}body #page-container .et_pb_section .et_pb_button_0:hover:after{margin-left:.3em;left:auto;margin-left:.3em;opacity:1}body #page-container .et_pb_section .et_pb_button_0:after{line-height:inherit;font-size:inherit!important;margin-left:-1em;left:auto;font-family:ETmodules!important;font-weight:400!important}.et_pb_button_0{transition:color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms}.et_pb_button_0,.et_pb_button_0:after{transition:all 300ms ease 0ms}.et_pb_section_1.et_pb_section{padding-top:0px;padding-bottom:4%;background-color:#FFFFFF!important}.et_pb_section_1,.et_pb_section_3,.et_pb_section_5,.et_pb_section_6{display:flex;flex-direction:column;justify-content:center}.et_pb_row_3.et_pb_row{padding-top:41px!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:41px;padding-bottom:0%}.et_pb_text_4,.et_pb_text_5,.et_pb_text_10,.et_pb_text_11,.et_pb_text_12,.et_pb_text_16,.et_pb_text_17,.et_pb_text_18,.et_pb_text_20,.et_pb_text_23,.et_pb_text_25,.et_pb_text_26{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px}.et_pb_text_4.et_pb_text a,.et_pb_text_5.et_pb_text a,.et_pb_text_10.et_pb_text a,.et_pb_text_11.et_pb_text a,.et_pb_text_12.et_pb_text a,.et_pb_text_15.et_pb_text a,.et_pb_text_16.et_pb_text a,.et_pb_text_17.et_pb_text a,.et_pb_text_18.et_pb_text a,.et_pb_text_20.et_pb_text a,.et_pb_text_21.et_pb_text a,.et_pb_text_22.et_pb_text a,.et_pb_text_23.et_pb_text a{color:#3A5D60!important;transition:color 300ms ease 0ms}.et_pb_text_4.et_pb_text a:hover,.et_pb_text_5.et_pb_text a:hover,.et_pb_text_10.et_pb_text a:hover,.et_pb_text_11.et_pb_text a:hover,.et_pb_text_12.et_pb_text a:hover,.et_pb_text_15.et_pb_text a:hover,.et_pb_text_16.et_pb_text a:hover,.et_pb_text_17.et_pb_text a:hover,.et_pb_text_18.et_pb_text a:hover,.et_pb_text_20.et_pb_text a:hover,.et_pb_text_21.et_pb_text a:hover,.et_pb_text_22.et_pb_text a:hover,.et_pb_text_23.et_pb_text a:hover{color:#A58036!important}.et_pb_text_4 a,.et_pb_text_5 a,.et_pb_text_10 a,.et_pb_text_11 a,.et_pb_text_12 a,.et_pb_text_15 a,.et_pb_text_16 a,.et_pb_text_17 a,.et_pb_text_18 a,.et_pb_text_20 a,.et_pb_text_21 a,.et_pb_text_22 a,.et_pb_text_23 a{text-decoration:underline}.et_pb_text_4 h3{font-family:'PT Serif',Georgia,"Times New Roman",serif;font-weight:700;font-style:italic;color:#A58036!important;line-height:1.1em}.et_pb_row_4.et_pb_row{padding-top:20px!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:20px;padding-bottom:0%}.et_pb_team_member_0.et_pb_team_member h4,.et_pb_team_member_0.et_pb_team_member h1.et_pb_module_header,.et_pb_team_member_0.et_pb_team_member h2.et_pb_module_header,.et_pb_team_member_0.et_pb_team_member h3.et_pb_module_header,.et_pb_team_member_0.et_pb_team_member h5.et_pb_module_header,.et_pb_team_member_0.et_pb_team_member h6.et_pb_module_header{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase}.et_pb_team_member_0.et_pb_team_member .et_pb_member_position{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;color:#132027!important}.et_pb_team_member_0.et_pb_team_member .et_pb_team_member_image{border-radius:200px 200px 200px 200px;overflow:hidden}.et_pb_image_1{text-align:left;margin-left:0}.et_pb_text_5 h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:800;text-transform:uppercase;font-size:28px;color:#A58036!important;line-height:1.1em}.et_pb_section_2.et_pb_section{padding-top:5%;padding-bottom:4%;background-color:#DDDDDD!important}.et_pb_row_5.et_pb_row{padding-top:0px!important;padding-bottom:0%!important;padding-top:0px;padding-bottom:0%}.et_pb_row_5,body #page-container .et-db #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_5.et_pb_row{max-width:800px}.et_pb_text_6{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;padding-bottom:0px!important;margin-bottom:-8px!important}.et_pb_text_6 h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:5vw;color:#132027!important;letter-spacing:-1px}.et_pb_text_6 h2,.et_pb_text_7 h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:3.2vw;color:#363960!important}.et_pb_text_7{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;padding-bottom:8px!important;margin-bottom:6px!important}.et_pb_divider_0{padding-bottom:2px;margin-bottom:0px!important}.et_pb_divider_0:before{border-top-color:#A58036;border-top-width:2px;width:auto;top:0px;right:0px;left:0px}.et_pb_row_6.et_pb_row{padding-top:1px!important;padding-bottom:1px!important;margin-top:16px!important;margin-right:auto!important;margin-left:auto!important;padding-top:1px;padding-bottom:1px}.et_pb_row_6,body #page-container .et-db #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_6.et_pb_row{max-width:100%}.et_pb_number_counter_0.et_pb_number_counter h3,.et_pb_number_counter_0.et_pb_number_counter h1.title,.et_pb_number_counter_0.et_pb_number_counter h2.title,.et_pb_number_counter_0.et_pb_number_counter h4.title,.et_pb_number_counter_0.et_pb_number_counter h5.title,.et_pb_number_counter_0.et_pb_number_counter h6.title,.et_pb_number_counter_1.et_pb_number_counter h3,.et_pb_number_counter_1.et_pb_number_counter h1.title,.et_pb_number_counter_1.et_pb_number_counter h2.title,.et_pb_number_counter_1.et_pb_number_counter h4.title,.et_pb_number_counter_1.et_pb_number_counter h5.title,.et_pb_number_counter_1.et_pb_number_counter h6.title,.et_pb_number_counter_2.et_pb_number_counter h3,.et_pb_number_counter_2.et_pb_number_counter h1.title,.et_pb_number_counter_2.et_pb_number_counter h2.title,.et_pb_number_counter_2.et_pb_number_counter h4.title,.et_pb_number_counter_2.et_pb_number_counter h5.title,.et_pb_number_counter_2.et_pb_number_counter h6.title,.et_pb_number_counter_3.et_pb_number_counter h3,.et_pb_number_counter_3.et_pb_number_counter h1.title,.et_pb_number_counter_3.et_pb_number_counter h2.title,.et_pb_number_counter_3.et_pb_number_counter h4.title,.et_pb_number_counter_3.et_pb_number_counter h5.title,.et_pb_number_counter_3.et_pb_number_counter h6.title,.et_pb_number_counter_4.et_pb_number_counter h3,.et_pb_number_counter_4.et_pb_number_counter h1.title,.et_pb_number_counter_4.et_pb_number_counter h2.title,.et_pb_number_counter_4.et_pb_number_counter h4.title,.et_pb_number_counter_4.et_pb_number_counter h5.title,.et_pb_number_counter_4.et_pb_number_counter h6.title,.et_pb_number_counter_5.et_pb_number_counter h3,.et_pb_number_counter_5.et_pb_number_counter h1.title,.et_pb_number_counter_5.et_pb_number_counter h2.title,.et_pb_number_counter_5.et_pb_number_counter h4.title,.et_pb_number_counter_5.et_pb_number_counter h5.title,.et_pb_number_counter_5.et_pb_number_counter h6.title{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:26px;color:#132027!important;line-height:1.1em}.et_pb_number_counter_0.et_pb_number_counter .percent p,.et_pb_number_counter_1.et_pb_number_counter .percent p,.et_pb_number_counter_2.et_pb_number_counter .percent p,.et_pb_number_counter_3.et_pb_number_counter .percent p,.et_pb_number_counter_4.et_pb_number_counter .percent p,.et_pb_number_counter_5.et_pb_number_counter .percent p{font-family:'PT Serif',Georgia,"Times New Roman",serif;font-weight:700;font-size:4vw;color:#A58036!important;line-height:102px}.et_pb_section_3.et_pb_section{padding-top:5%;padding-bottom:0.7%;background-color:#FFFFFF!important}.et_pb_row_7.et_pb_row{padding-top:0px!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:0px;padding-bottom:0%}.et_pb_text_8 h2,.et_pb_text_14 h2,.et_pb_text_19 h2{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:5vw;color:#132027!important}.et_pb_text_9{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-top:-7px!important}.et_pb_text_9 h2{font-family:'Freight Text Semibold Italic',Helvetica,Arial,Lucida,sans-serif;font-weight:600;font-style:italic;font-size:36px;color:#132027!important}.et_pb_text_10 h3,.et_pb_text_11 h3,.et_pb_text_12 h3,.et_pb_text_15 h3,.et_pb_text_17 h3,.et_pb_text_18 h3,.et_pb_text_20 h3,.et_pb_text_21 h3,.et_pb_text_22 h3,.et_pb_text_23 h3{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:28px;color:#181818!important;line-height:1.1em}.et_pb_section_4.et_pb_section{padding-top:1%;padding-bottom:4%}.et_pb_row_8.et_pb_row,.et_pb_row_9.et_pb_row{padding-top:1%!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:1%;padding-bottom:0%}.et_pb_row_8,body #page-container .et-db #et-boc .et-l .et_pb_row_8.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_8.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_8.et_pb_row{max-width:1120px}.et_pb_image_2,.et_pb_image_3{mix-blend-mode:multiply;backface-visibility:hidden;margin-bottom:25px!important;text-align:right;margin-right:0}.et_pb_image_2:hover,.et_pb_image_3:hover{mix-blend-mode:multiply;backface-visibility:hidden}.et_pb_section_5.et_pb_section{padding-top:0px;padding-bottom:8.1%;background-color:#FFFFFF!important}.et_pb_row_10.et_pb_row,.et_pb_row_14.et_pb_row,.et_pb_row_15.et_pb_row{padding-top:0%!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:0%;padding-bottom:0%}.et_pb_text_15{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;padding-top:4px!important;padding-bottom:10px!important;margin-top:0px!important;margin-bottom:1px!important}.et_pb_text_15 h4{font-family:'Freight Text Semibold Italic',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:27px;color:#132027!important;letter-spacing:1px;line-height:0.8em}.et_pb_image_4,.et_pb_image_6{margin-bottom:25px!important;text-align:right;margin-right:0}.et_pb_row_11.et_pb_row,.et_pb_row_12.et_pb_row{padding-top:2.5%!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:2.5%;padding-bottom:0%}.et_pb_image_5{margin-top:-35px!important;text-align:left;margin-left:0}.et_pb_row_13.et_pb_row{padding-top:0%!important;padding-bottom:0%!important;padding-left:80px!important;margin-top:-62px!important;margin-right:auto!important;margin-bottom:-62px!important;padding-top:0%;padding-bottom:0%;padding-left:80px}.et_pb_section_6.et_pb_section{padding-top:0px;padding-bottom:5%;background-color:#FFFFFF!important}.et_pb_text_20 h4,.et_pb_text_21 h4,.et_pb_text_22 h4,.et_pb_text_23 h4{font-family:'PT Serif',Georgia,"Times New Roman",serif;font-weight:700;font-size:21px;color:#A58036!important;line-height:1.3em}.et_pb_text_20 blockquote{border-width:2px;border-color:#A58036}.et_pb_text_21{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-top:27px!important}.et_pb_text_21 blockquote,.et_pb_text_22 blockquote,.et_pb_text_23 blockquote{border-width:0px;border-color:#A58036}.et_pb_text_22{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;margin-top:0px!important;margin-left:2rem!important}.et_pb_row_17.et_pb_row{padding-top:1px!important;padding-bottom:0%!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:1px;padding-bottom:0%}.et_pb_text_24{font-family:'Sofia Sans',Helvetica,Arial,Lucida,sans-serif;font-size:17px;width:100%}.et_pb_text_25 h4{font-family:'Freight Text Semibold Italic',Helvetica,Arial,Lucida,sans-serif;font-weight:500;font-size:26px;color:#A58036!important;letter-spacing:1px;line-height:1.3em}.et_pb_column_0{padding-top:0px;padding-bottom:0px}.et_pb_column_5{padding-top:2%}.et_pb_column_15,.et_pb_column_16,.et_pb_column_17{border-left-color:#A58036}.et_pb_team_member_0.et_pb_team_member.et_pb_module{margin-left:0px!important;margin-right:auto!important}@media only screen and (min-width:981px){.et_pb_row_6,body #page-container .et-db #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_6.et_pb_row{width:90%}.et_pb_image_3{display:none!important}}@media only screen and (max-width:980px){.et_pb_section_0.et_pb_section{padding-top:8%;padding-bottom:2.5%}.et_pb_row_1.et_pb_row{padding-top:3%!important;padding-right:5%!important;padding-bottom:3%!important;padding-left:5%!important;padding-top:3%!important;padding-right:5%!important;padding-bottom:3%!important;padding-left:5%!important}.et_pb_text_2{margin-top:-12px!important}body #page-container .et_pb_section .et_pb_button_0:after{line-height:inherit;font-size:inherit!important;margin-left:-1em;left:auto;display:inline-block;opacity:0;content:attr(data-icon);font-family:ETmodules!important;font-weight:400!important}body #page-container .et_pb_section .et_pb_button_0:before{display:none}body #page-container .et_pb_section .et_pb_button_0:hover:after{margin-left:.3em;left:auto;margin-left:.3em;opacity:1}.et_pb_section_1.et_pb_section,.et_pb_section_3.et_pb_section,.et_pb_section_5.et_pb_section,.et_pb_section_6.et_pb_section{padding-top:4%;padding-bottom:4%}.et_pb_row_3,body #page-container .et-db #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,.et_pb_row_4,body #page-container .et-db #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,.et_pb_row_5,body #page-container .et-db #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_5.et_pb_row,.et_pb_row_6,body #page-container .et-db #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_6.et_pb_row,.et_pb_row_7,body #page-container .et-db #et-boc .et-l .et_pb_row_7.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_7.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_7.et_pb_row,.et_pb_row_8,body #page-container .et-db #et-boc .et-l .et_pb_row_8.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_8.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_8.et_pb_row,.et_pb_row_9,body #page-container .et-db #et-boc .et-l .et_pb_row_9.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_9.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_9.et_pb_row,.et_pb_row_10,body #page-container .et-db #et-boc .et-l .et_pb_row_10.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_10.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_10.et_pb_row,.et_pb_row_11,body #page-container .et-db #et-boc .et-l .et_pb_row_11.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_11.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_11.et_pb_row,.et_pb_row_12,body #page-container .et-db #et-boc .et-l .et_pb_row_12.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_12.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_12.et_pb_row,.et_pb_row_13,body #page-container .et-db #et-boc .et-l .et_pb_row_13.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_13.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_13.et_pb_row,.et_pb_row_14,body #page-container .et-db #et-boc .et-l .et_pb_row_14.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_14.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_14.et_pb_row,.et_pb_row_15,body #page-container .et-db #et-boc .et-l .et_pb_row_15.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_15.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_15.et_pb_row,.et_pb_row_17,body #page-container .et-db #et-boc .et-l .et_pb_row_17.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_17.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_17.et_pb_row{width:90%}.et_pb_text_4,.et_pb_text_5,.et_pb_text_10,.et_pb_text_11,.et_pb_text_12,.et_pb_text_15,.et_pb_text_16,.et_pb_text_17,.et_pb_text_18,.et_pb_text_20,.et_pb_text_21,.et_pb_text_22,.et_pb_text_23{margin-bottom:32px!important}.et_pb_team_member_0{width:63%}.et_pb_image_1{width:64%}.et_pb_image_1 .et_pb_image_wrap img,.et_pb_image_2 .et_pb_image_wrap img,.et_pb_image_3 .et_pb_image_wrap img,.et_pb_image_4 .et_pb_image_wrap img,.et_pb_image_5 .et_pb_image_wrap img,.et_pb_image_6 .et_pb_image_wrap img{width:auto}.et_pb_section_2.et_pb_section{padding-top:7%;padding-bottom:7%}.et_pb_divider_0{padding-bottom:2px}.et_pb_divider_0:before{width:auto;top:0px;right:0px;left:0px}.et_pb_row_6.et_pb_row{padding-top:30px!important;padding-bottom:30px!important;padding-top:30px!important;padding-bottom:30px!important}.et_pb_number_counter_0.et_pb_number_counter .percent p,.et_pb_number_counter_1.et_pb_number_counter .percent p,.et_pb_number_counter_2.et_pb_number_counter .percent p,.et_pb_number_counter_3.et_pb_number_counter .percent p,.et_pb_number_counter_4.et_pb_number_counter .percent p,.et_pb_number_counter_5.et_pb_number_counter .percent p{font-size:5.5vw}.et_pb_text_9{margin-top:-7px!important}.et_pb_row_14.et_pb_row{padding-top:0%!important;padding-bottom:0%!important;padding-top:0%!important;padding-bottom:0%!important}.et_pb_column_0{padding-bottom:30px}.et_pb_column_5{padding-top:7%}.et_pb_column_15,.et_pb_column_16,.et_pb_column_17{border-left-color:#A58036;padding-left:3%}.et_pb_column_18{padding-left:3%}.et_pb_column_23{padding-left:0%}.et_pb_team_member_0.et_pb_team_member.et_pb_module{margin-left:auto!important;margin-right:0px!important}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_image_3{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0.et_pb_section{padding-top:12%;padding-bottom:2.5%}.et_pb_row_1.et_pb_row{padding-top:9%!important;padding-right:5%!important;padding-bottom:9%!important;padding-left:5%!important;padding-top:9%!important;padding-right:5%!important;padding-bottom:9%!important;padding-left:5%!important}.et_pb_text_0 h1,.et_pb_text_1 h1,.et_pb_text_2 h1,.et_pb_text_3 h1,.et_pb_text_4 h1,.et_pb_text_5 h1,.et_pb_text_7 h1,.et_pb_text_8 h1,.et_pb_text_9 h1,.et_pb_text_10 h1,.et_pb_text_11 h1,.et_pb_text_12 h1,.et_pb_text_14 h1,.et_pb_text_15 h1,.et_pb_text_16 h1,.et_pb_text_17 h1,.et_pb_text_18 h1,.et_pb_text_19 h1,.et_pb_text_20 h1,.et_pb_text_21 h1,.et_pb_text_22 h1,.et_pb_text_23 h1,.et_pb_text_24 h1,.et_pb_text_25 h1,.et_pb_text_26 h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:40px}.et_pb_text_0 h2,.et_pb_text_3 h2,.et_pb_text_4 h2,.et_pb_text_5 h2,.et_pb_text_6 h2,.et_pb_text_7 h2,.et_pb_text_10 h2,.et_pb_text_11 h2,.et_pb_text_12 h2,.et_pb_text_15 h2,.et_pb_text_16 h2,.et_pb_text_17 h2,.et_pb_text_18 h2,.et_pb_text_20 h2,.et_pb_text_21 h2,.et_pb_text_22 h2,.et_pb_text_23 h2,.et_pb_text_24 h2,.et_pb_text_25 h2,.et_pb_text_26 h2{font-size:36px}.et_pb_text_1 h2,.et_pb_text_8 h2,.et_pb_text_14 h2,.et_pb_text_19 h2{font-size:45px;line-height:0.9em}.et_pb_text_2 h2{font-size:34px}.et_pb_text_2{margin-top:-7px!important}body #page-container .et_pb_section .et_pb_button_0:after{line-height:inherit;font-size:inherit!important;margin-left:-1em;left:auto;display:inline-block;opacity:0;content:attr(data-icon);font-family:ETmodules!important;font-weight:400!important}body #page-container .et_pb_section .et_pb_button_0:before{display:none}body #page-container .et_pb_section .et_pb_button_0:hover:after{margin-left:.3em;left:auto;margin-left:.3em;opacity:1}.et_pb_section_1.et_pb_section,.et_pb_section_3.et_pb_section,.et_pb_section_5.et_pb_section,.et_pb_section_6.et_pb_section{padding-top:9%;padding-bottom:4%}.et_pb_text_4,.et_pb_text_5,.et_pb_text_10,.et_pb_text_11,.et_pb_text_12,.et_pb_text_15,.et_pb_text_16,.et_pb_text_17,.et_pb_text_18,.et_pb_text_20,.et_pb_text_21,.et_pb_text_22,.et_pb_text_23{margin-bottom:22px!important}.et_pb_team_member_0{width:46%}.et_pb_image_1{width:52%}.et_pb_image_1 .et_pb_image_wrap img,.et_pb_image_2 .et_pb_image_wrap img,.et_pb_image_3 .et_pb_image_wrap img,.et_pb_image_4 .et_pb_image_wrap img,.et_pb_image_5 .et_pb_image_wrap img,.et_pb_image_6 .et_pb_image_wrap img{width:auto}.et_pb_section_2.et_pb_section{padding-top:10%;padding-bottom:10%}.et_pb_text_6 h1{font-family:'Sofia Sans Condensed',Helvetica,Arial,Lucida,sans-serif;font-weight:700;text-transform:uppercase;font-size:45px}.et_pb_divider_0{padding-bottom:10px}.et_pb_divider_0:before{width:auto;top:0px;right:0px;left:0px}.et_pb_row_6.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px!important;padding-bottom:0px!important}.et_pb_number_counter_0.et_pb_number_counter .percent p,.et_pb_number_counter_1.et_pb_number_counter .percent p,.et_pb_number_counter_2.et_pb_number_counter .percent p,.et_pb_number_counter_3.et_pb_number_counter .percent p,.et_pb_number_counter_4.et_pb_number_counter .percent p,.et_pb_number_counter_5.et_pb_number_counter .percent p{font-size:60px}.et_pb_number_counter_1.et_pb_number_counter,.et_pb_number_counter_2.et_pb_number_counter,.et_pb_number_counter_3.et_pb_number_counter,.et_pb_number_counter_4.et_pb_number_counter,.et_pb_number_counter_5.et_pb_number_counter{margin-top:-10px!important}.et_pb_text_9 h2{font-size:33px}.et_pb_text_9{margin-top:1rem!important}.et_pb_image_2{display:none!important}.et_pb_text_15 h3{font-size:27px}.et_pb_row_14.et_pb_row{padding-top:40px!important;padding-bottom:0%!important;padding-top:40px!important;padding-bottom:0%!important}.et_pb_column_5{padding-top:2%}.et_pb_column_15,.et_pb_column_16,.et_pb_column_17{border-left-color:#A58036;padding-left:5%}.et_pb_column_18{padding-left:5%}.et_pb_column_23{padding-left:0%}.et_pb_team_member_0.et_pb_team_member.et_pb_module{margin-left:0px!important;margin-right:auto!important}}</style>	
+			<span class="et_pb_scroll_top et-pb-icon"></span>
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0c39b91da70b9eb',t:'MTc4MTU0NzgyNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

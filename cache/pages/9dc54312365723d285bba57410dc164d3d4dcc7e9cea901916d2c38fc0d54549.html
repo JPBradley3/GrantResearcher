@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Login</title>
+<link rel="stylesheet" type="text/css" href="../bootstrap/3/css/bootstrap.min.css" />
+<script type="text/javascript" src="../ScriptLibrary/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="../bootstrap/3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxDataBindings.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxDataSet.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxServerAction.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxFormValidator.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxSecurityProvider.js"></script>
+<link rel="stylesheet" type="text/css" href="../Css/Foster.css">
+<link rel="stylesheet" type="text/css" href="../Css/Portal.css">
+<script type="text/javascript">
+  /* dmxSecurityProvider name "dmxSecurityProvider" */
+       jQuery.dmxSecurityProvider(
+         {"url": "../dmxConnect/api/Portal/Login.asp", "form": {"enabled": true, "name": "frmLogin"}, "events": {"onLogin": "MM_goToURL('parent','Console.asp');", "onLoginFailed": "MM_showHideLayers('msgFail','','show');"}}
+       );
+  /* END dmxSecurityProvider name "dmxSecurityProvider" */
+function dmxServerActionControl(action, id) { // v1.0
+  if (jQuery.dmxServerAction) {
+    var da = jQuery.dmxServerAction.get(id),
+        args = Array.prototype.slice.call(arguments, 2);
+    if (da) {
+      da[action].apply(da, args);
+    }
+  }
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+<style>.error, .form-control.error { color:red;
+border-color: red;}</style>
+</head>
+<body onLoad="MM_showHideLayers('msgFail','','hide')">
+<nav class="navbar navbar-default portal"></nav>
+<div id="FFlogo" style=""><img src="/images/Logo-Illustrator.png" alt="Logo" class="img-responsive"/></div>
+<div class="container white-bkgd"><div class=" BodyHeadline">Organization Portal Login</div>
+<form method="get" name="frmLogin" class="form" id="frmLogin" onSubmit="MM_showHideLayers('msgFail','','hide')" data-dmx-validate="true">
+  <div class="form-group">
+    <label></label>Please login here with the username and password you received from The Foster Foundation.
+  </div>
+  <div class="form-group">
+  <div class="form-group col-sm-6">
+    <label for="username">Username:</label>&nbsp;&nbsp;<em>(Username is case sensitive)</em>
+    <input name="username" type="text" required="true" class="form-control" id="username" placeholder="enter username here" data-msg-required="Username is required." data-rule-alphanumeric="true" data-msg-nowhitespace="No spaces please." data-rule-nowhitespace="true"><br>
+    <label for="password">Password:</label>&nbsp;&nbsp;<em>(Password is case sensitive)</em>
+    <input name="password" type="password" required="true" class="form-control" id="password" placeholder="enter password here" data-msg-required="Password is required.">
+  </div>
+  </div>
+<div class="form-group">
+	<div class="col-sm-12">
+  <button type="submit" class="btn btn-FF">Login</button><p>&nbsp;</p></div>
+</div>
+</form>
+<div id="msgFail" class="alert alert-danger col-sm-6">The username/password combination you entered is not valid.<br>
+  Please try again.</div>
+  <div class="container col-sm-8">
+    <p><strong>Forgot your password?</strong> <br />That's OK, use this link to <a href="Password_Request.asp">Request Your Password</a>. You will need to provide your Username in order to request your password. A password email will be sent to the primary email contact for your Organization. </p>
+    <p><strong>Forgot your username?</strong> <br />You will need to <a href="mailto:info@thefosterfoundation.org?subject=Forgot Username - ID=">contact us via email</a>. </p>
+  </div>
+</div>
+</body>
+</html>

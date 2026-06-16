@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request Portal Password</title>
+<link rel="stylesheet" type="text/css" href="../bootstrap/3/css/bootstrap.min.css" />
+<script type="text/javascript" src="../ScriptLibrary/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="../bootstrap/3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxDataBindings.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxDataSet.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxServerAction.js"></script>
+<script type="text/javascript" src="../ScriptLibrary/dmxFormValidator.js"></script>
+<link rel="stylesheet" type="text/css" href="../Css/Foster.css">
+<link rel="stylesheet" type="text/css" href="../Css/Portal.css">
+</head>
+
+<body>
+<nav class="navbar navbar-default portal"></nav>
+<div id="FFlogo" style=""><img src="/images/Logo-Illustrator.png" alt="Logo" class="img-responsive"/></div>
+<div class="container">
+  <div class=" BodyHeadline">Password Request</div>
+<form method="post" name="frmReqPassword" class="form" id="frmReqPassword" action="procPassword_Request.asp">
+  <div class="form-group">
+    <label></label>
+    Please enter your username and an email will be sent to the Primary Contact for the Organization with the password on file.
+  </div>
+  <div class="form-group">
+  <div class="form-group col-sm-4">
+    <label for="username">Username:</label>&nbsp;&nbsp;<em>(Username is case sensitive)</em>
+    <input name="Username" type="text" required="true" class="form-control" id="Username" placeholder="enter username here" data-msg-required="Username is required." data-msg-nowhitespace="No spaces please." data-rule-nowhitespace="true"><br>
+  </div>
+  </div>
+<div class="form-group">
+	<div class="col-sm-12">
+  <button type="submit" class="btn btn-FF">Request Password</button></div>
+</div>
+</form>
+</div>
+<br />
+<div class="container">
+<div class="alert alert-success" role="alert" style="display:none;">The passsword was sent to the Organization's Primary Contact email address.</div>
+</div>
+</body>
+</html>

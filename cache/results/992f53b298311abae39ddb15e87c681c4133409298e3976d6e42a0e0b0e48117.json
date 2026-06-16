@@ -1,0 +1,16 @@
+{
+  "url": "https://www.stevefund.org/?utm_source=copilot.com",
+  "title": "No Title",
+  "summary": null,
+  "llm_amount": null,
+  "llm_deadline": null,
+  "llm_eligibility": null,
+  "emails": null,
+  "grant_amount": null,
+  "application_dates": null,
+  "eligibility_signals": "nonprofit; organization",
+  "pages_crawled": 1,
+  "content_types": "unknown",
+  "embedded_json": "[{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"WebPage\", \"@id\": \"https://stevefund.org/\", \"url\": \"https://stevefund.org/\", \"name\": \"The Steve Fund\", \"isPartOf\": {\"@id\": \"https://stevefund.org/#website\"}, \"about\": {\"@id\": \"https://stevefund.org/#organization\"}, \"primaryImageOfPage\": {\"@id\": \"https://stevefund.org/#primaryimage\"}, \"image\": {\"@id\": \"https://stevefund.org/#primaryimage\"}, \"thumbnailUrl\": \"https://stevefund.org/wp-content/uploads/2025/05/Soul-Care-Relate-blog-1-3rd-image-100.jpg\", \"datePublished\": \"2023-01-23T17:27:34+00:00\", \"dateModified\": \"2026-05-08T19:31:00+00:00\", \"description\": \"We are dedicated to supporting the mental health and emotional well-being for students of color.\", \"breadcrumb\": {\"@id\": \"https://stevefund.org/#breadcrumb\"}, \"inLanguage\": \"en-US\", \"potentialAction\": [{\"@type\": \"ReadAction\", \"target\": [\"https://stevefund.org/\"]}]}, {\"@type\": \"ImageObject\", \"inLanguage\": \"en-US\", \"@id\": \"https://stevefund.org/#primaryimage\", \"url\": \"https://stevefund.org/wp-content/uploads/2025/05/Soul-Care-Relate-blog-1-3rd-image-100.jpg\", \"contentUrl\": \"https://stevefund.org/wp-content/uploads/2025/05/Soul-Care-Relate-blog-1-3rd-image-100.jpg\", \"width\": 991, \"height\": 747}, {\"@type\": \"BreadcrumbList\", \"@id\": \"https://stevefund.org/#breadcrumb\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\"}]}, {\"@type\": \"WebSite\", \"@id\": \"https://stevefund.org/#website\", \"url\": \"https://stevefund.org/\", \"name\": \"The Steve Fund\", \"description\": \"Achieving Equity in Mental Health\", \"publisher\": {\"@id\": \"https://stevefund.org/#organization\"}, \"potentialAction\": [{\"@type\": \"SearchAction\", \"target\": {\"@type\": \"EntryPoint\", \"urlTemplate\": \"https://stevefund.org/?s={search_term_string}\"}, \"query-input\": {\"@type\": \"PropertyValueSpecification\", \"valueRequired\": true, \"valueName\": \"search_term_string\"}}], \"inLanguage\": \"en-US\"}, {\"@type\": \"Organization\", \"@id\": \"https://stevefund.org/#organization\", \"name\": \"The Steve Fund\", \"url\": \"https://stevefund.org/\", \"logo\": {\"@type\": \"ImageObject\", \"inLanguage\": \"en-US\", \"@id\": \"https://stevefund.org/#/schema/logo/image/\", \"url\": \"https://stevefund.org/wp-content/uploads/2023/01/stevefund-logo.svg\", \"contentUrl\": \"https://stevefund.org/wp-content/uploads/2023/01/stevefund-logo.svg\", \"width\": 112, \"height\": 85, \"caption\": \"The Steve Fund\"}, \"image\": {\"@id\": \"https://stevefund.org/#/schema/logo/image/\"}, \"sameAs\": [\"https://www.facebook.com/The-Steve-Fund-1416226418672754/\", \"https://x.com/thestevefund\", \"https://www.linkedin.com/company/thestevefund\", \"https://www.instagram.com/thestevefund/\", \"https://www.youtube.com/channel/UCnP35pt4PhI1UJQiHCRkPSQ\"]}]}]",
+  "embedded_xml": null
+}

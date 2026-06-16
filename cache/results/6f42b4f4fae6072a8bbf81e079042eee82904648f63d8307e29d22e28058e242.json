@@ -1,0 +1,25 @@
+{
+  "url": "https://www.norcliffefoundation.org/",
+  "title": "No Title",
+  "summary": "The Norcliffe Foundation is a private family foundation that provides grants to non-profit organizations in the Puget Sound Region of Washington State, focusing on human services, healthcare, civic and community projects, education, and arts and culture.",
+  "llm_amount": null,
+  "llm_deadline": "Rolling basis, year-round",
+  "llm_eligibility": [
+    {
+      "question": "Does your organization have IRS registered 501(c)3 status?",
+      "answer": "YES/NO"
+    },
+    {
+      "question": "Is your organization located within our geographic funding area?",
+      "answer": "YES/NO"
+    }
+  ],
+  "emails": null,
+  "grant_amount": "$50,000",
+  "application_dates": "May 31, 2025",
+  "eligibility_signals": "nonprofit; 501(c)(3); organization; eligible; must be; requirements",
+  "pages_crawled": 28,
+  "content_types": "unknown",
+  "embedded_json": null,
+  "embedded_xml": null
+}

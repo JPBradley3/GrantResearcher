@@ -1,0 +1,24 @@
+{
+  "url": "https://elevancehealth.foundation/for-grantseekers",
+  "title": "No Title",
+  "summary": "Elevance Health Foundation is a catalyst for positive change that supports community-based nonprofit organizations improving lives and communities.",
+  "llm_amount": "$150 million",
+  "llm_deadline": {
+    "Maternal/Infant Health": "July 31, 2026",
+    "Food as Medicine": "2027",
+    "Behavioral Health": "2027"
+  },
+  "llm_eligibility": [
+    "Community-based nonprofit organizations across the U.S.",
+    "National programs prioritizing scalable and sustainable systemic change.",
+    "Local programs implementing relevant interventions in California, Florida, Georgia, Indiana, Missouri, Nevada, New York, Ohio, Texas, and Virginia."
+  ],
+  "emails": "CARES@elevancehealth.com; foundation@elevancehealth.com",
+  "grant_amount": "$3,000; $90 m",
+  "application_dates": "July 31; October 24, 2025; July 31, 2026",
+  "eligibility_signals": "nonprofit; 501(c)(3); organization; eligible; must be; requirements",
+  "pages_crawled": 23,
+  "content_types": "unknown",
+  "embedded_json": "[{\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"For Grantseekers\", \"url\": \"https://elevancehealth.foundation/for-grantseekers\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Home\", \"url\": \"https://elevancehealth.foundation/home\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"About\", \"url\": \"https://elevancehealth.foundation/about-us\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Awards & Recognition\", \"url\": \"https://elevancehealth.foundation/awards-recognition\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Grantmaking\", \"url\": \"https://elevancehealth.foundation/grantmaking\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Maternal/Infant Health\", \"url\": \"https://elevancehealth.foundation/maternal-infant-health\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Food as Medicine\", \"url\": \"https://elevancehealth.foundation/food-as-medicine\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Behavioral Health\", \"url\": \"https://elevancehealth.foundation/behavioral-health\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Community Resiliency & Disaster Relief\", \"url\": \"https://elevancehealth.foundation/community-resiliency-disaster-relief\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Associate Engagement\", \"url\": \"https://elevancehealth.foundation/associate-engagement\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Impact Investing\", \"url\": \"https://elevancehealth.foundation/impact-investing\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Community Action Leadership\", \"url\": \"https://elevancehealth.foundation/community-action-leadership\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"For Grantees\", \"url\": \"https://elevancehealth.foundation/for-grantees\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Funding Impact Investing\", \"url\": \"https://elevancehealth.foundation/funding-impact-investing\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Inquiries\", \"url\": \"https://elevancehealth.foundation/inquiries\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Newsroom Maternal and Infant Health\", \"url\": \"https://elevancehealth.foundation/newsroom-maternal-and-infant-health\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Newsroom Food as Medicine\", \"url\": \"https://elevancehealth.foundation/newsroom-food-as-medicine\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Newsroom Behavioral Health\", \"url\": \"https://elevancehealth.foundation/newsroom-behavioral-health\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Newsroom Impact Investing\", \"url\": \"https://elevancehealth.foundation/newsroom-impact-investing\", \"description\": \"\"}, {\"@context\": \"http://schema.org\", \"@type\": \"WebPage\", \"name\": \"Cares\", \"url\": \"https://elevancehealth.foundation/cares\", \"description\": \"\"}]",
+  "embedded_xml": null
+}

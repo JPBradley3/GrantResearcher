@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/en-us/nonprofits/events/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Nonprofit Events</title>
+    <link
+      rel="canonical"
+      href="https://www.microsoft.com/en-us/nonprofits/events"
+    />
+
+    <meta
+      name="description"
+      content="Explore special events and learning opportunities created to help you expand your expertise, learn new skills, and help your organization achieve their goals."
+    />
+
+    <meta
+      name="twitter:url"
+      content="https://www.microsoft.com/en-us/nonprofits/events"
+    />
+    <meta name="twitter:title" content="Microsoft Nonprofit Events" />
+    <meta
+      name="twitter:description"
+      content="Explore special events and learning opportunities created to help you expand your expertise, learn new skills, and help your organization achieve their goals."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:url"
+      content="https://www.microsoft.com/en-us/nonprofits/events"
+    />
+    <meta property="og:title" content="Microsoft Nonprofit Events" />
+    <meta
+      property="og:description"
+      content="Explore special events and learning opportunities created to help you expand your expertise, learn new skills, and help your organization achieve their goals."
+    />
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:image"
+      content="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/NonProfit-Events"
+    />
+
+    <meta property="og:site_name" content="Microsoft" />
+    <meta property="twitter:site" content="@Microsoft" />
+    <meta property="twitter:creator" content="@Microsoft" />
+    <meta
+      property="twitter:image"
+      content="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/NonProfit-Events"
+    />
+    <script
+      type="module"
+      src="https://www.microsoft.com/webassistant/v1/uca.mjs"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"
+    ></script>
+    <script src="https://www.microsoft.com/foxtrot/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-jquery-cookie.ACSHASH5c75a4fa9fb3503322f8a0c9dd51512d.min.js"></script>
+    <script src="https://www.microsoft.com/foxtrot/etc.clientlibs/cascade.component.authoring/clientlibs/clientlib-jquery.ACSHASH75d0cb3e9ff9fee40f5ce5fd93c17fb2.min.js"></script>
+
+    <link rel="stylesheet" href="/en-us/nonprofits/events/main.css" />
+    <script src="/en-us/nonprofits/events/bundle.js" defer></script>
+
+    <style>
+      #unified-chat-assistant svg,
+      #unified-chat-assistant img {
+        display: inline-block;
+      }
+
+      .msame_Header {
+        display: none !important;
+      }
+
+      /* UHF 1.1 Compatibility Fix */
+      #root {
+        display: block !important;
+        overflow: visible !important;
+      }
+
+      /* Force desktop sidebar visibility */
+      @media (min-width: 1024px) {
+        .hidden.lg\:block {
+          display: block !important;
+        }
+        .lg\:block {
+          visibility: visible !important;
+          opacity: 1 !important;
+          position: relative !important;
+        }
+      }
+    </style>
+
+    <!-- WCP Consent Library -->
+    <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+    <script>
+      var adobeLaunchLoaded = false;
+      var cookieSnapshot = [];
+
+      /* ---------------------------------------- */
+      /* Build all domain variations to try        */
+      /* ---------------------------------------- */
+      function getDomainVariations() {
+        var hostname = location.hostname;
+        var domains = [];
+
+        domains.push(hostname);
+        domains.push("." + hostname);
+
+        var parts = hostname.split(".");
+        if (parts.length > 2) {
+          parts.shift();
+          domains.push("." + parts.join("."));
+          domains.push(parts.join("."));
+        }
+
+        domains.push("");
+        return domains;
+      }
+
+      /* ---------------------------------------- */
+      /* Take snapshot of cookies BEFORE           */
+      /* Adobe Launch loads                        */
+      /* ---------------------------------------- */
+      function takeCookieSnapshot() {
+        // If snapshot already exists, reuse it
+        var stored = sessionStorage.getItem("cookieSnapshot");
+
+        if (stored) {
+          cookieSnapshot = JSON.parse(stored);
+          return;
+        }
+
+        // First-time snapshot (clean state)
+        cookieSnapshot = document.cookie
+          .split(";")
+          .map((c) => c.split("=")[0].trim())
+          .filter((name) => name !== "");
+
+        sessionStorage.setItem(
+          "cookieSnapshot",
+          JSON.stringify(cookieSnapshot),
+        );
+      }
+
+      /* ---------------------------------------- */
+      /* Delete a single cookie across all         */
+      /* domain and path combinations              */
+      /* ---------------------------------------- */
+      function deleteCookie(name) {
+        var domains = getDomainVariations();
+        var paths = ["/", location.pathname];
+        var expiry = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+        domains.forEach(function (domain) {
+          paths.forEach(function (path) {
+            document.cookie =
+              name +
+              "=; " +
+              expiry +
+              "; path=" +
+              path +
+              "; domain=" +
+              domain +
+              ";";
+            document.cookie = name + "=; " + expiry + "; path=" + path + ";";
+          });
+        });
+      }
+
+      /* ---------------------------------------- */
+      /* Remove all cookies NOT in original        */
+      /* snapshot (i.e. placed by Adobe Launch)    */
+      /* ---------------------------------------- */
+      function removeAdobeCookies() {
+        var currentCookies = document.cookie
+          .split(";")
+          .map(function (c) {
+            return c.split("=")[0].trim();
+          })
+          .filter(function (name) {
+            return name !== "";
+          });
+
+        currentCookies.forEach(function (name) {
+          if (cookieSnapshot.indexOf(name) === -1) {
+            deleteCookie(name);
+          }
+        });
+      }
+
+      /* ---------------------------------------- */
+      /* Load Adobe Launch                         */
+      /* ---------------------------------------- */
+      function loadAdobeLaunch() {
+        if (adobeLaunchLoaded) return;
+        takeCookieSnapshot();
+        var s = document.createElement("script");
+        s.src =
+          "https://assets.adobedtm.com/5ef092d1efb5/4916b06c2a71/launch-EN72860085611b4af0a8db7c8f979bd615.min.js";
+        s.async = true;
+        document.head.appendChild(s);
+        adobeLaunchLoaded = true;
+        startWithdrawalWatcher();
+      }
+
+      /* ---------------------------------------- */
+      /* Watch for consent withdrawal after        */
+      /* Adobe Launch has loaded                   */
+      /* ---------------------------------------- */
+      function startWithdrawalWatcher() {
+        setInterval(function () {
+          if (!hasFullConsent()) {
+            removeAdobeCookies();
+          }
+        }, 500);
+      }
+
+      /* ---------------------------------------- */
+      /* Check full consent                        */
+      /* Primary: window.siteConsent (UHF global) */
+      /* Fallback: MSCC cookie (c0/c1/c2/c3)      */
+      /* ---------------------------------------- */
+      function hasFullConsent() {
+        try {
+          if (
+            window.siteConsent &&
+            typeof window.siteConsent.getConsent === "function"
+          ) {
+            var consent = window.siteConsent.getConsent();
+            return (
+              consent.Required === true &&
+              consent.Analytics === true &&
+              consent.SocialMedia === true &&
+              consent.Advertising === true
+            );
+          }
+        } catch (e) {}
+
+        try {
+          var cookieMatch = document.cookie
+            .split(";")
+            .map(function (c) {
+              return c.trim();
+            })
+            .find(function (row) {
+              return row.startsWith("MSCC=");
+            });
+
+          if (!cookieMatch) return false;
+
+          var cookieValue = decodeURIComponent(cookieMatch.split("=")[1]);
+          var params = new URLSearchParams(cookieValue);
+
+          return (
+            params.get("c0") === "1" &&
+            params.get("c1") === "1" &&
+            params.get("c2") === "1" &&
+            params.get("c3") === "1"
+          );
+        } catch (e) {
+          return false;
+        }
+      }
+
+      /* ---------------------------------------- */
+      /* Poll every second until full consent      */
+      /* given or 5 minute timeout                 */
+      /* ---------------------------------------- */
+      function startConsentPolling() {
+        var attempts = 0;
+        var maxAttempts = 300;
+
+        var interval = setInterval(function () {
+          attempts++;
+          if (hasFullConsent()) {
+            clearInterval(interval);
+            loadAdobeLaunch();
+            return;
+          }
+          if (attempts >= maxAttempts) {
+            clearInterval(interval);
+          }
+        }, 1000);
+      }
+
+      /* ---------------------------------------- */
+      /* UHF Loader                                */
+      /* ---------------------------------------- */
+      function fetchHeaderFooter(callback) {
+        var url =
+          "https://uhf.microsoft.com/en-us/shell/xml/MSNonProfits?headerid=MSNonProfitsHeader&footerid=MSNonProfitsFooter";
+
+        $.ajax({ method: "GET", url: url, dataType: "xml" })
+          .done(function (msg) {
+            var responsexml = msg;
+
+            var cssIncludes = $(responsexml)
+              .find("cssIncludes")[0]
+              .childNodes[1].data.trim();
+            $("head").append($.parseHTML(cssIncludes));
+
+            var headerHtml = $(responsexml)
+              .find("headerHtml")[0]
+              .childNodes[1].data.trim();
+            document.getElementById("customHeader").innerHTML = headerHtml;
+
+            var footerHtml = $(responsexml)
+              .find("footerHtml")[0]
+              .childNodes[1].data.trim();
+            document.getElementById("customFooter").innerHTML = footerHtml;
+
+            var javascriptIncludes = $(responsexml)
+              .find("javascriptIncludes")[0]
+              .childNodes[1].data.trim();
+            $("head").append($.parseHTML(javascriptIncludes, true));
+
+            if (callback) callback();
+          })
+          .fail(function (xhr, status, error) {});
+      }
+
+      /* ---------------------------------------- */
+      /* Init Page                                 */
+      /* ---------------------------------------- */
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchHeaderFooter(function () {
+          setTimeout(function () {
+            if (hasFullConsent()) {
+              loadAdobeLaunch();
+            } else {
+              startConsentPolling();
+            }
+          }, 500);
+        });
+      });
+    </script>
+    <script type="module" crossorigin src="/en-us/nonprofits/events/assets/index-R--rtEuj.js"></script>
+    <link rel="stylesheet" crossorigin href="/en-us/nonprofits/events/assets/index-BIsq5wVL.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="customHeader"></div>
+    <div id="root"></div>
+    <div
+      id="unified-chat-assistant"
+      options='{"partnerId": "1444a51eb61f4c58abe61a1ca315cba3-ab6574fe-10c2-435c-beb0-e3a9257cc64f-6859", "theme": "theme-day", "mode": "drawer"}'
+    ></div>
+    <!-- Footer -->
+    <div id="customFooter"></div>
+  </body>
+</html>

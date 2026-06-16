@@ -1,0 +1,25 @@
+{
+  "url": "http://www.thefosterfoundation.org/Grants.htm",
+  "title": "No Title",
+  "summary": "The Foster Foundation grants process has changed to by invitation only. Organizations must meet eligibility criteria and complete Organization Information Form to be considered for funding.",
+  "llm_amount": null,
+  "llm_deadline": {
+    "type": "range",
+    "start": "January 1",
+    "end": "August 31"
+  },
+  "llm_eligibility": [
+    "Have current 501(c)(3) status from the Internal Revenue Service.",
+    "Be located in or serve populations of the Pacific Northwest which includes Washington, Oregon, Idaho, Montana and Alaska.",
+    "Address as your mission or project intent one of The Foster Foundation's Priority Issues for funding.",
+    "Not have any delinquent final reports due to the Foundation from previous grant cycles."
+  ],
+  "emails": "info@thefosterfoundation.org",
+  "grant_amount": "$100 m; $3 m; $50 m; $36.5 m",
+  "application_dates": "August 31",
+  "eligibility_signals": "nonprofit; 501(c)(3); organization; eligible; must be; requirements",
+  "pages_crawled": 8,
+  "content_types": "unknown",
+  "embedded_json": null,
+  "embedded_xml": null
+}
