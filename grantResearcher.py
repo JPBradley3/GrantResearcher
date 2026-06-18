@@ -574,6 +574,22 @@ else:
 # Save output
 # -------------------------
 
-out.to_csv("output/grants_fleshed.csv", index=False)
+# Drop large per-row fields from the CSV output so the file is easier to open
+csv_out = out.copy()
+for col in ["raw_text", "embedded_json", "embedded_xml"]:
+    if col in csv_out.columns:
+        csv_out = csv_out.drop(columns=[col])
 
-print("Done → output/grants_fleshed.csv")
+chunk_size = 1000
+if len(csv_out) <= chunk_size:
+    csv_out.to_csv("output/grants_fleshed.csv", index=False)
+    print("Done → output/grants_fleshed.csv")
+else:
+    out_dir = Path("output")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for i in range(0, len(csv_out), chunk_size):
+        chunk = csv_out.iloc[i : i + chunk_size]
+        part_num = i // chunk_size + 1
+        out_path = out_dir / f"grants_fleshed_part_{part_num:02d}.csv"
+        chunk.to_csv(out_path, index=False)
+    print(f"Done → split into {((len(csv_out) - 1) // chunk_size) + 1} files in output/")
