@@ -205,18 +205,30 @@ def extract_dates(text):
 def analyze_with_llm(text):
     """Uses LLM to extract structured data from grant descriptions."""
     prompt = f"""
-    Extract the following details from the grant text below. 
+    Extract the following details from the grant text below.
     Return the result strictly as a JSON object with these keys:
     'summary', 'precise_amount', 'deadline', 'eligibility_criteria'.
-    
+
     Guidelines for 'precise_amount':
-    1. Extract only the dollar amount or range awarded TO A SINGLE APPLICANT (e.g., '$5,000' or '$10,000 - $25,000').
-    2. IGNORE total program budgets, total funding pools, or aggregate amounts (e.g., if text says '$1M total fund, $5k per grant', return '$5,000').
-    3. Ensure the value is a plain string, not an object or a list. 
-    4. If no specific individual amount is found, return null.
+    1. Extract the award amount given TO A SINGLE APPLICANT. This can be:
+       - A fixed dollar amount (e.g., '$5,000')
+       - A dollar range (e.g., '$10,000 - $25,000')
+       - A percentage of project costs (e.g., '50% of eligible project costs', 'up to 80%')
+       - A matching ratio (e.g., '1:1 match up to $10,000')
+       - A non-dollar award described in words (e.g., 'product donations up to $5,000 retail value')
+    2. IGNORE total program budgets or aggregate pool amounts. If text says '$1M total fund, up to $5k per grant', return '$5,000'.
+    3. Return a plain descriptive string, not an object or list.
+    4. If no amount is found, return null.
+
+    Guidelines for 'deadline':
+    1. If the grant has a SPECIFIC deadline, return it as a plain string (e.g., 'March 15, 2025').
+    2. If the grant accepts applications on a ROLLING or CONTINUOUS basis with no fixed close date, return 'Rolling / Ongoing'.
+    3. If the grant opens and closes in defined CYCLES or WINDOWS throughout the year (e.g., quarterly, twice a year), describe the cycle (e.g., 'Two cycles: spring deadline April 1 and fall deadline October 1').
+    4. If multiple future deadlines are listed, return all of them separated by ' | '.
+    5. If no deadline information is found, return null.
 
     Text:
-    {text[:8000]} 
+    {text[:8000]}
     """
     # Increased text limit to 8000 to account for multiple pages of data
     try:
