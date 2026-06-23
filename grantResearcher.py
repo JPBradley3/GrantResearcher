@@ -16,6 +16,8 @@ warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 import argparse
 import sys
 
+os.environ["OLLAMA_NUM_PARALLEL"] = "6"
+os.environ["OLLAMA_MAX_LOADED_MODELS"] = "1"
 
 # -------------------------
 # Load URLs
@@ -26,6 +28,20 @@ df = pd.read_csv("data/grants_urls.csv")
 # Ensure column exists
 if "url" not in df.columns:
     raise ValueError("CSV must have a column named 'url'")
+
+def unwrap_url(url):
+    """Decode HTML entities and extract the real URL from Google redirect wrappers."""
+    import html
+    url = html.unescape(str(url).strip())
+    if "google.com/url" in url:
+        parsed = urlparse(url)
+        qs = parse_qs(parsed.query)
+        url = (qs.get("q") or qs.get("url") or [url])[0]
+    # Decode any remaining percent-encoding in the extracted URL
+    from urllib.parse import unquote
+    return unquote(url)
+
+df["url"] = df["url"].apply(lambda u: unwrap_url(u) if pd.notna(u) else u)
 
 # -------------------------
 # Shared HTTP session + optional cache
@@ -45,7 +61,7 @@ session.headers.update(HEADERS)
 parser = argparse.ArgumentParser(description="Grant researcher scraper and LLM processor")
 parser.add_argument("--mode", choices=["scrape", "llm", "both"], default="both", help="Operation mode: scrape only, llm only, or both")
 parser.add_argument("--force-refresh", action="store_true", help="Force refresh cached pages/results")
-parser.add_argument("--llm-workers", type=int, default=2, help="Number of parallel LLM workers for llm-only mode")
+parser.add_argument("--llm-workers", type=int, default=6, help="Number of parallel LLM workers for llm-only mode")
 args = parser.parse_args()
 
 try:
@@ -241,7 +257,8 @@ def analyze_with_llm(text):
         response = ollama.generate(
             model='llama3',
             prompt=prompt,
-            format='json'
+            format='json',
+            keep_alive="1h"
         )
         raw_content = response['response'].strip()
         # Clean markdown formatting if present
@@ -332,15 +349,6 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
         cached_result = None if force_refresh else load_cached_result(url)
         if cached_result is not None:
             return cached_result
-
-        # Handle Google Search redirect URLs
-        if "google.com/url" in url:
-            parsed_url = urlparse(url)
-            query_params = parse_qs(parsed_url.query)
-            if 'q' in query_params:
-                url = query_params['q'][0]
-            elif 'url' in query_params:
-                url = query_params['url'][0]
 
         page_items = crawl_site(url, session, max_pages=300, use_cache=not force_refresh)
         if not page_items:
@@ -601,7 +609,7 @@ for col in ["raw_text", "embedded_json", "embedded_xml"]:
 chunk_size = 1000
 if len(csv_out) <= chunk_size:
     csv_out.to_csv("output/grants_fleshed.csv", index=False)
-    print("Done → output/grants_fleshed.csv")
+    print("Done -> output/grants_fleshed.csv")
 else:
     out_dir = Path("output")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -610,4 +618,4 @@ else:
         part_num = i // chunk_size + 1
         out_path = out_dir / f"grants_fleshed_part_{part_num:02d}.csv"
         chunk.to_csv(out_path, index=False)
-    print(f"Done → split into {((len(csv_out) - 1) // chunk_size) + 1} files in output/")
+    print(f"Done -> split into {((len(csv_out) - 1) // chunk_size) + 1} files in output/")
