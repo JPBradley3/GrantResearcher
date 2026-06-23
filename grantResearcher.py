@@ -16,8 +16,6 @@ warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 import argparse
 import sys
 
-os.environ["OLLAMA_NUM_PARALLEL"] = "6"
-os.environ["OLLAMA_MAX_LOADED_MODELS"] = "1"
 
 # -------------------------
 # Load URLs
@@ -55,8 +53,17 @@ HEADERS = {
     "DNT": "1"
 }
 
-session = requests.Session()
-session.headers.update(HEADERS)
+import threading
+_session_local = threading.local()
+
+def get_session():
+    if not hasattr(_session_local, "session"):
+        s = requests.Session()
+        s.headers.update(HEADERS)
+        _session_local.session = s
+    return _session_local.session
+
+session = get_session()
 
 parser = argparse.ArgumentParser(description="Grant researcher scraper and LLM processor")
 parser.add_argument("--mode", choices=["scrape", "llm", "both"], default="both", help="Operation mode: scrape only, llm only, or both")
@@ -120,9 +127,12 @@ def load_cached_result(url):
     return None
 
 
+_result_cache_lock = threading.Lock()
+
 def save_cached_result(url, result):
     path = result_cache_path(url)
-    path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    with _result_cache_lock:
+        path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def is_asset_url(url):
@@ -307,7 +317,7 @@ def crawl_site(start_url, session, max_pages=300, use_cache=True):
 
     while queue and len(pages) < max_pages:
         current_url = queue.pop(0)
-        result = fetch_url(current_url, session, use_cache=use_cache)
+        result = fetch_url(current_url, get_session(), use_cache=use_cache)
         if result is None:
             continue
         html, content_type = result
@@ -470,7 +480,7 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
         return result
 
 
-def process_llm_on_cached(urls, session, force_refresh=False, max_workers=4):
+def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
     """Process LLM extraction from cached raw_text or by crawling if needed."""
     results = []
 
@@ -486,7 +496,7 @@ def process_llm_on_cached(urls, session, force_refresh=False, max_workers=4):
         else:
             # attempt to crawl site to build raw_text
             try:
-                page_items = crawl_site(url, session, max_pages=300, use_cache=not force_refresh)
+                page_items = crawl_site(url, get_session(), max_pages=300, use_cache=not force_refresh)
                 if page_items:
                     parts = []
                     for index, (page_url, page_html, content_type) in enumerate(page_items):
@@ -576,7 +586,7 @@ results = []
 all_urls = df["url"].dropna().tolist()
 if args.mode == "llm":
     # Run LLM processing on cached pages/results
-    results = process_llm_on_cached(all_urls, session, force_refresh=args.force_refresh, max_workers=args.llm_workers)
+    results = process_llm_on_cached(all_urls, force_refresh=args.force_refresh, max_workers=args.llm_workers)
     out = pd.DataFrame(results)
 else:
     # scrape or both
@@ -586,7 +596,7 @@ else:
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_index = {
-            executor.submit(scrape_page, url, session, args.force_refresh, run_llm_flag): index
+            executor.submit(scrape_page, url, get_session(), args.force_refresh, run_llm_flag): index
             for index, url in enumerate(all_urls)
         }
 
