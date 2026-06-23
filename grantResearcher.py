@@ -5,6 +5,7 @@ from tqdm import tqdm
 import re
 from urllib.parse import urlparse, parse_qs, urljoin
 import ollama
+from groq import Groq
 import json
 import os
 import hashlib
@@ -69,6 +70,7 @@ parser = argparse.ArgumentParser(description="Grant researcher scraper and LLM p
 parser.add_argument("--mode", choices=["scrape", "llm", "both"], default="both", help="Operation mode: scrape only, llm only, or both")
 parser.add_argument("--force-refresh", action="store_true", help="Force refresh cached pages/results")
 parser.add_argument("--llm-workers", type=int, default=6, help="Number of parallel LLM workers for llm-only mode")
+parser.add_argument("--groq-key", type=str, default=os.environ.get("GROQ_API_KEY"), help="Groq API key (or set GROQ_API_KEY env var)")
 args = parser.parse_args()
 
 try:
@@ -229,7 +231,7 @@ def extract_dates(text):
 
 
 def analyze_with_llm(text):
-    """Uses LLM to extract structured data from grant descriptions."""
+    """Uses Groq API if key available, otherwise falls back to local Ollama."""
     prompt = f"""
     Extract the following details from the grant text below.
     Return the result strictly as a JSON object with these keys:
@@ -262,21 +264,25 @@ def analyze_with_llm(text):
     Text:
     {text[:15000]}
     """
-    # Increased text limit to 8000 to account for multiple pages of data
     try:
-        response = ollama.generate(
-            model='llama3',
-            prompt=prompt,
-            format='json',
-            keep_alive="1h"
-        )
-        raw_content = response['response'].strip()
-        # Clean markdown formatting if present
+        if args.groq_key:
+            client = Groq(api_key=args.groq_key)
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"},
+                temperature=0.1
+            )
+            raw_content = response.choices[0].message.content.strip()
+        else:
+            response = ollama.generate(model='llama3', prompt=prompt, format='json', keep_alive="1h")
+            raw_content = response['response'].strip()
+
         if raw_content.startswith("```json"):
             raw_content = raw_content[7:-3].strip()
         elif raw_content.startswith("```"):
             raw_content = raw_content[3:-3].strip()
-            
+
         return json.loads(raw_content)
     except Exception as e:
         print(f"\n[LLM Error] Could not analyze text: {e}")
@@ -550,36 +556,35 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
 # Run scraper
 # -------------------------
 
-try:
-    # Pre-flight check: Ensure Ollama is running and has the model
-    models_response = ollama.list()
-    # Support both dict-style and object-style responses from the Ollama client
-    models = getattr(models_response, "models", models_response)
-    available_models = []
-    for m in models:
-        if isinstance(m, dict):
-            available_models.append(m.get("name") or m.get("model"))
-        elif hasattr(m, "name"):
-            available_models.append(m.name)
-        elif hasattr(m, "model"):
-            available_models.append(m.model)
-        else:
-            available_models.append(str(m))
-    
-    if not any('llama3' in str(m) for m in available_models if m):
-        print("Model 'llama3' not found locally. Pulling now (this may take a few minutes)...")
-        ollama.pull('llama3')
-        print("Model 'llama3' downloaded successfully.")
-    else:
-        print("Ollama connection verified and 'llama3' model is ready.")
+if args.groq_key:
+    print("Using Groq API for LLM processing (llama3-70b).")
+else:
+    try:
+        models_response = ollama.list()
+        models = getattr(models_response, "models", models_response)
+        available_models = []
+        for m in models:
+            if isinstance(m, dict):
+                available_models.append(m.get("name") or m.get("model"))
+            elif hasattr(m, "name"):
+                available_models.append(m.name)
+            elif hasattr(m, "model"):
+                available_models.append(m.model)
+            else:
+                available_models.append(str(m))
 
-except Exception as e:
-    print(f"CRITICAL ERROR: Could not connect to the Ollama server. Please ensure the Ollama application is running in your system tray.\nError: {e}")
-    # If user asked only to scrape, we can continue without Ollama
-    if args.mode == "scrape":
-        print("Continuing in scrape-only mode (no LLM).")
-    else:
-        exit(1)
+        if not any('llama3' in str(m) for m in available_models if m):
+            print("Model 'llama3' not found locally. Pulling now (this may take a few minutes)...")
+            ollama.pull('llama3')
+            print("Model 'llama3' downloaded successfully.")
+        else:
+            print("Ollama connection verified and 'llama3' model is ready.")
+    except Exception as e:
+        print(f"CRITICAL ERROR: Could not connect to the Ollama server. Please ensure the Ollama application is running in your system tray.\nError: {e}")
+        if args.mode == "scrape":
+            print("Continuing in scrape-only mode (no LLM).")
+        else:
+            exit(1)
 
 results = []
 
