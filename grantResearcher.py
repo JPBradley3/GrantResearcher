@@ -227,8 +227,14 @@ def analyze_with_llm(text):
     4. If multiple future deadlines are listed, return all of them separated by ' | '.
     5. If no deadline information is found, return null.
 
+    Guidelines for 'eligibility_criteria':
+    1. If the grant is invite-only, nomination-only, or by referral, start the value with 'INVITE ONLY - ' followed by any other eligibility details.
+    2. Otherwise, summarize who qualifies: org type (e.g., 501(c)(3), nonprofit), location restrictions, size, focus area, or any stated requirements.
+    3. Return a plain descriptive string, not a list or object.
+    4. If no eligibility information is found, return null.
+
     Text:
-    {text[:8000]}
+    {text[:15000]}
     """
     # Increased text limit to 8000 to account for multiple pages of data
     try:
