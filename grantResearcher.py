@@ -1,5 +1,8 @@
 import pandas as pd
 import requests
+from curl_cffi import requests as curl_requests
+import random
+import time
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from tqdm import tqdm
 import re
@@ -179,18 +182,41 @@ BLOCK_SIGNALS = [
     "just a moment", "ddos-guard"
 ]
 
+POOL_SIGNALS = [
+    r"\$[\d.,]+\s*(million|billion)\s*(total|commitment|invested|endowment|fund|over|last|annual|per year)",
+    r"(total|committed|invested|endowment|over [\d]+ years?|last year|annually)\s*[:\-]?\s*\$[\d.,]+",
+    r"more than \$[\d.,]+\s*(million|billion)",
+    r"nearly \$[\d.,]+\s*(million|billion)",
+    r"awarded .{0,30}\$[\d.,]+\s*(million|billion)",
+    r"\$[\d.,]+\s*(million|billion) (in |over |across ).{0,20}(grant|year|program)",
+]
+
 def is_blocked_page(html):
     sample = html[:3000].lower()
     return any(sig in sample for sig in BLOCK_SIGNALS)
 
 
 def sanitize_llm_field(value):
-    """Return None if the LLM field contains an HTTP error or block message."""
+    """Return None if the LLM field contains an HTTP error, block message, or is a JSON object string."""
     if not isinstance(value, str):
         return value
     low = value.lower()
     if any(sig in low for sig in BLOCK_SIGNALS):
         return None
+    # Reject deadline fields that are JSON objects
+    stripped = value.strip()
+    if stripped.startswith("{") and stripped.endswith("}"):
+        return None
+    return stripped or None
+
+
+def sanitize_amount(value):
+    """Return None if the amount looks like a pool/total figure rather than a per-grant award."""
+    if not isinstance(value, str):
+        return value
+    for pattern in POOL_SIGNALS:
+        if re.search(pattern, value, re.IGNORECASE):
+            return None
     return value.strip() or None
 
 
@@ -282,7 +308,7 @@ def analyze_with_llm(text):
     4. If no eligibility information is found, return null.
 
     Text:
-    {text[:6000]}
+    {text[:12000]}
     """
     try:
         response = ollama.generate(model='llama3', prompt=prompt, format='json', keep_alive="1h")
@@ -302,6 +328,9 @@ def analyze_with_llm(text):
         }
 
 
+CURL_IMPERSONATE = "chrome120"
+CURL_BROWSERS = ["chrome120", "chrome110", "chrome107", "edge101"]
+
 def fetch_url(url, session, use_cache=True):
     url = normalize_url(url)
     if use_cache:
@@ -314,14 +343,38 @@ def fetch_url(url, session, use_cache=True):
                 cached_type = "application/xml"
             return cached_html, cached_type
 
-    r = session.get(url, timeout=15, allow_redirects=True)
-    if r.status_code in (403, 429, 503):
+    # Random delay to appear human
+    time.sleep(random.uniform(1.0, 3.5))
+
+    html = None
+    content_type = ""
+
+    # Try curl_cffi first (bypasses Cloudflare/TLS fingerprinting)
+    try:
+        impersonate = random.choice(CURL_BROWSERS)
+        r = curl_requests.get(url, impersonate=impersonate, timeout=20, allow_redirects=True)
+        if r.status_code in (403, 429, 503):
+            return None
+        html = r.text
+        content_type = r.headers.get("Content-Type", "").split(";")[0]
+    except Exception:
+        pass
+
+    # Fall back to requests if curl_cffi failed or returned a blocked page
+    if not html or is_blocked_page(html):
+        try:
+            r = session.get(url, timeout=15, allow_redirects=True)
+            if r.status_code in (403, 429, 503):
+                return None
+            html = r.text
+            content_type = r.headers.get("Content-Type", "").split(";")[0]
+        except Exception:
+            return None
+
+    if not html or is_blocked_page(html):
         return None
-    html = r.text
-    if is_blocked_page(html):
-        return None
-    content_type = r.headers.get("Content-Type", "").split(";")[0]
-    if use_cache and html:
+
+    if use_cache:
         save_cached_html(url, html)
     return html, content_type
 
@@ -471,7 +524,7 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
             try:
                 llm_data = analyze_with_llm(full_description)
                 result["summary"] = sanitize_llm_field(llm_data.get("summary"))
-                result["llm_amount"] = sanitize_llm_field(llm_data.get("precise_amount"))
+                result["llm_amount"] = sanitize_amount(sanitize_llm_field(llm_data.get("precise_amount")))
                 result["llm_deadline"] = sanitize_llm_field(llm_data.get("deadline"))
                 result["llm_eligibility"] = sanitize_llm_field(llm_data.get("eligibility_criteria"))
             except Exception:
@@ -545,7 +598,7 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
         result = cached or {"url": url}
         result.update({
             "summary": sanitize_llm_field(llm_data.get("summary")),
-            "llm_amount": sanitize_llm_field(llm_data.get("precise_amount")),
+            "llm_amount": sanitize_amount(sanitize_llm_field(llm_data.get("precise_amount"))),
             "llm_deadline": sanitize_llm_field(llm_data.get("deadline")),
             "llm_eligibility": sanitize_llm_field(llm_data.get("eligibility_criteria")),
             "raw_text": raw_text
