@@ -173,9 +173,26 @@ def extract_xml_from_html(html):
         pass
     return xml_strings
 
-# -------------------------
-# Helper functions
-# -------------------------
+BLOCK_SIGNALS = [
+    "too many requests", "access denied", "403 forbidden", "429",
+    "cloudflare", "captcha", "robot", "enable javascript", "checking your browser",
+    "just a moment", "ddos-guard"
+]
+
+def is_blocked_page(html):
+    sample = html[:3000].lower()
+    return any(sig in sample for sig in BLOCK_SIGNALS)
+
+
+def sanitize_llm_field(value):
+    """Return None if the LLM field contains an HTTP error or block message."""
+    if not isinstance(value, str):
+        return value
+    low = value.lower()
+    if any(sig in low for sig in BLOCK_SIGNALS):
+        return None
+    return value.strip() or None
+
 
 def clean_text(text):
     return re.sub(r"\s+", " ", text).strip()
@@ -242,8 +259,12 @@ def analyze_with_llm(text):
        - A percentage of project costs (e.g., '50% of eligible project costs', 'up to 80%')
        - A matching ratio (e.g., '1:1 match up to $10,000')
        - A non-dollar award described in words (e.g., 'product donations up to $5,000 retail value')
-    2. IGNORE total program budgets, endowments, or aggregate pool amounts. Words like 'total investment', 'total fund', 'total giving', 'endowment', 'over X years' signal a pool amount - ignore these.
-    3. If the only amount mentioned is a total pool with NO per-grant figure stated, return null.
+    2. IGNORE total program budgets, endowments, or aggregate amounts. The following are NOT per-grant amounts and must be ignored:
+       - Total fund sizes (e.g., '$100 million housing fund', '$2 billion endowment')
+       - Multi-year commitments to all grantees (e.g., '$27 million over three years')
+       - Annual giving totals (e.g., 'we gave $45M last year')
+       - Any amount described with: 'total', 'commitment', 'invested', 'endowment', 'over X years', 'last year'
+    3. If the ONLY amounts mentioned are pool/total figures with NO per-grant amount stated, return null.
     4. Return a plain descriptive string, not an object or list.
 
     Guidelines for 'deadline':
@@ -294,7 +315,11 @@ def fetch_url(url, session, use_cache=True):
             return cached_html, cached_type
 
     r = session.get(url, timeout=15, allow_redirects=True)
+    if r.status_code in (403, 429, 503):
+        return None
     html = r.text
+    if is_blocked_page(html):
+        return None
     content_type = r.headers.get("Content-Type", "").split(";")[0]
     if use_cache and html:
         save_cached_html(url, html)
@@ -445,10 +470,10 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
         if run_llm:
             try:
                 llm_data = analyze_with_llm(full_description)
-                result["summary"] = llm_data.get("summary")
-                result["llm_amount"] = llm_data.get("precise_amount")
-                result["llm_deadline"] = llm_data.get("deadline")
-                result["llm_eligibility"] = llm_data.get("eligibility_criteria")
+                result["summary"] = sanitize_llm_field(llm_data.get("summary"))
+                result["llm_amount"] = sanitize_llm_field(llm_data.get("precise_amount"))
+                result["llm_deadline"] = sanitize_llm_field(llm_data.get("deadline"))
+                result["llm_eligibility"] = sanitize_llm_field(llm_data.get("eligibility_criteria"))
             except Exception:
                 pass
 
@@ -519,10 +544,10 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
 
         result = cached or {"url": url}
         result.update({
-            "summary": llm_data.get("summary"),
-            "llm_amount": llm_data.get("precise_amount"),
-            "llm_deadline": llm_data.get("deadline"),
-            "llm_eligibility": llm_data.get("eligibility_criteria"),
+            "summary": sanitize_llm_field(llm_data.get("summary")),
+            "llm_amount": sanitize_llm_field(llm_data.get("precise_amount")),
+            "llm_deadline": sanitize_llm_field(llm_data.get("deadline")),
+            "llm_eligibility": sanitize_llm_field(llm_data.get("eligibility_criteria")),
             "raw_text": raw_text
         })
         save_cached_result(url, result)
