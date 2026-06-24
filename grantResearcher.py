@@ -5,7 +5,6 @@ from tqdm import tqdm
 import re
 from urllib.parse import urlparse, parse_qs, urljoin
 import ollama
-from groq import Groq
 import json
 import os
 import hashlib
@@ -69,8 +68,7 @@ session = get_session()
 parser = argparse.ArgumentParser(description="Grant researcher scraper and LLM processor")
 parser.add_argument("--mode", choices=["scrape", "llm", "both"], default="both", help="Operation mode: scrape only, llm only, or both")
 parser.add_argument("--force-refresh", action="store_true", help="Force refresh cached pages/results")
-parser.add_argument("--llm-workers", type=int, default=6, help="Number of parallel LLM workers for llm-only mode")
-parser.add_argument("--groq-key", type=str, default=os.environ.get("GROQ_API_KEY"), help="Groq API key (or set GROQ_API_KEY env var)")
+parser.add_argument("--llm-workers", type=int, default=1, help="Number of parallel LLM workers for llm-only mode")
 args = parser.parse_args()
 
 try:
@@ -231,7 +229,7 @@ def extract_dates(text):
 
 
 def analyze_with_llm(text):
-    """Uses Groq API if key available, otherwise falls back to local Ollama."""
+    """Uses LLM to extract structured data from grant descriptions."""
     prompt = f"""
     Extract the following details from the grant text below.
     Return the result strictly as a JSON object with these keys:
@@ -244,16 +242,17 @@ def analyze_with_llm(text):
        - A percentage of project costs (e.g., '50% of eligible project costs', 'up to 80%')
        - A matching ratio (e.g., '1:1 match up to $10,000')
        - A non-dollar award described in words (e.g., 'product donations up to $5,000 retail value')
-    2. IGNORE total program budgets or aggregate pool amounts. If text says '$1M total fund, up to $5k per grant', return '$5,000'.
-    3. Return a plain descriptive string, not an object or list.
-    4. If no amount is found, return null.
+    2. IGNORE total program budgets, endowments, or aggregate pool amounts. Words like 'total investment', 'total fund', 'total giving', 'endowment', 'over X years' signal a pool amount - ignore these.
+    3. If the only amount mentioned is a total pool with NO per-grant figure stated, return null.
+    4. Return a plain descriptive string, not an object or list.
 
     Guidelines for 'deadline':
     1. If the grant has a SPECIFIC deadline, return it as a plain string (e.g., 'March 15, 2025').
     2. If the grant accepts applications on a ROLLING or CONTINUOUS basis with no fixed close date, return 'Rolling / Ongoing'.
-    3. If the grant opens and closes in defined CYCLES or WINDOWS throughout the year (e.g., quarterly, twice a year), describe the cycle (e.g., 'Two cycles: spring deadline April 1 and fall deadline October 1').
+    3. If the grant opens and closes in defined CYCLES or WINDOWS throughout the year, describe the cycle plainly (e.g., 'Four cycles: Education March 15, Community June 15, Environment June 15, Arts September 15').
     4. If multiple future deadlines are listed, return all of them separated by ' | '.
-    5. If no deadline information is found, return null.
+    5. Return ONLY a plain string. Do NOT return a JSON object or dictionary.
+    6. If no deadline information is found, return null.
 
     Guidelines for 'eligibility_criteria':
     1. If the grant is invite-only, nomination-only, or by referral, start the value with 'INVITE ONLY - ' followed by any other eligibility details.
@@ -262,27 +261,15 @@ def analyze_with_llm(text):
     4. If no eligibility information is found, return null.
 
     Text:
-    {text[:15000]}
+    {text[:6000]}
     """
     try:
-        if args.groq_key:
-            client = Groq(api_key=args.groq_key)
-            response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-                temperature=0.1
-            )
-            raw_content = response.choices[0].message.content.strip()
-        else:
-            response = ollama.generate(model='llama3', prompt=prompt, format='json', keep_alive="1h")
-            raw_content = response['response'].strip()
-
+        response = ollama.generate(model='llama3', prompt=prompt, format='json', keep_alive="1h")
+        raw_content = response['response'].strip()
         if raw_content.startswith("```json"):
             raw_content = raw_content[7:-3].strip()
         elif raw_content.startswith("```"):
             raw_content = raw_content[3:-3].strip()
-
         return json.loads(raw_content)
     except Exception as e:
         print(f"\n[LLM Error] Could not analyze text: {e}")
@@ -556,9 +543,7 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
 # Run scraper
 # -------------------------
 
-if args.groq_key:
-    print("Using Groq API for LLM processing (llama3-70b).")
-else:
+if args.mode != "scrape":
     try:
         models_response = ollama.list()
         models = getattr(models_response, "models", models_response)
@@ -572,7 +557,6 @@ else:
                 available_models.append(m.model)
             else:
                 available_models.append(str(m))
-
         if not any('llama3' in str(m) for m in available_models if m):
             print("Model 'llama3' not found locally. Pulling now (this may take a few minutes)...")
             ollama.pull('llama3')
@@ -623,7 +607,7 @@ for col in ["raw_text", "embedded_json", "embedded_xml"]:
 
 chunk_size = 1000
 if len(csv_out) <= chunk_size:
-    csv_out.to_csv("output/grants_fleshed.csv", index=False)
+    csv_out.to_csv("output/grants_fleshed.csv", index=False, quoting=1)
     print("Done -> output/grants_fleshed.csv")
 else:
     out_dir = Path("output")
