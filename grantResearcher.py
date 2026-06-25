@@ -151,6 +151,19 @@ def is_asset_url(url):
     return bool(re.search(r"\.(css|js|png|jpe?g|gif|svg|ico|pdf|zip|rar|mp4|webm|mp3)(?:[?#]|$)", url, re.IGNORECASE))
 
 
+SKIP_PATH_PATTERNS = [
+    r"/blog/", r"/news/", r"/press-release", r"/newsroom/",
+    r"/careers/", r"/jobs/",
+    r"/store/b/", r"/shop/",
+    r"/legal/", r"/privacy", r"/terms", r"/cookie", r"/sitemap",
+    r"/cdn-cgi/",
+]
+
+def is_skip_url(url):
+    path = urlparse(url).path.lower()
+    return any(re.search(p, path) for p in SKIP_PATH_PATTERNS)
+
+
 def is_json_text(text):
     stripped = text.strip()
     return stripped.startswith("{") or stripped.startswith("[")
@@ -165,9 +178,11 @@ def extract_jsonld_from_html(html):
     json_objects = []
     soup = BeautifulSoup(html, "lxml")
     for script in soup.find_all("script", type=lambda t: t and "json" in t.lower()):
-        raw = script.string or script.get_text() or ""
+        raw = (script.string or script.get_text() or "").strip()
+        if not raw:
+            continue
         try:
-            parsed = json.loads(raw.strip())
+            parsed = json.loads(raw)
             json_objects.append(parsed)
         except Exception as e:
             log.warning("JSON-LD parse failed: %s", e)
@@ -427,7 +442,7 @@ def crawl_site(start_url, session, max_pages=300, use_cache=True):
                 continue
             if parsed_sub.netloc != base_domain:
                 continue
-            if sub_url in seen_urls or is_asset_url(sub_url):
+            if sub_url in seen_urls or is_asset_url(sub_url) or is_skip_url(sub_url):
                 continue
 
             seen_urls.add(sub_url)
