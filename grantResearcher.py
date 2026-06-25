@@ -3,6 +3,7 @@ import requests
 from curl_cffi import requests as curl_requests
 import random
 import time
+import logging
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from tqdm import tqdm
 import re
@@ -18,6 +19,14 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 import argparse
 import sys
+
+logging.basicConfig(
+    filename="scrape_errors.log",
+    level=logging.WARNING,
+    format="%(asctime)s %(levelname)s %(message)s",
+    encoding="utf-8"
+)
+log = logging.getLogger(__name__)
 
 
 # -------------------------
@@ -160,7 +169,8 @@ def extract_jsonld_from_html(html):
         try:
             parsed = json.loads(raw.strip())
             json_objects.append(parsed)
-        except Exception:
+        except Exception as e:
+            log.warning("JSON-LD parse failed: %s", e)
             continue
     return json_objects
 
@@ -172,8 +182,8 @@ def extract_xml_from_html(html):
     try:
         xml_soup = BeautifulSoup(html, "xml")
         xml_strings.append(str(xml_soup))
-    except Exception:
-        pass
+    except Exception as e:
+        log.warning("XML parse failed: %s", e)
     return xml_strings
 
 BLOCK_SIGNALS = [
@@ -354,24 +364,28 @@ def fetch_url(url, session, use_cache=True):
         impersonate = random.choice(CURL_BROWSERS)
         r = curl_requests.get(url, impersonate=impersonate, timeout=20, allow_redirects=True)
         if r.status_code in (403, 429, 503):
+            log.warning("curl_cffi blocked [%s] %s", r.status_code, url)
             return None
         html = r.text
         content_type = r.headers.get("Content-Type", "").split(";")[0]
-    except Exception:
-        pass
+    except Exception as e:
+        log.warning("curl_cffi failed for %s: %s", url, e)
 
     # Fall back to requests if curl_cffi failed or returned a blocked page
     if not html or is_blocked_page(html):
         try:
             r = session.get(url, timeout=15, allow_redirects=True)
             if r.status_code in (403, 429, 503):
+                log.warning("requests blocked [%s] %s", r.status_code, url)
                 return None
             html = r.text
             content_type = r.headers.get("Content-Type", "").split(";")[0]
-        except Exception:
+        except Exception as e:
+            log.warning("requests failed for %s: %s", url, e)
             return None
 
     if not html or is_blocked_page(html):
+        log.warning("Both fetchers blocked or empty for %s", url)
         return None
 
     if use_cache:
@@ -453,7 +467,8 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
                     pretty = json.dumps(parsed, ensure_ascii=False, indent=2)
                     all_descriptions.append(f"--- {page_label} ({page_url}) [json] ---\n" + pretty)
                     all_raw_content.append(pretty)
-                except Exception:
+                except Exception as e:
+                    log.warning("JSON page parse failed for %s: %s", page_url, e)
                     all_descriptions.append(f"--- {page_label} ({page_url}) [json] ---\n" + page_html)
                     all_raw_content.append(page_html)
                 continue
@@ -527,13 +542,14 @@ def scrape_page(url, session, force_refresh=False, run_llm=True):
                 result["llm_amount"] = sanitize_amount(sanitize_llm_field(llm_data.get("precise_amount")))
                 result["llm_deadline"] = sanitize_llm_field(llm_data.get("deadline"))
                 result["llm_eligibility"] = sanitize_llm_field(llm_data.get("eligibility_criteria"))
-            except Exception:
-                pass
+            except Exception as e:
+                log.warning("LLM failed for %s: %s", url, e)
 
         save_cached_result(url, result)
         return result
 
     except Exception as e:
+        log.error("scrape_page failed for %s: %s", url, e)
         result = {
             "url": url,
             "title": None,
@@ -580,7 +596,8 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
                             lines = soup.get_text(separator="\n", strip=True).splitlines()
                             parts.append("\n\n".join([l.strip() for l in lines if len(l.strip()) > 0]))
                     raw_text = "\n\n".join(parts)
-            except Exception:
+            except Exception as e:
+                log.warning("process_llm crawl failed for %s: %s", url, e)
                 raw_text = None
 
         if not raw_text:
@@ -593,6 +610,7 @@ def process_llm_on_cached(urls, force_refresh=False, max_workers=4):
         try:
             llm_data = analyze_with_llm(raw_text)
         except Exception as e:
+            log.warning("LLM failed in process_llm_on_cached for %s: %s", url, e)
             llm_data = {"summary": None, "precise_amount": None, "deadline": None, "eligibility_criteria": None}
 
         result = cached or {"url": url}
