@@ -214,6 +214,10 @@ POOL_SIGNALS = [
     r"nearly \$[\d.,]+\s*(million|billion)",
     r"awarded .{0,30}\$[\d.,]+\s*(million|billion)",
     r"\$[\d.,]+\s*(million|billion) (in |over |across ).{0,20}(grant|year|program)",
+    r"^\$[\d.,]+\s*[Bb]\b",
+    r"^\$[\d.,]+\s*[Mm]\b",
+    r"total grant dollars",
+    r"impact investing program",
 ]
 
 def is_blocked_page(html):
